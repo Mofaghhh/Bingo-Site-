@@ -1,0 +1,16 @@
+{
+	"name": "bingo-wiki-backend",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Backend for the Bingo Ranked wiki — content API with RU/EN localisation",
+	"main": "server.js",
+	"type": "commonjs",
+	"scripts": {
+		"start": "node server.js",
+		"dev": "node server.js",
+		"build": "node build.js"
+	},
+	"dependencies": {
+		"markdown-it": "^14.1.0"
+	}
+}

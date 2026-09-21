@@ -1,0 +1,204 @@
+{
+	"languages": ["ru", "en"],
+	"defaultLanguage": "ru",
+	"sections": [
+		{
+			"id": "start",
+			"title": { "ru": "Getting started", "en": "Getting started" },
+			"items": [
+				{
+					"slug": "bingo-ranked",
+					"title": { "ru": "Bingo Ranked", "en": "Bingo Ranked" },
+					"description": {
+						"ru": "Обзор проекта: соревновательный Bingo для Minecraft.",
+						"en": "Project overview: competitive Bingo for Minecraft."
+					}
+				},
+				{
+					"slug": "nachalo-raboty/vy-novichok-sygraite-v-trenirovku",
+					"title": { "ru": "New to Bingo? Try Practice", "en": "New to Bingo? Try Practice" },
+					"description": {
+						"ru": "Тренировочный режим для знакомства с механикой.",
+						"en": "A practice mode that introduces the core mechanics."
+					}
+				},
+				{
+					"slug": "nachalo-raboty/kak-igrat",
+					"title": { "ru": "How to play", "en": "How to play" },
+					"description": {
+						"ru": "Пошаговый запуск первого матча.",
+						"en": "A step-by-step walkthrough of your first match."
+					}
+				},
+				{
+					"slug": "nachalo-raboty/faq",
+					"title": { "ru": "FAQ", "en": "FAQ" },
+					"description": {
+						"ru": "Частые вопросы о матчах, Ready и Surrender.",
+						"en": "Common questions about matches, Ready and surrender."
+					}
+				}
+			]
+		},
+		{
+			"id": "game",
+			"title": { "ru": "Gameplay", "en": "Gameplay" },
+			"items": [
+				{
+					"slug": "igra/bingo",
+					"title": { "ru": "Bingo", "en": "Bingo" },
+					"description": {
+						"ru": "Карта 5×5 из 25 целей.",
+						"en": "A 5x5 board with 25 objectives."
+					}
+				},
+				{
+					"slug": "igra/lobbi",
+					"title": { "ru": "Lobby", "en": "Lobby" },
+					"description": {
+						"ru": "Подготовка и Ready перед матчем.",
+						"en": "Preparation and Ready before a match."
+					}
+				},
+				{
+					"slug": "igra/matchmaking",
+					"title": { "ru": "Matchmaking", "en": "Matchmaking" },
+					"description": {
+						"ru": "Поиск соперника для Ranked-матча.",
+						"en": "Finding an opponent for a ranked match."
+					}
+				},
+				{
+					"slug": "igra/matchi",
+					"title": { "ru": "Matches", "en": "Matches" },
+					"description": {
+						"ru": "Равные стартовые условия и ход матча.",
+						"en": "Equal starting conditions and match flow."
+					}
+				},
+				{
+					"slug": "igra/vykhod-iz-matcha-i-surrender",
+					"title": { "ru": "Leaving a match and surrender", "en": "Leaving a match and surrender" },
+					"description": {
+						"ru": "Как работает выход из матча и сдача.",
+						"en": "How leaving a match and surrender are handled."
+					}
+				}
+			]
+		},
+		{
+			"id": "ranked",
+			"title": { "ru": "Ranked", "en": "Ranked" },
+			"items": [
+				{
+					"slug": "ranked/elo-i-rangi",
+					"title": { "ru": "ELO and ranks", "en": "ELO and ranks" },
+					"description": {
+						"ru": "Рейтинг, уровни и их диапазоны.",
+						"en": "Rating, tiers and their ranges."
+					}
+				},
+				{
+					"slug": "ranked/istoriya-elo",
+					"title": { "ru": "ELO history", "en": "ELO history" },
+					"description": {
+						"ru": "Динамика рейтинга между матчами.",
+						"en": "Rating changes across matches."
+					}
+				},
+				{
+					"slug": "ranked/sezony",
+					"title": { "ru": "Seasons", "en": "Seasons" },
+					"description": {
+						"ru": "Соревновательные периоды Ranked.",
+						"en": "Competitive periods in ranked play."
+					}
+				},
+				{
+					"slug": "ranked/liderbord",
+					"title": { "ru": "Leaderboard", "en": "Leaderboard" },
+					"description": {
+						"ru": "Лучшие игроки Ranked.",
+						"en": "The top ranked players."
+					}
+				}
+			]
+		},
+		{
+			"id": "community",
+			"title": { "ru": "Community", "en": "Community" },
+			"items": [
+				{
+					"slug": "soobshestvo/pravila",
+					"title": { "ru": "Rules", "en": "Rules" },
+					"description": {
+						"ru": "Правила честной игры.",
+						"en": "Rules for fair play."
+					}
+				},
+				{
+					"slug": "soobshestvo/zapreshyonnye-modifikacii",
+					"title": { "ru": "Banned modifications", "en": "Banned modifications" },
+					"description": {
+						"ru": "Список запрещённых модификаций по категориям.",
+						"en": "Banned modifications grouped by category."
+					}
+				},
+				{
+					"slug": "soobshestvo/turniry",
+					"title": { "ru": "Tournaments", "en": "Tournaments" },
+					"description": {
+						"ru": "Соревновательные события Bingo Ranked.",
+						"en": "Competitive Bingo Ranked events."
+					}
+				},
+				{
+					"slug": "soobshestvo/messenger-druzya",
+					"title": { "ru": "Messenger and friends", "en": "Messenger and friends" },
+					"description": {
+						"ru": "Друзья, профиль и общение.",
+						"en": "Friends, profile and messaging."
+					}
+				}
+			]
+		},
+		{
+			"id": "extra",
+			"title": { "ru": "Additional", "en": "Additional" },
+			"items": [
+				{
+					"slug": "dopolnitelno/vozmozhnosti-moda",
+					"title": { "ru": "Mod features", "en": "Mod features" },
+					"description": {
+						"ru": "Обзор возможностей мода.",
+						"en": "An overview of the mod's features."
+					}
+				},
+				{
+					"slug": "dopolnitelno/reshenie-problem",
+					"title": { "ru": "Troubleshooting", "en": "Troubleshooting" },
+					"description": {
+						"ru": "Типовые проблемы и их решения.",
+						"en": "Common problems and their fixes."
+					}
+				},
+				{
+					"slug": "dopolnitelno/changelog",
+					"title": { "ru": "Changelog", "en": "Changelog" },
+					"description": {
+						"ru": "История изменений мода.",
+						"en": "The mod's release history."
+					}
+				},
+				{
+					"slug": "legal",
+					"title": { "ru": "License and legal", "en": "License and legal" },
+					"description": {
+						"ru": "Правовая информация и персональные данные.",
+						"en": "Legal information and personal data."
+					}
+				}
+			]
+		}
+	]
+}

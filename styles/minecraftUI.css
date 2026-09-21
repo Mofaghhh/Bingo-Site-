@@ -1,0 +1,191 @@
+:root {
+
+	--accent: #f2cf4e;
+	--accent-light: #fbf19b;
+	--accent-mid: #e8bf3e;
+	--accent-dark: #b8862f;
+	--accent-deep: #8a5a20;
+	--accent-gradient: linear-gradient(90deg, #f2cf4e, #fbf19b);
+	--accent-gradient-deep: linear-gradient(10deg, #f2cf4e, #ffdf7a);
+
+	--site-bg-top: #0a0b0e;
+	--site-bg-mid: #14161a;
+	--site-bg-bottom: #1e2126;
+
+	--minecraft-font: 'MinecraftFull', ui-monospace, monospace;
+	--minecraft-header-font: 'MinecraftTen', sans-serif;
+
+	--minecraft-background-color: #313233;
+	--minecraft-foreground-color: #48494a;
+	--minecraft-border-color: #1e1e1f;
+
+	--minecraft-border-top-color: #5a5b5c;
+	--minecraft-border-bottom-color: #323334;
+
+	--minecraft-text-color: #ffffff;
+	--minecraft-text-color-dark: #1e1e1f;
+	--minecraft-text-accent-color: #f2cf4e;
+	--minecraft-text-secondary-color: #ffffff;
+	--minecraft-text-subtle-color: #d0d1d4;
+
+	--minecraft-button-color: #d0d1d4;
+	--minecraft-button-text-color: #1e1e1f;
+	--minecraft-button-secondary-text-color: #7a7b7d;
+	--minecraft-button-hover-color: #b1b2b5;
+	--minecraft-button-inset-border-color: #ecedee;
+
+	--minecraft-code-text-color: #d0d1d4;
+	--minecraft-code-background-color: #0d0e11;
+	--minecraft-code-border-color: #4a4330;
+
+	--minecraft-scrollbar-track: #1b1c1d;
+	--minecraft-scrollbar-thumb: #6b6d70;
+	--minecraft-scrollbar-thumb-hover: #8e9094;
+	--minecraft-scrollbar-border: #111213;
+
+	--font-size-small: 16px;
+	--font-size-medium: 24px;
+	--font-size-large: 32px;
+}
+
+* {
+	scrollbar-width: 24px;
+}
+
+*::-webkit-scrollbar {
+	width: 24px;
+	height: 24px;
+	border-radius: 0;
+}
+*::-webkit-scrollbar-track {
+	background: var(--minecraft-scrollbar-track);
+	border: 4px solid var(--minecraft-scrollbar-border);
+	border-radius: 0;
+	box-shadow: inset 0 12px 0 0 #00000033;
+}
+*::-webkit-scrollbar-thumb {
+	background: var(--minecraft-scrollbar-thumb);
+	border: 4px solid var(--minecraft-scrollbar-border);
+	border-radius: 0;
+	box-shadow:
+		inset 4px 4px 0 0 #ffffff33,
+		inset -4px -4px 0 0 #00000055,
+		0px 16px 0 -4px #00000033;
+}
+*::-webkit-scrollbar-button {
+	border-radius: 0;
+	display: none;
+}
+*::-webkit-scrollbar-thumb:hover {
+	background: var(--minecraft-scrollbar-thumb-hover);
+}
+*::-webkit-scrollbar-corner {
+	background: var(--minecraft-scrollbar-track);
+	border-radius: 0;
+}
+
+.minecraft-button {
+	all: unset;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	min-height: 32px;
+	user-select: none !important;
+	cursor: pointer;
+	-webkit-user-drag: none;
+	-moz-user-drag: none;
+	-ms-user-drag: none;
+	font-family: var(--minecraft-font);
+	font-size: var(--font-size-medium);
+	color: var(--minecraft-button-text-color);
+	background-color: var(--minecraft-button-color);
+
+	box-shadow:
+		0 -12px 0 0 #58585a inset,
+		0 -16px 0 0 var(--minecraft-button-inset-border-color) inset,
+		0 0 0 4px var(--minecraft-button-inset-border-color) inset,
+		0 0 0 4px var(--minecraft-border-color);
+	border-bottom: unset;
+	padding: calc(4px + 8px) 16px calc(8px + 12px + 4px) 16px;
+	position: relative;
+	text-align: center;
+	height: min-content;
+}
+.minecraft-button:hover {
+	background-color: var(--minecraft-button-hover-color);
+}
+.minecraft-button:active {
+
+	box-shadow:
+		0 0 0 4px #ecedee inset,
+		0 0 0 4px #1e1e1f;
+	padding: calc(4px + 8px) 16px calc(8px + 4px) 16px;
+	margin-top: 12px;
+}
+
+.minecraft-button.accent {
+	color: #1e1e1f;
+	background-color: var(--accent);
+
+	box-shadow:
+		0 -12px 0 0 #c9a63a inset,
+		0 -16px 0 0 var(--accent-light) inset,
+		0 0 0 4px var(--accent-light) inset,
+		0 0 0 4px var(--minecraft-border-color);
+}
+.minecraft-button.accent:hover {
+	background-color: var(--accent-light);
+}
+
+.minecraft-box {
+	padding-top: 4px;
+	outline: 4px solid var(--minecraft-border-color);
+	background-color: var(--minecraft-foreground-color);
+
+	box-shadow:
+		0 4px 0 0 #ffffff33 inset,
+		0 -4px 0 0 #00000055 inset;
+}
+
+.minecraft-inset-box {
+	background-color: var(--minecraft-background-color);
+
+	box-shadow:
+		0 12px 0 0 #00000044 inset,
+		0 0 0 4px var(--minecraft-border-color);
+	padding: calc(8px + 16px) calc(8px) calc(8px + 4px) calc(8px + 4px);
+}
+
+hr {
+	width: 120%;
+	transform: translateX(-10%);
+	border: 0;
+	border-top: 4px solid var(--minecraft-border-bottom-color);
+	border-bottom: 4px solid var(--minecraft-border-top-color);
+	margin: 32px 0;
+}
+
+.minecraft-right-arrow::before {
+	content: '→';
+	display: inline-block;
+	font-family: 'MinecraftFull', sans-serif;
+	text-decoration: none;
+	font-weight: normal;
+	font-style: normal;
+}
+.minecraft-left-arrow::before {
+	content: '←';
+	display: inline-block;
+	font-family: 'MinecraftFull', sans-serif;
+	text-decoration: none;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.minecraft-icon {
+	width: 24px;
+	height: 24px;
+	image-rendering: pixelated;
+	vertical-align: middle;
+}

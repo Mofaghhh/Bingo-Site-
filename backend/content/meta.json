@@ -1,0 +1,52 @@
+{
+	"brand": {
+		"name": "Bingo Ranked",
+		"short": "Bingo",
+		"tagline": {
+			"ru": "Соревновательный Bingo для Minecraft.",
+			"en": "Competitive Bingo for Minecraft."
+		}
+	},
+	"languages": [
+		{ "code": "ru", "label": "Русский", "short": "RU" },
+		{ "code": "en", "label": "English", "short": "EN" }
+	],
+	"ui": {
+		"ru": {
+			"home": "Главная",
+			"docs": "Документация",
+			"menu": "Меню",
+			"onThisPage": "На этой странице",
+			"previous": "Назад",
+			"next": "Далее",
+			"searchPlaceholder": "Поиск по документации",
+			"searchNoResults": "Ничего не найдено",
+			"searchHint": "Введите запрос, чтобы найти страницу.",
+			"language": "Язык",
+			"notFound": "Страница не найдена",
+			"notFoundText": "Такой страницы нет или она была перемещена.",
+			"backHome": "На главную",
+			"footerNote": "Официальная документация проекта Bingo Ranked.",
+			"lastUpdated": "Обновлено",
+			"legal": "Лицензия и правовая информация"
+		},
+		"en": {
+			"home": "Home",
+			"docs": "Documentation",
+			"menu": "Menu",
+			"onThisPage": "On this page",
+			"previous": "Previous",
+			"next": "Next",
+			"searchPlaceholder": "Search the documentation",
+			"searchNoResults": "No results",
+			"searchHint": "Type a query to find a page.",
+			"language": "Language",
+			"notFound": "Page not found",
+			"notFoundText": "This page does not exist or has been moved.",
+			"backHome": "Back to home",
+			"footerNote": "Official documentation for the Bingo Ranked project.",
+			"lastUpdated": "Updated",
+			"legal": "License and legal"
+		}
+	}
+}

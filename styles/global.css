@@ -1,0 +1,323 @@
+@font-face {
+	font-family: 'MinecraftFull';
+	src: url('../fonts/MinecraftFull.ttf') format('truetype');
+	font-display: swap;
+	font-weight: normal;
+	unicode-range: U+0000-024F, U+1E00-1EFF, U+2000-206F, U+2070-209F, U+20A0-20CF,
+		U+2100-214F, U+2190-21FF, U+2200-22FF, U+FEFF, U+FFFD;
+}
+@font-face {
+	font-family: 'MinecraftTen';
+	src: url('../fonts/MinecraftTen.ttf') format('truetype');
+	font-display: swap;
+	font-weight: normal;
+	unicode-range: U+0000-024F, U+1E00-1EFF, U+2000-206F, U+2070-209F, U+20A0-20CF,
+		U+2100-214F, U+2190-21FF, U+2200-22FF, U+FEFF, U+FFFD;
+}
+
+@font-face {
+	font-family: 'MinecraftFull';
+	src: url('../fonts/MinecraftRus.woff2') format('woff2'),
+		url('../fonts/MinecraftRus.ttf') format('truetype');
+	font-display: swap;
+	font-weight: normal;
+	unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+	font-family: 'MinecraftTen';
+	src: url('../fonts/MinecraftRus.woff2') format('woff2'),
+		url('../fonts/MinecraftRus.ttf') format('truetype');
+	font-display: swap;
+	font-weight: normal;
+	unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+html {
+	--un-bg-opacity: 0;
+	background: linear-gradient(
+		180deg,
+		var(--site-bg-top) 0%,
+		var(--site-bg-mid) 45%,
+		var(--site-bg-bottom) 100%
+	);
+	color: #ffffff;
+	font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: var(--site-bg-top);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+code,
+pre,
+.shiki code {
+	font-family: 'Cascadia Code', Consolas, 'SFMono-Regular', Menlo, monospace !important;
+	font-size: 14px !important;
+}
+
+@media (width < 640px) {
+	* {
+		font-size: 14px;
+	}
+}
+
+code {
+	text-wrap: nowrap;
+}
+
+a {
+	color: var(--accent);
+}
+
+.docs-content p {
+	overflow-wrap: break-word;
+	color: var(--minecraft-text-color);
+	margin-left: 1.5rem;
+	line-height: 1.65;
+}
+
+.docs-content li > :first-child {
+	margin-left: 0;
+	display: inline;
+}
+
+.docs-content img {
+	max-width: 100%;
+	background-color: var(--minecraft-background-color);
+
+	box-shadow:
+		0 0 0 4px var(--minecraft-border-color);
+	margin: 16px 0px;
+}
+
+.docs-content a {
+	color: var(--accent-light);
+	text-underline-offset: 2px;
+}
+.docs-content a:hover {
+	color: #ffffff;
+}
+
+.docs-content pre {
+	overflow-x: auto;
+	color: var(--minecraft-text-secondary-color);
+	background-color: var(--minecraft-code-background-color);
+
+	box-shadow:
+		0 8px 0 0 #00000044 inset,
+		0 0 0 4px var(--minecraft-border-color);
+	padding: calc(8px + 12px) calc(8px) calc(8px + 4px) calc(8px + 4px);
+	border-radius: 0px;
+}
+
+.docs-content code {
+	background-color: var(--minecraft-code-background-color);
+	color: var(--accent-light);
+	border-radius: 4px;
+	padding: 2px 4px;
+	margin: 0 1px 0 1px;
+	text-wrap: nowrap;
+}
+
+.docs-content pre code {
+	text-wrap: initial;
+	line-height: 1.5;
+	background: none;
+	color: var(--minecraft-text-secondary-color);
+}
+
+.docs-content .admonition {
+	margin: 16px 0;
+	padding: 16px 12px 4px 12px;
+	border-left: 4px solid var(--accent);
+	background-color: #26210f;
+	overflow: clip;
+	outline: 4px solid var(--minecraft-border-color);
+
+	box-shadow:
+		0 4px 0 0 #ffffff33 inset,
+		0 -4px 0 0 #00000055 inset;
+}
+.docs-content .admonition > div > p {
+	margin-left: 0;
+}
+.docs-content .admonition-title {
+	margin: 0 0 8px;
+	font-family: 'MinecraftFull', sans-serif;
+	font-size: 16px;
+	color: var(--accent);
+}
+
+.docs-content .admonition-tip {
+	border-left-color: #6add8f;
+	background-color: #102d22;
+}
+.docs-content .admonition-tip .admonition-title {
+	color: #6add8f;
+}
+
+.docs-content .admonition-warning {
+	border-left-color: #ff9f4a;
+	background-color: #33210d;
+}
+.docs-content .admonition-warning .admonition-title {
+	color: #ff9f4a;
+}
+
+.docs-content .admonition-danger {
+	border-left-color: #ff6f6f;
+	background-color: #3d1c1c;
+}
+.docs-content .admonition-danger .admonition-title {
+	color: #ff6f6f;
+}
+
+.docs-content .admonition-info,
+.docs-content .admonition-note {
+	border-left-color: var(--accent);
+	background-color: #26210f;
+}
+.docs-content .admonition-info .admonition-title,
+.docs-content .admonition-note .admonition-title {
+	color: var(--accent);
+}
+
+.docs-content h1 {
+	font-family: var(--minecraft-header-font);
+	font-size: 64px;
+	font-weight: normal;
+	letter-spacing: 0.05em;
+	background: var(--accent-gradient-deep);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 24px 0px 32px 0px;
+	filter: drop-shadow(4px 4px 0px #00000044);
+}
+
+.docs-content h2 {
+	font-family: var(--minecraft-header-font);
+	font-size: calc(9px * 4);
+	font-weight: normal;
+	letter-spacing: 0.05em;
+	background: var(--accent-gradient-deep);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 32px 0 16px;
+	filter: drop-shadow(3px 3px 0px #00000044);
+	width: fit-content;
+}
+
+.docs-content h3 {
+	font-family: var(--minecraft-header-font);
+	font-size: calc(9px * 3);
+	font-weight: normal;
+	letter-spacing: 0.05em;
+	color: var(--accent-light);
+	padding-left: 8px;
+	margin: 32px 0 12px;
+	filter: drop-shadow(2px 2px 0px #00000044);
+	width: fit-content;
+}
+
+.docs-content h4 {
+	display: inline-block;
+	margin: 0;
+}
+
+@media (width < 640px) {
+	.docs-content h1 {
+		font-size: 48px !important;
+	}
+	.docs-content h2 {
+		font-size: calc(9px * 3.5) !important;
+	}
+	.docs-content h3 {
+		font-size: calc(9px * 2.5) !important;
+	}
+	.docs-content p {
+		margin-left: 0;
+	}
+	.docs-content ul {
+		padding-left: 8px !important;
+	}
+	.docs-content ol {
+		padding-left: 24px !important;
+	}
+}
+
+.docs-content ul {
+	padding-left: 32px;
+	margin-bottom: 16px;
+}
+.docs-content ul li::marker {
+	content: '';
+	display: none;
+}
+.docs-content ul li::before {
+	content: '';
+	font-family: var(--minecraft-font);
+	font-size: var(--font-size-small);
+	color: transparent;
+	background-color: var(--accent);
+	width: 10px;
+	height: 10px;
+	outline: 3px solid var(--minecraft-border-color);
+
+	box-shadow:
+		-1px -1px 0 0 #00000044 inset,
+		1px 1px 0 0 #ffffff44 inset;
+	display: inline-block;
+	transform: translateY(-1px) rotate(45deg);
+	margin-right: 16px;
+}
+.docs-content ol li::marker {
+	font-family: var(--minecraft-font);
+	font-size: var(--font-size-small);
+	color: var(--accent);
+}
+.docs-content li {
+	margin-bottom: 6px;
+}
+.docs-content li + li {
+	margin: 16px 0 0 0;
+}
+
+@media (width < 640px) {
+	.docs-content ul li::before {
+		margin-right: 8px;
+		width: 6px;
+		height: 6px;
+	}
+}
+
+.docs-content table {
+	border-collapse: collapse;
+	margin: 16px 0;
+}
+.docs-content table th,
+.docs-content table td {
+	border: 4px solid var(--minecraft-border-color);
+	padding: 8px;
+}
+.docs-content table th {
+	font-family: var(--minecraft-font);
+	font-size: var(--font-size-small);
+	font-weight: normal;
+	background-color: var(--minecraft-foreground-color);
+
+	box-shadow:
+		4px 4px 0 0 #ffffff22 inset,
+		-4px -4px 0 0 #00000022 inset;
+}
+.docs-content table td {
+	background-color: var(--minecraft-background-color);
+	color: var(--minecraft-text-color);
+}

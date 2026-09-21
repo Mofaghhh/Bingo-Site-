@@ -1,0 +1,49 @@
+<svg width="1024" height="1024" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <!-- жёсткая пиксельная тень -->
+  <path d="M2 1H14V3H10V4H12V10H13V12H14V14H12V15H4V14H2V12H3V10H4V4H6V3H2Z"
+        transform="translate(0.8 0.8)" fill="#000" opacity="0.45"/>
+
+  <!-- белая обводка: ровный ступенчатый контур силуэта -->
+  <path d="M2 1H14V3H10V4H12V10H13V12H14V14H12V15H4V14H2V12H3V10H4V4H6V3H2Z"
+        fill="#fff" stroke="#fff" stroke-width="1"/>
+
+  <!-- колокол (пиксель-спрайт) -->
+  <g>
+    <!-- балка -->
+    <rect x="2" y="1" width="12" height="1" fill="#7a4a2a"/>
+    <rect x="3" y="1" width="2"  height="1" fill="#8a5a35"/>
+    <rect x="9" y="1" width="3"  height="1" fill="#5a3419"/>
+    <rect x="13" y="1" width="1" height="1" fill="#3a2010"/>
+    <rect x="2" y="2" width="12" height="1" fill="#4a2a15"/>
+    <rect x="8" y="2" width="6"  height="1" fill="#3a2010"/>
+    <!-- шейка -->
+    <rect x="6" y="3" width="4" height="1" fill="#b8862f"/>
+    <rect x="9" y="3" width="1" height="1" fill="#8a5a20"/>
+    <!-- тело -->
+    <rect x="4" y="4" width="8" height="5" fill="#f2cf4e"/>
+    <rect x="4" y="4" width="1" height="5" fill="#c9973a"/>
+    <rect x="6" y="4" width="2" height="5" fill="#fbf19b"/>
+    <rect x="9" y="4" width="2" height="5" fill="#e8bf3e"/>
+    <rect x="11" y="4" width="1" height="5" fill="#8a5a20"/>
+    <rect x="4" y="9" width="8" height="1" fill="#d9a83c"/>
+    <rect x="6" y="9" width="2" height="1" fill="#f3e08a"/>
+    <rect x="11" y="9" width="1" height="1" fill="#8a5a20"/>
+    <!-- юбка -->
+    <rect x="3" y="10" width="10" height="1" fill="#f7d95c"/>
+    <rect x="3" y="10" width="1"  height="1" fill="#c9973a"/>
+    <rect x="6" y="10" width="2"  height="1" fill="#fbf19b"/>
+    <rect x="12" y="10" width="1" height="1" fill="#8a5a20"/>
+    <rect x="3" y="11" width="10" height="1" fill="#f3e08a"/>
+    <rect x="3" y="11" width="1"  height="1" fill="#c9973a"/>
+    <rect x="6" y="11" width="2"  height="1" fill="#fbf19b"/>
+    <rect x="12" y="11" width="1" height="1" fill="#d9a83c"/>
+    <!-- подставка -->
+    <rect x="2" y="12" width="12" height="1" fill="#f3e08a"/>
+    <rect x="2" y="12" width="1"  height="1" fill="#d9a83c"/>
+    <rect x="5" y="12" width="4"  height="1" fill="#fbf19b"/>
+    <rect x="13" y="12" width="1" height="1" fill="#c9973a"/>
+    <rect x="2" y="13" width="12" height="1" fill="#8a5a20"/>
+    <rect x="12" y="13" width="2" height="1" fill="#5a3419"/>
+    <rect x="4" y="14" width="8"  height="1" fill="#5a3a1f"/>
+  </g>
+</svg>
