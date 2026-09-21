@@ -6,10 +6,10 @@ const path = require('path');
 const url = require('url');
 
 const content = require('./lib/content');
-const { renderPage, renderNotFound } = require('./lib/template');
 
 const PORT = process.env.PORT || 3000;
 const SITE_ROOT = path.join(__dirname, '..');
+const BASE = (process.env.BASE_PATH || '').replace(/\/+$/, '');
 
 const MIME = {
 	'.html': 'text/html; charset=utf-8',
@@ -26,6 +26,13 @@ const MIME = {
 	'.woff2': 'font/woff2'
 };
 
+function stripBase(p) {
+	if (!BASE) return p;
+	if (p === BASE) return '/';
+	if (p.startsWith(BASE + '/')) return p.slice(BASE.length);
+	return p;
+}
+
 function sendJson(res, status, data) {
 	const body = JSON.stringify(data);
 	res.writeHead(status, {
@@ -36,28 +43,30 @@ function sendJson(res, status, data) {
 	res.end(body);
 }
 
-function sendHtml(res, status, html, extraHeaders) {
-	const headers = Object.assign(
-		{
-			'Content-Type': 'text/html; charset=utf-8',
-			'Content-Length': Buffer.byteLength(html),
-			'Cache-Control': 'no-cache'
-		},
-		extraHeaders || {}
-	);
-	res.writeHead(status, headers);
-	res.end(html);
-}
-
 function sendFile(res, filePath) {
 	fs.readFile(filePath, (err, data) => {
+		if (err) {
+			notFound(res);
+			return;
+		}
+		res.writeHead(200, {
+			'Content-Type': MIME[path.extname(filePath).toLowerCase()] || 'application/octet-stream',
+			'Content-Length': data.length
+		});
+		res.end(data);
+	});
+}
+
+function notFound(res) {
+	const file = path.join(SITE_ROOT, '404.html');
+	fs.readFile(file, (err, data) => {
 		if (err) {
 			res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
 			res.end('404');
 			return;
 		}
-		res.writeHead(200, {
-			'Content-Type': MIME[path.extname(filePath).toLowerCase()] || 'application/octet-stream',
+		res.writeHead(404, {
+			'Content-Type': 'text/html; charset=utf-8',
 			'Content-Length': data.length
 		});
 		res.end(data);
@@ -82,13 +91,9 @@ function resolveLang(req, query) {
 	return content.normalizeLang(content.defaultLang());
 }
 
-function notFoundPage(lang) {
-	return renderNotFound(lang);
-}
-
 const server = http.createServer((req, res) => {
 	const parsed = url.parse(req.url, true);
-	const pathname = decodeURIComponent(parsed.pathname);
+	const pathname = stripBase(decodeURIComponent(parsed.pathname));
 	const query = parsed.query;
 
 	if (pathname.startsWith('/api/')) {
@@ -119,27 +124,13 @@ const server = http.createServer((req, res) => {
 		return sendJson(res, 404, { error: 'unknown_endpoint' });
 	}
 
-	const lang = resolveLang(req, query);
-
 	if (pathname === '/docs' || pathname === '/docs/') {
-		const first = content.listPages(lang)[0];
-		res.writeHead(302, { Location: '/docs/' + (first ? first.slug : '') + '/' });
+		const first = content.listPages(content.defaultLang())[0];
+		res.writeHead(302, { Location: BASE + '/docs/' + (first ? first.slug : '') + '/' });
 		return res.end();
 	}
 
-	if (pathname.startsWith('/docs/')) {
-		const slug = pathname.slice('/docs/'.length).replace(/\/+$/, '').replace(/\.html$/, '');
-		if (!slug) {
-			const first = content.listPages(lang)[0];
-			res.writeHead(302, { Location: '/docs/' + (first ? first.slug : '') + '/' });
-			return res.end();
-		}
-		const html = renderPage(slug, lang);
-		if (!html) return sendHtml(res, 404, notFoundPage(lang));
-		return sendHtml(res, 200, html);
-	}
-
-	let filePath = pathname === '/' ? '/index.html' : pathname;
+	let filePath = pathname.endsWith('/') ? pathname + 'index.html' : pathname;
 	const resolved = path.normalize(path.join(SITE_ROOT, filePath));
 	if (!resolved.startsWith(SITE_ROOT)) {
 		res.writeHead(403);
@@ -149,9 +140,9 @@ const server = http.createServer((req, res) => {
 		return sendFile(res, resolved);
 	}
 
-	return sendHtml(res, 404, notFoundPage(lang));
+	return notFound(res);
 });
 
 server.listen(PORT, () => {
-	console.log('Bingo wiki backend listening on http://localhost:' + PORT);
+	console.log('Bingo wiki on http://localhost:' + PORT + (BASE ? ' (base ' + BASE + ')' : ''));
 });

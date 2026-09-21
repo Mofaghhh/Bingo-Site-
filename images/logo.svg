@@ -3,10 +3,6 @@
   <path d="M2 1H14V3H10V4H12V10H13V12H14V14H12V15H4V14H2V12H3V10H4V4H6V3H2Z"
         transform="translate(0.8 0.8)" fill="#000" opacity="0.45"/>
 
-  <!-- белая обводка: ровный ступенчатый контур силуэта -->
-  <path d="M2 1H14V3H10V4H12V10H13V12H14V14H12V15H4V14H2V12H3V10H4V4H6V3H2Z"
-        fill="#fff" stroke="#fff" stroke-width="1"/>
-
   <!-- колокол (пиксель-спрайт) -->
   <g>
     <!-- балка -->
