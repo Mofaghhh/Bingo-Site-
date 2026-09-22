@@ -99,14 +99,6 @@
 					}
 				},
 				{
-					"slug": "ranked/istoriya-elo",
-					"title": { "ru": "ELO history", "en": "ELO history" },
-					"description": {
-						"ru": "Динамика рейтинга между матчами.",
-						"en": "Rating changes across matches."
-					}
-				},
-				{
 					"slug": "ranked/sezony",
 					"title": { "ru": "Seasons", "en": "Seasons" },
 					"description": {
