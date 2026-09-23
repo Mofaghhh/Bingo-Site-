@@ -31,7 +31,7 @@
 			section.items.forEach(function (item) {
 				var active = item.slug === activeSlug ? ' class="active"' : '';
 				out +=
-					'<li><a' + active + ' href="/bingo-ranked/docs/' + item.slug + '/">' + esc(item.title) + '</a></li>';
+					'<li><a' + active + ' href="/Bingo-Site-/docs/' + item.slug + '/">' + esc(item.title) + '</a></li>';
 			});
 			out += '</ul></div>';
 		});
@@ -58,7 +58,7 @@
 		var out = '';
 		if (prevNext && prevNext.prev) {
 			out +=
-				'<a class="prev" href="/bingo-ranked/docs/' +
+				'<a class="prev" href="/Bingo-Site-/docs/' +
 				prevNext.prev.slug +
 				'/"><span class="page-label">' +
 				esc(ui.previous) +
@@ -70,7 +70,7 @@
 		}
 		if (prevNext && prevNext.next) {
 			out +=
-				'<a class="next" href="/bingo-ranked/docs/' +
+				'<a class="next" href="/Bingo-Site-/docs/' +
 				prevNext.next.slug +
 				'/"><span class="page-label">' +
 				esc(ui.next) +
@@ -118,7 +118,7 @@
 		document.title = page.title + ' — ' + data.brand.name;
 		document.documentElement.lang = lang;
 		var docsBtn = document.querySelector('[data-docs]');
-		if (docsBtn) docsBtn.setAttribute('href', '/bingo-ranked/docs/' + firstSlug(lang) + '/');
+		if (docsBtn) docsBtn.setAttribute('href', '/Bingo-Site-/docs/' + firstSlug(lang) + '/');
 		rendered = lang;
 		markActive(lang);
 		store(lang);
