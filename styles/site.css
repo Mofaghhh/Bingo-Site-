@@ -606,6 +606,25 @@
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+	.hero-actions .minecraft-button {
+		flex: 1 1 100%;
+		text-align: center;
+	}
+	.hero-art img {
+		width: 160px;
+	}
+	.intro-section > div {
+		padding: 18px 20px;
+	}
+	.intro-section p {
+		font-size: 16px;
+	}
+	.section-title {
+		font-size: 26px;
+	}
+	.card {
+		padding: 20px;
+	}
 	.site-footer {
 		padding: 32px 20px;
 	}
