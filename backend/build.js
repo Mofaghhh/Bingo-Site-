@@ -33,12 +33,12 @@ function copyDir(src, dest) {
 	}
 }
 
-const STALE_BASES = /\/(?:bingo-ranked|bingo-ranked|Bingo-Site-|bingo-site)/g;
+const STALE_BASES = /\/(?:bingo-ranked|Bingo-Site-|bingo-site)/g;
 
 function applyBase(text) {
 	if (!BASE) return text;
 	text = text.replace(STALE_BASES, '');
-	text = text.replace(/(["'])\/(["'])(?:["'])?/g, '$1' + BASE + '/$2');
+	text = text.replace(/(href=["'])\/(["'])/g, '$1' + BASE + '/$2');
 	return text.replace(
 		/(["'(])\/(docs|styles|scripts|fonts|images|logo\.svg|favicon\.svg)/g,
 		'$1' + BASE + '/$2'

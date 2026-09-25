@@ -31,7 +31,7 @@
 			section.items.forEach(function (item) {
 				var active = item.slug === activeSlug ? ' class="active"' : '';
 				out +=
-					'<li><a' + active + ' href="/Bingo-Site-/docs/' + item.slug + '/">' + esc(item.title) + '</a></li>';
+					'<li><a' + active + ' href="/Bingo-Site-/docs/' + item.slug + '/Bingo-Site-/">' + esc(item.title) + '</a></li>';
 			});
 			out += '</ul></div>';
 		});
@@ -60,7 +60,7 @@
 			out +=
 				'<a class="prev" href="/Bingo-Site-/docs/' +
 				prevNext.prev.slug +
-				'/"><span class="page-label">' +
+				'/Bingo-Site-/"><span class="page-label">' +
 				esc(ui.previous) +
 				'</span><span class="page-title">' +
 				esc(prevNext.prev.title) +
@@ -72,7 +72,7 @@
 			out +=
 				'<a class="next" href="/Bingo-Site-/docs/' +
 				prevNext.next.slug +
-				'/"><span class="page-label">' +
+				'/Bingo-Site-/"><span class="page-label">' +
 				esc(ui.next) +
 				'</span><span class="page-title">' +
 				esc(prevNext.next.title) +
@@ -118,7 +118,7 @@
 		document.title = page.title + ' — ' + data.brand.name;
 		document.documentElement.lang = lang;
 		var docsBtn = document.querySelector('[data-docs]');
-		if (docsBtn) docsBtn.setAttribute('href', '/Bingo-Site-/docs/' + firstSlug(lang) + '/');
+		if (docsBtn) docsBtn.setAttribute('href', '/Bingo-Site-/docs/' + firstSlug(lang) + '/Bingo-Site-/');
 		rendered = lang;
 		markActive(lang);
 		store(lang);

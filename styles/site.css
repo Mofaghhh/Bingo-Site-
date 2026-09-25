@@ -281,6 +281,57 @@
 	flex-wrap: wrap;
 }
 
+.menu-toggle {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	padding: 0;
+	cursor: pointer;
+	border: 0;
+	color: #c6c7c9;
+	background-color: #1b1c1f;
+	box-shadow: 0 0 0 4px var(--minecraft-border-color);
+}
+.menu-toggle:hover {
+	color: var(--accent);
+}
+.menu-toggle span,
+.menu-toggle span::before,
+.menu-toggle span::after {
+	position: absolute;
+	width: 20px;
+	height: 2px;
+	background-color: currentColor;
+}
+.menu-toggle span {
+	position: relative;
+	display: block;
+}
+.menu-toggle span::before,
+.menu-toggle span::after {
+	content: '';
+	left: 0;
+}
+.menu-toggle span::before {
+	top: -6px;
+}
+.menu-toggle span::after {
+	top: 6px;
+}
+
+.docs-sidebar-backdrop {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 25;
+	background-color: #00000088;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
 .lang-switch {
 	display: flex;
 }
@@ -499,19 +550,49 @@
 		order: -1;
 		justify-self: center;
 	}
+	.menu-toggle {
+		display: flex;
+	}
 	.docs-layout {
 		grid-template-columns: minmax(0, 1fr);
 		padding: 24px 20px 64px;
 	}
 	.docs-sidebar {
-		position: static;
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 30;
+		width: min(320px, 86vw);
 		max-height: none;
+		margin: 0;
+		padding: 28px 20px 32px;
+		background-color: #101114;
+		border-right: 4px solid var(--minecraft-border-color);
+		box-shadow: 0 0 0 4px #ffffff0d inset;
+		overflow-y: auto;
+		transform: translateX(-105%);
+		transition: transform 0.25s ease;
+	}
+	.docs-sidebar-backdrop {
+		display: block;
+	}
+	body.sidebar-open {
+		overflow: hidden;
+	}
+	body.sidebar-open .docs-sidebar {
+		transform: translateX(0);
+	}
+	body.sidebar-open .docs-sidebar-backdrop {
+		pointer-events: auto;
+		opacity: 1;
 	}
 }
 
 @media (width < 640px) {
 	.site-header {
 		padding: 16px 20px;
+		justify-content: center;
 	}
 	.site-brand .brand-name {
 		font-size: 28px;
@@ -530,5 +611,36 @@
 	}
 	.docs-header {
 		padding: 12px 16px;
+	}
+	.docs-header .brand-name {
+		font-size: 20px;
+	}
+	.docs-header .site-brand img {
+		width: 32px;
+		height: 32px;
+	}
+	.docs-header {
+		gap: 12px;
+	}
+	.docs-header .header-tools {
+		gap: 8px;
+	}
+	.docs-header .minecraft-button {
+		padding: 8px 12px;
+		font-size: 13px;
+	}
+	.lang-switch a,
+	.lang-switch button {
+		font-size: 13px;
+		padding: 8px 10px;
+	}
+	.docs-layout {
+		padding: 16px 14px 48px;
+	}
+	.docs-content p {
+		margin-left: 0.75rem;
+	}
+	.docs-toc {
+		display: none;
 	}
 }

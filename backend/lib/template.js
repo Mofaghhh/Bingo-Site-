@@ -160,10 +160,13 @@ function renderPage(slug, initialLang) {
 					<span class="brand-name">${esc(meta.brand.name)}</span>
 				</a>
 				<div class="header-tools">
+					<button class="menu-toggle" type="button" data-menu-toggle aria-label="Menu" aria-expanded="false"><span></span></button>
 					<a class="minecraft-button" data-docs href="${docsHref}">${esc(ui.docs)}</a>
 					${renderLangSwitch(lang, meta)}
 				</div>
 			</header>
+
+			<div class="docs-sidebar-backdrop" data-menu-close></div>
 
 			<div class="docs-layout">
 				<aside class="docs-sidebar">${renderSidebar(nav, slug)}</aside>
