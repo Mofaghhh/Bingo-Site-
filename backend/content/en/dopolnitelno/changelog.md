@@ -1,5 +1,25 @@
 # Changelog
 
+### Version 1.2.0 — Minecraft 26.3 (September 25, 2026)
+
+**Menu**
+
+- Fixed the mode menu buttons darkening
+- Updated the menu buttons
+
+**Interface**
+
+- The timer on the card no longer turns red
+- The "Create lobby" icon is now a regular white map
+
+**Other**
+
+- Fixed the license screen
+
+**How to update**
+
+- Use the update button on the main screen, or download the new version from Modrinth
+
 ### Version 1.1.0 — Minecraft 26.3 (September 22, 2026)
 
 **Compatibility**
