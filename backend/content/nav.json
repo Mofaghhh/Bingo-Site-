@@ -4,7 +4,7 @@
 	"sections": [
 		{
 			"id": "start",
-			"title": { "ru": "Getting started", "en": "Getting started" },
+			"title": { "ru": "Начало работы", "en": "Getting started" },
 			"items": [
 				{
 					"slug": "bingo-ranked",
@@ -16,25 +16,25 @@
 				},
 				{
 					"slug": "nachalo-raboty/vy-novichok-sygraite-v-trenirovku",
-					"title": { "ru": "New to Bingo? Try Practice", "en": "New to Bingo? Try Practice" },
+					"title": { "ru": "Новичок? Опробуйте тренировку", "en": "New to Bingo? Try Practice" },
 					"description": {
-						"ru": "Тренировочный режим для знакомства с механикой.",
+						"ru": "Тренировочный режим для знакомства с механикой без рейтинга.",
 						"en": "A practice mode that introduces the core mechanics."
 					}
 				},
 				{
 					"slug": "nachalo-raboty/kak-igrat",
-					"title": { "ru": "How to play", "en": "How to play" },
+					"title": { "ru": "Как играть", "en": "How to play" },
 					"description": {
-						"ru": "Пошаговый запуск первого матча.",
+						"ru": "Пошаговый запуск первого матча: от лобби до финиша.",
 						"en": "A step-by-step walkthrough of your first match."
 					}
 				},
 				{
 					"slug": "nachalo-raboty/faq",
-					"title": { "ru": "FAQ", "en": "FAQ" },
+					"title": { "ru": "Частые вопросы (FAQ)", "en": "FAQ" },
 					"description": {
-						"ru": "Частые вопросы о матчах, Ready и Surrender.",
+						"ru": "Ответы на популярные вопросы о матчах, Ready и сдаче.",
 						"en": "Common questions about matches, Ready and surrender."
 					}
 				}
@@ -42,45 +42,45 @@
 		},
 		{
 			"id": "game",
-			"title": { "ru": "Gameplay", "en": "Gameplay" },
+			"title": { "ru": "Игровой процесс", "en": "Gameplay" },
 			"items": [
 				{
 					"slug": "igra/bingo",
-					"title": { "ru": "Bingo", "en": "Bingo" },
+					"title": { "ru": "Бинго-карта", "en": "Bingo" },
 					"description": {
-						"ru": "Карта 5×5 из 25 целей.",
+						"ru": "Сетка 5×5 из 25 целей и правила закрытия линий.",
 						"en": "A 5x5 board with 25 objectives."
 					}
 				},
 				{
 					"slug": "igra/lobbi",
-					"title": { "ru": "Lobby", "en": "Lobby" },
+					"title": { "ru": "Лобби", "en": "Lobby" },
 					"description": {
-						"ru": "Подготовка и Ready перед матчем.",
+						"ru": "Подготовка к игре и проверка готовности Ready.",
 						"en": "Preparation and Ready before a match."
 					}
 				},
 				{
 					"slug": "igra/matchmaking",
-					"title": { "ru": "Matchmaking", "en": "Matchmaking" },
+					"title": { "ru": "Поиск игры", "en": "Matchmaking" },
 					"description": {
-						"ru": "Поиск соперника для Ranked-матча.",
+						"ru": "Автоматический подбор соперника по текущему рейтингу.",
 						"en": "Finding an opponent for a ranked match."
 					}
 				},
 				{
 					"slug": "igra/matchi",
-					"title": { "ru": "Matches", "en": "Matches" },
+					"title": { "ru": "Матчи", "en": "Matches" },
 					"description": {
-						"ru": "Равные стартовые условия и ход матча.",
+						"ru": "Равные стартовые условия и структура поединка.",
 						"en": "Equal starting conditions and match flow."
 					}
 				},
 				{
 					"slug": "igra/vykhod-iz-matcha-i-surrender",
-					"title": { "ru": "Leaving a match and surrender", "en": "Leaving a match and surrender" },
+					"title": { "ru": "Выход и сдача (Surrender)", "en": "Leaving a match and surrender" },
 					"description": {
-						"ru": "Как работает выход из матча и сдача.",
+						"ru": "Как работает кнопка сдачи и штрафы за выход из игры.",
 						"en": "How leaving a match and surrender are handled."
 					}
 				}
@@ -88,29 +88,29 @@
 		},
 		{
 			"id": "ranked",
-			"title": { "ru": "Ranked", "en": "Ranked" },
+			"title": { "ru": "Рейтинг и ранги", "en": "Ranked" },
 			"items": [
 				{
 					"slug": "ranked/elo-i-rangi",
-					"title": { "ru": "ELO and ranks", "en": "ELO and ranks" },
+					"title": { "ru": "Система ELO и ранги", "en": "ELO and ranks" },
 					"description": {
-						"ru": "Рейтинг, уровни и их диапазоны.",
+						"ru": "Шкала рейтинга от Copper до Netherite и правила начисления очков.",
 						"en": "Rating, tiers and their ranges."
 					}
 				},
 				{
 					"slug": "ranked/sezony",
-					"title": { "ru": "Seasons", "en": "Seasons" },
+					"title": { "ru": "Сезоны", "en": "Seasons" },
 					"description": {
-						"ru": "Соревновательные периоды Ranked.",
+						"ru": "Соревновательные сезоны, награды и сброс рейтинга.",
 						"en": "Competitive periods in ranked play."
 					}
 				},
 				{
 					"slug": "ranked/liderbord",
-					"title": { "ru": "Leaderboard", "en": "Leaderboard" },
+					"title": { "ru": "Таблица лидеров", "en": "Leaderboard" },
 					"description": {
-						"ru": "Лучшие игроки Ranked.",
+						"ru": "Топ лучших игроков рейтингового сезона.",
 						"en": "The top ranked players."
 					}
 				}
@@ -118,37 +118,37 @@
 		},
 		{
 			"id": "community",
-			"title": { "ru": "Community", "en": "Community" },
+			"title": { "ru": "Сообщество", "en": "Community" },
 			"items": [
 				{
 					"slug": "soobshestvo/pravila",
-					"title": { "ru": "Rules", "en": "Rules" },
+					"title": { "ru": "Правила", "en": "Rules" },
 					"description": {
-						"ru": "Правила честной игры.",
+						"ru": "Регламент честной игры и поведение в матчах.",
 						"en": "Rules for fair play."
 					}
 				},
 				{
 					"slug": "soobshestvo/zapreshyonnye-modifikacii",
-					"title": { "ru": "Banned modifications", "en": "Banned modifications" },
+					"title": { "ru": "Запрещённые моды", "en": "Banned modifications" },
 					"description": {
-						"ru": "Список запрещённых модификаций по категориям.",
+						"ru": "Актуальный список разрешённых и запрещённых модов.",
 						"en": "Banned modifications grouped by category."
 					}
 				},
 				{
 					"slug": "soobshestvo/turniry",
-					"title": { "ru": "Tournaments", "en": "Tournaments" },
+					"title": { "ru": "Турниры", "en": "Tournaments" },
 					"description": {
-						"ru": "Соревновательные события Bingo Ranked.",
+						"ru": "Специальные турниры для стримеров и контент-мейкеров.",
 						"en": "Competitive Bingo Ranked events."
 					}
 				},
 				{
 					"slug": "soobshestvo/messenger-druzya",
-					"title": { "ru": "Messenger and friends", "en": "Messenger and friends" },
+					"title": { "ru": "Друзья и мессенджер", "en": "Messenger and friends" },
 					"description": {
-						"ru": "Друзья, профиль и общение.",
+						"ru": "Список друзей, чат и система быстрых сообщений.",
 						"en": "Friends, profile and messaging."
 					}
 				}
@@ -156,37 +156,37 @@
 		},
 		{
 			"id": "extra",
-			"title": { "ru": "Additional", "en": "Additional" },
+			"title": { "ru": "Дополнительно", "en": "Additional" },
 			"items": [
 				{
 					"slug": "dopolnitelno/vozmozhnosti-moda",
-					"title": { "ru": "Mod features", "en": "Mod features" },
+					"title": { "ru": "Возможности мода", "en": "Mod features" },
 					"description": {
-						"ru": "Обзор возможностей мода.",
+						"ru": "Все встроенные функции и интерфейсы мода.",
 						"en": "An overview of the mod's features."
 					}
 				},
 				{
 					"slug": "dopolnitelno/reshenie-problem",
-					"title": { "ru": "Troubleshooting", "en": "Troubleshooting" },
+					"title": { "ru": "Решение проблем", "en": "Troubleshooting" },
 					"description": {
-						"ru": "Типовые проблемы и их решения.",
+						"ru": "Что делать при крашах, багах и проблемах с подключением.",
 						"en": "Common problems and their fixes."
 					}
 				},
 				{
 					"slug": "dopolnitelno/changelog",
-					"title": { "ru": "Changelog", "en": "Changelog" },
+					"title": { "ru": "Список изменений (Changelog)", "en": "Changelog" },
 					"description": {
-						"ru": "История изменений мода.",
+						"ru": "Патчноуты и история версий Bingo Ranked.",
 						"en": "The mod's release history."
 					}
 				},
 				{
 					"slug": "legal",
-					"title": { "ru": "License and legal", "en": "License and legal" },
+					"title": { "ru": "Лицензия и правовая информация", "en": "License and legal" },
 					"description": {
-						"ru": "Правовая информация и персональные данные.",
+						"ru": "Правовая информация и лицензионное соглашение.",
 						"en": "Legal information and personal data."
 					}
 				}

@@ -1,4 +1,4 @@
-# Banned modifications
+# Запрещённые модификации
 
 | Категория | Модификации |
 | --- | --- |
@@ -17,10 +17,10 @@
 | Прочие утилиты | BedrockMiner, Client Vein Miner, Trajectory Preview |
 
 {% hint style="warning" %}
-Jade и WTHIT разрешены только для информации при наведении и на близком расстоянии.
+Jade и WTHIT разрешены только для базовой информации при наведении курсора на блок в непосредственной близости.
 {% endhint %}
 
-### Allowed alternatives
+### Разрешённые клиенты и альтернативы
 
 * Feather
 * Lunar

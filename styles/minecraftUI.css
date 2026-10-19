@@ -28,11 +28,12 @@
 	--minecraft-text-secondary-color: #ffffff;
 	--minecraft-text-subtle-color: #d0d1d4;
 
-	--minecraft-button-color: #d0d1d4;
-	--minecraft-button-text-color: #1e1e1f;
-	--minecraft-button-secondary-text-color: #7a7b7d;
-	--minecraft-button-hover-color: #b1b2b5;
-	--minecraft-button-inset-border-color: #ecedee;
+	--minecraft-button-color: #383a3d;
+	--minecraft-button-text-color: #ffffff;
+	--minecraft-button-secondary-text-color: #a9aaad;
+	--minecraft-button-hover-color: #484b4f;
+	--minecraft-button-inset-border-color: #52555a;
+	--minecraft-button-bottom-shadow: #202123;
 
 	--minecraft-code-text-color: #d0d1d4;
 	--minecraft-code-background-color: #0d0e11;
@@ -102,7 +103,7 @@
 	background-color: var(--minecraft-button-color);
 
 	box-shadow:
-		0 -12px 0 0 #58585a inset,
+		0 -12px 0 0 var(--minecraft-button-bottom-shadow) inset,
 		0 -16px 0 0 var(--minecraft-button-inset-border-color) inset,
 		0 0 0 4px var(--minecraft-button-inset-border-color) inset,
 		0 0 0 4px var(--minecraft-border-color);
@@ -114,12 +115,13 @@
 }
 .minecraft-button:hover {
 	background-color: var(--minecraft-button-hover-color);
+	color: var(--accent-light);
 }
 .minecraft-button:active {
 
 	box-shadow:
-		0 0 0 4px #ecedee inset,
-		0 0 0 4px #1e1e1f;
+		0 0 0 4px var(--minecraft-button-inset-border-color) inset,
+		0 0 0 4px var(--minecraft-border-color);
 	padding: calc(4px + 8px) 16px calc(8px + 4px) 16px;
 	margin-top: 12px;
 }
@@ -136,6 +138,12 @@
 }
 .minecraft-button.accent:hover {
 	background-color: var(--accent-light);
+	color: #1e1e1f;
+}
+.minecraft-button.accent:active {
+	box-shadow:
+		0 0 0 4px var(--accent-light) inset,
+		0 0 0 4px var(--minecraft-border-color);
 }
 
 .minecraft-box {
