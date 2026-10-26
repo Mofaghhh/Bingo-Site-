@@ -146,6 +146,44 @@
 						</div>
 					</div>
 				</section>
+
+				<!-- Tournament Bracket Section: 256 Players Split in Pools & Finals -->
+				<section class="section bracket-section-container">
+					<h2 class="section-title" data-ru="Турнирная сетка (256 слотов)" data-en="Tournament Bracket (256 Slots)">Турнирная сетка (256 слотов)</h2>
+
+					<div class="bracket-controls-bar">
+						<div class="bracket-pool-tabs">
+							<button type="button" class="bracket-tab-btn active" data-pool="finals" data-ru="👑 Топ-16 / Финалы" data-en="👑 Top-16 / Finals">👑 Топ-16 / Финалы</button>
+							<button type="button" class="bracket-tab-btn" data-pool="pool1" data-ru="Сетка 1 (1–64)" data-en="Bracket 1 (1–64)">Сетка 1 (1–64)</button>
+							<button type="button" class="bracket-tab-btn" data-pool="pool2" data-ru="Сетка 2 (65–128)" data-en="Bracket 2 (65–128)">Сетка 2 (65–128)</button>
+							<button type="button" class="bracket-tab-btn" data-pool="pool3" data-ru="Сетка 3 (129–192)" data-en="Bracket 3 (129–192)">Сетка 3 (129–192)</button>
+							<button type="button" class="bracket-tab-btn" data-pool="pool4" data-ru="Сетка 4 (193–256)" data-en="Bracket 4 (193–256)">Сетка 4 (193–256)</button>
+							<button type="button" class="bracket-tab-btn" data-pool="all" data-ru="🌐 Вся сетка (256)" data-en="🌐 Full Bracket (256)">🌐 Вся сетка (256)</button>
+						</div>
+
+						<div class="bracket-zoom-tools">
+							<button type="button" class="bracket-tool-btn" id="btn-zoom-out" title="Уменьшить">−</button>
+							<span class="bracket-zoom-indicator" id="zoom-val">100%</span>
+							<button type="button" class="bracket-tool-btn" id="btn-zoom-in" title="Увеличить">+</button>
+							<button type="button" class="bracket-tool-btn" id="btn-zoom-reset" title="По центру" data-ru="Сброс" data-en="Reset">Сброс</button>
+							<button type="button" class="bracket-tool-btn" id="btn-fullscreen" title="На весь экран" data-ru="⛶ Экран" data-en="⛶ Full">⛶ Экран</button>
+						</div>
+					</div>
+
+					<div class="bracket-viewport-wrapper" id="bracket-viewport">
+						<div class="bracket-dot-grid"></div>
+						<div class="bracket-stage-container" id="bracket-stage">
+							<div class="bracket-headers-row" id="bracket-headers"></div>
+							<svg class="bracket-svg" id="bracket-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+						</div>
+					</div>
+
+					<div class="bracket-hints">
+						<span data-ru="✦ Перетаскивайте мышкой для перемещения" data-en="✦ Drag to pan around the bracket">✦ Перетаскивайте мышкой для перемещения</span>
+						<span data-ru="✦ Колёсико мыши для масштабирования" data-en="✦ Mouse wheel to zoom in/out">✦ Колёсико мыши для масштабирования</span>
+						<span data-ru="✦ Наведите на слот для подсветки пути к победителю" data-en="✦ Hover slot to trace victory path">✦ Наведите на слот для подсветки пути к победителю</span>
+					</div>
+				</section>
 			</main>
 
 			<footer class="site-footer">
