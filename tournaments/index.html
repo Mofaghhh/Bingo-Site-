@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Турнирная сетка — Bingo Ranked</title>
-		<meta name="description" content="Турнирная сетка Bingo Ranked на 256 игроков. Single Elimination плей-офф на равных сидах мира." />
+		<title>Турниры — Bingo Ranked</title>
+		<meta name="description" content="Турниры Bingo Ranked — шоу-матчи для стримеров с призовым фондом и открытые кубки сообщества." />
 		<link rel="icon" href="/Bingo-Site-/favicon.svg" type="image/svg+xml" />
 		<link rel="stylesheet" href="/Bingo-Site-/styles/minecraftUI.css" />
 		<link rel="stylesheet" href="/Bingo-Site-/styles/global.css" />
@@ -30,57 +30,122 @@
 				</nav>
 			</header>
 
-			<main class="tournament-page-container">
-				<div class="tournament-header-compact">
-					<div class="tournament-title-group">
-						<div class="season-badge">
-							<span data-ru="🏆 Турнирная сетка • 256 слотов" data-en="🏆 Tournament Bracket • 256 Slots">🏆 Турнирная сетка • 256 слотов</span>
-						</div>
-						<h1 data-ru="Турнирная сетка" data-en="Tournament Bracket">Турнирная сетка</h1>
+			<main>
+				<section class="hero">
+					<div class="hero-text">
+						<h1 data-ru="Турниры Bingo" data-en="Bingo Tournaments">Турниры Bingo</h1>
 						<p
-							class="tournament-subtitle"
-							data-ru="Олимпийская система Single Elimination на 256 участников. Абсолютно равные стартовые условия и одинаковый сид мира."
-							data-en="Single Elimination 256-player bracket. Strictly identical starting conditions and shared world seeds."
+							data-ru="Официальные шоу-матчи и открытые кубки сообщества. Идентичный сид мира, одинаковый спавн и честный регламент — побеждает тот, кто соберёт цели первым."
+							data-en="Official showmatches and open community cups. Identical world seed, equal spawn, and strictly fair rules — race to complete the objectives first."
 						>
-							Олимпийская система Single Elimination на 256 участников. Абсолютно равные стартовые условия и одинаковый сид мира.
+							Официальные шоу-матчи и открытые кубки сообщества. Идентичный сид мира, одинаковый спавн и честный регламент — побеждает тот, кто соберёт цели первым.
+						</p>
+						<div class="hero-actions">
+							<a class="minecraft-button accent" href="/Bingo-Site-/docs/soobshestvo/turniry/" data-ru="Регламент турниров" data-en="Tournament Rules">Регламент турниров</a>
+							<a class="minecraft-button" href="/Bingo-Site-/docs/soobshestvo/zapreshyonnye-modifikacii/" data-ru="Разрешённые моды" data-en="Allowed Mods">Разрешённые моды</a>
+						</div>
+					</div>
+					<div class="hero-art">
+						<img src="/Bingo-Site-/logo.svg" alt="" />
+					</div>
+				</section>
+
+				<section class="intro-section">
+					<div>
+						<p
+							data-ru="Честная игра без рандома: абсолютно равные стартовые условия для всех участников турнира. Решает только ваш скилл."
+							data-en="Fair play, zero RNG: completely identical starting conditions for all tournament players make every match a true test of skill."
+						>
+							Честная игра без рандома: абсолютно равные стартовые условия для всех участников турнира. Решает только ваш скилл.
 						</p>
 					</div>
-				</div>
+				</section>
 
-				<!-- Bracket Controls Toolbar -->
-				<div class="bracket-controls-bar">
-					<div class="bracket-pool-tabs">
-						<button type="button" class="bracket-tab-btn active" data-pool="all" data-ru="Вся сетка (256)" data-en="Full Bracket (256)">Вся сетка (256)</button>
-						<button type="button" class="bracket-tab-btn" data-pool="p1" data-ru="Пул 1 (1–64)" data-en="Pool 1 (1–64)">Пул 1 (1–64)</button>
-						<button type="button" class="bracket-tab-btn" data-pool="p2" data-ru="Пул 2 (65–128)" data-en="Pool 2 (65–128)">Пул 2 (65–128)</button>
-						<button type="button" class="bracket-tab-btn" data-pool="p3" data-ru="Пул 3 (129–192)" data-en="Pool 3 (129–192)">Пул 3 (129–192)</button>
-						<button type="button" class="bracket-tab-btn" data-pool="p4" data-ru="Пул 4 (193–256)" data-en="Pool 4 (193–256)">Пул 4 (193–256)</button>
-						<button type="button" class="bracket-tab-btn" data-pool="finals" data-ru="👑 Топ-16 / Финалы" data-en="👑 Top-16 / Finals">👑 Топ-16 / Финалы</button>
+				<section class="section">
+					<h2 class="section-title" data-ru="Турнирные направления" data-en="Tournament Paths">Турнирные направления</h2>
+					<div class="tourney-cards-grid">
+						<!-- Card 1: Creator & Streamer Cup -->
+						<div class="tourney-card">
+							<span class="tourney-badge" data-ru="МЕДИА • INVITATIONAL" data-en="CREATOR • INVITATIONAL">МЕДИА • INVITATIONAL</span>
+							<h3 data-ru="Кубок Контент-мейкеров" data-en="Creator Invitational">Кубок Контент-мейкеров</h3>
+							<div class="tourney-prize-bar" data-ru="💰 Призовой фонд: 50 000 ₽ + ELO Trophy" data-en="💰 Prize pool: $1,000 + ELO Trophy">
+								💰 Призовой фонд: 50 000 ₽ + ELO Trophy
+							</div>
+							<p
+								data-ru="Официальные шоу-матчи и турниры для стримеров Twitch, YouTube и авторов видео. Прямой эфир с кастерами, трансляция от первого лица и статус амбассадора проекта."
+								data-en="Official showmatches and tournaments for Twitch/YouTube streamers and video creators. Live cast commentary, first-person POV broadcast and project ambassador status."
+							>
+								Официальные шоу-матчи и турниры для стримеров Twitch, YouTube и авторов видео. Прямой эфир с кастерами, трансляция от первого лица и статус амбассадора проекта.
+							</p>
+							<ul class="tourney-list">
+								<li data-ru="Сетка на 16 участников (Double Elimination)" data-en="16-player bracket (Double Elimination)">Сетка на 16 участников (Double Elimination)</li>
+								<li data-ru="Официальная трансляция с кастерами на главном канале" data-en="Official live broadcast with casters">Официальная трансляция с кастерами на главном канале</li>
+								<li data-ru="Обязательный стрим матча от первого лица со звуком" data-en="Mandatory live POV stream with game audio">Обязательный стрим матча от первого лица со звуком</li>
+								<li data-ru="Эксклюзивный внутриигровой бейдж победителя и трофей" data-en="Exclusive in-game champion trophy badge">Эксклюзивный внутриигровой бейдж победителя и трофей</li>
+							</ul>
+							<div class="tourney-card-footer">
+								<a class="minecraft-button" href="/Bingo-Site-/docs/soobshestvo/turniry/" data-ru="Подробнее о регламенте" data-en="Tournament Regulations">Подробнее о регламенте</a>
+							</div>
+						</div>
+
+						<!-- Card 2: Open Community Cup -->
+						<div class="tourney-card">
+							<span class="tourney-badge community" data-ru="ОТКРЫТЫЙ КУБОК • ДЛЯ ВСЕХ" data-en="OPEN CUP • FOR EVERYONE">ОТКРЫТЫЙ КУБОК • ДЛЯ ВСЕХ</span>
+							<h3 data-ru="Кубок Сообщества" data-en="Community Cup">Кубок Сообщества</h3>
+							<div class="tourney-prize-bar" data-ru="⭐ Рейтинговые очки ELO + Роль Чемпиона" data-en="⭐ Bonus ELO Points + Champion Discord Role">
+								⭐ Рейтинговые очки ELO + Роль Чемпиона
+							</div>
+							<p
+								data-ru="Регулярные турниры выходного дня для всех зарегистрированных игроков Bingo Ranked от Copper до Netherite. Честный подбор равных оппонентов и борьба за очки рейтинга."
+								data-en="Weekly weekend cups for all registered Bingo Ranked players from Copper to Netherite. Fair tier-based matchmaking and seasonal championship points."
+							>
+								Регулярные турниры выходного дня для всех зарегистрированных игроков Bingo Ranked от Copper до Netherite. Честный подбор равных оппонентов и борьба за очки рейтинга.
+							</p>
+							<ul class="tourney-list">
+								<li data-ru="Открытая регистрация без медиа-требований" data-en="Open entry with zero subscriber requirements">Открытая регистрация без медиа-требований</li>
+								<li data-ru="Швейцарская система квалификаций + сетка плей-офф" data-en="Swiss system qualifiers + playoffs stage">Швейцарская система квалификаций + сетка плей-офф</li>
+								<li data-ru="Автоматическая валидация через мод-клиент" data-en="Automatic client validation via official mod">Автоматическая валидация через мод-клиент</li>
+								<li data-ru="Бонусные сезонные очки ELO и роли в Discord" data-en="Bonus seasonal ELO points and Discord roles">Бонусные сезонные очки ELO и роли в Discord</li>
+							</ul>
+							<div class="tourney-card-footer">
+								<a class="minecraft-button" href="/Bingo-Site-/docs/soobshestvo/pravila/" data-ru="Правила честной игры" data-en="Fair-play Rules">Правила честной игры</a>
+							</div>
+						</div>
 					</div>
+				</section>
 
-					<div class="bracket-zoom-tools">
-						<button type="button" class="bracket-tool-btn" id="btn-zoom-out" title="Уменьшить">−</button>
-						<span class="bracket-zoom-indicator" id="zoom-val">100%</span>
-						<button type="button" class="bracket-tool-btn" id="btn-zoom-in" title="Увеличить">+</button>
-						<button type="button" class="bracket-tool-btn" id="btn-zoom-reset" title="По центру" data-ru="Сброс" data-en="Reset">Сброс</button>
-						<button type="button" class="bracket-tool-btn" id="btn-fullscreen" title="На весь экран" data-ru="⛶ Экран" data-en="⛶ Full">⛶ Экран</button>
+				<section class="section">
+					<h2 class="section-title" data-ru="Форматы соревнований" data-en="Competition Formats">Форматы соревнований</h2>
+					<div class="card-grid">
+						<div class="card">
+							<h3 data-ru="1v1 Speedrun Duel" data-en="1v1 Speedrun Duel">1v1 Speedrun Duel</h3>
+							<p
+								data-ru="Классическая дуэль один на один. Гонка на скорость до первой собранной линии из 5 целей на бинго-карте. Лимит времени — 20 минут."
+								data-en="Classic head-to-head duel. Pure speed race to complete any 5-objective row, column, or diagonal line. 20-minute time limit."
+							>
+								Классическая дуэль один на один. Гонка на скорость до первой собранной линии из 5 целей на бинго-карте. Лимит времени — 20 минут.
+							</p>
+						</div>
+						<div class="card">
+							<h3 data-ru="2v2 Team Rush" data-en="2v2 Team Rush">2v2 Team Rush</h3>
+							<p
+								data-ru="Командная битва дуэтов на общей доске. Прогресс целей суммируется, участники разделяют сбор поверхностных и подземных ресурсов."
+								data-en="Two-player team battle on a shared board. Objective progress is synchronized across teammates, splitting surface and mining roles."
+							>
+								Командная битва дуэтов на общей доске. Прогресс целей суммируется, участники разделяют сбор поверхностных и подземных ресурсов.
+							</p>
+						</div>
+						<div class="card">
+							<h3 data-ru="Lockout Mode" data-en="Lockout Mode">Lockout Mode</h3>
+							<p
+								data-ru="Тактический захват доски: каждая закрытая клетка навсегда блокируется для противника. Побеждает тот, кто первым возьмёт 13 из 25 целей."
+								data-en="Tactical board control: claimed objectives are permanently locked out for the opponent. The first to claim 13 of 25 objectives wins."
+							>
+								Тактический захват доски: каждая закрытая клетка навсегда блокируется для противника. Побеждает тот, кто первым возьмёт 13 из 25 целей.
+							</p>
+						</div>
 					</div>
-				</div>
-
-				<!-- Interactive Bracket Canvas -->
-				<div class="bracket-viewport-wrapper" id="bracket-viewport">
-					<div class="bracket-dot-grid"></div>
-					<div class="bracket-stage-container" id="bracket-stage">
-						<div class="bracket-headers-row" id="bracket-headers"></div>
-						<svg class="bracket-svg" id="bracket-svg" xmlns="http://www.w3.org/2000/svg"></svg>
-					</div>
-				</div>
-
-				<div class="bracket-hints">
-					<span data-ru="✦ Перетаскивайте мышкой для перемещения" data-en="✦ Drag to pan around the bracket">✦ Перетаскивайте мышкой для перемещения</span>
-					<span data-ru="✦ Колёсико мыши для масштабирования" data-en="✦ Mouse wheel to zoom in/out">✦ Колёсико мыши для масштабирования</span>
-					<span data-ru="✦ Наведите на слот для подсветки пути к финалу" data-en="✦ Hover slot to trace victory path">✦ Наведите на слот для подсветки пути к финалу</span>
-				</div>
+				</section>
 			</main>
 
 			<footer class="site-footer">
