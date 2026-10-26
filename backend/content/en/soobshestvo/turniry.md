@@ -20,7 +20,7 @@ Competitions in Bingo Ranked are divided into two brackets:
 #### 2. Community Tournament
 * **Target Audience:** All registered players from Copper to Netherite tiers.
 * **Bracket:** 256 players, 1v1 elimination.
-* **Rewards:** Exclusive tournament medals.
+* **Format:** Open participation (no prize pool or medals).
 
 ---
 
