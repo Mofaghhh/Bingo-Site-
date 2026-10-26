@@ -142,12 +142,13 @@ function renderPage(slug, initialLang) {
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="dark" />
 		<title>${esc(page.title)} — ${esc(meta.brand.name)}</title>
 		<meta name="description" content="${esc(page.description)}" />
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-		<link rel="stylesheet" href="/styles/minecraftUI.css" />
-		<link rel="stylesheet" href="/styles/global.css" />
-		<link rel="stylesheet" href="/styles/site.css" />
+		<link rel="stylesheet" href="/styles/minecraftUI.css?v=4" />
+		<link rel="stylesheet" href="/styles/global.css?v=4" />
+		<link rel="stylesheet" href="/styles/site.css?v=4" />
 	</head>
 	<body data-page="${esc(slug)}">
 		<div class="aurora-bg"></div>
@@ -156,7 +157,7 @@ function renderPage(slug, initialLang) {
 		<div class="docs-shell">
 			<header class="docs-header">
 				<a class="site-brand" href="/">
-					<img src="/logo.svg" alt="${esc(meta.brand.name)}" />
+					<img src="/logo.png" alt="${esc(meta.brand.name)}" />
 					<span class="brand-name">${esc(meta.brand.name)}</span>
 				</a>
 				<div class="header-tools">
@@ -205,11 +206,12 @@ function renderNotFound(lang) {
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="dark" />
 		<title>${esc(ui.notFound)} — ${esc(meta.brand.name)}</title>
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-		<link rel="stylesheet" href="/styles/minecraftUI.css" />
-		<link rel="stylesheet" href="/styles/global.css" />
-		<link rel="stylesheet" href="/styles/site.css" />
+		<link rel="stylesheet" href="/styles/minecraftUI.css?v=4" />
+		<link rel="stylesheet" href="/styles/global.css?v=4" />
+		<link rel="stylesheet" href="/styles/site.css?v=4" />
 	</head>
 	<body>
 		<div class="aurora-bg"></div>

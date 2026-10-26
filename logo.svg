@@ -1,4 +1,8 @@
-<svg width="1024" height="1024" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+<svg width="1024" height="1024" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" style="color-scheme: light dark; forced-color-adjust: none;">
+  <style>
+    :root { color-scheme: light dark; forced-color-adjust: none; }
+    path, rect, g { forced-color-adjust: none; }
+  </style>
   <!-- жёсткая пиксельная тень -->
   <path d="M2 1H14V3H10V4H12V10H13V12H14V14H12V15H4V14H2V12H3V10H4V4H6V3H2Z"
         transform="translate(0.8 0.8)" fill="#000" opacity="0.45"/>

@@ -1,4 +1,6 @@
 :root {
+	color-scheme: dark;
+	forced-color-adjust: none;
 
 	--accent: #f2cf4e;
 	--accent-light: #fbf19b;

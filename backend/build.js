@@ -11,7 +11,7 @@ const OUT = process.env.OUT_DIR ? path.resolve(SITE_ROOT, process.env.OUT_DIR) :
 const TO_ROOT = OUT === SITE_ROOT;
 
 const ASSET_DIRS = ['styles', 'fonts', 'scripts', 'images', 'tournaments'];
-const ASSET_FILES = ['logo.svg', 'favicon.svg'];
+const ASSET_FILES = ['logo.svg', 'logo.png', 'favicon.svg'];
 
 function mkdirp(dir) {
 	fs.mkdirSync(dir, { recursive: true });
@@ -40,7 +40,7 @@ function applyBase(text) {
 	text = text.replace(STALE_BASES, '');
 	text = text.replace(/(href=["'])\/(["'])/g, '$1' + BASE + '/$2');
 	return text.replace(
-		/(["'(])\/(docs|tournaments|styles|scripts|fonts|images|logo\.svg|favicon\.svg)/g,
+		/(["'(])\/(docs|tournaments|styles|scripts|fonts|images|logo\.svg|logo\.png|favicon\.svg)/g,
 		'$1' + BASE + '/$2'
 	);
 }

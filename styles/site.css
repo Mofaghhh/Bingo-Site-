@@ -50,6 +50,7 @@
 	width: 56px;
 	height: 56px;
 	image-rendering: pixelated;
+	forced-color-adjust: none;
 }
 .site-brand .brand-name {
 	font-family: var(--minecraft-header-font);
@@ -118,6 +119,7 @@
 	width: clamp(180px, 22vw, 320px);
 	height: auto;
 	image-rendering: pixelated;
+	forced-color-adjust: none;
 	animation: float 6s ease-in-out infinite;
 }
 @keyframes float {
