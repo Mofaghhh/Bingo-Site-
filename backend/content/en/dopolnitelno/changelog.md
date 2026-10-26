@@ -15,7 +15,7 @@
 **Custom Lobbies**
 
 - Creation of private rooms and connection via lobby code
-- The "Copy" button for the lobby code now flashes with a green checkmark
+- The "Copy" button for the lobby code now displays a checkmark confirmation
 - Participant skins, ELO ranks, and rewards are now visible directly in the waiting room
 - Fixed player Ready check synchronization before match start
 
@@ -24,12 +24,11 @@
 - Matchmaking screen pairing opponents of equal skill rating
 - Queue waiting screen with quick cancel option
 - 3-2-1 countdown sequence before match launch
-- Automatic match completion and victory recording upon completing any 5x5 line
+- Automatic match completion and victory recording upon completing any line
 - Victory and defeat results screen with animated rating adjustments
 
 **Player Profile**
 
-- External profile view now only displays three tabs: "Main", "Ranked", and "Matches"
 - Interactive 3D character model with dynamic animations and emotes
 - Model preview and customization in the settings menu
 - Support for both skin types: classic and slim
@@ -42,7 +41,6 @@
 
 **Rating Graph & Stats**
 
-- New ELO rating graph: smooth line with seasonal divisions
 - Color-coded tier markers on the graph when reaching a new rank
 - Hover cards: match date, opponent, and outcome
 - Personal stats: win rate percentage, wins, losses, draws, and peak rating
@@ -52,7 +50,6 @@
 
 - Leaderboard is now split into pages for convenient browsing
 - Fast player search by username with autocomplete suggestions
-- Real-time online status and player ranks displayed in lists
 
 **Chat & Emotes**
 
