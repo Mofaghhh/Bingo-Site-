@@ -1,21 +1,21 @@
 # Tournaments
 
 {% hint style="info" %}
-The official interactive tournament hub with path selection and registrations is available on the [Bingo Ranked Tournaments](/tournaments/) page.
+The official tournaments section is available on the [Bingo Ranked Tournaments](/tournaments/) page.
 {% endhint %}
 
 Bingo Ranked tournaments are official competitive events, showmatches, and open community cups featuring prize pools, hosted on completely identical world seeds with strictly fair starting conditions.
 
 ---
 
-### Tournament Fork: Choose Your Path
+### Tournament Paths
 
 Competitions in Bingo Ranked are divided into two distinct brackets:
 
 #### 1. Content Creator Bracket (Creator & Streamer Cup)
 * **Target Audience:** Twitch and YouTube streamers, video creators, and Minecraft content makers.
 * **Format:** Invitational showmatches featuring official casts and community streams.
-* **Prize Pool:** Cash prizes, commemorative digital badges, and exclusive ELO trophies.
+* **Prize Pool:** 20,000 RUB, commemorative digital badges, and exclusive ELO trophies.
 * **Requirements:**
   * Live first-person broadcast with in-game audio and commentary;
   * Clean Bingo Ranked client without banned modifications;
@@ -31,15 +31,14 @@ Competitions in Bingo Ranked are divided into two distinct brackets:
 
 ---
 
-### Match Format Options
+### Competition Format: 1v1 Speedrun Duel
 
-Tournaments operate under one of the official rulesets:
+Tournament matches are played in a head-to-head duel format:
 
-| Format | Players | Victory Condition | Gameplay Focus |
-|---|---|---|---|
-| **1v1 Speedrun Duel** | 1v1 | First to complete any 5-objective row/column/diagonal | Pure speed, biome pathing, and rapid crafting execution. |
-| **2v2 Team Rush** | 2v2 | First team to finish a complete line | Shared progress, role assignment (mining vs surface collection). |
-| **Lockout Mode** | 1v1 / 2v2 | Most claimed objectives (13+ out of 25) | Objectives become unavailable once claimed by an opponent. |
+* **Players:** 1v1;
+* **Victory Condition:** First to complete any 5-objective line (row, column, or diagonal);
+* **Time Limit:** 20 minutes. If no line is completed, the player with the most claimed objectives wins;
+* **Gameplay Focus:** High-speed pathing, rapid biome scouting, and crafting execution.
 
 ---
 

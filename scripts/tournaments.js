@@ -49,8 +49,8 @@
 	var MODES = {
 		finals: {
 			rounds: [16, 8, 4, 2, 1],
-			names_ru: ['1/8 финала', '1/4 финала', 'Полуфинал', 'Финал', '★ Чемпион ★'],
-			names_en: ['Round of 16', 'Quarterfinals', 'Semifinals', 'Final', '★ Champion ★'],
+			names_ru: ['1/8 финала', '1/4 финала', 'Полуфинал', 'Финал', 'Чемпион'],
+			names_en: ['Round of 16', 'Quarterfinals', 'Semifinals', 'Final', 'Champion'],
 			baseStep: 48,
 			slotW: 140,
 			slotH: 28,
@@ -94,8 +94,8 @@
 		},
 		all: {
 			rounds: [256, 128, 64, 32, 16, 8, 4, 2, 1],
-			names_ru: ['1/128', '1/64', '1/32', '1/16', '1/8', '1/4', '1/2', 'Финал', '★ Чемпион ★'],
-			names_en: ['1/128', '1/64', '1/32', '1/16', '1/8', '1/4', '1/2', 'Final', '★ Champion ★'],
+			names_ru: ['1/128', '1/64', '1/32', '1/16', '1/8', '1/4', '1/2', 'Финал', 'Чемпион'],
+			names_en: ['1/128', '1/64', '1/32', '1/16', '1/8', '1/4', '1/2', 'Final', 'Champion'],
 			baseStep: 36,
 			slotW: 135,
 			slotH: 24,
@@ -247,7 +247,7 @@
 			}
 		}
 
-		// Render slot rectangles (completely empty, stylish)
+		// Render slot rectangles (clean and empty)
 		for (var c = 0; c < rounds.length; c++) {
 			var count = rounds[c];
 			var x = PAD_X + c * colStep;
@@ -277,7 +277,7 @@
 					text.setAttribute('x', x + slotW / 2);
 					text.setAttribute('y', y);
 					text.setAttribute('class', 'bracket-slot-text champion-text');
-					text.textContent = '★ Champion ★';
+					text.textContent = 'Champion';
 					slotsGroup.appendChild(text);
 				}
 			}
