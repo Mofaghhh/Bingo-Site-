@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Турниры — Bingo Ranked</title>
-		<meta name="description" content="Турниры Bingo Ranked — шоу-матчи для стримеров с призовым фондом и открытые кубки сообщества." />
+		<title>Турнирная сетка — Bingo Ranked</title>
+		<meta name="description" content="Турнирная сетка Bingo Ranked на 256 игроков. Single Elimination плей-офф на равных сидах мира." />
 		<link rel="icon" href="/Bingo-Site-/favicon.svg" type="image/svg+xml" />
 		<link rel="stylesheet" href="/Bingo-Site-/styles/minecraftUI.css" />
 		<link rel="stylesheet" href="/Bingo-Site-/styles/global.css" />
@@ -30,287 +30,58 @@
 				</nav>
 			</header>
 
-			<main>
-				<section class="tournament-hero">
-					<div class="season-badge">
-						<span data-ru="🏆 Сезон 1: The First Seed" data-en="🏆 Season 1: The First Seed">🏆 Сезон 1: The First Seed</span>
-					</div>
-					<h1 data-ru="Турниры Bingo Ranked" data-en="Bingo Ranked Tournaments">Турниры Bingo Ranked</h1>
-					<p
-						data-ru="Один сид мира, одинаковый спавн и честный регламент. Выберите свою турнирную ветку: закрытые шоу-матчи контент-мейкеров с денежным призом или открытые рейтинговые кубки сообщества."
-						data-en="Same world seed, identical spawn, strictly fair rules. Choose your tournament path: invitational creator showmatches with cash prizes or open community ranked cups."
-					>
-						Один сид мира, одинаковый спавн и честный регламент. Выберите свою турнирную ветку: закрытые шоу-матчи контент-мейкеров с денежным призом или открытые рейтинговые кубки сообщества.
-					</p>
-				</section>
-
-				<section class="fork-section">
-					<div class="fork-header-banner">
-						<div class="fork-divider-line"></div>
-						<h2 data-ru="⚔️ Турнирная развилка ⚔️" data-en="⚔️ Choose Your Path ⚔️">⚔️ Турнирная развилка ⚔️</h2>
-						<div class="fork-divider-line"></div>
-					</div>
-
-					<!-- MAIN FORK CARDS -->
-					<div class="fork-cards-grid">
-						<!-- Path 1: Creator & Streamer Cup -->
-						<div class="fork-card active" id="card-creator">
-							<span class="fork-card-badge" data-ru="МЕДИА • INVITATIONAL" data-en="CREATOR • INVITATIONAL">МЕДИА • INVITATIONAL</span>
-							<div class="fork-card-top">
-								<h3 data-ru="Кубок Контент-мейкеров" data-en="Creator Invitational Cup">Кубок Контент-мейкеров</h3>
-								<span class="fork-card-icon">👑</span>
-							</div>
-							<div class="fork-card-prize" data-ru="💰 Призовой фонд: 50 000 ₽ + ELO Trophy" data-en="💰 Prize pool: $1,000 + ELO Trophy">
-								💰 Призовой фонд: 50 000 ₽ + ELO Trophy
-							</div>
-							<p
-								class="fork-card-desc"
-								data-ru="Официальные шоу-матчи и турниры для стримеров Twitch, YouTube и авторов видео. Прямой эфир с кастерами, трансляция от первого лица и статус амбассадора проекта."
-								data-en="Official showmatches and tournaments for Twitch/YouTube streamers and content creators. Live commentary, first-person POV broadcast and project ambassador status."
-							>
-								Официальные шоу-матчи и турниры для стримеров Twitch, YouTube и авторов видео. Прямой эфир с кастерами, трансляция от первого лица и статус амбассадора проекта.
-							</p>
-							<ul class="fork-feature-list">
-								<li data-ru="Сетка на 16 стримеров (Double Elimination)" data-en="16-creator bracket (Double Elimination)">Сетка на 16 стримеров (Double Elimination)</li>
-								<li data-ru="Официальный стрим с комментаторами" data-en="Official live cast with casters">Официальный стрим с комментаторами</li>
-								<li data-ru="Требование: стрим от первого лица со звуком" data-en="Requirement: live POV stream with sound">Требование: стрим от первого лица со звуком</li>
-								<li data-ru="Эксклюзивный внутриигровой бейдж победителя" data-en="Exclusive in-game champion trophy badge">Эксклюзивный внутриигровой бейдж победителя</li>
-							</ul>
-							<div class="fork-card-actions">
-								<button type="button" class="minecraft-button accent" data-open-modal="creator" data-ru="Подать заявку" data-en="Apply Now">Подать заявку</button>
-								<a class="minecraft-button" href="/Bingo-Site-/docs/soobshestvo/turniry/" data-ru="Регламент" data-en="Regulations">Регламент</a>
-							</div>
+			<main class="tournament-page-container">
+				<div class="tournament-header-compact">
+					<div class="tournament-title-group">
+						<div class="season-badge">
+							<span data-ru="🏆 Турнирная сетка • 256 слотов" data-en="🏆 Tournament Bracket • 256 Slots">🏆 Турнирная сетка • 256 слотов</span>
 						</div>
-
-						<!-- Path 2: Open Community Cup -->
-						<div class="fork-card" id="card-community">
-							<span class="fork-card-badge community" data-ru="ОТКРЫТЫЙ КУБОК • ДЛЯ ВСЕХ" data-en="OPEN CUP • FOR EVERYONE">ОТКРЫТЫЙ КУБОК • ДЛЯ ВСЕХ</span>
-							<div class="fork-card-top">
-								<h3 data-ru="Открытый кубок сообщества" data-en="Open Community Cup">Открытый кубок сообщества</h3>
-								<span class="fork-card-icon">⚡</span>
-							</div>
-							<div class="fork-card-prize" data-ru="⭐ Рейтинговые очки ELO + Роль Чемпиона" data-en="⭐ Bonus ELO Points + Champion Discord Role">
-								⭐ Рейтинговые очки ELO + Роль Чемпиона
-							</div>
-							<p
-								class="fork-card-desc"
-								data-ru="Регулярные турниры выходного дня для всех зарегистрированных игроков от Copper до Netherite. Честный подбор равных оппонентов, борьба за дивизион и очки рейтинга."
-								data-en="Weekly weekend cups for all registered Bingo Ranked players from Copper to Netherite. Pure skill-based matchmaking, tier ladders and season championship points."
-							>
-								Регулярные турниры выходного дня для всех зарегистрированных игроков от Copper до Netherite. Честный подбор равных оппонентов, борьба за дивизион и очки рейтинга.
-							</p>
-							<ul class="fork-feature-list">
-								<li data-ru="Доступно любому игроку без ограничений подписчиков" data-en="Open to every player with zero subscriber requirements">Доступно любому игроку без ограничений подписчиков</li>
-								<li data-ru="Швейцарская система квалификаций + плей-офф" data-en="Swiss system qualifiers + playoffs stage">Швейцарская система квалификаций + плей-офф</li>
-								<li data-ru="Автоматическая валидация через мод-клиент" data-en="Automatic anticheat client verification">Автоматическая валидация через мод-клиент</li>
-								<li data-ru="Бонусные сезонные ELO очки за победы" data-en="Bonus seasonal ELO points for high placement">Бонусные сезонные ELO очки за победы</li>
-							</ul>
-							<div class="fork-card-actions">
-								<button type="button" class="minecraft-button accent" data-open-modal="community" data-ru="Участвовать" data-en="Enter Cup">Участвовать</button>
-								<a class="minecraft-button" href="/Bingo-Site-/docs/soobshestvo/pravila/" data-ru="Правила честной игры" data-en="Fair-play Rules">Правила честной игры</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- FORMATS FORK SECTION -->
-					<div class="formats-box">
-						<h3 data-ru="Развилка игровых форматов" data-en="Tournament Game Formats">Развилка игровых форматов</h3>
+						<h1 data-ru="Турнирная сетка" data-en="Tournament Bracket">Турнирная сетка</h1>
 						<p
-							data-ru="В зависимости от раунда сетки матчи проводятся по разным соревновательным правилам. Выберите формат, чтобы узнать подробности:"
-							data-en="Matches are played under distinct competitive formats depending on the tournament round. Select a format to learn more:"
+							class="tournament-subtitle"
+							data-ru="Олимпийская система Single Elimination на 256 участников. Абсолютно равные стартовые условия и одинаковый сид мира."
+							data-en="Single Elimination 256-player bracket. Strictly identical starting conditions and shared world seeds."
 						>
-							В зависимости от раунда сетки матчи проводятся по разным соревновательным правилам. Выберите формат, чтобы узнать подробности:
+							Олимпийская система Single Elimination на 256 участников. Абсолютно равные стартовые условия и одинаковый сид мира.
 						</p>
-
-						<div class="formats-tabs">
-							<button type="button" class="format-tab-btn active" data-tab="duel" data-ru="1v1 Speedrun Duel" data-en="1v1 Speedrun Duel">1v1 Speedrun Duel</button>
-							<button type="button" class="format-tab-btn" data-tab="duo" data-ru="2v2 Team Rush" data-en="2v2 Team Rush">2v2 Team Rush</button>
-							<button type="button" class="format-tab-btn" data-tab="lockout" data-ru="Lockout Mode" data-en="Lockout Mode">Lockout Mode</button>
-						</div>
-
-						<div class="format-content-panel active" id="format-panel-duel">
-							<div class="format-info-card">
-								<h4 data-ru="Правила дуэли" data-en="Duel Rules">Правила дуэли</h4>
-								<p
-									data-ru="Оба игрока начинают в одной точке с одинаковым сидом мира. Побеждает тот, кто первым выполнит любую горизонтальную, вертикальную или диагональную линию из 5 целей на бинго-карте."
-									data-en="Both players spawn at the exact same coordinates on an identical world seed. The first player to complete any 5-objective row, column, or diagonal line wins the match."
-								>
-									Оба игрока начинают в одной точке с одинаковым сидом мира. Побеждает тот, кто первым выполнит любую горизонтальную, вертикальную или диагональную линию из 5 целей на бинго-карте.
-								</p>
-							</div>
-							<div class="format-info-card">
-								<h4 data-ru="Особенности и таймер" data-en="Timing & Nuances">Особенности и таймер</h4>
-								<p
-									data-ru="Лимит времени — 20 минут. Если никто не закрыл линию, победа присуждается игроку с наибольшим числом закрытых целей. Идеальный баланс между скоростью поиска биомов и знанием крафтов."
-									data-en="Match time limit is 20 minutes. If no line is completed, the player with the highest objective count wins. Perfect balance of biome scouting and crafting knowledge."
-								>
-									Лимит времени — 20 минут. Если никто не закрыл линию, победа присуждается игроку с наибольшим числом закрытых целей. Идеальный баланс между скоростью поиска биомов и знанием крафтов.
-								</p>
-							</div>
-						</div>
-
-						<div class="format-content-panel" id="format-panel-duo">
-							<div class="format-info-card">
-								<h4 data-ru="Командная работа 2х2" data-en="2v2 Teamwork">Командная работа 2х2</h4>
-								<p
-									data-ru="Команды из двух человек соревнуются на общей карте. Прогресс закрытия целей суммируется внутри дуэта. Разделяйте роли: один собирает подземные ресурсы, второй исследует биомы на поверхности."
-									data-en="Two-player teams compete on a shared board. Objective progress is synchronized across teammates. Split roles: one player delves underground while the other explores surface biomes."
-								>
-									Команды из двух человек соревнуются на общей карте. Прогресс закрытия целей суммируется внутри дуэта. Разделяйте роли: один собирает подземные ресурсы, второй исследует биомы на поверхности.
-								</p>
-							</div>
-							<div class="format-info-card">
-								<h4 data-ru="Стратегия дуэта" data-en="Duo Strategy">Стратегия дуэта</h4>
-								<p
-									data-ru="Тактическая коммуникация решает всё. Быстрый обмен координатами структур и параллельный крафт позволяют закрывать сложные линии менее чем за 8–10 минут."
-									data-en="Communication is key. Rapid coordination of structure coordinates and concurrent crafting enable top teams to complete lines in under 8–10 minutes."
-								>
-									Тактическая коммуникация решает всё. Быстрый обмен координатами структур и параллельный крафт позволяют закрывать сложные линии менее чем за 8–10 минут.
-								</p>
-							</div>
-						</div>
-
-						<div class="format-content-panel" id="format-panel-lockout">
-							<div class="format-info-card">
-								<h4 data-ru="Режим Lockout (Захват клеток)" data-en="Lockout Mechanics">Режим Lockout (Захват клеток)</h4>
-								<p
-									data-ru="Самый хардкорный режим! Как только игрок закрывает клетку на доске, она навсегда блокируется для противника. Чтобы победить, необходимо первым захватить 13 целей из 25."
-									data-en="The most tactical mode! Once a player claims an objective on the board, it is locked out for the opponent permanently. The first to claim 13 out of 25 objectives takes the win."
-								>
-									Самый хардкорный режим! Как только игрок закрывает клетку на доске, она навсегда блокируется для противника. Чтобы победить, необходимо первым захватить 13 целей из 25.
-								</p>
-							</div>
-							<div class="format-info-card">
-								<h4 data-ru="Тактическая борьба" data-en="Mind Games">Тактическая борьба</h4>
-								<p
-									data-ru="Здесь важно не просто бежать вперед, а красть ключевые клетки у оппонента, блокируя его линии и заставляя менять маршрут прямо по ходу партии."
-									data-en="In Lockout, denial is just as important as speed. Steal key objectives right before your opponent to disrupt their routes and force mid-game pivots."
-								>
-									Здесь важно не просто бежать вперед, а красть ключевые клетки у оппонента, блокируя его линии и заставляя менять маршрут прямо по ходу партии.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- BRACKET FORK TREE -->
-					<div class="bracket-section">
-						<h3 class="section-title" data-ru="Схема турнирной сетки" data-en="Tournament Bracket Structure">Схема турнирной сетки</h3>
-						<div class="bracket-wrapper">
-							<div class="bracket-col">
-								<div class="bracket-col-title" data-ru="1. Квалификация (Швейцарка)" data-en="1. Qualifier (Swiss)">1. Квалификация (Швейцарка)</div>
-								<div class="bracket-match">
-									<div class="bracket-player winner">
-										<span>Team / Player A</span>
-										<span class="bracket-score">1</span>
-									</div>
-									<div class="bracket-player">
-										<span>Team / Player B</span>
-										<span class="bracket-score">0</span>
-									</div>
-								</div>
-								<div class="bracket-match">
-									<div class="bracket-player winner">
-										<span>Team / Player C</span>
-										<span class="bracket-score">1</span>
-									</div>
-									<div class="bracket-player">
-										<span>Team / Player D</span>
-										<span class="bracket-score">0</span>
-									</div>
-								</div>
-							</div>
-
-							<div class="bracket-col">
-								<div class="bracket-col-title" data-ru="2. Плей-офф (Best of 3)" data-en="2. Playoffs (Best of 3)">2. Плей-офф (Best of 3)</div>
-								<div class="bracket-match">
-									<div class="bracket-player winner">
-										<span>Semifinalist 1</span>
-										<span class="bracket-score">2</span>
-									</div>
-									<div class="bracket-player">
-										<span>Semifinalist 2</span>
-										<span class="bracket-score">1</span>
-									</div>
-								</div>
-								<div class="bracket-match">
-									<div class="bracket-player winner">
-										<span>Semifinalist 3</span>
-										<span class="bracket-score">2</span>
-									</div>
-									<div class="bracket-player">
-										<span>Semifinalist 4</span>
-										<span class="bracket-score">0</span>
-									</div>
-								</div>
-							</div>
-
-							<div class="bracket-col">
-								<div class="bracket-col-title" data-ru="3. Гранд-Финал (Best of 5)" data-en="3. Grand Final (Best of 5)">3. Гранд-Финал (Best of 5)</div>
-								<div class="bracket-match">
-									<div class="bracket-player winner">
-										<span>👑 Champion</span>
-										<span class="bracket-score">3</span>
-									</div>
-									<div class="bracket-player">
-										<span>🥈 Runner-up</span>
-										<span class="bracket-score">2</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-
-			<!-- REGISTRATION MODAL -->
-			<div class="modal-overlay" id="reg-modal">
-				<div class="minecraft-modal">
-					<button type="button" class="modal-close-btn" aria-label="Close">✕</button>
-					<h3 data-ru="Заявка на турнир" data-en="Tournament Entry">Заявка на турнир</h3>
-					<p data-ru="Выберите вашу ветку турнира и укажите данные для связи." data-en="Select your bracket and fill in your contact information.">
-						Выберите вашу ветку турнира и укажите данные для связи.
-					</p>
-
-					<form id="tournament-reg-form">
-						<div class="modal-form-group">
-							<label data-ru="Турнирная развилка:" data-en="Tournament Path:">Турнирная развилка:</label>
-							<div class="modal-path-radio">
-								<div class="modal-radio-option selected" data-path="creator" data-ru="👑 Стример / Медиа" data-en="👑 Creator / Streamer">
-									👑 Стример / Медиа
-								</div>
-								<div class="modal-radio-option" data-path="community" data-ru="⚡ Игрок Сообщества" data-en="⚡ Community Player">
-									⚡ Игрок Сообщества
-								</div>
-							</div>
-						</div>
-
-						<div class="modal-form-group">
-							<label for="reg-nick" data-ru="Minecraft никнейм:" data-en="Minecraft Username:">Minecraft никнейм:</label>
-							<input class="minecraft-input" type="text" id="reg-nick" required placeholder="Steve" data-ru="Steve" data-en="Steve" />
-						</div>
-
-						<div class="modal-form-group">
-							<label for="reg-discord" data-ru="Discord (для координации):" data-en="Discord Tag:">Discord (для координации):</label>
-							<input class="minecraft-input" type="text" id="reg-discord" required placeholder="username#0000" data-ru="username#0000" data-en="username#0000" />
-						</div>
-
-						<div class="modal-form-group">
-							<label for="reg-link" data-ru="Ссылка на канал или текущий ранг ELO:" data-en="Channel Link or current ELO Rank:">Ссылка на канал или текущий ранг ELO:</label>
-							<input class="minecraft-input" type="text" id="reg-link" placeholder="twitch.tv/channel или Gold II" data-ru="twitch.tv/channel или Gold II" data-en="twitch.tv/channel or Gold II" />
-						</div>
-
-						<button type="submit" class="minecraft-button accent" style="width:100%;margin-top:12px;" data-ru="Отправить заявку" data-en="Submit Application">
-							Отправить заявку
-						</button>
-					</form>
-
-					<div class="modal-success-msg" id="modal-success">
-						<span data-ru="✓ Заявка принята! Организаторы свяжутся с вами в Discord перед стартом сетки." data-en="✓ Application received! Tournament organizers will reach out on Discord prior to match start.">
-							✓ Заявка принята! Организаторы свяжутся с вами в Discord перед стартом сетки.
-						</span>
 					</div>
 				</div>
-			</div>
+
+				<!-- Bracket Controls Toolbar -->
+				<div class="bracket-controls-bar">
+					<div class="bracket-pool-tabs">
+						<button type="button" class="bracket-tab-btn active" data-pool="all" data-ru="Вся сетка (256)" data-en="Full Bracket (256)">Вся сетка (256)</button>
+						<button type="button" class="bracket-tab-btn" data-pool="p1" data-ru="Пул 1 (1–64)" data-en="Pool 1 (1–64)">Пул 1 (1–64)</button>
+						<button type="button" class="bracket-tab-btn" data-pool="p2" data-ru="Пул 2 (65–128)" data-en="Pool 2 (65–128)">Пул 2 (65–128)</button>
+						<button type="button" class="bracket-tab-btn" data-pool="p3" data-ru="Пул 3 (129–192)" data-en="Pool 3 (129–192)">Пул 3 (129–192)</button>
+						<button type="button" class="bracket-tab-btn" data-pool="p4" data-ru="Пул 4 (193–256)" data-en="Pool 4 (193–256)">Пул 4 (193–256)</button>
+						<button type="button" class="bracket-tab-btn" data-pool="finals" data-ru="👑 Топ-16 / Финалы" data-en="👑 Top-16 / Finals">👑 Топ-16 / Финалы</button>
+					</div>
+
+					<div class="bracket-zoom-tools">
+						<button type="button" class="bracket-tool-btn" id="btn-zoom-out" title="Уменьшить">−</button>
+						<span class="bracket-zoom-indicator" id="zoom-val">100%</span>
+						<button type="button" class="bracket-tool-btn" id="btn-zoom-in" title="Увеличить">+</button>
+						<button type="button" class="bracket-tool-btn" id="btn-zoom-reset" title="По центру" data-ru="Сброс" data-en="Reset">Сброс</button>
+						<button type="button" class="bracket-tool-btn" id="btn-fullscreen" title="На весь экран" data-ru="⛶ Экран" data-en="⛶ Full">⛶ Экран</button>
+					</div>
+				</div>
+
+				<!-- Interactive Bracket Canvas -->
+				<div class="bracket-viewport-wrapper" id="bracket-viewport">
+					<div class="bracket-dot-grid"></div>
+					<div class="bracket-stage-container" id="bracket-stage">
+						<div class="bracket-headers-row" id="bracket-headers"></div>
+						<svg class="bracket-svg" id="bracket-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+					</div>
+				</div>
+
+				<div class="bracket-hints">
+					<span data-ru="✦ Перетаскивайте мышкой для перемещения" data-en="✦ Drag to pan around the bracket">✦ Перетаскивайте мышкой для перемещения</span>
+					<span data-ru="✦ Колёсико мыши для масштабирования" data-en="✦ Mouse wheel to zoom in/out">✦ Колёсико мыши для масштабирования</span>
+					<span data-ru="✦ Наведите на слот для подсветки пути к финалу" data-en="✦ Hover slot to trace victory path">✦ Наведите на слот для подсветки пути к финалу</span>
+				</div>
+			</main>
 
 			<footer class="site-footer">
 				<div class="footer-inner">

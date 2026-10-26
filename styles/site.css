@@ -735,15 +735,26 @@
 }
 
 /* ==========================================================================
-   Tournaments & Fork Styles
+   Tournaments & 256-Player Bracket Styles
    ========================================================================== */
 
-.tournament-hero {
-	max-width: 1400px;
+.tournament-page-container {
+	max-width: 1700px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 48px 48px 24px;
-	text-align: center;
+	padding: 24px 32px 48px;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.tournament-header-compact {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 20px;
+	flex-wrap: wrap;
+	gap: 16px;
 }
 
 .season-badge {
@@ -751,518 +762,308 @@
 	align-items: center;
 	gap: 8px;
 	font-family: var(--minecraft-font);
-	font-size: 14px;
+	font-size: 13px;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
-	padding: 6px 14px;
-	background-color: #1b1c1f;
+	padding: 5px 12px;
+	background-color: #17111c;
 	color: var(--accent);
-	outline: 3px solid var(--minecraft-border-color);
-	box-shadow: 0 0 0 1px var(--accent-dark) inset;
-	margin-bottom: 16px;
+	outline: 2px solid var(--minecraft-border-color);
+	box-shadow: 0 0 0 1px #482538 inset;
+	margin-bottom: 8px;
 }
 
-.tournament-hero h1 {
+.tournament-title-group h1 {
 	font-family: var(--minecraft-header-font);
-	font-size: clamp(40px, 6vw, 72px);
+	font-size: clamp(32px, 4vw, 54px);
 	font-weight: normal;
 	letter-spacing: 0.05em;
 	line-height: 1.1;
-	margin: 0 0 16px;
+	margin: 4px 0 6px;
 	background: var(--accent-gradient-deep);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	filter: drop-shadow(4px 4px 0px #00000055);
+	filter: drop-shadow(3px 3px 0px #00000055);
 }
 
-.tournament-hero p {
-	font-size: 18px;
-	line-height: 1.6;
-	color: #d0d1d4;
-	max-width: 60ch;
-	margin: 0 auto 28px;
-}
-
-.fork-section {
-	max-width: 1400px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 16px 48px 48px;
-}
-
-.fork-header-banner {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 16px;
-	margin-bottom: 32px;
-	text-align: center;
-}
-
-.fork-header-banner .fork-divider-line {
-	flex: 1;
-	height: 4px;
-	background: linear-gradient(90deg, transparent, var(--accent-dark), transparent);
-}
-
-.fork-header-banner h2 {
+.tournament-subtitle {
+	font-size: 15px;
+	line-height: 1.5;
+	color: #a9aaad;
 	margin: 0;
-	font-family: var(--minecraft-header-font);
-	font-size: clamp(24px, 3.5vw, 36px);
-	background: var(--accent-gradient);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	filter: drop-shadow(2px 2px 0px #00000055);
-	white-space: nowrap;
+	max-width: 60ch;
 }
 
-.fork-cards-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 32px;
-	margin-bottom: 48px;
-}
-
-.fork-card {
-	position: relative;
-	background-color: var(--minecraft-foreground-color);
-	outline: 4px solid var(--minecraft-border-color);
-	box-shadow:
-		0 4px 0 0 #ffffff22 inset,
-		0 -4px 0 0 #00000055 inset;
-	padding: 32px;
+.bracket-controls-bar {
 	display: flex;
-	flex-direction: column;
-	transition: transform 0.2s ease, outline-color 0.2s ease;
-	cursor: pointer;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+	background-color: #121017;
+	outline: 4px solid var(--minecraft-border-color);
+	box-shadow: 0 4px 0 0 #ffffff18 inset, 0 -4px 0 0 #00000066 inset;
+	padding: 12px 18px;
+	margin-bottom: 16px;
+	flex-wrap: wrap;
 }
 
-.fork-card:hover {
-	transform: translateY(-4px);
+.bracket-pool-tabs {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+	align-items: center;
 }
 
-.fork-card.active {
-	outline: 4px solid var(--accent);
-	box-shadow:
-		0 4px 0 0 #ffffff33 inset,
-		0 -4px 0 0 #00000055 inset,
-		0 0 24px #f2cf4e33;
-}
-
-.fork-card-badge {
-	position: absolute;
-	top: -14px;
-	left: 28px;
+.bracket-tab-btn {
+	background-color: #1d1724;
+	color: #c8c5cf;
+	border: 0;
 	font-family: var(--minecraft-font);
 	font-size: 13px;
+	padding: 8px 14px;
+	cursor: pointer;
+	box-shadow: 0 0 0 2px #382436;
+	transition: all 0.15s ease;
+}
+
+.bracket-tab-btn:hover {
+	color: var(--accent-light);
+	background-color: #2b1f36;
+	box-shadow: 0 0 0 2px var(--accent-dark);
+}
+
+.bracket-tab-btn.active {
 	background-color: var(--accent);
-	color: #1a1508;
-	padding: 4px 12px;
+	color: #18141f;
 	font-weight: bold;
 	box-shadow: 0 0 0 2px var(--minecraft-border-color);
 }
 
-.fork-card-badge.community {
-	background-color: #58a6ff;
-	color: #0b132b;
-}
-
-.fork-card-top {
+.bracket-zoom-tools {
 	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-	gap: 16px;
-	margin-bottom: 16px;
-	margin-top: 4px;
-}
-
-.fork-card-top h3 {
-	font-family: var(--minecraft-header-font);
-	font-size: 28px;
-	margin: 0;
-	color: #ffffff;
-	line-height: 1.2;
-}
-
-.fork-card-icon {
-	font-size: 36px;
-	line-height: 1;
-	filter: drop-shadow(2px 2px 0px #00000066);
-}
-
-.fork-card-prize {
-	display: inline-block;
-	background-color: #121316;
-	border-left: 4px solid var(--accent);
-	padding: 10px 14px;
-	margin-bottom: 20px;
-	font-family: var(--minecraft-font);
-	font-size: 15px;
-	color: var(--accent-light);
-}
-
-.fork-card-desc {
-	font-size: 16px;
-	line-height: 1.6;
-	color: #d0d1d4;
-	margin: 0 0 24px;
-}
-
-.fork-feature-list {
-	list-style: none;
-	padding: 0;
-	margin: 0 0 28px;
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-}
-
-.fork-feature-list li {
-	display: flex;
+	gap: 6px;
 	align-items: center;
-	gap: 10px;
-	font-size: 15px;
-	color: #e5e6e8;
 }
 
-.fork-feature-list li::before {
-	content: '■';
-	font-size: 10px;
-	color: var(--accent);
-}
-
-.fork-card-actions {
-	margin-top: auto;
-	display: flex;
-	gap: 14px;
-	flex-wrap: wrap;
-}
-
-.fork-card-actions .minecraft-button {
-	flex: 1 1 auto;
-	font-size: 15px;
-}
-
-/* Formats Section */
-.formats-box {
-	background-color: var(--minecraft-background-color);
-	outline: 4px solid var(--minecraft-border-color);
-	box-shadow:
-		0 8px 0 0 #00000044 inset,
-		0 0 0 4px var(--minecraft-border-color);
-	padding: 32px;
-	margin-bottom: 48px;
-}
-
-.formats-box h3 {
-	font-family: var(--minecraft-header-font);
-	font-size: 28px;
-	margin: 0 0 8px;
-	background: var(--accent-gradient);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.formats-tabs {
-	display: flex;
-	gap: 8px;
-	margin-bottom: 24px;
-	flex-wrap: wrap;
-}
-
-.format-tab-btn {
-	background-color: #1b1c1f;
-	color: #c6c7c9;
+.bracket-tool-btn {
+	background-color: #1d1724;
+	color: #e2dfeb;
 	border: 0;
 	font-family: var(--minecraft-font);
-	font-size: 15px;
-	padding: 10px 18px;
-	cursor: pointer;
-	box-shadow: 0 0 0 3px var(--minecraft-border-color);
-	transition: background-color 0.15s ease, color 0.15s ease;
-}
-
-.format-tab-btn:hover {
-	color: var(--accent);
-}
-
-.format-tab-btn.active {
-	background-color: var(--accent);
-	color: #1e1e1f;
-	font-weight: bold;
-}
-
-.format-content-panel {
-	display: none;
-	animation: fadeIn 0.2s ease;
-}
-
-.format-content-panel.active {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 24px;
-}
-
-@keyframes fadeIn {
-	from { opacity: 0; transform: translateY(6px); }
-	to { opacity: 1; transform: translateY(0); }
-}
-
-.format-info-card {
-	background-color: #18191d;
-	outline: 3px solid var(--minecraft-border-color);
-	padding: 20px;
-}
-
-.format-info-card h4 {
-	font-family: var(--minecraft-font);
-	font-size: 18px;
-	color: var(--accent);
-	margin: 0 0 10px;
-}
-
-.format-info-card p {
-	font-size: 15px;
-	line-height: 1.55;
-	color: #c8c9cc;
-	margin: 0;
-}
-
-/* Bracket Tree Section */
-.bracket-section {
-	margin-bottom: 48px;
-}
-
-.bracket-wrapper {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 20px;
-	position: relative;
-	margin-top: 24px;
-}
-
-.bracket-col {
-	background-color: var(--minecraft-foreground-color);
-	outline: 4px solid var(--minecraft-border-color);
-	padding: 20px;
-	box-shadow:
-		0 4px 0 0 #ffffff22 inset,
-		0 -4px 0 0 #00000055 inset;
-}
-
-.bracket-col-title {
-	font-family: var(--minecraft-font);
-	font-size: 15px;
-	text-transform: uppercase;
-	color: var(--accent);
-	letter-spacing: 0.05em;
-	margin: 0 0 16px;
-	text-align: center;
-	border-bottom: 2px solid var(--minecraft-border-color);
-	padding-bottom: 8px;
-}
-
-.bracket-match {
-	background-color: #121316;
-	outline: 2px solid var(--minecraft-border-color);
-	padding: 12px 14px;
-	margin-bottom: 12px;
-	font-family: var(--minecraft-font);
 	font-size: 14px;
+	padding: 7px 12px;
+	cursor: pointer;
+	box-shadow: 0 0 0 2px var(--minecraft-border-color);
+	user-select: none;
 }
 
-.bracket-match:last-child {
-	margin-bottom: 0;
+.bracket-tool-btn:hover {
+	color: var(--accent);
+	background-color: #2b1f36;
 }
 
-.bracket-player {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 4px 0;
-	color: #e0e1e4;
+.bracket-tool-btn:active {
+	margin-top: 2px;
+	box-shadow: 0 0 0 2px var(--minecraft-border-color);
 }
 
-.bracket-player.winner {
-	color: var(--accent-light);
-	font-weight: bold;
+.bracket-zoom-indicator {
+	font-family: var(--minecraft-font);
+	font-size: 13px;
+	color: var(--accent);
+	padding: 0 8px;
+	min-width: 48px;
+	text-align: center;
 }
 
-.bracket-score {
-	font-weight: bold;
-	padding: 2px 6px;
-	background-color: #1f2025;
-	border: 1px solid var(--minecraft-border-color);
+/* Bracket Viewport */
+.bracket-viewport-wrapper {
+	position: relative;
+	width: 100%;
+	height: 720px;
+	background-color: #0b090f;
+	outline: 4px solid var(--minecraft-border-color);
+	box-shadow:
+		0 6px 0 0 #ffffff14 inset,
+		0 -6px 0 0 #00000088 inset;
+	overflow: hidden;
+	user-select: none;
+	cursor: grab;
 }
 
-/* Modal */
-.modal-overlay {
-	display: none;
+.bracket-viewport-wrapper:active {
+	cursor: grabbing;
+}
+
+.bracket-viewport-wrapper.is-fullscreen {
 	position: fixed;
 	inset: 0;
-	z-index: 100;
-	background-color: #000000aa;
-	backdrop-filter: blur(4px);
-	align-items: center;
-	justify-content: center;
-	padding: 20px;
-}
-
-.modal-overlay.open {
-	display: flex;
-	animation: fadeIn 0.2s ease;
-}
-
-.minecraft-modal {
-	background-color: var(--minecraft-foreground-color);
-	outline: 6px solid var(--minecraft-border-color);
-	box-shadow:
-		0 6px 0 0 #ffffff33 inset,
-		0 -6px 0 0 #00000077 inset,
-		0 16px 36px #00000099;
-	width: 100%;
-	max-width: 540px;
-	padding: 32px;
-	position: relative;
-}
-
-.modal-close-btn {
-	position: absolute;
-	top: 16px;
-	right: 16px;
-	background-color: #1b1c1f;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	margin: 0;
 	border: 0;
-	color: #ffffff;
-	font-family: var(--minecraft-font);
-	font-size: 18px;
-	width: 32px;
-	height: 32px;
-	cursor: pointer;
-	box-shadow: 0 0 0 3px var(--minecraft-border-color);
-}
-
-.modal-close-btn:hover {
-	color: var(--accent);
-}
-
-.minecraft-modal h3 {
-	font-family: var(--minecraft-header-font);
-	font-size: 28px;
-	margin: 0 0 8px;
-	color: #ffffff;
-}
-
-.minecraft-modal p {
-	font-size: 15px;
-	color: #c6c7c9;
-	margin: 0 0 20px;
-	line-height: 1.5;
-}
-
-.modal-form-group {
-	margin-bottom: 16px;
-}
-
-.modal-form-group label {
-	display: block;
-	font-family: var(--minecraft-font);
-	font-size: 14px;
-	color: var(--accent);
-	margin-bottom: 6px;
-}
-
-.minecraft-input {
-	width: 100%;
-	background-color: #121316;
-	border: 3px solid var(--minecraft-border-color);
-	color: #ffffff;
-	font-family: var(--minecraft-font);
-	font-size: 15px;
-	padding: 10px 14px;
-	box-sizing: border-box;
 	outline: none;
 }
 
-.minecraft-input:focus {
-	border-color: var(--accent);
+.bracket-dot-grid {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background-image: radial-gradient(circle, #382436 1.3px, transparent 1.3px);
+	background-size: 24px 24px;
+	opacity: 0.85;
 }
 
-.modal-path-radio {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 12px;
-	margin-bottom: 20px;
+.bracket-stage-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: 0 0;
+	will-change: transform;
 }
 
-.modal-radio-option {
-	background-color: #1b1c1f;
-	outline: 2px solid var(--minecraft-border-color);
-	padding: 12px;
-	cursor: pointer;
-	text-align: center;
+.bracket-headers-row {
+	display: flex;
+	margin-bottom: 12px;
+	pointer-events: none;
+}
+
+.bracket-round-header {
 	font-family: var(--minecraft-font);
-	font-size: 14px;
-	color: #c8c9cc;
-	transition: all 0.15s ease;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--accent);
+	text-align: center;
+	background-color: #18121f;
+	padding: 6px 8px;
+	border: 1px solid #4a283e;
+	box-shadow: 0 2px 4px #00000055;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
-.modal-radio-option.selected {
-	outline-color: var(--accent);
-	background-color: #292a30;
-	color: var(--accent-light);
+/* Bracket SVG Styles */
+.bracket-svg {
+	display: block;
+	overflow: visible;
+}
+
+.bracket-connector-line {
+	fill: none;
+	stroke: #843254;
+	stroke-width: 1.6;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	transition: stroke 0.2s ease, stroke-width 0.2s ease;
+}
+
+.bracket-connector-line.highlighted {
+	stroke: var(--accent);
+	stroke-width: 2.4;
+	filter: drop-shadow(0 0 6px #f2cf4e88);
+}
+
+.bracket-slot-rect {
+	fill: #16121b;
+	stroke: #482538;
+	stroke-width: 1.5;
+	rx: 5px;
+	ry: 5px;
+	cursor: pointer;
+	transition: fill 0.15s ease, stroke 0.15s ease, filter 0.15s ease;
+}
+
+.bracket-slot-rect:hover {
+	fill: #271a2d;
+	stroke: var(--accent);
+	filter: drop-shadow(0 0 8px #f2cf4e66);
+}
+
+.bracket-slot-rect.champion-slot {
+	fill: #1f1810;
+	stroke: var(--accent);
+	stroke-width: 2;
+}
+
+.bracket-slot-rect.highlighted {
+	fill: #2d1e34;
+	stroke: var(--accent-light);
+	stroke-width: 2;
+	filter: drop-shadow(0 0 10px #f2cf4eaa);
+}
+
+.bracket-slot-text {
+	font-family: var(--minecraft-font);
+	font-size: 11px;
+	fill: #6e5c77;
+	pointer-events: none;
+	text-anchor: middle;
+	dominant-baseline: central;
+	user-select: none;
+}
+
+.bracket-slot-text.champion-text {
+	fill: var(--accent-light);
 	font-weight: bold;
 }
 
-.modal-success-msg {
-	display: none;
-	background-color: #1a3821;
-	outline: 3px solid #3fb950;
-	padding: 16px;
-	color: #bdfcc9;
+.bracket-hints {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	font-family: var(--minecraft-font);
-	font-size: 15px;
-	text-align: center;
-	margin-top: 16px;
-	line-height: 1.5;
+	font-size: 13px;
+	color: #7b7885;
+	margin-top: 12px;
+	padding: 0 4px;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.bracket-hints span {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
 }
 
 @media (width < 880px) {
-	.fork-cards-grid {
-		grid-template-columns: 1fr;
-		gap: 24px;
+	.tournament-page-container {
+		padding: 16px 14px 36px;
 	}
-	.bracket-wrapper {
-		grid-template-columns: 1fr;
+	.bracket-viewport-wrapper {
+		height: 580px;
 	}
-	.format-content-panel.active {
-		grid-template-columns: 1fr;
+	.bracket-controls-bar {
+		padding: 10px 12px;
 	}
-	.tournament-hero {
-		padding: 32px 20px 16px;
+	.bracket-tab-btn {
+		font-size: 11px;
+		padding: 6px 10px;
 	}
-	.fork-section {
-		padding: 16px 20px 32px;
+	.bracket-tool-btn {
+		font-size: 12px;
+		padding: 6px 9px;
 	}
 }
 
 @media (width < 640px) {
-	.tournament-hero h1 {
-		font-size: 32px;
+	.bracket-viewport-wrapper {
+		height: 500px;
 	}
-	.fork-card {
-		padding: 24px 18px;
+	.tournament-title-group h1 {
+		font-size: 28px;
 	}
-	.fork-card-top h3 {
-		font-size: 22px;
+	.bracket-pool-tabs {
+		width: 100%;
+		justify-content: flex-start;
 	}
-	.formats-box {
-		padding: 20px 16px;
-	}
-	.minecraft-modal {
-		padding: 24px 18px;
+	.bracket-zoom-tools {
+		width: 100%;
+		justify-content: flex-end;
+		margin-top: 4px;
 	}
 }
-
