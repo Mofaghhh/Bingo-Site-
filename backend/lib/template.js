@@ -161,6 +161,7 @@ function renderPage(slug, initialLang) {
 				</a>
 				<div class="header-tools">
 					<button class="menu-toggle" type="button" data-menu-toggle aria-label="Menu" aria-expanded="false"><span></span></button>
+					<a class="minecraft-button" data-tournaments href="/tournaments/">${esc(ui.tournaments || 'Турниры')}</a>
 					<a class="minecraft-button" data-docs href="${docsHref}">${esc(ui.docs)}</a>
 					${renderLangSwitch(lang, meta)}
 				</div>
@@ -183,7 +184,10 @@ function renderPage(slug, initialLang) {
 				<div class="footer-inner">
 					<span class="footer-brand">${esc(meta.brand.name)}</span>
 					<span class="footer-brand">${esc(ui.footerNote)}</span>
-					<a class="footer-brand footer-link" href="/docs/legal/">${esc(ui.legal)}</a>
+					<nav>
+						<a class="footer-brand footer-link" data-tournaments href="/tournaments/">${esc(ui.tournaments || 'Турниры')}</a>
+						<a class="footer-brand footer-link" data-legal href="/docs/legal/">${esc(ui.legal)}</a>
+					</nav>
 				</div>
 			</footer>
 		</div>

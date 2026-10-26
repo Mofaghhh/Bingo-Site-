@@ -15,6 +15,7 @@
 		"ru": {
 			"home": "Главная",
 			"docs": "Документация",
+			"tournaments": "Турниры",
 			"menu": "Меню",
 			"onThisPage": "На этой странице",
 			"previous": "Назад",
@@ -33,6 +34,7 @@
 		"en": {
 			"home": "Home",
 			"docs": "Documentation",
+			"tournaments": "Tournaments",
 			"menu": "Menu",
 			"onThisPage": "On this page",
 			"previous": "Previous",

@@ -118,7 +118,18 @@
 		document.title = page.title + ' — ' + data.brand.name;
 		document.documentElement.lang = lang;
 		var docsBtn = document.querySelector('[data-docs]');
-		if (docsBtn) docsBtn.setAttribute('href', '/Bingo-Site-/docs/' + firstSlug(lang) + '/');
+		if (docsBtn) {
+			docsBtn.setAttribute('href', '/Bingo-Site-/docs/' + firstSlug(lang) + '/');
+			if (ui.docs) docsBtn.textContent = ui.docs;
+		}
+		var tourBtns = document.querySelectorAll('[data-tournaments]');
+		tourBtns.forEach(function (btn) {
+			if (ui.tournaments) btn.textContent = ui.tournaments;
+		});
+		var legalBtns = document.querySelectorAll('[data-legal]');
+		legalBtns.forEach(function (btn) {
+			if (ui.legal) btn.textContent = ui.legal;
+		});
 		rendered = lang;
 		markActive(lang);
 		store(lang);

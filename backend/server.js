@@ -130,11 +130,18 @@ const server = http.createServer((req, res) => {
 		return res.end();
 	}
 
+	if (pathname === '/tournaments' || pathname === '/tournaments/') {
+		return sendFile(res, path.join(SITE_ROOT, 'tournaments', 'index.html'));
+	}
+
 	let filePath = pathname.endsWith('/') ? pathname + 'index.html' : pathname;
-	const resolved = path.normalize(path.join(SITE_ROOT, filePath));
+	let resolved = path.normalize(path.join(SITE_ROOT, filePath));
 	if (!resolved.startsWith(SITE_ROOT)) {
 		res.writeHead(403);
 		return res.end('403');
+	}
+	if (fs.existsSync(resolved) && fs.statSync(resolved).isDirectory()) {
+		resolved = path.join(resolved, 'index.html');
 	}
 	if (fs.existsSync(resolved) && fs.statSync(resolved).isFile()) {
 		return sendFile(res, resolved);

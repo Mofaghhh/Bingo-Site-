@@ -10,7 +10,7 @@ const BASE = (process.env.BASE_PATH || '').replace(/\/+$/, '');
 const OUT = process.env.OUT_DIR ? path.resolve(SITE_ROOT, process.env.OUT_DIR) : SITE_ROOT;
 const TO_ROOT = OUT === SITE_ROOT;
 
-const ASSET_DIRS = ['styles', 'fonts', 'scripts', 'images'];
+const ASSET_DIRS = ['styles', 'fonts', 'scripts', 'images', 'tournaments'];
 const ASSET_FILES = ['logo.svg', 'favicon.svg'];
 
 function mkdirp(dir) {
@@ -40,7 +40,7 @@ function applyBase(text) {
 	text = text.replace(STALE_BASES, '');
 	text = text.replace(/(href=["'])\/(["'])/g, '$1' + BASE + '/$2');
 	return text.replace(
-		/(["'(])\/(docs|styles|scripts|fonts|images|logo\.svg|favicon\.svg)/g,
+		/(["'(])\/(docs|tournaments|styles|scripts|fonts|images|logo\.svg|favicon\.svg)/g,
 		'$1' + BASE + '/$2'
 	);
 }
@@ -85,6 +85,13 @@ if (TO_ROOT) {
 			path.join(OUT, 'index.html'),
 			applyBase(fs.readFileSync(path.join(SITE_ROOT, 'index.html'), 'utf8'))
 		);
+		if (fs.existsSync(path.join(SITE_ROOT, 'tournaments', 'index.html'))) {
+			mkdirp(path.join(OUT, 'tournaments'));
+			fs.writeFileSync(
+				path.join(OUT, 'tournaments', 'index.html'),
+				applyBase(fs.readFileSync(path.join(SITE_ROOT, 'tournaments', 'index.html'), 'utf8'))
+			);
+		}
 		applyBaseToJs(path.join(OUT, 'scripts'));
 	}
 } else {
