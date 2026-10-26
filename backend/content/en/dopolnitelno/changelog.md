@@ -5,86 +5,78 @@
 **Security & Accounts**
 
 - Closed Bingo Ranked access for cracked / non-premium Minecraft clients
-- Main menu login button for non-premium versions is now locked with a padlock icon
-- Added a tooltip over the lock explaining that a genuine Minecraft license is required
-- Implemented strict account authentication via official Mojang auth servers
-- Prevented unauthorized logins under licensed usernames from cracked launchers
-- Fixed genuine account authorization on Prism Launcher and Modrinth App
-- Fixed an issue where certain launchers were falsely flagged as cracked
-- Session authorization is now safely remembered and no longer prompts on every launch
+- Main menu login button for non-premium versions is now locked with a padlock
+- Added tooltip over the lock explaining that a genuine Minecraft license is required
+- Implemented account authentication via official Mojang servers
+- Logging in under another player's username is no longer possible
+- Full login support for Prism Launcher and Modrinth App
+- Logins are now remembered and no longer require confirmation on every launch
 
-**Main Menu & Scaling**
+**Main Menu & Interface**
 
-- Fixed button click detection in fullscreen display mode
-- Fixed UI elements and lists shifting out of alignment when changing GUI Scale
+- Fullscreen mode: buttons and lists no longer shift when changing screen scale
 - Removed redundant empty bottom padding across all menu screens
-- Replaced ambiguous error codes with clear, descriptive messages
-- Updated the project license and about screens
+- Clear and informative localized error messages
+- Updated the project license and information screen
 
 **Custom Lobbies**
 
-- Fixed crash when creating a new private lobby room
-- Fixed connection issues when joining a lobby via room code
-- The "Copy" button for the lobby code now displays a green checkmark confirmation
-- Fixed switching and real-time state synchronization of player Ready checks
-- Guaranteed identical world seed generation across all participants before match launch
-- Player skins, ELO tiers, and tournament medals are now displayed directly in the waiting room
+- Creation of private rooms and connection via lobby code
+- The "Copy" button for the lobby code now flashes with a green checkmark
+- Participant skins, ELO ranks, and rewards are now visible directly in the waiting room
+- Fixed player Ready check synchronization before match start
 
 **Matchmaking & Matches**
 
-- Added ranked matchmaking screen with ELO-based skill rating pairing
-- Implemented queue screen with fast one-click cancellation
-- Added "3-2-1" countdown sequence before match start
-- Fixed the objective card timer — it no longer turns red prematurely
-- Automatic match completion and instant victory recording upon completing any 5x5 line
-- Post-match victory and defeat screens with animated ELO rating adjustments
+- Matchmaking screen pairing opponents of equal skill rating
+- Queue waiting screen with quick cancel option
+- 3-2-1 countdown sequence before match launch
+- Automatic match completion and victory recording upon completing any 5x5 line
+- Victory and defeat results screen with animated rating adjustments
 
 **Player Profile**
 
-- Streamlined external profile views: reduced to "Main", "Ranked", and "Matches" tabs
-- Removed the add-friend button when inspecting another player's profile
-- Added an interactive 3D character model with dynamic animations and emotes
-- Added 3D model preview and customization in the profile settings menu
-- Full support for both skin model types: Classic (4px) and Slim (3px)
+- External profile view now only displays three tabs: "Main", "Ranked", and "Matches"
+- Interactive 3D character model with dynamic animations and emotes
+- Model preview and customization in the settings menu
+- Support for both skin types: classic and slim
 
 **Medals & Tournaments**
 
-- Introduced an official tournament award system: Gold, Silver, and Bronze medals
-- Medals are showcased next to the player's username in profile, lobby, and leaderboard views
-- Added hover tooltips displaying tournament name, date, and placement
-- Implemented server-side cryptographic verification to prevent medal tampering or exploit
+- Tournament reward system: gold, silver, and bronze medals
+- Medals displayed next to the player's username in profile, lobby, and leaderboard views
+- Tooltips displaying tournament title and date when hovering over a medal
 
 **Rating Graph & Stats**
 
-- Completely rewritten ELO rating chart: smooth curve with clear seasonal dividers
-- Color-coded tier milestone markers on the graph when reaching new rank divisions
-- Interactive hover cards on data points: match date, opponent, and rating outcome
-- Comprehensive personal statistics: win rate percentage, wins, losses, draws, and all-time peak rating
-- Full-screen past match history log with pagination
+- New ELO rating graph: smooth line with seasonal divisions
+- Color-coded tier markers on the graph when reaching a new rank
+- Hover cards: match date, opponent, and outcome
+- Personal stats: win rate percentage, wins, losses, draws, and peak rating
+- Browse past match history with pagination
 
 **Leaderboards & Search**
 
-- Leaderboard is now paginated for convenient browsing and reduced latency
-- Instant player search by username with real-time autocompletion suggestions
-- Real-time online status indicators ("Online" / "In Match") and rank badges in lists
+- Leaderboard is now split into pages for convenient browsing
+- Fast player search by username with autocomplete suggestions
+- Real-time online status and player ranks displayed in lists
 
 **Chat & Emotes**
 
-- Direct messages now correctly display the sender's actual username instead of "They"
-- Added a custom emoji picker menu and signature emote packs for chat and lobbies
-- Fixed mouse wheel smooth scrolling in the message view
+- Added custom emoji picker menu and signature emote packs for chat and lobbies
+- Direct messages now correctly show the sender's username
 
 **External Integrations**
 
-- Added 6 social media profile links: Telegram, YouTube, Twitch, TikTok, Reddit, Instagram
-- Clicking a social icon opens the player's web profile directly in the browser
-- Rich Discord Presence: displays current game mode, objective progress score, and rank tier
+- Social media links in player profiles: Telegram, YouTube, Twitch, TikTok, Reddit, Instagram
+- Clicking a social icon opens the player's profile directly in browser
+- Rich Discord Presence: current game mode, match score, and rank tier
 
-**Stability & Networking**
+**Stability**
 
-- Improved network fault tolerance against packet loss and unstable connection drops
-- Real-time low-latency synchronization of opponent's objective claims
-- Eliminated hitching and micro-stutters in menus and high-intensity match moments
+- Improved connection stability during network drops and latency spikes
+- Real-time synchronization of opponent's completed objectives
+- Optimized performance in menus and during matches
 
 ### Version 1.2.0 — Minecraft 26.3 (September 25, 2026)
 
