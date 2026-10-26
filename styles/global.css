@@ -193,12 +193,12 @@ a {
 	font-size: 64px;
 	font-weight: normal;
 	letter-spacing: 0.05em;
+	color: var(--accent);
 	background: var(--accent-gradient-deep);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	margin: 24px 0px 32px 0px;
-	filter: drop-shadow(4px 4px 0px #00000044);
 }
 
 .docs-content h2 {
@@ -206,12 +206,12 @@ a {
 	font-size: calc(9px * 4);
 	font-weight: normal;
 	letter-spacing: 0.05em;
+	color: var(--accent);
 	background: var(--accent-gradient-deep);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	margin: 32px 0 16px;
-	filter: drop-shadow(3px 3px 0px #00000044);
 	width: fit-content;
 }
 

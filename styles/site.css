@@ -44,6 +44,7 @@
 	align-items: center;
 	gap: 16px;
 	text-decoration: none;
+	filter: drop-shadow(2px 2px 0px #00000055);
 }
 .site-brand img {
 	width: 56px;
@@ -54,11 +55,11 @@
 	font-family: var(--minecraft-header-font);
 	font-size: 40px;
 	letter-spacing: 0.05em;
+	color: var(--accent);
 	background: var(--accent-gradient);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	filter: drop-shadow(3px 3px 0px #00000055);
 	line-height: 1;
 }
 
@@ -80,6 +81,10 @@
 	padding: 64px 48px 32px;
 }
 
+.hero-text {
+	filter: drop-shadow(3px 3px 0px #00000055);
+}
+
 .hero-text h1 {
 	font-family: var(--minecraft-header-font);
 	font-size: clamp(48px, 8vw, 96px);
@@ -87,11 +92,11 @@
 	letter-spacing: 0.05em;
 	line-height: 1.05;
 	margin: 0 0 16px;
+	color: var(--accent);
 	background: var(--accent-gradient-deep);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	filter: drop-shadow(5px 5px 0px #00000055);
 }
 .hero-text p {
 	font-size: 20px;
@@ -160,12 +165,12 @@
 	font-size: 40px;
 	font-weight: normal;
 	letter-spacing: 0.05em;
+	color: var(--accent);
 	background: var(--accent-gradient);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	margin: 0 0 24px;
-	filter: drop-shadow(3px 3px 0px #00000055);
 }
 
 .card-grid {
