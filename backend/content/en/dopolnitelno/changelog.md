@@ -12,13 +12,6 @@
 - Full login support for Prism Launcher and Modrinth App
 - Logins are now remembered and no longer require confirmation on every launch
 
-**Main Menu & Interface**
-
-- Fullscreen mode: buttons and lists no longer shift when changing screen scale
-- Removed redundant empty bottom padding across all menu screens
-- Clear and informative localized error messages
-- Updated the project license and information screen
-
 **Custom Lobbies**
 
 - Creation of private rooms and connection via lobby code
