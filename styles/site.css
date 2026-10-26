@@ -980,6 +980,10 @@
 		0 -6px 0 0 #00000088 inset;
 	overflow: hidden;
 	user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	touch-action: none;
+	overscroll-behavior: contain;
 	cursor: grab;
 }
 
@@ -1013,6 +1017,9 @@
 	left: 0;
 	transform-origin: 0 0;
 	will-change: transform;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 }
 
 .bracket-headers-row {
@@ -1048,13 +1055,11 @@
 	stroke-width: 1.6;
 	stroke-linecap: round;
 	stroke-linejoin: round;
-	transition: stroke 0.2s ease, stroke-width 0.2s ease;
 }
 
 .bracket-connector-line.highlighted {
 	stroke: var(--accent);
-	stroke-width: 2.4;
-	filter: drop-shadow(0 0 6px #f2cf4e88);
+	stroke-width: 2.5;
 }
 
 .bracket-slot-rect {
@@ -1064,13 +1069,11 @@
 	rx: 5px;
 	ry: 5px;
 	cursor: pointer;
-	transition: fill 0.15s ease, stroke 0.15s ease, filter 0.15s ease;
 }
 
 .bracket-slot-rect:hover {
 	fill: #271a2d;
 	stroke: var(--accent);
-	filter: drop-shadow(0 0 8px #f2cf4e66);
 }
 
 .bracket-slot-rect.champion-slot {
@@ -1083,7 +1086,6 @@
 	fill: #2d1e34;
 	stroke: var(--accent-light);
 	stroke-width: 2;
-	filter: drop-shadow(0 0 10px #f2cf4eaa);
 }
 
 .bracket-slot-text {
@@ -1122,7 +1124,7 @@
 
 @media (width < 880px) {
 	.bracket-viewport-wrapper {
-		height: 560px;
+		height: 520px;
 	}
 	.bracket-controls-bar {
 		padding: 10px 12px;
@@ -1139,15 +1141,34 @@
 
 @media (width < 640px) {
 	.bracket-viewport-wrapper {
-		height: 480px;
+		height: 420px;
+	}
+	.bracket-controls-bar {
+		padding: 8px 10px;
+		gap: 8px;
 	}
 	.bracket-pool-tabs {
 		width: 100%;
-		justify-content: flex-start;
+		overflow-x: auto;
+		flex-wrap: nowrap;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+		padding-bottom: 2px;
+	}
+	.bracket-pool-tabs::-webkit-scrollbar {
+		display: none;
+	}
+	.bracket-tab-btn {
+		white-space: nowrap;
+		flex-shrink: 0;
 	}
 	.bracket-zoom-tools {
 		width: 100%;
-		justify-content: flex-end;
+		justify-content: space-between;
 		margin-top: 4px;
+	}
+	.bracket-hints {
+		font-size: 11px;
+		gap: 6px;
 	}
 }
