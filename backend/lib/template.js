@@ -143,7 +143,7 @@ function renderPage(slug, initialLang) {
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="color-scheme" content="dark" />
-		<title>${esc(page.title)} — ${esc(meta.brand.name)}</title>
+		<title>${esc(page.title)} | ${esc(meta.brand.name)}</title>
 		<meta name="description" content="${esc(page.description)}" />
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<link rel="stylesheet" href="/styles/minecraftUI.css?v=4" />
@@ -207,7 +207,7 @@ function renderNotFound(lang) {
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="color-scheme" content="dark" />
-		<title>${esc(ui.notFound)} — ${esc(meta.brand.name)}</title>
+		<title>${esc(ui.notFound)} | ${esc(meta.brand.name)}</title>
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<link rel="stylesheet" href="/styles/minecraftUI.css?v=4" />
 		<link rel="stylesheet" href="/styles/global.css?v=4" />

@@ -1,6 +1,6 @@
 # Changelog
 
-### Version 1.3.0 — Minecraft 26.3 (October 26, 2026)
+### Version 1.3.0 (Minecraft 26.3, October 26, 2026)
 
 **Security & Accounts**
 
@@ -68,7 +68,7 @@
 - Real-time synchronization of opponent's completed objectives
 - Optimized performance in menus and during matches
 
-### Version 1.2.0 — Minecraft 26.3 (September 25, 2026)
+### Version 1.2.0 (Minecraft 26.3, September 25, 2026)
 
 **Menu**
 
@@ -88,7 +88,7 @@
 
 - Use the update button on the main screen, or download the new version from Modrinth
 
-### Version 1.1.0 — Minecraft 26.3 (September 22, 2026)
+### Version 1.1.0 (Minecraft 26.3, September 22, 2026)
 
 **Compatibility**
 
@@ -99,7 +99,7 @@
 
 - While a new release is available, the Bingo menu and matchmaking are blocked: you cannot play until the mod is updated.
 - The "Update available" button now updates the mod by itself: it opens the Modrinth page and downloads the new jar.
-- After the update the mod jar is replaced automatically and the old jar is removed on game exit — just restart the game.
+- After the update the mod jar is replaced automatically and the old jar is removed on game exit: just restart the game.
 
 **New goals**
 

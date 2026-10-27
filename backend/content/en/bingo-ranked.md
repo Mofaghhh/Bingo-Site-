@@ -8,14 +8,14 @@ Both players receive the same Bingo board, find an opponent, and complete the ob
 
 | Section | Page |
 | --- | --- |
-| How to play — start your first match. | [How to play](/docs/nachalo-raboty/kak-igrat) |
-| Ranked — learn how rating works. | [ELO and ranks](/docs/ranked/elo-i-rangi) |
-| Matchmaking — find an opponent. | [Matchmaking](/docs/igra/matchmaking) |
-| Lobby — prepare for the start. | [Lobby](/docs/igra/lobbi) |
-| Rules — play fair. | [Rules](/docs/soobshestvo/pravila) |
-| Banned modifications — check your mods. | [Banned modifications](/docs/soobshestvo/zapreshyonnye-modifikacii) |
-| ELO and ranks — track your progress. | [ELO and ranks](/docs/ranked/elo-i-rangi) |
-| Tournaments — entry requirements. | [Tournaments](/docs/soobshestvo/turniry) |
+| How to play: start your first match. | [How to play](/docs/nachalo-raboty/kak-igrat) |
+| Ranked: learn how rating works. | [ELO and ranks](/docs/ranked/elo-i-rangi) |
+| Matchmaking: find an opponent. | [Matchmaking](/docs/igra/matchmaking) |
+| Lobby: prepare for the start. | [Lobby](/docs/igra/lobbi) |
+| Rules: play fair. | [Rules](/docs/soobshestvo/pravila) |
+| Banned modifications: check your mods. | [Banned modifications](/docs/soobshestvo/zapreshyonnye-modifikacii) |
+| ELO and ranks: track your progress. | [ELO and ranks](/docs/ranked/elo-i-rangi) |
+| Tournaments: entry requirements. | [Tournaments](/docs/soobshestvo/turniry) |
 
 ## Features
 

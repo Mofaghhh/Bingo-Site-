@@ -1,7 +1,6 @@
 (function () {
 	'use strict';
 
-	// --- Language management ---
 	function storedLang() {
 		try {
 			var ls = localStorage.getItem('lang');
@@ -45,7 +44,6 @@
 		});
 	});
 
-	// --- Bracket Modes Configuration ---
 	var MODES = {
 		finals: {
 			rounds: [16, 8, 4, 2, 1],
@@ -119,13 +117,11 @@
 	var curTotalW = 1200;
 	var curTotalH = 800;
 
-	// Fast lookup tables & highlighted elements stack for O(1) operations
 	var slotLookup = {};
 	var lineLookup = {};
 	var highlightedSlots = [];
 	var highlightedLines = [];
 
-	// Pan & Zoom state
 	var scale = 1.0;
 	var panX = 40;
 	var panY = 20;
@@ -255,7 +251,6 @@
 		svgContainer.setAttribute('height', curTotalH);
 		svgContainer.innerHTML = '';
 
-		// Reset lookup maps
 		slotLookup = {};
 		lineLookup = {};
 		highlightedSlots = [];
@@ -279,7 +274,6 @@
 		slotsGroup.setAttribute('class', 'bracket-slots-group');
 		svgContainer.appendChild(slotsGroup);
 
-		// Render connector brackets
 		for (var col = 0; col < rounds.length - 1; col++) {
 			var x0 = PAD_X + col * colStep + slotW;
 			var x1 = PAD_X + (col + 1) * colStep;
@@ -313,7 +307,6 @@
 			}
 		}
 
-		// Render slot rectangles (clean and empty)
 		for (var c = 0; c < rounds.length; c++) {
 			var count = rounds[c];
 			var x = PAD_X + c * colStep;
@@ -424,7 +417,6 @@
 		fitToView();
 	}
 
-	// Desktop Mouse Drag
 	viewportWrapper.addEventListener('mousedown', function (e) {
 		if (e.button !== 0) return;
 		isDragging = true;
@@ -448,7 +440,7 @@
 		isDragging = false;
 	});
 
-	// Mobile Touch Handling (Optimized 60/120fps with Focal Pinch-to-Zoom)
+	// Touch drag & pinch zoom
 	viewportWrapper.addEventListener('touchstart', function (e) {
 		clearSlotHover();
 		if (e.touches.length === 1) {
@@ -522,7 +514,6 @@
 		lastPinchDist = 0;
 	}, { passive: true });
 
-	// Wheel zoom
 	viewportWrapper.addEventListener('wheel', function (e) {
 		e.preventDefault();
 		var rect = viewportWrapper.getBoundingClientRect();
@@ -540,7 +531,6 @@
 		applyTransform(false);
 	}, { passive: false });
 
-	// Control Buttons
 	var zoomInBtn = document.getElementById('btn-zoom-in');
 	var zoomOutBtn = document.getElementById('btn-zoom-out');
 	var zoomResetBtn = document.getElementById('btn-zoom-reset');
@@ -592,7 +582,6 @@
 		}
 	});
 
-	// Pool Tabs
 	var poolTabs = document.querySelectorAll('.bracket-tab-btn');
 	poolTabs.forEach(function (tab) {
 		tab.addEventListener('click', function () {
@@ -603,7 +592,6 @@
 		});
 	});
 
-	// Initial render
 	switchMode('finals');
 	applyLang(storedLang());
 

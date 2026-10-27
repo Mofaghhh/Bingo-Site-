@@ -115,7 +115,7 @@
 				page.html + '<div class="docs-pagination">' + buildPagination(data.prevNext[lang], ui) + '</div>';
 		}
 		if (toc) toc.innerHTML = buildToc(page.toc, ui.onThisPage);
-		document.title = page.title + ' — ' + data.brand.name;
+		document.title = page.title + ' | ' + data.brand.name;
 		document.documentElement.lang = lang;
 		var docsBtn = document.querySelector('[data-docs]');
 		if (docsBtn) {

@@ -120,16 +120,6 @@
 	height: auto;
 	image-rendering: pixelated;
 	forced-color-adjust: none;
-	animation: float 6s ease-in-out infinite;
-}
-@keyframes float {
-	0%,
-	100% {
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(-16px);
-	}
 }
 
 .section {
@@ -741,9 +731,7 @@
 	}
 }
 
-/* ==========================================================================
-   Tournaments Page Styles (Clean & Minecraft UI)
-   ========================================================================== */
+/* Tournaments */
 
 .tourney-cards-grid {
 	display: grid;
@@ -884,9 +872,7 @@
 		font-size: 26px;
 	}
 }
-/* ==========================================================================
-   Bracket Section & Viewer
-   ========================================================================== */
+/* Bracket Section & Viewer */
 
 .bracket-section-container {
 	margin-top: 24px;
