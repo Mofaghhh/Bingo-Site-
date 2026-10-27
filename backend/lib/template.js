@@ -146,9 +146,9 @@ function renderPage(slug, initialLang) {
 		<title>${esc(page.title)} | ${esc(meta.brand.name)}</title>
 		<meta name="description" content="${esc(page.description)}" />
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-		<link rel="stylesheet" href="/styles/minecraftUI.css?v=4" />
-		<link rel="stylesheet" href="/styles/global.css?v=4" />
-		<link rel="stylesheet" href="/styles/site.css?v=4" />
+		<link rel="stylesheet" href="/styles/minecraftUI.css?v=5" />
+		<link rel="stylesheet" href="/styles/global.css?v=5" />
+		<link rel="stylesheet" href="/styles/site.css?v=5" />
 	</head>
 	<body data-page="${esc(slug)}">
 		<div class="aurora-bg"></div>
@@ -209,9 +209,9 @@ function renderNotFound(lang) {
 		<meta name="color-scheme" content="dark" />
 		<title>${esc(ui.notFound)} | ${esc(meta.brand.name)}</title>
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-		<link rel="stylesheet" href="/styles/minecraftUI.css?v=4" />
-		<link rel="stylesheet" href="/styles/global.css?v=4" />
-		<link rel="stylesheet" href="/styles/site.css?v=4" />
+		<link rel="stylesheet" href="/styles/minecraftUI.css?v=5" />
+		<link rel="stylesheet" href="/styles/global.css?v=5" />
+		<link rel="stylesheet" href="/styles/site.css?v=5" />
 	</head>
 	<body>
 		<div class="aurora-bg"></div>

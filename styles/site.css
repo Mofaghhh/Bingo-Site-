@@ -120,6 +120,29 @@
 	height: auto;
 	image-rendering: pixelated;
 	forced-color-adjust: none;
+	animation: mc-item-bob 3.6s ease-in-out infinite;
+	will-change: transform;
+	cursor: pointer;
+}
+.hero-art img:hover {
+	animation-play-state: paused;
+	filter: brightness(1.08);
+}
+
+@keyframes mc-item-bob {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-8px);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero-art img {
+		animation: none;
+	}
 }
 
 .section {
