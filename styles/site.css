@@ -1135,6 +1135,24 @@
 	outline: 1px solid #5a3854;
 }
 
+.participant-tag.chosen {
+	background-color: #2d210b;
+	color: var(--accent);
+	outline: 1px solid var(--accent-dark);
+}
+
+.participant-tag.random {
+	background-color: #171c2d;
+	color: #79c0ff;
+	outline: 1px solid #283e60;
+}
+
+.participant-tag.pass {
+	background-color: #1e1b24;
+	color: #9c95a6;
+	outline: 1px solid #3c3447;
+}
+
 .participant-tag.community {
 	background-color: #13243a;
 	color: #79c0ff;

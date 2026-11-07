@@ -1,23 +1,25 @@
 (function () {
 	'use strict';
 
-	var bellSounds = ['/Bingo-Site-/sounds/bell1.ogg', '/Bingo-Site-/sounds/bell2.ogg'];
+	var defaultSounds = ['/Bingo-Site-/sounds/bell1.ogg', '/Bingo-Site-/sounds/bell2.ogg'];
 
-	function getBasePath() {
+	function resolveSoundUrl(url) {
+		if (url.indexOf('http://') === 0 || url.indexOf('https://') === 0) {
+			return url;
+		}
 		var script = document.querySelector('script[src*="bell.js"]');
 		if (script) {
-			var src = script.getAttribute('src');
-			var idx = src.indexOf('/Bingo-Site-/scripts/bell.js');
-			if (idx !== -1) {
-				return src.substring(0, idx);
+			var src = script.getAttribute('src') || '';
+			var idx = src.indexOf('/' + 'scripts/bell.js');
+			if (idx > 0) {
+				var prefix = src.substring(0, idx);
+				if (url.indexOf(prefix) !== 0) {
+					return prefix + url;
+				}
 			}
 		}
-		var link = document.querySelector('link[rel="stylesheet"][href*="/"]');
-		if (link) return '';
-		return '';
+		return url;
 	}
-
-	var basePath = getBasePath();
 
 	function spawnBellParticles(el) {
 		var rect = el.getBoundingClientRect();
@@ -56,8 +58,9 @@
 
 		// Play vanilla Minecraft bell sound with slight pitch variance
 		try {
-			var pick = bellSounds[Math.floor(Math.random() * bellSounds.length)];
-			var audio = new Audio(basePath + pick);
+			var rawPick = defaultSounds[Math.floor(Math.random() * defaultSounds.length)];
+			var soundUrl = resolveSoundUrl(rawPick);
+			var audio = new Audio(soundUrl);
 			audio.volume = 0.8;
 			// Minecraft bell pitch variation
 			audio.playbackRate = 0.94 + Math.random() * 0.12;

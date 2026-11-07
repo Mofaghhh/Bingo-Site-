@@ -375,19 +375,18 @@
 					avatar.setAttribute('class', 'bracket-slot-avatar');
 					slotsGroup.appendChild(avatar);
 
+					var displayName = player.nick.length > 14 ? (player.nick.slice(0, 12) + '…') : player.nick;
 					var nameText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 					nameText.setAttribute('x', x + 30);
 					nameText.setAttribute('y', y);
 					nameText.setAttribute('class', 'bracket-slot-name');
-					nameText.textContent = player.nick;
+					nameText.textContent = displayName;
+					if (displayName !== player.nick) {
+						var titleEl = document.createElementNS('http://www.w3.org/2000/svg', 'title');
+						titleEl.textContent = player.nick;
+						nameText.appendChild(titleEl);
+					}
 					slotsGroup.appendChild(nameText);
-				} else if (player && !player.registered) {
-					var emptyText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-					emptyText.setAttribute('x', x + slotW / 2);
-					emptyText.setAttribute('y', y);
-					emptyText.setAttribute('class', 'bracket-slot-text');
-					emptyText.textContent = player.nick;
-					slotsGroup.appendChild(emptyText);
 				} else if (isChampion) {
 					var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 					text.setAttribute('x', x + slotW / 2);
@@ -666,16 +665,20 @@
 
 		var roster = window.TOURNAMENT_ROSTER;
 		var filtered = roster.filter(function (p) {
-			if (filterType === 'creators' && p.type !== 'creators') return false;
-			if (filterType === 'community' && p.type !== 'community') return false;
-			if (searchQuery && p.nick.toLowerCase().indexOf(searchQuery) === -1) return false;
+			if (filterType === 'chosen' && p.matchType !== 'Выбранная пара') return false;
+			if (filterType === 'random' && p.matchType === 'Выбранная пара') return false;
+			if (searchQuery) {
+				var nickMatch = p.nick && p.nick.toLowerCase().indexOf(searchQuery) !== -1;
+				var oppMatch = p.opponent && p.opponent.toLowerCase().indexOf(searchQuery) !== -1;
+				var tgMatch = p.tg && p.tg.toLowerCase().indexOf(searchQuery) !== -1;
+				if (!nickMatch && !oppMatch && !tgMatch) return false;
+			}
 			return true;
 		});
 
 		var countVal = document.getElementById('roster-count-val');
 		if (countVal) {
-			var regCount = roster.filter(function (p) { return p.registered; }).length;
-			countVal.textContent = regCount + ' / ' + roster.length;
+			countVal.textContent = String(roster.length);
 		}
 
 		container.innerHTML = '';
@@ -724,11 +727,15 @@
 			meta.appendChild(seed);
 
 			var tag = document.createElement('span');
-			tag.className = 'participant-tag ' + (player.type === 'creators' ? 'creators' : 'community');
-			if (!player.registered) {
-				tag.textContent = isRu ? 'Свободно' : 'Open';
+			if (player.matchType === 'Выбранная пара') {
+				tag.className = 'participant-tag chosen';
+				tag.textContent = isRu ? 'Выбранная пара' : 'Chosen Pair';
+			} else if (player.opponent) {
+				tag.className = 'participant-tag random';
+				tag.textContent = isRu ? 'Случайный подбор' : 'Random Match';
 			} else {
-				tag.textContent = player.type === 'creators' ? (isRu ? 'Креатор' : 'Creator') : (isRu ? 'Игрок' : 'Player');
+				tag.className = 'participant-tag pass';
+				tag.textContent = isRu ? 'Ожидает пару' : 'Awaiting Pair';
 			}
 			meta.appendChild(tag);
 
@@ -821,7 +828,7 @@
 		});
 	}
 
-	switchMode('finals');
+	switchMode('pool1');
 	renderParticipantsGrid('all', '');
 	applyLang(storedLang());
 
