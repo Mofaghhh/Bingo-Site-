@@ -21,6 +21,7 @@ In competitive Bingo Ranked matches and tournaments, victory must rely on game k
 | Fog and visibility | No Fog, Lava Clear, and similar liquid or fog transparency features |
 | Movement | InvMove, Wall-Jump, Accessible Step |
 | Inventory | Mouse Wheelie, Inventory Profiles Next, Client Sort, Sort It Out!, Lightweight Inventory Sorting, Mouse Tweaks, More Mouse Tweaks |
+| Recipe viewers | JEI (Just Enough Items), REI (Roughly Enough Items), EMI, NEI, and any external recipe catalog overlays |
 | Other utilities | BedrockMiner, Client Vein Miner, Trajectory Preview |
 
 {% hint style="danger" %}

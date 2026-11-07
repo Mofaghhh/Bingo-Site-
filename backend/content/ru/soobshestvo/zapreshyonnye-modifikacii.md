@@ -21,6 +21,7 @@
 | Туман и видимость | No Fog, Lava Clear и аналогичные функции прозрачности жидкостей и тумана |
 | Передвижение | InvMove, Wall-Jump, Accessible Step |
 | Инвентарь | Mouse Wheelie, Inventory Profiles Next, Client Sort, Sort It Out!, Lightweight Inventory Sorting, Mouse Tweaks, More Mouse Tweaks |
+| Рецепты и справочники | JEI (Just Enough Items), REI (Roughly Enough Items), EMI, NEI и любые сторонние каталоги рецептов |
 | Прочие утилиты | BedrockMiner, Client Vein Miner, Trajectory Preview |
 
 {% hint style="danger" %}
