@@ -369,7 +369,7 @@
 					avatar.setAttribute('y', y - 10);
 					avatar.setAttribute('width', 20);
 					avatar.setAttribute('height', 20);
-					var avUrl = window.getPlayerAvatarUrl ? window.getPlayerAvatarUrl(player.nick, 24) : 'https://mc-heads.net/avatar/' + encodeURIComponent(player.nick) + '/24';
+					var avUrl = window.getPlayerAvatarUrl ? window.getPlayerAvatarUrl(player.nick, 24) : 'https://minotar.net/helm/' + encodeURIComponent(player.nick) + '/24';
 					avatar.setAttribute('href', avUrl);
 					avatar.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', avUrl);
 					avatar.setAttribute('class', 'bracket-slot-avatar');
@@ -666,12 +666,10 @@
 		var roster = window.TOURNAMENT_ROSTER;
 		var filtered = roster.filter(function (p) {
 			if (filterType === 'chosen' && p.matchType !== 'Выбранная пара') return false;
-			if (filterType === 'random' && p.matchType === 'Выбранная пара') return false;
 			if (searchQuery) {
 				var nickMatch = p.nick && p.nick.toLowerCase().indexOf(searchQuery) !== -1;
-				var oppMatch = p.opponent && p.opponent.toLowerCase().indexOf(searchQuery) !== -1;
-				var tgMatch = p.tg && p.tg.toLowerCase().indexOf(searchQuery) !== -1;
-				if (!nickMatch && !oppMatch && !tgMatch) return false;
+				var oppMatch = (p.matchType === 'Выбранная пара' && p.opponent) ? p.opponent.toLowerCase().indexOf(searchQuery) !== -1 : false;
+				if (!nickMatch && !oppMatch) return false;
 			}
 			return true;
 		});
@@ -696,6 +694,7 @@
 		var isRu = document.documentElement.lang !== 'en';
 
 		filtered.forEach(function (player) {
+			var isChosen = (player.matchType === 'Выбранная пара');
 			var card = document.createElement('div');
 			card.className = 'participant-card' + (!player.registered ? ' open-slot' : '');
 			card.setAttribute('data-nick', player.nick);
@@ -706,12 +705,12 @@
 
 			var img = document.createElement('img');
 			img.className = 'participant-avatar';
-			img.src = window.getPlayerAvatarUrl ? window.getPlayerAvatarUrl(player.nick, 32) : 'https://mc-heads.net/avatar/' + encodeURIComponent(player.nick) + '/32';
+			img.src = window.getPlayerAvatarUrl ? window.getPlayerAvatarUrl(player.nick, 32) : 'https://minotar.net/helm/' + encodeURIComponent(player.nick) + '/32';
 			img.alt = player.nick;
 			img.loading = 'lazy';
 			img.onerror = function () {
 				this.onerror = null;
-				this.src = 'https://minotar.net/helm/' + encodeURIComponent(player.nick) + '/32';
+				this.src = 'https://cravatar.eu/helmavatar/' + encodeURIComponent(player.nick) + '/32.png';
 			};
 			avatarWrap.appendChild(img);
 
@@ -726,18 +725,12 @@
 			seed.textContent = '#' + (player.seed < 10 ? '0' : '') + player.seed;
 			meta.appendChild(seed);
 
-			var tag = document.createElement('span');
-			if (player.matchType === 'Выбранная пара') {
+			if (isChosen) {
+				var tag = document.createElement('span');
 				tag.className = 'participant-tag chosen';
 				tag.textContent = isRu ? 'Выбранная пара' : 'Chosen Pair';
-			} else if (player.opponent) {
-				tag.className = 'participant-tag random';
-				tag.textContent = isRu ? 'Случайный подбор' : 'Random Match';
-			} else {
-				tag.className = 'participant-tag pass';
-				tag.textContent = isRu ? 'Ожидает пару' : 'Awaiting Pair';
+				meta.appendChild(tag);
 			}
-			meta.appendChild(tag);
 
 			var nick = document.createElement('span');
 			nick.className = 'participant-nick';
@@ -748,18 +741,11 @@
 			info.appendChild(meta);
 			info.appendChild(nick);
 
-			if (player.opponent) {
+			if (isChosen && player.opponent) {
 				var vsRow = document.createElement('span');
 				vsRow.className = 'participant-vs';
 				vsRow.textContent = (isRu ? 'против ' : 'vs ') + player.opponent;
 				info.appendChild(vsRow);
-			}
-
-			if (player.tg && player.tg !== player.nick) {
-				var tgRow = document.createElement('span');
-				tgRow.className = 'participant-tg';
-				tgRow.textContent = player.tg;
-				info.appendChild(tgRow);
 			}
 
 			card.appendChild(avatarWrap);

@@ -197,8 +197,8 @@
 	},
 	{
 		"seed": 25,
-		"nick": "f16ka",
-		"tg": "f16ka",
+		"nick": "fi6ka",
+		"tg": "fi6ka",
 		"opponent": "Zavet_Tenej",
 		"matchType": "Выбранная пара",
 		"registered": true
@@ -207,7 +207,7 @@
 		"seed": 26,
 		"nick": "Zavet_Tenej",
 		"tg": "Zavet_Tenej",
-		"opponent": "f16ka",
+		"opponent": "fi6ka",
 		"matchType": "Выбранная пара",
 		"registered": true
 	},
@@ -594,6 +594,6 @@
 	window.getPlayerAvatarUrl = function (nick, size) {
 		size = size || 32;
 		if (!nick) return '';
-		return 'https://mc-heads.net/avatar/' + encodeURIComponent(nick) + '/' + size;
+		return 'https://minotar.net/helm/' + encodeURIComponent(nick) + '/' + size;
 	};
 })();
