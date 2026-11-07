@@ -23,7 +23,8 @@ const MIME = {
 	'.ico': 'image/x-icon',
 	'.ttf': 'font/ttf',
 	'.woff': 'font/woff',
-	'.woff2': 'font/woff2'
+	'.woff2': 'font/woff2',
+	'.ogg': 'audio/ogg'
 };
 
 function stripBase(p) {

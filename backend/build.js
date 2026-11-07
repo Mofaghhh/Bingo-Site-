@@ -10,7 +10,7 @@ const BASE = (process.env.BASE_PATH || '').replace(/\/+$/, '');
 const OUT = process.env.OUT_DIR ? path.resolve(SITE_ROOT, process.env.OUT_DIR) : SITE_ROOT;
 const TO_ROOT = OUT === SITE_ROOT;
 
-const ASSET_DIRS = ['styles', 'fonts', 'scripts', 'images', 'tournaments'];
+const ASSET_DIRS = ['styles', 'fonts', 'scripts', 'images', 'tournaments', 'sounds'];
 const ASSET_FILES = ['logo.svg', 'logo.png', 'favicon.svg'];
 
 function mkdirp(dir) {
@@ -40,7 +40,7 @@ function applyBase(text) {
 	text = text.replace(STALE_BASES, '');
 	text = text.replace(/(href=["'])\/(["'])/g, '$1' + BASE + '/$2');
 	return text.replace(
-		/(["'(])\/(docs|tournaments|styles|scripts|fonts|images|logo\.svg|logo\.png|favicon\.svg)/g,
+		/(["'(])\/(docs|tournaments|styles|scripts|fonts|images|sounds|logo\.svg|logo\.png|favicon\.svg)/g,
 		'$1' + BASE + '/$2'
 	);
 }

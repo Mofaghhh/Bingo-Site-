@@ -194,6 +194,7 @@ function renderPage(slug, initialLang) {
 		</div>
 		<script id="wiki-data" type="application/json">${json}</script>
 		<script src="/scripts/wiki.js" defer></script>
+		<script src="/scripts/bell.js" defer></script>
 	</body>
 </html>`;
 }
@@ -223,6 +224,7 @@ function renderNotFound(lang) {
 				<p><a class="minecraft-button" href="/">${esc(ui.backHome)}</a></p>
 			</div>
 		</div>
+		<script src="/scripts/bell.js" defer></script>
 	</body>
 </html>`;
 }

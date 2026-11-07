@@ -30,10 +30,17 @@
 				el.textContent = val;
 			}
 		});
+		document.querySelectorAll('[data-placeholder-ru][data-placeholder-en]').forEach(function (input) {
+			var ph = input.getAttribute('data-placeholder-' + lang);
+			if (ph != null) input.placeholder = ph;
+		});
 		document.querySelectorAll('.lang-switch [data-lang]').forEach(function (b) {
 			b.classList.toggle('active', b.getAttribute('data-lang') === lang);
 		});
 		updateHeadersLang();
+		if (typeof renderParticipantsGrid === 'function') {
+			renderParticipantsGrid(currentRosterFilter, currentRosterSearch);
+		}
 		storeLang(lang);
 	}
 
@@ -50,7 +57,7 @@
 			names_ru: ['1/8 финала', '1/4 финала', 'Полуфинал', 'Финал', 'Чемпион'],
 			names_en: ['Round of 16', 'Quarterfinals', 'Semifinals', 'Final', 'Champion'],
 			baseStep: 48,
-			slotW: 140,
+			slotW: 160,
 			slotH: 28,
 			colGap: 72
 		},
@@ -58,48 +65,69 @@
 			rounds: [64, 32, 16, 8, 4, 2, 1],
 			names_ru: ['1/32 финала', '1/16 финала', '1/8 финала', '1/4 финала', 'Полуфинал', 'Финал сетки', 'Победитель 1–64'],
 			names_en: ['Round of 64', 'Round of 32', 'Round of 16', 'Quarterfinals', 'Semifinals', 'Bracket Final', 'Winner 1–64'],
-			baseStep: 38,
-			slotW: 140,
-			slotH: 26,
-			colGap: 68
+			baseStep: 40,
+			slotW: 160,
+			slotH: 28,
+			colGap: 70
 		},
 		pool2: {
 			rounds: [64, 32, 16, 8, 4, 2, 1],
 			names_ru: ['1/32 финала', '1/16 финала', '1/8 финала', '1/4 финала', 'Полуфинал', 'Финал сетки', 'Победитель 65–128'],
 			names_en: ['Round of 64', 'Round of 32', 'Round of 16', 'Quarterfinals', 'Semifinals', 'Bracket Final', 'Winner 65–128'],
-			baseStep: 38,
-			slotW: 140,
-			slotH: 26,
-			colGap: 68
+			baseStep: 40,
+			slotW: 160,
+			slotH: 28,
+			colGap: 70
 		},
 		pool3: {
 			rounds: [64, 32, 16, 8, 4, 2, 1],
 			names_ru: ['1/32 финала', '1/16 финала', '1/8 финала', '1/4 финала', 'Полуфинал', 'Финал сетки', 'Победитель 129–192'],
 			names_en: ['Round of 64', 'Round of 32', 'Round of 16', 'Quarterfinals', 'Semifinals', 'Bracket Final', 'Winner 129–192'],
-			baseStep: 38,
-			slotW: 140,
-			slotH: 26,
-			colGap: 68
+			baseStep: 40,
+			slotW: 160,
+			slotH: 28,
+			colGap: 70
 		},
 		pool4: {
 			rounds: [64, 32, 16, 8, 4, 2, 1],
 			names_ru: ['1/32 финала', '1/16 финала', '1/8 финала', '1/4 финала', 'Полуфинал', 'Финал сетки', 'Победитель 193–256'],
 			names_en: ['Round of 64', 'Round of 32', 'Round of 16', 'Quarterfinals', 'Semifinals', 'Bracket Final', 'Winner 193–256'],
-			baseStep: 38,
-			slotW: 140,
-			slotH: 26,
-			colGap: 68
+			baseStep: 40,
+			slotW: 160,
+			slotH: 28,
+			colGap: 70
 		},
 		all: {
 			rounds: [256, 128, 64, 32, 16, 8, 4, 2, 1],
 			names_ru: ['1/128', '1/64', '1/32', '1/16', '1/8', '1/4', '1/2', 'Финал', 'Чемпион'],
 			names_en: ['1/128', '1/64', '1/32', '1/16', '1/8', '1/4', '1/2', 'Final', 'Champion'],
-			baseStep: 36,
-			slotW: 135,
-			slotH: 24,
-			colGap: 65
+			baseStep: 38,
+			slotW: 150,
+			slotH: 26,
+			colGap: 66
 		}
 	};
+
+	function getSlotPlayer(modeKey, colIndex, rowIndex) {
+		if (!window.TOURNAMENT_ROSTER) return null;
+		var roster = window.TOURNAMENT_ROSTER;
+		if (colIndex !== 0) return null;
+
+		if (modeKey === 'finals') {
+			return roster[rowIndex] || null;
+		} else if (modeKey === 'pool1') {
+			return roster[rowIndex] || null;
+		} else if (modeKey === 'pool2') {
+			return roster[64 + rowIndex] || null;
+		} else if (modeKey === 'pool3') {
+			return roster[128 + rowIndex] || null;
+		} else if (modeKey === 'pool4') {
+			return roster[192 + rowIndex] || null;
+		} else if (modeKey === 'all') {
+			return roster[rowIndex] || null;
+		}
+		return null;
+	}
 
 	var currentModeKey = 'finals';
 	var viewportWrapper = document.getElementById('bracket-viewport');
@@ -314,22 +342,46 @@
 
 			for (var i = 0; i < count; i++) {
 				var y = curPositions[c][i];
+				var player = getSlotPlayer(currentModeKey, c, i);
 
 				var rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
 				rect.setAttribute('x', x);
 				rect.setAttribute('y', y - slotH / 2);
 				rect.setAttribute('width', slotW);
 				rect.setAttribute('height', slotH);
-				rect.setAttribute('rx', '5');
-				rect.setAttribute('ry', '5');
+				rect.setAttribute('rx', '4');
+				rect.setAttribute('ry', '4');
 				rect.setAttribute('class', 'bracket-slot-rect' + (isChampion ? ' champion-slot' : ''));
 				rect.setAttribute('data-col', c);
 				rect.setAttribute('data-idx', i);
 
+				if (player) {
+					rect.setAttribute('data-nick', player.nick);
+					rect.setAttribute('data-seed', player.seed);
+				}
+
 				slotLookup[c + '_' + i] = rect;
 				slotsGroup.appendChild(rect);
 
-				if (isChampion) {
+				if (player) {
+					var avatar = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+					avatar.setAttribute('x', x + 5);
+					avatar.setAttribute('y', y - 10);
+					avatar.setAttribute('width', 20);
+					avatar.setAttribute('height', 20);
+					var avUrl = window.getPlayerAvatarUrl ? window.getPlayerAvatarUrl(player.nick, 24) : 'https://mc-heads.net/avatar/' + encodeURIComponent(player.nick) + '/24';
+					avatar.setAttribute('href', avUrl);
+					avatar.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', avUrl);
+					avatar.setAttribute('class', 'bracket-slot-avatar');
+					slotsGroup.appendChild(avatar);
+
+					var nameText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					nameText.setAttribute('x', x + 30);
+					nameText.setAttribute('y', y);
+					nameText.setAttribute('class', 'bracket-slot-name');
+					nameText.textContent = player.nick;
+					slotsGroup.appendChild(nameText);
+				} else if (isChampion) {
 					var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 					text.setAttribute('x', x + slotW / 2);
 					text.setAttribute('y', y);
@@ -582,7 +634,7 @@
 		}
 	});
 
-	var poolTabs = document.querySelectorAll('.bracket-tab-btn');
+	var poolTabs = document.querySelectorAll('.bracket-pool-tabs [data-pool]');
 	poolTabs.forEach(function (tab) {
 		tab.addEventListener('click', function () {
 			poolTabs.forEach(function (t) { t.classList.remove('active'); });
@@ -592,7 +644,158 @@
 		});
 	});
 
+	// Tournament Roster Management
+	var currentRosterFilter = 'all';
+	var currentRosterSearch = '';
+
+	function renderParticipantsGrid(filterType, searchQuery) {
+		var container = document.getElementById('participants-grid');
+		if (!container || !window.TOURNAMENT_ROSTER) return;
+
+		filterType = filterType || currentRosterFilter || 'all';
+		currentRosterFilter = filterType;
+		if (searchQuery !== undefined) currentRosterSearch = searchQuery;
+		searchQuery = (currentRosterSearch || '').trim().toLowerCase();
+
+		var roster = window.TOURNAMENT_ROSTER;
+		var filtered = roster.filter(function (p) {
+			if (filterType === 'creators' && p.type !== 'creators') return false;
+			if (filterType === 'community' && p.type !== 'community') return false;
+			if (searchQuery && p.nick.toLowerCase().indexOf(searchQuery) === -1) return false;
+			return true;
+		});
+
+		var countVal = document.getElementById('roster-count-val');
+		if (countVal) {
+			countVal.textContent = filtered.length + ' / ' + roster.length;
+		}
+
+		container.innerHTML = '';
+
+		if (filtered.length === 0) {
+			var isRu = document.documentElement.lang !== 'en';
+			var empty = document.createElement('div');
+			empty.className = 'roster-empty-notice';
+			empty.textContent = isRu ? 'Игрок не найден' : 'No players found';
+			container.appendChild(empty);
+			return;
+		}
+
+		var frag = document.createDocumentFragment();
+		var isRu = document.documentElement.lang !== 'en';
+
+		filtered.forEach(function (player) {
+			var card = document.createElement('div');
+			card.className = 'participant-card';
+			card.setAttribute('data-nick', player.nick);
+			card.setAttribute('data-seed', player.seed);
+
+			var avatarWrap = document.createElement('div');
+			avatarWrap.className = 'participant-avatar-wrap';
+
+			var img = document.createElement('img');
+			img.className = 'participant-avatar';
+			img.src = window.getPlayerAvatarUrl ? window.getPlayerAvatarUrl(player.nick, 32) : 'https://mc-heads.net/avatar/' + encodeURIComponent(player.nick) + '/32';
+			img.alt = player.nick;
+			img.loading = 'lazy';
+			img.onerror = function () {
+				this.onerror = null;
+				this.src = 'https://minotar.net/helm/' + encodeURIComponent(player.nick) + '/32';
+			};
+			avatarWrap.appendChild(img);
+
+			var info = document.createElement('div');
+			info.className = 'participant-info';
+
+			var meta = document.createElement('div');
+			meta.className = 'participant-meta-row';
+
+			var seed = document.createElement('span');
+			seed.className = 'participant-seed';
+			seed.textContent = '#' + (player.seed < 10 ? '0' : '') + player.seed;
+			meta.appendChild(seed);
+
+			var tag = document.createElement('span');
+			tag.className = 'participant-tag ' + (player.type === 'creators' ? 'creators' : 'community');
+			tag.textContent = player.type === 'creators' ? (isRu ? 'Креатор' : 'Creator') : (isRu ? 'Игрок' : 'Player');
+			meta.appendChild(tag);
+
+			var nick = document.createElement('span');
+			nick.className = 'participant-nick';
+			nick.textContent = player.nick;
+			nick.title = player.nick;
+
+			info.appendChild(meta);
+			info.appendChild(nick);
+
+			card.appendChild(avatarWrap);
+			card.appendChild(info);
+
+			card.addEventListener('click', function () {
+				highlightPlayerInBracket(player.seed);
+			});
+
+			frag.appendChild(card);
+		});
+
+		container.appendChild(frag);
+	}
+
+	function highlightPlayerInBracket(seed) {
+		var targetPool = 'finals';
+		var targetIdx = seed - 1;
+
+		if (seed <= 64) {
+			targetPool = 'pool1';
+			targetIdx = seed - 1;
+		} else if (seed <= 128) {
+			targetPool = 'pool2';
+			targetIdx = seed - 65;
+		} else if (seed <= 192) {
+			targetPool = 'pool3';
+			targetIdx = seed - 129;
+		} else {
+			targetPool = 'pool4';
+			targetIdx = seed - 193;
+		}
+
+		if (currentModeKey !== targetPool && currentModeKey !== 'all' && (currentModeKey !== 'finals' || seed > 16)) {
+			switchMode(targetPool);
+			var tabBtn = document.querySelector('.bracket-pool-tabs [data-pool="' + targetPool + '"]');
+			if (tabBtn) {
+				document.querySelectorAll('.bracket-pool-tabs [data-pool]').forEach(function (b) { b.classList.remove('active'); });
+				tabBtn.classList.add('active');
+			}
+		}
+
+		highlightPath(0, targetIdx);
+
+		var vp = document.getElementById('bracket-viewport');
+		if (vp) {
+			vp.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		}
+	}
+
+	var rosterTabs = document.querySelectorAll('#roster-filter-tabs [data-filter]');
+	rosterTabs.forEach(function (tab) {
+		tab.addEventListener('click', function () {
+			rosterTabs.forEach(function (t) { t.classList.remove('active'); });
+			tab.classList.add('active');
+			currentRosterFilter = tab.getAttribute('data-filter');
+			renderParticipantsGrid(currentRosterFilter, currentRosterSearch);
+		});
+	});
+
+	var searchInput = document.getElementById('roster-search-input');
+	if (searchInput) {
+		searchInput.addEventListener('input', function (e) {
+			currentRosterSearch = e.target.value;
+			renderParticipantsGrid(currentRosterFilter, currentRosterSearch);
+		});
+	}
+
 	switchMode('finals');
+	renderParticipantsGrid('all', '');
 	applyLang(storedLang());
 
 	window.addEventListener('resize', function () {
