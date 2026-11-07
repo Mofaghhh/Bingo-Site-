@@ -363,7 +363,7 @@
 				slotLookup[c + '_' + i] = rect;
 				slotsGroup.appendChild(rect);
 
-				if (player) {
+				if (player && player.registered) {
 					var avatar = document.createElementNS('http://www.w3.org/2000/svg', 'image');
 					avatar.setAttribute('x', x + 5);
 					avatar.setAttribute('y', y - 10);
@@ -381,6 +381,13 @@
 					nameText.setAttribute('class', 'bracket-slot-name');
 					nameText.textContent = player.nick;
 					slotsGroup.appendChild(nameText);
+				} else if (player && !player.registered) {
+					var emptyText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					emptyText.setAttribute('x', x + slotW / 2);
+					emptyText.setAttribute('y', y);
+					emptyText.setAttribute('class', 'bracket-slot-text');
+					emptyText.textContent = player.nick;
+					slotsGroup.appendChild(emptyText);
 				} else if (isChampion) {
 					var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 					text.setAttribute('x', x + slotW / 2);
@@ -667,7 +674,8 @@
 
 		var countVal = document.getElementById('roster-count-val');
 		if (countVal) {
-			countVal.textContent = filtered.length + ' / ' + roster.length;
+			var regCount = roster.filter(function (p) { return p.registered; }).length;
+			countVal.textContent = regCount + ' / ' + roster.length;
 		}
 
 		container.innerHTML = '';
@@ -686,7 +694,7 @@
 
 		filtered.forEach(function (player) {
 			var card = document.createElement('div');
-			card.className = 'participant-card';
+			card.className = 'participant-card' + (!player.registered ? ' open-slot' : '');
 			card.setAttribute('data-nick', player.nick);
 			card.setAttribute('data-seed', player.seed);
 
@@ -717,16 +725,35 @@
 
 			var tag = document.createElement('span');
 			tag.className = 'participant-tag ' + (player.type === 'creators' ? 'creators' : 'community');
-			tag.textContent = player.type === 'creators' ? (isRu ? 'Креатор' : 'Creator') : (isRu ? 'Игрок' : 'Player');
+			if (!player.registered) {
+				tag.textContent = isRu ? 'Свободно' : 'Open';
+			} else {
+				tag.textContent = player.type === 'creators' ? (isRu ? 'Креатор' : 'Creator') : (isRu ? 'Игрок' : 'Player');
+			}
 			meta.appendChild(tag);
 
 			var nick = document.createElement('span');
 			nick.className = 'participant-nick';
 			nick.textContent = player.nick;
 			nick.title = player.nick;
+			if (!player.registered) nick.style.color = '#736d7b';
 
 			info.appendChild(meta);
 			info.appendChild(nick);
+
+			if (player.opponent) {
+				var vsRow = document.createElement('span');
+				vsRow.className = 'participant-vs';
+				vsRow.textContent = (isRu ? 'против ' : 'vs ') + player.opponent;
+				info.appendChild(vsRow);
+			}
+
+			if (player.tg && player.tg !== player.nick) {
+				var tgRow = document.createElement('span');
+				tgRow.className = 'participant-tg';
+				tgRow.textContent = player.tg;
+				info.appendChild(tgRow);
+			}
 
 			card.appendChild(avatarWrap);
 			card.appendChild(info);
