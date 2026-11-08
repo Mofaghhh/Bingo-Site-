@@ -79,30 +79,12 @@
 			slotH: 28,
 			colGap: 70
 		},
-		pool3: {
-			rounds: [64, 32, 16, 8, 4, 2, 1],
-			names_ru: ['1/32 финала', '1/16 финала', '1/8 финала', '1/4 финала', 'Полуфинал', 'Финал сетки', 'Победитель 129–192'],
-			names_en: ['Round of 64', 'Round of 32', 'Round of 16', 'Quarterfinals', 'Semifinals', 'Bracket Final', 'Winner 129–192'],
-			baseStep: 40,
-			slotW: 160,
-			slotH: 28,
-			colGap: 70
-		},
-		pool4: {
-			rounds: [64, 32, 16, 8, 4, 2, 1],
-			names_ru: ['1/32 финала', '1/16 финала', '1/8 финала', '1/4 финала', 'Полуфинал', 'Финал сетки', 'Победитель 193–256'],
-			names_en: ['Round of 64', 'Round of 32', 'Round of 16', 'Quarterfinals', 'Semifinals', 'Bracket Final', 'Winner 193–256'],
-			baseStep: 40,
-			slotW: 160,
-			slotH: 28,
-			colGap: 70
-		},
 		all: {
-			rounds: [256, 128, 64, 32, 16, 8, 4, 2, 1],
-			names_ru: ['1/128', '1/64', '1/32', '1/16', '1/8', '1/4', '1/2', 'Финал', 'Чемпион'],
-			names_en: ['1/128', '1/64', '1/32', '1/16', '1/8', '1/4', '1/2', 'Final', 'Champion'],
+			rounds: [128, 64, 32, 16, 8, 4, 2, 1],
+			names_ru: ['1/64 финала', '1/32 финала', '1/16 финала', '1/8 финала', '1/4 финала', 'Полуфинал', 'Финал', 'Чемпион'],
+			names_en: ['Round of 64', 'Round of 32', 'Round of 16', 'Quarterfinals', 'Semifinals', 'Bracket Final', 'Final', 'Champion'],
 			baseStep: 38,
-			slotW: 150,
+			slotW: 155,
 			slotH: 26,
 			colGap: 66
 		}
@@ -119,10 +101,6 @@
 			return roster[rowIndex] || null;
 		} else if (modeKey === 'pool2') {
 			return roster[64 + rowIndex] || null;
-		} else if (modeKey === 'pool3') {
-			return roster[128 + rowIndex] || null;
-		} else if (modeKey === 'pool4') {
-			return roster[192 + rowIndex] || null;
 		} else if (modeKey === 'all') {
 			return roster[rowIndex] || null;
 		}
@@ -373,6 +351,11 @@
 					avatar.setAttribute('href', avUrl);
 					avatar.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', avUrl);
 					avatar.setAttribute('class', 'bracket-slot-avatar');
+					avatar.addEventListener('error', function () {
+						var fallback = 'https://cravatar.eu/helmavatar/' + encodeURIComponent(player.nick) + '/24.png';
+						this.setAttribute('href', fallback);
+						this.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', fallback);
+					});
 					slotsGroup.appendChild(avatar);
 
 					var displayName = player.nick.length > 14 ? (player.nick.slice(0, 12) + '…') : player.nick;
@@ -728,7 +711,7 @@
 			if (isChosen) {
 				var tag = document.createElement('span');
 				tag.className = 'participant-tag chosen';
-				tag.textContent = isRu ? 'Выбранная пара' : 'Chosen Pair';
+				tag.textContent = isRu ? 'Пара' : 'Pair';
 				meta.appendChild(tag);
 			}
 
@@ -762,21 +745,15 @@
 	}
 
 	function highlightPlayerInBracket(seed) {
-		var targetPool = 'finals';
+		var targetPool = 'pool1';
 		var targetIdx = seed - 1;
 
 		if (seed <= 64) {
 			targetPool = 'pool1';
 			targetIdx = seed - 1;
-		} else if (seed <= 128) {
+		} else {
 			targetPool = 'pool2';
 			targetIdx = seed - 65;
-		} else if (seed <= 192) {
-			targetPool = 'pool3';
-			targetIdx = seed - 129;
-		} else {
-			targetPool = 'pool4';
-			targetIdx = seed - 193;
 		}
 
 		if (currentModeKey !== targetPool && currentModeKey !== 'all' && (currentModeKey !== 'finals' || seed > 16)) {

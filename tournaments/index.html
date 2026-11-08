@@ -79,7 +79,7 @@
 								Официальный турнир для стримеров Twitch, YouTube и авторов видео.
 							</p>
 							<ul class="tourney-list">
-								<li data-ru="Сетка на 256 участников" data-en="256-player bracket">Сетка на 256 участников</li>
+								<li data-ru="Сетка на 128 участников" data-en="128-player bracket">Сетка на 128 участников</li>
 								<li data-ru="Эксклюзивные медали для призёров и победителя" data-en="Exclusive medals for winners and runners-up">Эксклюзивные медали для призёров и победителя</li>
 							</ul>
 							<div class="tourney-card-footer">
@@ -101,7 +101,7 @@
 								Турнир для всех зарегистрированных игроков Bingo Ranked от Copper до Netherite.
 							</p>
 							<ul class="tourney-list">
-								<li data-ru="Сетка на 256 участников" data-en="256-player bracket">Сетка на 256 участников</li>
+								<li data-ru="Сетка на 128 участников" data-en="128-player bracket">Сетка на 128 участников</li>
 								<li data-ru="Открытое участие для всех игроков проекта" data-en="Open entry for all project players">Открытое участие для всех игроков проекта</li>
 								<li data-ru="Матчи 1v1 на выбывание" data-en="1v1 single elimination matches">Матчи 1v1 на выбывание</li>
 							</ul>
@@ -129,25 +129,25 @@
 				<section class="section participants-section-container" id="roster-section">
 					<div class="participants-header-bar">
 						<div>
-							<h2 class="section-title" data-ru="Список участников" data-en="Tournament Roster" style="margin-bottom: 6px;">Список участников</h2>
-							<p class="participants-subtitle" data-ru="Официальные участники с лицензией Minecraft. Нажмите на игрока для подсветки в сетке." data-en="Official participants with licensed Minecraft accounts. Click a player to highlight in bracket.">
-								Официальные участники с лицензией Minecraft. Нажмите на игрока для подсветки в сетке.
+							<h2 class="section-title" data-ru="Участники турнира" data-en="Tournament Players" style="margin-bottom: 6px;">Участники турнира</h2>
+							<p class="participants-subtitle" data-ru="Кликните по игроку, чтобы подсветить его матч в турнирной сетке." data-en="Click a player to trace their match in the bracket.">
+								Кликните по игроку, чтобы подсветить его матч в турнирной сетке.
 							</p>
 						</div>
 						<div class="participants-stats-badge">
-							<span data-ru="Участников зарегистрировано:" data-en="Registered players:">Участников зарегистрировано:</span>
-							<strong id="roster-count-val">73</strong>
+							<span data-ru="Игроков в списке:" data-en="Players:">Игроков в списке:</span>
+							<strong id="roster-count-val">86</strong>
 						</div>
 					</div>
 
 					<div class="participants-controls-bar">
 						<div class="bracket-pool-tabs" id="roster-filter-tabs">
-							<button type="button" class="bracket-tab-btn active" data-filter="all" data-ru="Все участники (73)" data-en="All Players (73)">Все участники (73)</button>
-							<button type="button" class="bracket-tab-btn" data-filter="chosen" data-ru="Выбранные пары (26)" data-en="Chosen Pairs (26)">Выбранные пары (26)</button>
+							<button type="button" class="bracket-tab-btn active" data-filter="all" data-ru="Все (86)" data-en="All (86)">Все (86)</button>
+							<button type="button" class="bracket-tab-btn" data-filter="chosen" data-ru="Пары (26)" data-en="Pairs (26)">Пары (26)</button>
 						</div>
 
 						<div class="roster-search-box">
-							<input type="text" id="roster-search-input" placeholder="Поиск игрока по нику..." data-placeholder-ru="Поиск игрока по нику..." data-placeholder-en="Search player by nick..." autocomplete="off" spellcheck="false" />
+							<input type="text" id="roster-search-input" placeholder="Поиск по нику..." data-placeholder-ru="Поиск по нику..." data-placeholder-en="Search by nick..." autocomplete="off" spellcheck="false" />
 						</div>
 					</div>
 
@@ -156,18 +156,16 @@
 					</div>
 				</section>
 
-				<!-- Tournament Bracket Section: 256 Players Split in Pools & Finals -->
+				<!-- Tournament Bracket Section: 128 Players Split in Pools & Finals -->
 				<section class="section bracket-section-container">
-					<h2 class="section-title" data-ru="Турнирная сетка (256 слотов)" data-en="Tournament Bracket (256 Slots)">Турнирная сетка (256 слотов)</h2>
+					<h2 class="section-title" data-ru="Турнирная сетка (128 слотов)" data-en="Tournament Bracket (128 Slots)">Турнирная сетка (128 слотов)</h2>
 
 					<div class="bracket-controls-bar">
 						<div class="bracket-pool-tabs">
 							<button type="button" class="bracket-tab-btn active" data-pool="pool1" data-ru="Сетка 1 (1–64)" data-en="Bracket 1 (1–64)">Сетка 1 (1–64)</button>
 							<button type="button" class="bracket-tab-btn" data-pool="pool2" data-ru="Сетка 2 (65–128)" data-en="Bracket 2 (65–128)">Сетка 2 (65–128)</button>
-							<button type="button" class="bracket-tab-btn" data-pool="pool3" data-ru="Сетка 3 (129–192)" data-en="Bracket 3 (129–192)">Сетка 3 (129–192)</button>
-							<button type="button" class="bracket-tab-btn" data-pool="pool4" data-ru="Сетка 4 (193–256)" data-en="Bracket 4 (193–256)">Сетка 4 (193–256)</button>
 							<button type="button" class="bracket-tab-btn" data-pool="finals" data-ru="Топ-16 / Финалы" data-en="Top-16 / Finals">Топ-16 / Финалы</button>
-							<button type="button" class="bracket-tab-btn" data-pool="all" data-ru="Вся сетка (256)" data-en="Full Bracket (256)">Вся сетка (256)</button>
+							<button type="button" class="bracket-tab-btn" data-pool="all" data-ru="Вся сетка (128)" data-en="Full Bracket (128)">Вся сетка (128)</button>
 						</div>
 
 						<div class="bracket-zoom-tools">
