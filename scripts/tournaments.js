@@ -662,10 +662,24 @@
 			countVal.textContent = String(roster.length);
 		}
 
+		var allTab = document.querySelector('#roster-filter-tabs [data-filter="all"]');
+		var chosenTab = document.querySelector('#roster-filter-tabs [data-filter="chosen"]');
+		var chosenCount = roster.filter(function (p) { return p.matchType === 'Выбранная пара'; }).length;
+		var isRu = document.documentElement.lang !== 'en';
+		if (allTab) {
+			allTab.setAttribute('data-ru', 'Все (' + roster.length + ')');
+			allTab.setAttribute('data-en', 'All (' + roster.length + ')');
+			allTab.textContent = (isRu ? 'Все (' : 'All (') + roster.length + ')';
+		}
+		if (chosenTab) {
+			chosenTab.setAttribute('data-ru', 'Пары (' + chosenCount + ')');
+			chosenTab.setAttribute('data-en', 'Pairs (' + chosenCount + ')');
+			chosenTab.textContent = (isRu ? 'Пары (' : 'Pairs (') + chosenCount + ')';
+		}
+
 		container.innerHTML = '';
 
 		if (filtered.length === 0) {
-			var isRu = document.documentElement.lang !== 'en';
 			var empty = document.createElement('div');
 			empty.className = 'roster-empty-notice';
 			empty.textContent = isRu ? 'Игрок не найден' : 'No players found';
@@ -674,7 +688,6 @@
 		}
 
 		var frag = document.createDocumentFragment();
-		var isRu = document.documentElement.lang !== 'en';
 
 		filtered.forEach(function (player) {
 			var isChosen = (player.matchType === 'Выбранная пара');
@@ -692,8 +705,13 @@
 			img.alt = player.nick;
 			img.loading = 'lazy';
 			img.onerror = function () {
-				this.onerror = null;
-				this.src = 'https://cravatar.eu/helmavatar/' + encodeURIComponent(player.nick) + '/32.png';
+				if (this.src.indexOf('cravatar.eu') === -1) {
+					this.src = 'https://cravatar.eu/helmavatar/' + encodeURIComponent(player.nick) + '/32.png';
+				} else if (this.src.indexOf('mc-heads.net') === -1) {
+					this.src = 'https://mc-heads.net/avatar/' + encodeURIComponent(player.nick) + '/32';
+				} else {
+					this.onerror = null;
+				}
 			};
 			avatarWrap.appendChild(img);
 
