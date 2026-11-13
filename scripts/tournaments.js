@@ -347,14 +347,26 @@
 					avatar.setAttribute('y', y - 10);
 					avatar.setAttribute('width', 20);
 					avatar.setAttribute('height', 20);
-					var avUrl = window.getPlayerAvatarUrl ? window.getPlayerAvatarUrl(player.nick, 24) : 'https://minotar.net/helm/' + encodeURIComponent(player.nick) + '/24';
+					var avUrl = window.getPlayerAvatarUrl ? window.getPlayerAvatarUrl(player.nick, 24) : 'assets/avatars/' + encodeURIComponent(player.nick) + '.png';
 					avatar.setAttribute('href', avUrl);
 					avatar.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', avUrl);
 					avatar.setAttribute('class', 'bracket-slot-avatar');
 					avatar.addEventListener('error', function () {
-						var fallback = 'https://cravatar.eu/helmavatar/' + encodeURIComponent(player.nick) + '/24.png';
-						this.setAttribute('href', fallback);
-						this.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', fallback);
+						var nick = encodeURIComponent(player.nick);
+						var cur = this.getAttribute('href') || '';
+						if (cur.indexOf('assets/avatars') !== -1) {
+							var fb1 = 'https://crafthead.net/helm/' + nick + '/24';
+							this.setAttribute('href', fb1);
+							this.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', fb1);
+						} else if (cur.indexOf('crafthead.net') !== -1) {
+							var fb2 = 'https://mc-heads.net/avatar/' + nick + '/24';
+							this.setAttribute('href', fb2);
+							this.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', fb2);
+						} else {
+							var svgSteve = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8"><rect width="8" height="8" fill="%23b47a57"/><rect x="2" y="1" width="4" height="2" fill="%2326160d"/><rect x="1" y="2" width="6" height="1" fill="%2326160d"/><rect x="1" y="3" width="1" height="2" fill="%2326160d"/><rect x="6" y="3" width="1" height="2" fill="%2326160d"/><rect x="1" y="4" width="2" height="1" fill="%23fff"/><rect x="5" y="4" width="2" height="1" fill="%23fff"/><rect x="2" y="4" width="1" height="1" fill="%234b3e86"/><rect x="5" y="4" width="1" height="1" fill="%234b3e86"/><rect x="3" y="5" width="2" height="1" fill="%237e4e37"/><rect x="2" y="6" width="4" height="1" fill="%2367371c"/></svg>';
+							this.setAttribute('href', svgSteve);
+							this.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', svgSteve);
+						}
 					});
 					slotsGroup.appendChild(avatar);
 
@@ -701,16 +713,20 @@
 
 			var img = document.createElement('img');
 			img.className = 'participant-avatar';
-			img.src = window.getPlayerAvatarUrl ? window.getPlayerAvatarUrl(player.nick, 32) : 'https://minotar.net/helm/' + encodeURIComponent(player.nick) + '/32';
+			img.src = window.getPlayerAvatarUrl ? window.getPlayerAvatarUrl(player.nick, 32) : 'assets/avatars/' + encodeURIComponent(player.nick) + '.png';
 			img.alt = player.nick;
 			img.loading = 'lazy';
 			img.onerror = function () {
-				if (this.src.indexOf('cravatar.eu') === -1) {
-					this.src = 'https://cravatar.eu/helmavatar/' + encodeURIComponent(player.nick) + '/32.png';
-				} else if (this.src.indexOf('mc-heads.net') === -1) {
-					this.src = 'https://mc-heads.net/avatar/' + encodeURIComponent(player.nick) + '/32';
+				var nick = encodeURIComponent(player.nick);
+				if (this.src.indexOf('assets/avatars') !== -1) {
+					this.src = 'https://crafthead.net/helm/' + nick + '/32';
+				} else if (this.src.indexOf('crafthead.net') !== -1) {
+					this.src = 'https://mineskin.eu/helm/' + nick + '/32';
+				} else if (this.src.indexOf('mineskin.eu') !== -1) {
+					this.src = 'https://mc-heads.net/avatar/' + nick + '/32';
 				} else {
 					this.onerror = null;
+					this.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 8 8"><rect width="8" height="8" fill="%23b47a57"/><rect x="2" y="1" width="4" height="2" fill="%2326160d"/><rect x="1" y="2" width="6" height="1" fill="%2326160d"/><rect x="1" y="3" width="1" height="2" fill="%2326160d"/><rect x="6" y="3" width="1" height="2" fill="%2326160d"/><rect x="1" y="4" width="2" height="1" fill="%23fff"/><rect x="5" y="4" width="2" height="1" fill="%23fff"/><rect x="2" y="4" width="1" height="1" fill="%234b3e86"/><rect x="5" y="4" width="1" height="1" fill="%234b3e86"/><rect x="3" y="5" width="2" height="1" fill="%237e4e37"/><rect x="2" y="6" width="4" height="1" fill="%2367371c"/></svg>';
 				}
 			};
 			avatarWrap.appendChild(img);

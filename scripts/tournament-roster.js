@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	// Official Tournament Roster (102 Real Participants)
+	// Official Tournament Roster (106 Real Participants)
 	var TOURNAMENT_ROSTER = [
 	{
 		"seed": 1,
@@ -716,14 +716,41 @@
 		"opponent": "gribkoB",
 		"matchType": "Случайный подбор",
 		"registered": true
+	},
+	{
+		"seed": 103,
+		"nick": "_1Atropine3_",
+		"opponent": "ExyAI",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 104,
+		"nick": "ExyAI",
+		"opponent": "_1Atropine3_",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 105,
+		"nick": "Lick_Moder",
+		"opponent": "Teredex",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 106,
+		"nick": "Teredex",
+		"opponent": "Lick_Moder",
+		"matchType": "Случайный подбор",
+		"registered": true
 	}
 ];
 
 	window.TOURNAMENT_ROSTER = TOURNAMENT_ROSTER;
 
 	window.getPlayerAvatarUrl = function (nick, size) {
-		size = size || 32;
 		if (!nick) return '';
-		return 'https://minotar.net/helm/' + encodeURIComponent(nick) + '/' + size;
+		return '/Bingo-Site-/assets/avatars/' + encodeURIComponent(nick) + '.png';
 	};
 })();
