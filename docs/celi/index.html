@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="dark" />
+		<title>Каталог целей | Bingo Ranked</title>
+		<meta name="description" content="Интерактивная база целей мода с поиском, фильтрами и анимацией вариантов." />
+		<link rel="icon" href="/Bingo-Site-/favicon.svg" type="image/svg+xml" />
+		<link rel="stylesheet" href="/Bingo-Site-/styles/minecraftUI.css?v=5" />
+		<link rel="stylesheet" href="/Bingo-Site-/styles/global.css?v=5" />
+		<link rel="stylesheet" href="/Bingo-Site-/styles/site.css?v=5" />
+	</head>
+	<body data-page="celi">
+		<div class="aurora-bg"></div>
+		<div class="grid-bg"></div>
+
+		<div class="docs-shell">
+			<header class="docs-header">
+				<a class="site-brand" href="/Bingo-Site-/">
+					<img src="/Bingo-Site-/logo.png" alt="Bingo Ranked" />
+					<span class="brand-name">Bingo Ranked</span>
+				</a>
+				<div class="header-tools">
+					<nav class="site-nav docs-nav">
+						<a class="minecraft-button" data-tournaments href="/Bingo-Site-/tournaments/">Турниры</a>
+						<a class="minecraft-button" data-docs href="/Bingo-Site-/docs/kak-igrat/">Документация</a>
+					</nav>
+					<div class="header-controls">
+						<div class="lang-switch" role="group" aria-label="Language"><button type="button" data-lang="ru" class="active">RU</button><button type="button" data-lang="en">EN</button></div>
+						<button class="menu-toggle" type="button" data-menu-toggle aria-label="Menu" aria-expanded="false"><span></span></button>
+					</div>
+				</div>
+			</header>
+
+			<div class="docs-sidebar-backdrop" data-menu-close></div>
+
+			<div class="docs-layout">
+				<aside class="docs-sidebar"><div class="sidebar-section"><p class="sidebar-title">Руководство</p><ul><li><a href="/Bingo-Site-/docs/kak-igrat/">Как играть (Гайд)</a></li><li><a class="active" href="/Bingo-Site-/docs/celi/">Каталог целей</a></li></ul></div><div class="sidebar-section"><p class="sidebar-title">Регламент</p><ul><li><a href="/Bingo-Site-/docs/pravila-i-mody/">Правила и список модов</a></li></ul></div><div class="sidebar-section"><p class="sidebar-title">Соревнования</p><ul><li><a href="/Bingo-Site-/docs/reiting-i-turniry/">Рейтинг ELO и турниры</a></li></ul></div><div class="sidebar-section"><p class="sidebar-title">Поддержка</p><ul><li><a href="/Bingo-Site-/docs/baza-znanii/">База знаний</a></li><li><a href="/Bingo-Site-/docs/changelog/">Список изменений</a></li></ul></div></aside>
+
+				<article class="docs-content">
+					<h1 id="каталог-целей-bingo-ranked">Каталог целей Bingo Ranked</h1>
+<p>В этом разделе собраны игровые цели, блоки и предметы, которые могут встретиться на бинго-карте 5×5 в матчах Bingo Ranked.</p>
+<p>Каждый матч генерирует уникальную сетку из 25 случайных задач. Некоторые цели содержат группу взаимозаменяемых предметов (например, любой цвет шерсти или любой вид древесины) - в каталоге такие блоки циклично сменяются в ячейке.</p>
+<p><div class="admonition admonition-info"><p class="admonition-title">Info</p><p><strong>Тестовая заготовка каталога:</strong> база целей наполняется и согласовывается. Кликните по любой карточке с группой вариантов (обозначена значком <code>⇄</code>), чтобы открыть полное окно всех допустимых предметов.</p>
+</div></p>
+<hr>
+<div class="targets-catalog-wrapper">
+<div class="targets-controls-panel">
+<div class="targets-search-row">
+<div class="targets-search-input-wrap">
+<input type="text" id="targets-search" class="targets-search-input" placeholder="Поиск по названию цели, предмету или подсказке..." autocomplete="off" spellcheck="false" />
+</div>
+<label class="targets-toggle-wrap">
+<input type="checkbox" id="targets-cycling-toggle" checked />
+<span>⇄ Анимация смены вариантов</span>
+</label>
+</div>
+<div class="targets-filter-row">
+<div class="targets-filter-pills" id="targets-category-tabs">
+<button type="button" class="targets-filter-btn active" data-category="all">Все категории</button>
+<button type="button" class="targets-filter-btn" data-category="blocks">Блоки</button>
+<button type="button" class="targets-filter-btn" data-category="items">Предметы</button>
+<button type="button" class="targets-filter-btn" data-category="food">Еда</button>
+<button type="button" class="targets-filter-btn" data-category="redstone">Механизмы</button>
+<button type="button" class="targets-filter-btn" data-category="nether">Незер</button>
+</div>
+<div class="targets-filter-pills" id="targets-diff-tabs">
+<button type="button" class="targets-filter-btn active" data-diff="all">Любая сложность</button>
+<button type="button" class="targets-filter-btn" data-diff="easy">Легко</button>
+<button type="button" class="targets-filter-btn" data-diff="medium">Средне</button>
+<button type="button" class="targets-filter-btn" data-diff="hard">Сложно</button>
+</div>
+<div class="targets-count-badge">
+Найдено целей: <strong id="targets-count">0</strong>
+</div>
+</div>
+</div>
+<div class="targets-grid" id="targets-grid">
+<!-- Заполняется динамически скриптом scripts/targets.js -->
+</div>
+<div class="targets-modal" id="targets-modal" role="dialog" aria-modal="true">
+<div class="targets-modal-dialog">
+<div class="targets-modal-header">
+<h3 id="targets-modal-title">Варианты цели</h3>
+<button type="button" class="targets-modal-close-btn" id="targets-modal-close" aria-label="Закрыть">✕</button>
+</div>
+<div class="targets-modal-body" id="targets-modal-body">
+<!-- Контент группы вариантов -->
+</div>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="как-засчитываются-цели-в-матче">Как засчитываются цели в матче</h2>
+<ol>
+<li><strong>Моментальная фиксация:</strong> как только целевой предмет попадает в инвентарь игрока (из крафта, сундука, дропа моба или раскопки), ячейка на карте немедленно загорается зелёным.</li>
+<li><strong>Предметы не изымаются:</strong> ресурсы остаются у вас, их можно использовать для крафта следующих инструментов или снаряжения.</li>
+<li><strong>Групповые цели:</strong> для целей с пометкой группы достаточно получить <strong>любой один</strong> предмет из списка (например, достаточно добыть 1 любое бревно берёзы, чтобы закрыть цель на брёвна).</li>
+</ol>
+
+					<div class="docs-pagination"><a class="prev" href="/Bingo-Site-/docs/kak-igrat/"><span class="page-label">Назад</span><span class="page-title">Как играть (Гайд)</span></a><a class="next" href="/Bingo-Site-/docs/pravila-i-mody/"><span class="page-label">Далее</span><span class="page-title">Правила и список модов</span></a></div>
+				</article>
+
+				<aside class="docs-toc"><p class="sidebar-title">На этой странице</p><ul><li><a class="sub" href="#targets-modal-title">Варианты цели</a></li><li><a class="" href="#как-засчитываются-цели-в-матче">Как засчитываются цели в матче</a></li></ul></aside>
+			</div>
+
+			<footer class="site-footer">
+				<div class="footer-inner">
+					<span class="footer-brand">Bingo Ranked</span>
+					<span class="footer-brand">Официальная документация проекта Bingo Ranked.</span>
+					<nav>
+						<a class="footer-brand footer-link" data-tournaments href="/Bingo-Site-/tournaments/">Турниры</a>
+						<a class="footer-brand footer-link" data-legal href="/Bingo-Site-/docs/baza-znanii/#3-pravovaya-informaciya-legal-disclaimer">Лицензия и правовая информация</a>
+					</nav>
+				</div>
+			</footer>
+		</div>
+		<script id="wiki-data" type="application/json">{"slug":"celi","defaultLanguage":"ru","languages":["ru","en"],"brand":{"name":"Bingo Ranked","short":"Bingo","tagline":{"ru":"Соревновательное Бинго для Minecraft.","en":"Competitive Bingo for Minecraft."}},"ui":{"ru":{"home":"Главная","docs":"Документация","tournaments":"Турниры","menu":"Меню","onThisPage":"На этой странице","previous":"Назад","next":"Далее","searchPlaceholder":"Поиск по документации","searchNoResults":"Ничего не найдено","searchHint":"Введите запрос, чтобы найти страницу.","language":"Язык","notFound":"Страница не найдена","notFoundText":"Такой страницы нет или она была перемещена.","backHome":"На главную","footerNote":"Официальная документация проекта Bingo Ranked.","lastUpdated":"Обновлено","legal":"Лицензия и правовая информация"},"en":{"home":"Home","docs":"Documentation","tournaments":"Tournaments","menu":"Menu","onThisPage":"On this page","previous":"Previous","next":"Next","searchPlaceholder":"Search the documentation","searchNoResults":"No results","searchHint":"Type a query to find a page.","language":"Language","notFound":"Page not found","notFoundText":"This page does not exist or has been moved.","backHome":"Back to home","footerNote":"Official documentation for the Bingo Ranked project.","lastUpdated":"Updated","legal":"License and legal"}},"nav":{"ru":{"sections":[{"title":"Руководство","items":[{"slug":"kak-igrat","title":"Как играть (Гайд)"},{"slug":"celi","title":"Каталог целей"}]},{"title":"Регламент","items":[{"slug":"pravila-i-mody","title":"Правила и список модов"}]},{"title":"Соревнования","items":[{"slug":"reiting-i-turniry","title":"Рейтинг ELO и турниры"}]},{"title":"Поддержка","items":[{"slug":"baza-znanii","title":"База знаний"},{"slug":"changelog","title":"Список изменений"}]}]},"en":{"sections":[{"title":"Guide","items":[{"slug":"kak-igrat","title":"How to Play (Guide)"},{"slug":"celi","title":"Objectives Catalog"}]},{"title":"Regulations","items":[{"slug":"pravila-i-mody","title":"Rules & Mod List"}]},{"title":"Competitions","items":[{"slug":"reiting-i-turniry","title":"ELO & Tournaments"}]},{"title":"Support","items":[{"slug":"baza-znanii","title":"Knowledge Base"},{"slug":"changelog","title":"Changelog"}]}]}},"page":{"ru":{"title":"Каталог целей","description":"Интерактивная база целей мода с поиском, фильтрами и анимацией вариантов.","html":"\u003ch1 id=\"каталог-целей-bingo-ranked\">Каталог целей Bingo Ranked\u003c/h1>\n\u003cp>В этом разделе собраны игровые цели, блоки и предметы, которые могут встретиться на бинго-карте 5×5 в матчах Bingo Ranked.\u003c/p>\n\u003cp>Каждый матч генерирует уникальную сетку из 25 случайных задач. Некоторые цели содержат группу взаимозаменяемых предметов (например, любой цвет шерсти или любой вид древесины) - в каталоге такие блоки циклично сменяются в ячейке.\u003c/p>\n\u003cp>\u003cdiv class=\"admonition admonition-info\">\u003cp class=\"admonition-title\">Info\u003c/p>\u003cp>\u003cstrong>Тестовая заготовка каталога:\u003c/strong> база целей наполняется и согласовывается. Кликните по любой карточке с группой вариантов (обозначена значком \u003ccode>⇄\u003c/code>), чтобы открыть полное окно всех допустимых предметов.\u003c/p>\n\u003c/div>\u003c/p>\n\u003chr>\n\u003cdiv class=\"targets-catalog-wrapper\">\n\u003cdiv class=\"targets-controls-panel\">\n\u003cdiv class=\"targets-search-row\">\n\u003cdiv class=\"targets-search-input-wrap\">\n\u003cinput type=\"text\" id=\"targets-search\" class=\"targets-search-input\" placeholder=\"Поиск по названию цели, предмету или подсказке...\" autocomplete=\"off\" spellcheck=\"false\" />\n\u003c/div>\n\u003clabel class=\"targets-toggle-wrap\">\n\u003cinput type=\"checkbox\" id=\"targets-cycling-toggle\" checked />\n\u003cspan>⇄ Анимация смены вариантов\u003c/span>\n\u003c/label>\n\u003c/div>\n\u003cdiv class=\"targets-filter-row\">\n\u003cdiv class=\"targets-filter-pills\" id=\"targets-category-tabs\">\n\u003cbutton type=\"button\" class=\"targets-filter-btn active\" data-category=\"all\">Все категории\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-category=\"blocks\">Блоки\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-category=\"items\">Предметы\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-category=\"food\">Еда\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-category=\"redstone\">Механизмы\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-category=\"nether\">Незер\u003c/button>\n\u003c/div>\n\u003cdiv class=\"targets-filter-pills\" id=\"targets-diff-tabs\">\n\u003cbutton type=\"button\" class=\"targets-filter-btn active\" data-diff=\"all\">Любая сложность\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-diff=\"easy\">Легко\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-diff=\"medium\">Средне\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-diff=\"hard\">Сложно\u003c/button>\n\u003c/div>\n\u003cdiv class=\"targets-count-badge\">\nНайдено целей: \u003cstrong id=\"targets-count\">0\u003c/strong>\n\u003c/div>\n\u003c/div>\n\u003c/div>\n\u003cdiv class=\"targets-grid\" id=\"targets-grid\">\n\u003c!-- Заполняется динамически скриптом scripts/targets.js -->\n\u003c/div>\n\u003cdiv class=\"targets-modal\" id=\"targets-modal\" role=\"dialog\" aria-modal=\"true\">\n\u003cdiv class=\"targets-modal-dialog\">\n\u003cdiv class=\"targets-modal-header\">\n\u003ch3 id=\"targets-modal-title\">Варианты цели\u003c/h3>\n\u003cbutton type=\"button\" class=\"targets-modal-close-btn\" id=\"targets-modal-close\" aria-label=\"Закрыть\">✕\u003c/button>\n\u003c/div>\n\u003cdiv class=\"targets-modal-body\" id=\"targets-modal-body\">\n\u003c!-- Контент группы вариантов -->\n\u003c/div>\n\u003c/div>\n\u003c/div>\n\u003c/div>\n\u003chr>\n\u003ch2 id=\"как-засчитываются-цели-в-матче\">Как засчитываются цели в матче\u003c/h2>\n\u003col>\n\u003cli>\u003cstrong>Моментальная фиксация:\u003c/strong> как только целевой предмет попадает в инвентарь игрока (из крафта, сундука, дропа моба или раскопки), ячейка на карте немедленно загорается зелёным.\u003c/li>\n\u003cli>\u003cstrong>Предметы не изымаются:\u003c/strong> ресурсы остаются у вас, их можно использовать для крафта следующих инструментов или снаряжения.\u003c/li>\n\u003cli>\u003cstrong>Групповые цели:\u003c/strong> для целей с пометкой группы достаточно получить \u003cstrong>любой один\u003c/strong> предмет из списка (например, достаточно добыть 1 любое бревно берёзы, чтобы закрыть цель на брёвна).\u003c/li>\n\u003c/ol>\n","toc":[{"level":3,"id":"targets-modal-title","text":"Варианты цели"},{"level":2,"id":"как-засчитываются-цели-в-матче","text":"Как засчитываются цели в матче"}]},"en":{"title":"Objectives Catalog","description":"Interactive database of all mod objectives with filters and cycling variants.","html":"\u003ch1 id=\"bingo-ranked-objectives-catalog\">Bingo Ranked Objectives Catalog\u003c/h1>\n\u003cp>This catalog outlines the in-game objectives, blocks, and items that appear on the 5×5 bingo board in Bingo Ranked matches.\u003c/p>\n\u003cp>Each match generates a unique board of 25 random tasks. Certain objectives accept a group of interchangeable items (such as any wool color or any tree log) - in this catalog, these items cycle dynamically within their slot.\u003c/p>\n\u003cp>\u003cdiv class=\"admonition admonition-info\">\u003cp class=\"admonition-title\">Info\u003c/p>\u003cp>\u003cstrong>Interactive Prototype:\u003c/strong> the objectives database is currently being populated and calibrated. Click any card with a group icon (\u003ccode>⇄\u003c/code>) to view all valid interchangeable items for that objective.\u003c/p>\n\u003c/div>\u003c/p>\n\u003chr>\n\u003cdiv class=\"targets-catalog-wrapper\">\n\u003cdiv class=\"targets-controls-panel\">\n\u003cdiv class=\"targets-search-row\">\n\u003cdiv class=\"targets-search-input-wrap\">\n\u003cinput type=\"text\" id=\"targets-search\" class=\"targets-search-input\" placeholder=\"Search by objective name, item, or hint...\" autocomplete=\"off\" spellcheck=\"false\" />\n\u003c/div>\n\u003clabel class=\"targets-toggle-wrap\">\n\u003cinput type=\"checkbox\" id=\"targets-cycling-toggle\" checked />\n\u003cspan>⇄ Cycle Variant Animation\u003c/span>\n\u003c/label>\n\u003c/div>\n\u003cdiv class=\"targets-filter-row\">\n\u003cdiv class=\"targets-filter-pills\" id=\"targets-category-tabs\">\n\u003cbutton type=\"button\" class=\"targets-filter-btn active\" data-category=\"all\">All Categories\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-category=\"blocks\">Blocks\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-category=\"items\">Items\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-category=\"food\">Food\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-category=\"redstone\">Mechanisms\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-category=\"nether\">Nether\u003c/button>\n\u003c/div>\n\u003cdiv class=\"targets-filter-pills\" id=\"targets-diff-tabs\">\n\u003cbutton type=\"button\" class=\"targets-filter-btn active\" data-diff=\"all\">Any Difficulty\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-diff=\"easy\">Easy\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-diff=\"medium\">Medium\u003c/button>\n\u003cbutton type=\"button\" class=\"targets-filter-btn\" data-diff=\"hard\">Hard\u003c/button>\n\u003c/div>\n\u003cdiv class=\"targets-count-badge\">\nObjectives Found: \u003cstrong id=\"targets-count\">0\u003c/strong>\n\u003c/div>\n\u003c/div>\n\u003c/div>\n\u003cdiv class=\"targets-grid\" id=\"targets-grid\">\n\u003c!-- Populated dynamically by scripts/targets.js -->\n\u003c/div>\n\u003cdiv class=\"targets-modal\" id=\"targets-modal\" role=\"dialog\" aria-modal=\"true\">\n\u003cdiv class=\"targets-modal-dialog\">\n\u003cdiv class=\"targets-modal-header\">\n\u003ch3 id=\"targets-modal-title\">Objective Variants\u003c/h3>\n\u003cbutton type=\"button\" class=\"targets-modal-close-btn\" id=\"targets-modal-close\" aria-label=\"Close\">✕\u003c/button>\n\u003c/div>\n\u003cdiv class=\"targets-modal-body\" id=\"targets-modal-body\">\n\u003c!-- Group variants content -->\n\u003c/div>\n\u003c/div>\n\u003c/div>\n\u003c/div>\n\u003chr>\n\u003ch2 id=\"how-objectives-are-claimed\">How Objectives Are Claimed\u003c/h2>\n\u003col>\n\u003cli>\u003cstrong>Instant Detection:\u003c/strong> as soon as an item enters player inventory (via crafting, chest looting, mining, or mob drops), the corresponding board slot turns green.\u003c/li>\n\u003cli>\u003cstrong>Items Retained:\u003c/strong> collected items remain in your inventory and can be used to craft subsequent tools, armor, or weapons.\u003c/li>\n\u003cli>\u003cstrong>Group Objectives:\u003c/strong> for group objectives, collecting \u003cstrong>any single variant\u003c/strong> completes the requirement (e.g. obtaining 1 birch log completes the Wood Logs objective).\u003c/li>\n\u003c/ol>\n","toc":[{"level":3,"id":"targets-modal-title","text":"Objective Variants"},{"level":2,"id":"how-objectives-are-claimed","text":"How Objectives Are Claimed"}]}},"prevNext":{"ru":{"prev":{"slug":"kak-igrat","title":"Как играть (Гайд)"},"next":{"slug":"pravila-i-mody","title":"Правила и список модов"}},"en":{"prev":{"slug":"kak-igrat","title":"How to Play (Guide)"},"next":{"slug":"pravila-i-mody","title":"Rules & Mod List"}}},"initialLang":"ru"}</script>
+		<script src="/Bingo-Site-/scripts/wiki.js" defer></script>
+		<script src="/Bingo-Site-/scripts/bell.js" defer></script>
+		<script src="/Bingo-Site-/scripts/targets-data.js" defer></script>
+		<script src="/Bingo-Site-/scripts/targets.js" defer></script>
+	</body>
+</html>

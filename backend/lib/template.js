@@ -199,6 +199,7 @@ function renderPage(slug, initialLang) {
 		<script id="wiki-data" type="application/json">${json}</script>
 		<script src="/scripts/wiki.js" defer></script>
 		<script src="/scripts/bell.js" defer></script>
+		${slug === 'celi' ? '<script src="/scripts/targets-data.js" defer></script>\n\t\t<script src="/scripts/targets.js" defer></script>' : ''}
 	</body>
 </html>`;
 }

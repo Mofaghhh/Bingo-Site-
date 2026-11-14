@@ -13,6 +13,14 @@
 						"ru": "Полное руководство для новичка: от тренировки до победы.",
 						"en": "Complete beginner's guide: from practice to victory."
 					}
+				},
+				{
+					"slug": "celi",
+					"title": { "ru": "Каталог целей", "en": "Objectives Catalog" },
+					"description": {
+						"ru": "Интерактивная база целей мода с поиском, фильтрами и анимацией вариантов.",
+						"en": "Interactive database of all mod objectives with filters and cycling variants."
+					}
 				}
 			]
 		},
