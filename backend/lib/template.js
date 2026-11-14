@@ -161,10 +161,14 @@ function renderPage(slug, initialLang) {
 					<span class="brand-name">${esc(meta.brand.name)}</span>
 				</a>
 				<div class="header-tools">
-					<button class="menu-toggle" type="button" data-menu-toggle aria-label="Menu" aria-expanded="false"><span></span></button>
-					<a class="minecraft-button" data-tournaments href="/tournaments/">${esc(ui.tournaments || 'Турниры')}</a>
-					<a class="minecraft-button" data-docs href="${docsHref}">${esc(ui.docs)}</a>
-					${renderLangSwitch(lang, meta)}
+					<nav class="site-nav docs-nav">
+						<a class="minecraft-button" data-tournaments href="/tournaments/">${esc(ui.tournaments || 'Турниры')}</a>
+						<a class="minecraft-button" data-docs href="${docsHref}">${esc(ui.docs)}</a>
+					</nav>
+					<div class="header-controls">
+						${renderLangSwitch(lang, meta)}
+						<button class="menu-toggle" type="button" data-menu-toggle aria-label="Menu" aria-expanded="false"><span></span></button>
+					</div>
 				</div>
 			</header>
 
@@ -187,7 +191,7 @@ function renderPage(slug, initialLang) {
 					<span class="footer-brand">${esc(ui.footerNote)}</span>
 					<nav>
 						<a class="footer-brand footer-link" data-tournaments href="/tournaments/">${esc(ui.tournaments || 'Турниры')}</a>
-						<a class="footer-brand footer-link" data-legal href="/docs/legal/">${esc(ui.legal)}</a>
+						<a class="footer-brand footer-link" data-legal href="/docs/baza-znanii/#3-pravovaya-informaciya-legal-disclaimer">${esc(ui.legal)}</a>
 					</nav>
 				</div>
 			</footer>

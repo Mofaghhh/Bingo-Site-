@@ -76,6 +76,40 @@ write(
 		'/">'
 );
 
+const LEGACY_REDIRECTS = {
+	'bingo-ranked': 'kak-igrat',
+	'nachalo-raboty/vy-novichok-sygraite-v-trenirovku': 'kak-igrat',
+	'nachalo-raboty/kak-igrat': 'kak-igrat',
+	'nachalo-raboty/faq': 'kak-igrat',
+	'igra/bingo': 'kak-igrat',
+	'igra/lobbi': 'kak-igrat',
+	'igra/matchmaking': 'kak-igrat',
+	'igra/matchi': 'kak-igrat',
+	'igra/vykhod-iz-matcha-i-surrender': 'kak-igrat',
+	'ranked/elo-i-rangi': 'reiting-i-turniry',
+	'ranked/sezony': 'reiting-i-turniry',
+	'ranked/liderbord': 'reiting-i-turniry',
+	'soobshestvo/turniry': 'reiting-i-turniry',
+	'soobshestvo/pravila': 'pravila-i-mody',
+	'soobshestvo/zapreshyonnye-modifikacii': 'pravila-i-mody',
+	'soobshestvo/messenger-druzya': 'baza-znanii',
+	'dopolnitelno/vozmozhnosti-moda': 'baza-znanii',
+	'dopolnitelno/reshenie-problem': 'baza-znanii',
+	'legal': 'baza-znanii',
+	'dopolnitelno/changelog': 'changelog'
+};
+
+for (const [fromSlug, toSlug] of Object.entries(LEGACY_REDIRECTS)) {
+	write(
+		path.join('docs', fromSlug, 'index.html'),
+		'<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=' +
+			BASE +
+			'/docs/' +
+			toSlug +
+			'/">'
+	);
+}
+
 write('404.html', applyBase(renderNotFound(defaultLang)));
 write('.nojekyll', '');
 
