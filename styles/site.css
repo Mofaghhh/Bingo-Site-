@@ -1582,366 +1582,342 @@
 }
 
 /* ==========================================================================
-   Bingo Objectives Catalog (Interactive Minecraft Target Grid)
+   PepeLand-Style Objectives Catalog (Authentic Isometric 3D Tile Grid)
    ========================================================================== */
 
-.targets-catalog-wrapper {
+.pepe-catalog-wrapper {
 	margin-top: 24px;
 	width: 100%;
 }
 
-.targets-controls-panel {
-	background-color: #121316;
-	border: 3px solid var(--minecraft-border-color);
-	padding: 16px 20px;
-	margin-bottom: 24px;
+.pepe-controls-bar {
 	display: flex;
-	flex-direction: column;
-	gap: 14px;
-}
-
-.targets-search-row {
-	display: flex;
+	flex-wrap: wrap;
 	gap: 12px;
 	align-items: center;
-	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #121317;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 10px;
+	padding: 12px 16px;
+	margin-bottom: 16px;
 }
 
-.targets-search-input-wrap {
-	flex: 1 1 280px;
-	position: relative;
-}
-
-.targets-search-input {
-	width: 100%;
-	box-sizing: border-box;
-	background-color: #0b0c0e;
-	border: 3px solid var(--minecraft-border-color);
-	padding: 10px 14px;
-	color: #ffffff;
-	font-family: var(--minecraft-font);
-	font-size: 14px;
-	outline: none;
+.pepe-search-wrap {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex: 1 1 260px;
+	background-color: #0d0e11;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 8px;
+	padding: 8px 12px;
 	transition: border-color 0.15s ease;
 }
 
-.targets-search-input:focus {
-	border-color: var(--accent);
+.pepe-search-wrap:focus-within {
+	border-color: rgba(255, 255, 255, 0.3);
 }
 
-.targets-toggle-wrap {
+.pepe-search-icon {
+	color: #64748b;
+	flex-shrink: 0;
+}
+
+.pepe-search-input {
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #f1f5f9;
+	font-size: 13.5px;
+	width: 100%;
+	font-family: inherit;
+}
+
+.pepe-search-input::placeholder {
+	color: #64748b;
+}
+
+.pepe-toggle-wrap {
 	display: flex;
 	align-items: center;
 	gap: 8px;
 	cursor: pointer;
 	user-select: none;
-	font-family: var(--minecraft-font);
 	font-size: 13px;
-	color: #cfd0d4;
+	color: #94a3b8;
 }
 
-.targets-toggle-wrap input[type="checkbox"] {
-	appearance: none;
-	width: 18px;
-	height: 18px;
-	background-color: #0b0c0e;
-	border: 2px solid var(--minecraft-border-color);
+.pepe-toggle-wrap input[type="checkbox"] {
 	cursor: pointer;
-	display: grid;
-	place-content: center;
-	margin: 0;
+	accent-color: #6366f1;
 }
 
-.targets-toggle-wrap input[type="checkbox"]:checked {
-	background-color: var(--accent);
-	border-color: #c9a63a;
+.pepe-counter-badge {
+	font-size: 12.5px;
+	color: #64748b;
+	white-space: nowrap;
 }
 
-.targets-toggle-wrap input[type="checkbox"]:checked::before {
-	content: "✓";
-	color: #1e1e1f;
-	font-size: 13px;
-	font-weight: bold;
-	line-height: 1;
+.pepe-counter-badge strong {
+	color: #e2e8f0;
 }
 
-.targets-filter-row {
+/* Category Pills */
+.pepe-category-tabs {
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 28px;
+}
+
+.pepe-tab-btn {
+	display: inline-flex;
 	align-items: center;
-	gap: 12px;
-	flex-wrap: wrap;
-}
-
-.targets-filter-pills {
-	display: flex;
 	gap: 6px;
-	flex-wrap: wrap;
-}
-
-.targets-filter-btn {
-	background-color: #1b1c20;
-	border: 2px solid var(--minecraft-border-color);
-	color: #a0a2a8;
-	font-family: var(--minecraft-font);
-	font-size: 12px;
+	background-color: #14151a;
+	border: 1px solid rgba(255, 255, 255, 0.07);
+	border-radius: 9999px;
+	color: #94a3b8;
+	font-size: 12.5px;
 	padding: 6px 12px;
 	cursor: pointer;
 	transition: all 0.15s ease;
+	font-family: inherit;
 }
 
-.targets-filter-btn:hover {
+.pepe-tab-btn:hover {
+	background-color: #1e2027;
+	color: #f1f5f9;
+	border-color: rgba(255, 255, 255, 0.15);
+}
+
+.pepe-tab-btn.active {
+	background-color: #272a35;
 	color: #ffffff;
-	border-color: #63666e;
+	border-color: rgba(255, 255, 255, 0.28);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-.targets-filter-btn.active {
-	background-color: var(--accent);
-	color: #1a1a1c;
-	border-color: #d1b142;
-	font-weight: bold;
+.pepe-tab-badge {
+	font-size: 11px;
+	background-color: rgba(255, 255, 255, 0.08);
+	color: #cbd5e1;
+	padding: 1px 6px;
+	border-radius: 9999px;
 }
 
-.targets-count-badge {
-	font-family: var(--minecraft-font);
-	font-size: 12px;
-	color: #8c8e96;
+/* Category Section & Header */
+.pepe-category {
+	margin-bottom: 32px;
 }
 
-.targets-count-badge strong {
-	color: var(--accent);
-}
-
-.targets-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-	gap: 16px;
-	margin-bottom: 40px;
-}
-
-.target-card {
-	background-color: #141518;
-	border: 3px solid var(--minecraft-border-color);
-	padding: 14px 12px;
+.pepe-cat-header {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
-	text-align: center;
+	gap: 10px;
+	margin-bottom: 12px;
+}
+
+.pepe-cat-title {
+	font-size: 1.12rem;
+	font-weight: 700;
+	color: #f8fafc;
+	margin: 0;
+	line-height: 1.3;
+}
+
+.pepe-cat-badge {
+	font-size: 0.78rem;
+	font-weight: 600;
+	color: #94a3b8;
+	background-color: rgba(255, 255, 255, 0.07);
+	padding: 2px 8px;
+	border-radius: 9999px;
+}
+
+/* PepeLand Isometric Tile Grid */
+.pepe-item-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(46px, 1fr));
+	gap: 6px;
+}
+
+.pepe-tile {
+	width: 48px;
+	height: 48px;
+	border-radius: 8px;
+	background-color: #14151b;
+	border: 1px solid rgba(255, 255, 255, 0.08);
 	position: relative;
-	cursor: default;
-	transition: transform 0.12s ease, border-color 0.15s ease, background-color 0.15s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	padding: 0;
+	box-sizing: border-box;
+	transition: background-color 0.12s ease, border-color 0.12s ease, transform 0.1s ease;
 	outline: none;
 }
 
-.target-card[data-group="true"] {
-	cursor: pointer;
+.pepe-tile:hover,
+.pepe-tile:focus-visible {
+	background-color: #21232d;
+	border-color: rgba(255, 255, 255, 0.22);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+	z-index: 2;
 }
 
-.target-card:hover,
-.target-card:focus-visible {
-	border-color: var(--accent);
-	background-color: #191b20;
-	transform: translateY(-2px);
+.pepe-tile.has-variants {
+	border-color: rgba(167, 139, 250, 0.25);
 }
 
-.target-slot {
-	width: 68px;
-	height: 68px;
-	background-color: #0d0e10;
-	border: 3px solid #222428;
-	box-shadow: inset 0 3px 0 0 #00000088, inset 0 -3px 0 0 #3a3c4288;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 10px;
-	position: relative;
-	flex-shrink: 0;
+.pepe-tile.has-variants:hover {
+	border-color: rgba(167, 139, 250, 0.6);
 }
 
-.target-slot.small {
-	width: 52px;
-	height: 52px;
-	margin-bottom: 6px;
-}
-
-.target-icon {
-	width: 44px;
-	height: 44px;
-	object-fit: contain;
+.pepe-sprite {
+	display: block;
+	width: 34px;
+	height: 34px;
+	background-repeat: no-repeat;
 	image-rendering: pixelated;
 	image-rendering: -moz-crisp-edges;
 	image-rendering: crisp-edges;
-	transition: opacity 0.18s ease;
+	pointer-events: none;
+	flex-shrink: 0;
 }
 
-.target-slot.small .target-icon {
-	width: 34px;
-	height: 34px;
-}
-
-.target-group-badge {
+.pepe-count {
 	position: absolute;
-	top: -6px;
-	right: -6px;
-	background-color: #2b1f47;
-	border: 2px solid #7352b0;
-	color: #d8c2ff;
-	font-family: var(--minecraft-font);
-	font-size: 10px;
-	padding: 1px 4px;
+	bottom: 2px;
+	right: 4px;
+	font-size: 11px;
+	font-weight: 700;
 	line-height: 1;
+	color: #ffffff;
+	text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 0 1px 2px #000;
+	font-family: var(--minecraft-font, monospace);
+	pointer-events: none;
+	letter-spacing: -0.5px;
+}
+
+.pepe-variant-dot {
+	position: absolute;
+	top: 2px;
+	right: 3px;
+	font-size: 9.5px;
+	line-height: 1;
+	color: #a78bfa;
+	opacity: 0.8;
 	pointer-events: none;
 }
 
-.target-info {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 4px;
+/* Floating Tooltip */
+.pepe-tooltip {
+	position: absolute;
+	z-index: 1000;
+	background-color: #121319;
+	border: 1px solid rgba(255, 255, 255, 0.16);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+	padding: 10px 12px;
+	max-width: 280px;
+	pointer-events: none;
+	animation: pepeFadeIn 0.1s ease-out;
 }
 
-.target-name {
-	font-family: var(--minecraft-font);
-	font-size: 13px;
+@keyframes pepeFadeIn {
+	from { opacity: 0; transform: translateY(2px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+.pepe-tip-header {
+	font-size: 13.5px;
+	font-weight: 700;
 	color: #ffffff;
-	font-weight: bold;
 	line-height: 1.25;
-	display: block;
-	min-height: 32px;
-	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
+	margin-bottom: 4px;
 }
 
-.target-parent-name {
-	font-family: var(--minecraft-font);
-	font-size: 11px;
-	color: #8c8f99;
-	margin-top: -2px;
+.pepe-tip-sub {
+	font-size: 11.5px;
+	color: #94a3b8;
+	margin-bottom: 8px;
+	line-height: 1.3;
 }
 
-.target-meta {
+.pepe-tip-code {
+	font-family: monospace;
+	font-size: 10.5px;
+	color: #38bdf8;
+	background-color: rgba(56, 189, 248, 0.1);
+	padding: 1px 4px;
+	border-radius: 4px;
+}
+
+.pepe-tip-meta {
 	display: flex;
 	gap: 6px;
 	align-items: center;
-	justify-content: center;
-	margin-top: 6px;
 	flex-wrap: wrap;
+	margin-bottom: 4px;
 }
 
-.target-cat-badge {
-	font-family: var(--minecraft-font);
-	font-size: 10px;
-	color: #92959e;
-	background-color: #1f2026;
+.pepe-tip-tag {
+	font-size: 10.5px;
 	padding: 2px 6px;
-	border-radius: 2px;
+	border-radius: 4px;
+	font-weight: 600;
 }
 
-.target-diff {
-	font-family: var(--minecraft-font);
-	font-size: 10px;
-	padding: 2px 6px;
-	border-radius: 2px;
-	font-weight: bold;
+.pepe-tip-tag.count-tag {
+	background-color: rgba(34, 197, 94, 0.15);
+	color: #4ade80;
 }
 
-.diff-easy {
-	color: #55ff55;
-	background-color: #0f2e0f;
+.pepe-tip-tag.type-tag {
+	background-color: rgba(255, 255, 255, 0.08);
+	color: #cbd5e1;
 }
 
-.diff-medium {
-	color: #ffaa00;
-	background-color: #332200;
+.pepe-tip-tag.var-tag {
+	background-color: rgba(167, 139, 250, 0.15);
+	color: #c4b5fd;
 }
 
-.diff-hard {
-	color: #ff5555;
-	background-color: #331111;
-}
-
-/* Authentic Minecraft Tooltip */
-.mc-tooltip {
-	position: absolute;
-	bottom: calc(100% + 8px);
-	left: 50%;
-	transform: translateX(-50%);
-	width: 240px;
-	background: #100010f2;
-	border: 3px solid #28007f;
-	box-shadow: 0 0 0 2px #100010, 0 6px 14px rgba(0, 0, 0, 0.7);
-	padding: 10px 12px;
-	text-align: left;
-	pointer-events: none;
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.15s ease;
-	z-index: 100;
-}
-
-.target-card:hover .mc-tooltip,
-.target-card:focus-visible .mc-tooltip {
-	opacity: 1;
-	visibility: visible;
-}
-
-.mc-tooltip-title {
-	font-family: var(--minecraft-font);
-	font-size: 14px;
-	color: #ffff55;
-	font-weight: bold;
-	margin-bottom: 6px;
-	line-height: 1.2;
-}
-
-.mc-tooltip-desc {
-	font-family: var(--minecraft-font);
-	font-size: 12px;
-	color: #ffffff;
-	line-height: 1.35;
-	margin-bottom: 8px;
-}
-
-.mc-tooltip-tip {
-	font-family: var(--minecraft-font);
+.pepe-tip-action {
 	font-size: 11px;
-	color: #55ffff;
-	line-height: 1.3;
-	border-top: 1px dashed #3f2080;
+	color: #a78bfa;
+	margin-top: 6px;
+	border-top: 1px dashed rgba(255, 255, 255, 0.1);
 	padding-top: 6px;
 }
 
-.mc-tooltip-variants-hint {
-	font-family: var(--minecraft-font);
-	font-size: 10.5px;
-	color: #ffaa00;
-	margin-top: 6px;
-}
-
-/* Modal for group variants */
-.targets-modal {
+/* Variant Modal */
+.pepe-modal-overlay {
 	position: fixed;
 	inset: 0;
-	background-color: rgba(0, 0, 0, 0.8);
-	z-index: 200;
+	background-color: rgba(0, 0, 0, 0.78);
+	backdrop-filter: blur(4px);
+	z-index: 1200;
 	display: none;
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
 }
 
-.targets-modal.open {
+.pepe-modal-overlay.open {
 	display: flex;
 }
 
-.targets-modal-dialog {
-	background-color: #151619;
-	border: 4px solid var(--minecraft-border-color);
-	box-shadow: 0 0 0 4px #000000, 0 16px 36px rgba(0, 0, 0, 0.9);
-	max-width: 640px;
+.pepe-modal-dialog {
+	background-color: #14151b;
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	box-shadow: 0 20px 48px rgba(0, 0, 0, 0.85);
+	border-radius: 12px;
+	max-width: 620px;
 	width: 100%;
 	max-height: 85vh;
 	display: flex;
@@ -1949,97 +1925,117 @@
 	overflow: hidden;
 }
 
-.targets-modal-header {
+.pepe-modal-header {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	padding: 14px 18px;
-	background-color: #101114;
-	border-bottom: 3px solid var(--minecraft-border-color);
+	align-items: flex-start;
+	padding: 16px 20px;
+	background-color: #101116;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.targets-modal-header h3 {
-	font-family: var(--minecraft-header-font);
-	font-size: 20px;
-	color: var(--accent);
+.pepe-modal-title {
+	font-size: 1.15rem;
+	font-weight: 700;
+	color: #ffffff;
+	margin: 0 0 4px 0;
+}
+
+.pepe-modal-subtitle {
+	font-size: 12.5px;
+	color: #94a3b8;
 	margin: 0;
 }
 
-.targets-modal-close-btn {
+.pepe-modal-close {
 	background: transparent;
 	border: none;
-	color: #ffffff;
-	font-family: var(--minecraft-font);
-	font-size: 18px;
+	color: #94a3b8;
+	font-size: 20px;
 	cursor: pointer;
-	padding: 2px 8px;
 	line-height: 1;
+	padding: 4px;
+	transition: color 0.15s ease;
 }
 
-.targets-modal-close-btn:hover {
-	color: #ff5555;
-}
-
-.targets-modal-body {
-	padding: 18px;
-	overflow-y: auto;
-}
-
-.modal-target-desc {
-	font-family: var(--minecraft-font);
-	font-size: 13px;
+.pepe-modal-close:hover {
 	color: #ffffff;
-	margin-bottom: 8px;
 }
 
-.modal-target-tip {
-	font-family: var(--minecraft-font);
-	font-size: 12px;
-	color: #55ffff;
-	margin-bottom: 16px;
-	padding: 8px 12px;
-	background-color: #0b0c0f;
-	border-left: 3px solid #55ffff;
-}
-
-.modal-variants-grid {
+.pepe-modal-grid {
+	padding: 16px 20px;
+	overflow-y: auto;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-	gap: 12px;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	gap: 10px;
 }
 
-.modal-variant-card {
-	background-color: #0e0f12;
-	border: 2px solid #282a30;
-	padding: 10px 8px;
+.pepe-modal-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	background-color: #181921;
+	border: 1px solid rgba(255, 255, 255, 0.06);
+	border-radius: 8px;
+	padding: 8px 10px;
+}
+
+.pepe-modal-tile {
+	width: 40px;
+	height: 40px;
+	background-color: #101116;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.pepe-modal-item-info {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	text-align: center;
+	min-width: 0;
 }
 
-.modal-variant-name {
-	font-family: var(--minecraft-font);
-	font-size: 11px;
-	color: #d8dae0;
-	margin-top: 4px;
-	line-height: 1.2;
+.pepe-modal-item-name {
+	font-size: 12px;
+	font-weight: 600;
+	color: #f1f5f9;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.pepe-modal-item-id {
+	font-size: 10px;
+	color: #64748b;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.pepe-empty-state {
+	padding: 32px;
+	text-align: center;
+	color: #64748b;
+	font-size: 14px;
 }
 
 @media (width < 640px) {
-	.targets-grid {
-		grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-		gap: 10px;
+	.pepe-item-grid {
+		grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+		gap: 5px;
 	}
-	.target-slot {
-		width: 58px;
-		height: 58px;
+	.pepe-tile {
+		width: 44px;
+		height: 44px;
 	}
-	.target-icon {
-		width: 38px;
-		height: 38px;
+	.pepe-sprite {
+		width: 30px;
+		height: 30px;
 	}
-	.mc-tooltip {
-		display: none; /* Tooltip disabled on small screens in favor of modal tap */
+	.pepe-modal-grid {
+		grid-template-columns: 1fr;
 	}
 }

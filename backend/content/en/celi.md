@@ -1,62 +1,51 @@
 # Bingo Ranked Objectives Catalog
 
-This catalog outlines the in-game objectives, blocks, and items that appear on the 5×5 bingo board in Bingo Ranked matches.
+This catalog features all 256 Minecraft objectives, blocks, and items available on the 5×5 bingo card during Bingo Ranked matches.
 
-Each match generates a unique board of 25 random tasks. Certain objectives accept a group of interchangeable items (such as any wool color or any tree log) - in this catalog, these items cycle dynamically within their slot.
+Each match generates a unique randomized 5×5 board of 25 goals. Group objectives (such as any wool color or wood type) cycle through allowable variants right on the tile.
 
 {% hint style="info" %}
-**Interactive Prototype:** the objectives database is currently being populated and calibrated. Click any card with a group icon (`⇄`) to view all valid interchangeable items for that objective.
+**Interactive Guide:** Hover over any tile to view its objective title, item ID, and completion requirements. Click any tile marked with `⇄` to inspect all valid variant items in an interactive modal.
 {% endhint %}
 
 ---
 
-<div class="targets-catalog-wrapper">
-<div class="targets-controls-panel">
-<div class="targets-search-row">
-<div class="targets-search-input-wrap">
-<input type="text" id="targets-search" class="targets-search-input" placeholder="Search by objective name, item, or hint..." autocomplete="off" spellcheck="false" />
+<div class="pepe-catalog-wrapper">
+<div class="pepe-controls-bar">
+<div class="pepe-search-wrap">
+<svg class="pepe-search-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" /></svg>
+<input type="text" id="pepe-search" class="pepe-search-input" placeholder="Search objectives, items, or IDs (e.g. oak_log, diamond, wool)..." autocomplete="off" spellcheck="false" />
 </div>
-<label class="targets-toggle-wrap">
-<input type="checkbox" id="targets-cycling-toggle" checked />
+<label class="pepe-toggle-wrap">
+<input type="checkbox" id="pepe-cycling-toggle" checked />
 <span>⇄ Cycle Variant Animation</span>
 </label>
-</div>
-
-<div class="targets-filter-row">
-<div class="targets-filter-pills" id="targets-category-tabs">
-<button type="button" class="targets-filter-btn active" data-category="all">All Categories</button>
-<button type="button" class="targets-filter-btn" data-category="blocks">Blocks</button>
-<button type="button" class="targets-filter-btn" data-category="items">Items</button>
-<button type="button" class="targets-filter-btn" data-category="food">Food</button>
-<button type="button" class="targets-filter-btn" data-category="redstone">Mechanisms</button>
-<button type="button" class="targets-filter-btn" data-category="nether">Nether</button>
-</div>
-
-<div class="targets-filter-pills" id="targets-diff-tabs">
-<button type="button" class="targets-filter-btn active" data-diff="all">Any Difficulty</button>
-<button type="button" class="targets-filter-btn" data-diff="easy">Easy</button>
-<button type="button" class="targets-filter-btn" data-diff="medium">Medium</button>
-<button type="button" class="targets-filter-btn" data-diff="hard">Hard</button>
-</div>
-
-<div class="targets-count-badge">
-Objectives Found: <strong id="targets-count">0</strong>
-</div>
+<div class="pepe-counter-badge">
+Objectives: <strong id="pepe-count">256 / 256</strong>
 </div>
 </div>
 
-<div class="targets-grid" id="targets-grid">
-<!-- Populated dynamically by scripts/targets.js -->
+<div class="pepe-category-tabs" id="pepe-category-tabs">
+<!-- Categories rendered dynamically -->
 </div>
 
-<div class="targets-modal" id="targets-modal" role="dialog" aria-modal="true">
-<div class="targets-modal-dialog">
-<div class="targets-modal-header">
-<h3 id="targets-modal-title">Objective Variants</h3>
-<button type="button" class="targets-modal-close-btn" id="targets-modal-close" aria-label="Close">✕</button>
+<div class="pepe-catalog-body" id="pepe-catalog">
+<!-- Item grids rendered dynamically by scripts/targets.js -->
 </div>
-<div class="targets-modal-body" id="targets-modal-body">
-<!-- Group variants content -->
+
+<div id="pepe-tooltip" class="pepe-tooltip" style="display: none;"></div>
+
+<div class="pepe-modal-overlay" id="pepe-modal" role="dialog" aria-modal="true">
+<div class="pepe-modal-dialog">
+<div class="pepe-modal-header">
+<div>
+<h3 id="pepe-modal-title" class="pepe-modal-title">Objective Variants</h3>
+<p id="pepe-modal-subtitle" class="pepe-modal-subtitle">Any item below satisfies this objective</p>
+</div>
+<button type="button" class="pepe-modal-close" id="pepe-modal-close" aria-label="Close">✕</button>
+</div>
+<div class="pepe-modal-grid" id="pepe-modal-grid">
+<!-- Variant items -->
 </div>
 </div>
 </div>
@@ -64,8 +53,8 @@ Objectives Found: <strong id="targets-count">0</strong>
 
 ---
 
-## How Objectives Are Claimed
+## How Objectives Are Scored
 
-1. **Instant Detection:** as soon as an item enters player inventory (via crafting, chest looting, mining, or mob drops), the corresponding board slot turns green.
-2. **Items Retained:** collected items remain in your inventory and can be used to craft subsequent tools, armor, or weapons.
-3. **Group Objectives:** for group objectives, collecting **any single variant** completes the requirement (e.g. obtaining 1 birch log completes the Wood Logs objective).
+1. **Instant Detection:** The moment an objective item enters the player's inventory (via crafting, mining, chests, or mob drops), the slot on the card turns green.
+2. **Items Are Kept:** Gathered items are not consumed by the card and remain available to craft further tools, gear, or subsequent goals.
+3. **Group Objectives:** For multi-variant objectives, obtaining **any single** listed item satisfies the card slot.
