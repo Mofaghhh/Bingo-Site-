@@ -52,6 +52,31 @@
 			'background-position: calc(-' + x + ' * ' + s + 'px) calc(-' + y + ' * ' + s + 'px);';
 	}
 
+	function getPopoverTitle(goal) {
+		var n = goal.name || '';
+		if (n.indexOf('брёвен') !== -1) return 'Брёвна';
+		if (n.indexOf('шерсти') !== -1) return 'Шерсть';
+		if (n.indexOf('кровать') !== -1) return 'Кровати';
+		if (n.indexOf('флаг') !== -1) return 'Флаги';
+		if (n.indexOf('двери') !== -1) return 'Деревянные двери';
+		if (n.indexOf('люки') !== -1) return 'Деревянные люки';
+		if (n.indexOf('забор') !== -1) return 'Заборы';
+		if (n.indexOf('таблички') !== -1) return 'Таблички';
+		if (n.indexOf('панелей') !== -1) return 'Стеклянные панели';
+		if (n.indexOf('стекла') !== -1) return 'Стекло';
+		if (n.indexOf('терракоты') !== -1) return 'Терракота';
+		if (n.indexOf('красителей') !== -1) return 'Красители';
+		if (n.indexOf('саженца') !== -1) return 'Саженцы';
+		if (n.indexOf('лодку') !== -1) return 'Лодки';
+		if (n.indexOf('камня') !== -1) return 'Камни';
+		if (n.indexOf('сырой руды') !== -1) return 'Сырая руда';
+		if (n.indexOf('каменный инструмент') !== -1) return 'Каменные инструменты';
+		if (n.indexOf('железный инструмент') !== -1) return 'Железные инструменты';
+		if (n.indexOf('оружие') !== -1) return 'Оружие';
+		if (n.indexOf('железную броню') !== -1) return 'Железная броня';
+		return goal.name;
+	}
+
 	function renderCategoryTabs() {
 		if (!categoryTabs) return;
 		var en = isEn();
@@ -198,26 +223,13 @@
 		hideTooltip();
 
 		var curIdx = variantIndices[goal.id] || 0;
+		if (curIdx >= goal.variants.length) curIdx = 0;
 		var curVariant = goal.variants[curIdx] || goal.variants[0];
 
-		// Clean title without extra prefix
-		var cleanTitle = goal.name
-			.replace(/^Сруби любые \d+ /, '')
-			.replace(/^Скрафти любую /, '')
-			.replace(/^Скрафти любые /, '')
-			.replace(/^Скрафти любой /, '')
-			.replace(/^Добудь \d+ любой /, '')
-			.replace(/^Добудь \d+ любого /, '')
-			.replace(/^Собери \d+ любых /, '')
-			.replace(/^Скрафти \d+ любых /, '')
-			.replace(/^Скрафти \d+ /, '')
-			.replace(/^Переплавь \d+ /, '')
-			.replace(/^Обпали \d+ /, '');
-
-		cleanTitle = cleanTitle.charAt(0).toUpperCase() + cleanTitle.slice(1);
+		var popoverTitle = getPopoverTitle(goal);
 
 		var html = '<div class="pepe-popover-header">';
-		html += '<span class="pepe-popover-title">' + cleanTitle + '</span>';
+		html += '<span class="pepe-popover-title">' + popoverTitle + '</span>';
 		html += '<span class="pepe-popover-badge">' + goal.variants.length + '</span>';
 		if (isPinned) {
 			html += '<button type="button" class="pepe-popover-close-btn" aria-label="Закрыть">✕</button>';
@@ -310,7 +322,7 @@
 			if (!pinnedGoalId) {
 				closePopover();
 			}
-		}, 180);
+		}, 200);
 	}
 
 	function positionElement(elem, targetEl) {

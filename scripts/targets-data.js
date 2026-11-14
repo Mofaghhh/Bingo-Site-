@@ -7,7 +7,7 @@
     "badge": "69",
     "goals": [
       {
-        "id": "oak_log",
+        "id": "any_log",
         "name": "Сруби любые 8 брёвен",
         "type": "Вариант",
         "count": 8,
@@ -29,16 +29,6 @@
             }
           },
           {
-            "id": "birch_log",
-            "name": "Берёзовое бревно",
-            "sprite": {
-              "file": "blocks-0-8028f094c135.webp",
-              "cols": 8,
-              "x": 0,
-              "y": 4
-            }
-          },
-          {
             "id": "spruce_log",
             "name": "Еловое бревно",
             "sprite": {
@@ -49,8 +39,18 @@
             }
           },
           {
+            "id": "birch_log",
+            "name": "Берёзовое бревно",
+            "sprite": {
+              "file": "blocks-0-8028f094c135.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 4
+            }
+          },
+          {
             "id": "jungle_log",
-            "name": "Тропическое бревно",
+            "name": "Бревно тропического дерева",
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
@@ -79,6 +79,16 @@
             }
           },
           {
+            "id": "mangrove_log",
+            "name": "Мангровое бревно",
+            "sprite": {
+              "file": "blocks-5-7424e7c80f0c.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 1
+            }
+          },
+          {
             "id": "cherry_log",
             "name": "Вишнёвое бревно",
             "sprite": {
@@ -89,13 +99,23 @@
             }
           },
           {
-            "id": "mangrove_log",
-            "name": "Мангровое бревно",
+            "id": "crimson_stem",
+            "name": "Багровый стебель",
             "sprite": {
-              "file": "blocks-5-7424e7c80f0c.webp",
+              "file": "blocks-2-18b9c6c6e65f.webp",
               "cols": 8,
-              "x": 4,
-              "y": 1
+              "x": 2,
+              "y": 3
+            }
+          },
+          {
+            "id": "warped_stem",
+            "name": "Искажённый стебель",
+            "sprite": {
+              "file": "blocks-9-c0040410abbd.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 3
             }
           }
         ]
@@ -244,7 +264,7 @@
         "variants": null
       },
       {
-        "id": "stone",
+        "id": "any_stone",
         "name": "Добудь 16 любого камня",
         "type": "Вариант",
         "count": 16,
@@ -263,6 +283,16 @@
               "cols": 8,
               "x": 7,
               "y": 3
+            }
+          },
+          {
+            "id": "cobblestone",
+            "name": "Булыжник",
+            "sprite": {
+              "file": "blocks-2-18b9c6c6e65f.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 0
             }
           },
           {
@@ -307,7 +337,7 @@
           },
           {
             "id": "cobbled_deepslate",
-            "name": "Дроблёный сланец",
+            "name": "Колотый глубинный сланец",
             "sprite": {
               "file": "blocks-1-7750487a426a.webp",
               "cols": 8,
@@ -862,8 +892,8 @@
             "sprite": {
               "file": "blocks-10-ad8a94908c83.webp",
               "cols": 8,
-              "x": 2,
-              "y": 3
+              "x": 7,
+              "y": 2
             }
           },
           {
@@ -872,7 +902,7 @@
             "sprite": {
               "file": "blocks-6-60d5e373d30c.webp",
               "cols": 8,
-              "x": 4,
+              "x": 1,
               "y": 1
             }
           },
@@ -882,7 +912,7 @@
             "sprite": {
               "file": "blocks-5-7424e7c80f0c.webp",
               "cols": 8,
-              "x": 6,
+              "x": 3,
               "y": 0
             }
           },
@@ -892,8 +922,8 @@
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
-              "x": 0,
-              "y": 4
+              "x": 5,
+              "y": 3
             }
           },
           {
@@ -902,7 +932,7 @@
             "sprite": {
               "file": "blocks-10-ad8a94908c83.webp",
               "cols": 8,
-              "x": 4,
+              "x": 1,
               "y": 4
             }
           },
@@ -912,7 +942,7 @@
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
-              "x": 4,
+              "x": 1,
               "y": 6
             }
           },
@@ -922,17 +952,17 @@
             "sprite": {
               "file": "blocks-6-60d5e373d30c.webp",
               "cols": 8,
-              "x": 2,
-              "y": 4
+              "x": 7,
+              "y": 3
             }
           },
           {
             "id": "gray_stained_glass",
-            "name": "Серый стекло",
+            "name": "Серое стекло",
             "sprite": {
               "file": "blocks-3-c451627f3b8d.webp",
               "cols": 8,
-              "x": 3,
+              "x": 0,
               "y": 6
             }
           },
@@ -942,8 +972,8 @@
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
-              "x": 2,
-              "y": 5
+              "x": 7,
+              "y": 4
             }
           },
           {
@@ -952,7 +982,7 @@
             "sprite": {
               "file": "blocks-2-18b9c6c6e65f.webp",
               "cols": 8,
-              "x": 5,
+              "x": 2,
               "y": 5
             }
           },
@@ -962,7 +992,7 @@
             "sprite": {
               "file": "blocks-7-c29e02b641f7.webp",
               "cols": 8,
-              "x": 6,
+              "x": 3,
               "y": 2
             }
           },
@@ -972,7 +1002,7 @@
             "sprite": {
               "file": "blocks-1-7750487a426a.webp",
               "cols": 8,
-              "x": 3,
+              "x": 0,
               "y": 1
             }
           },
@@ -982,7 +1012,7 @@
             "sprite": {
               "file": "blocks-1-7750487a426a.webp",
               "cols": 8,
-              "x": 4,
+              "x": 1,
               "y": 3
             }
           },
@@ -992,7 +1022,7 @@
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
-              "x": 5,
+              "x": 2,
               "y": 0
             }
           },
@@ -1002,8 +1032,8 @@
             "sprite": {
               "file": "blocks-7-c29e02b641f7.webp",
               "cols": 8,
-              "x": 2,
-              "y": 6
+              "x": 7,
+              "y": 5
             }
           },
           {
@@ -1012,8 +1042,8 @@
             "sprite": {
               "file": "blocks-0-8028f094c135.webp",
               "cols": 8,
-              "x": 0,
-              "y": 6
+              "x": 5,
+              "y": 5
             }
           }
         ]
@@ -1046,7 +1076,7 @@
             "sprite": {
               "file": "blocks-10-ad8a94908c83.webp",
               "cols": 8,
-              "x": 2,
+              "x": 0,
               "y": 3
             }
           },
@@ -1056,7 +1086,7 @@
             "sprite": {
               "file": "blocks-6-60d5e373d30c.webp",
               "cols": 8,
-              "x": 4,
+              "x": 2,
               "y": 1
             }
           },
@@ -1066,7 +1096,7 @@
             "sprite": {
               "file": "blocks-5-7424e7c80f0c.webp",
               "cols": 8,
-              "x": 6,
+              "x": 4,
               "y": 0
             }
           },
@@ -1076,8 +1106,8 @@
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
-              "x": 0,
-              "y": 4
+              "x": 6,
+              "y": 3
             }
           },
           {
@@ -1086,7 +1116,7 @@
             "sprite": {
               "file": "blocks-10-ad8a94908c83.webp",
               "cols": 8,
-              "x": 4,
+              "x": 2,
               "y": 4
             }
           },
@@ -1096,7 +1126,7 @@
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
-              "x": 4,
+              "x": 2,
               "y": 6
             }
           },
@@ -1106,17 +1136,17 @@
             "sprite": {
               "file": "blocks-6-60d5e373d30c.webp",
               "cols": 8,
-              "x": 2,
+              "x": 0,
               "y": 4
             }
           },
           {
             "id": "gray_stained_glass_pane",
-            "name": "Серый панель",
+            "name": "Серая стеклянная панель",
             "sprite": {
               "file": "blocks-3-c451627f3b8d.webp",
               "cols": 8,
-              "x": 3,
+              "x": 1,
               "y": 6
             }
           },
@@ -1126,7 +1156,7 @@
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
-              "x": 2,
+              "x": 0,
               "y": 5
             }
           },
@@ -1136,7 +1166,7 @@
             "sprite": {
               "file": "blocks-2-18b9c6c6e65f.webp",
               "cols": 8,
-              "x": 5,
+              "x": 3,
               "y": 5
             }
           },
@@ -1146,7 +1176,7 @@
             "sprite": {
               "file": "blocks-7-c29e02b641f7.webp",
               "cols": 8,
-              "x": 6,
+              "x": 4,
               "y": 2
             }
           },
@@ -1156,7 +1186,7 @@
             "sprite": {
               "file": "blocks-1-7750487a426a.webp",
               "cols": 8,
-              "x": 3,
+              "x": 1,
               "y": 1
             }
           },
@@ -1166,7 +1196,7 @@
             "sprite": {
               "file": "blocks-1-7750487a426a.webp",
               "cols": 8,
-              "x": 4,
+              "x": 2,
               "y": 3
             }
           },
@@ -1176,7 +1206,7 @@
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
-              "x": 5,
+              "x": 3,
               "y": 0
             }
           },
@@ -1186,7 +1216,7 @@
             "sprite": {
               "file": "blocks-7-c29e02b641f7.webp",
               "cols": 8,
-              "x": 2,
+              "x": 0,
               "y": 6
             }
           },
@@ -1196,8 +1226,8 @@
             "sprite": {
               "file": "blocks-0-8028f094c135.webp",
               "cols": 8,
-              "x": 0,
-              "y": 6
+              "x": 6,
+              "y": 5
             }
           }
         ]
@@ -1233,168 +1263,168 @@
             "sprite": {
               "file": "blocks-9-c0040410abbd.webp",
               "cols": 8,
-              "x": 5,
-              "y": 1
+              "x": 4,
+              "y": 0
             }
           },
           {
             "id": "white_terracotta",
-            "name": "Белая терракота",
+            "name": "Белая керамика",
             "sprite": {
               "file": "blocks-10-ad8a94908c83.webp",
               "cols": 8,
-              "x": 2,
+              "x": 1,
               "y": 3
             }
           },
           {
             "id": "orange_terracotta",
-            "name": "Оранжевая терракота",
+            "name": "Оранжевая керамика",
             "sprite": {
               "file": "blocks-6-60d5e373d30c.webp",
               "cols": 8,
-              "x": 4,
+              "x": 3,
               "y": 1
             }
           },
           {
             "id": "magenta_terracotta",
-            "name": "Пурпурная терракота",
+            "name": "Пурпурная керамика",
             "sprite": {
               "file": "blocks-5-7424e7c80f0c.webp",
               "cols": 8,
-              "x": 6,
+              "x": 5,
               "y": 0
             }
           },
           {
             "id": "light_blue_terracotta",
-            "name": "Голубая терракота",
+            "name": "Голубая керамика",
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
-              "x": 0,
-              "y": 4
+              "x": 7,
+              "y": 3
             }
           },
           {
             "id": "yellow_terracotta",
-            "name": "Жёлтая терракота",
+            "name": "Жёлтая керамика",
             "sprite": {
               "file": "blocks-10-ad8a94908c83.webp",
               "cols": 8,
-              "x": 4,
+              "x": 3,
               "y": 4
             }
           },
           {
             "id": "lime_terracotta",
-            "name": "Лаймовая терракота",
+            "name": "Лаймовая керамика",
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
-              "x": 4,
+              "x": 3,
               "y": 6
             }
           },
           {
             "id": "pink_terracotta",
-            "name": "Розовая терракота",
+            "name": "Розовая керамика",
             "sprite": {
               "file": "blocks-6-60d5e373d30c.webp",
               "cols": 8,
-              "x": 2,
+              "x": 1,
               "y": 4
             }
           },
           {
             "id": "gray_terracotta",
-            "name": "Серый терракота",
+            "name": "Серая керамика",
             "sprite": {
               "file": "blocks-3-c451627f3b8d.webp",
               "cols": 8,
-              "x": 3,
+              "x": 2,
               "y": 6
             }
           },
           {
             "id": "light_gray_terracotta",
-            "name": "Светло-серая терракота",
+            "name": "Светло-серая керамика",
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
-              "x": 2,
+              "x": 1,
               "y": 5
             }
           },
           {
             "id": "cyan_terracotta",
-            "name": "Бирюзовая терракота",
+            "name": "Бирюзовая керамика",
             "sprite": {
               "file": "blocks-2-18b9c6c6e65f.webp",
               "cols": 8,
-              "x": 5,
+              "x": 4,
               "y": 5
             }
           },
           {
             "id": "purple_terracotta",
-            "name": "Фиолетовая терракота",
+            "name": "Фиолетовая керамика",
             "sprite": {
               "file": "blocks-7-c29e02b641f7.webp",
               "cols": 8,
-              "x": 6,
+              "x": 5,
               "y": 2
             }
           },
           {
             "id": "blue_terracotta",
-            "name": "Синяя терракота",
+            "name": "Синяя керамика",
             "sprite": {
               "file": "blocks-1-7750487a426a.webp",
               "cols": 8,
-              "x": 3,
+              "x": 2,
               "y": 1
             }
           },
           {
             "id": "brown_terracotta",
-            "name": "Коричневая терракота",
+            "name": "Коричневая керамика",
             "sprite": {
               "file": "blocks-1-7750487a426a.webp",
               "cols": 8,
-              "x": 4,
+              "x": 3,
               "y": 3
             }
           },
           {
             "id": "green_terracotta",
-            "name": "Зелёная терракота",
+            "name": "Зелёная керамика",
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
-              "x": 5,
+              "x": 4,
               "y": 0
             }
           },
           {
             "id": "red_terracotta",
-            "name": "Красная терракота",
+            "name": "Красная керамика",
             "sprite": {
               "file": "blocks-7-c29e02b641f7.webp",
               "cols": 8,
-              "x": 2,
+              "x": 1,
               "y": 6
             }
           },
           {
             "id": "black_terracotta",
-            "name": "Чёрная терракота",
+            "name": "Чёрная керамика",
             "sprite": {
               "file": "blocks-0-8028f094c135.webp",
               "cols": 8,
-              "x": 0,
-              "y": 6
+              "x": 7,
+              "y": 5
             }
           }
         ]
@@ -1452,7 +1482,7 @@
         "variants": null
       },
       {
-        "id": "white_wool",
+        "id": "any_wool",
         "name": "Добудь 12 любой шерсти",
         "type": "Вариант",
         "count": 12,
@@ -1535,7 +1565,7 @@
           },
           {
             "id": "gray_wool",
-            "name": "Серый шерсть",
+            "name": "Серая шерсть",
             "sprite": {
               "file": "blocks-3-c451627f3b8d.webp",
               "cols": 8,
@@ -1626,7 +1656,7 @@
         ]
       },
       {
-        "id": "white_bed",
+        "id": "any_bed",
         "name": "Скрафти любую кровать",
         "type": "Вариант",
         "count": 1,
@@ -1648,23 +1678,33 @@
             }
           },
           {
-            "id": "red_bed",
-            "name": "Красная кровать",
+            "id": "orange_bed",
+            "name": "Оранжевая кровать",
             "sprite": {
-              "file": "blocks-7-c29e02b641f7.webp",
+              "file": "blocks-6-60d5e373d30c.webp",
               "cols": 8,
-              "x": 0,
-              "y": 4
+              "x": 4,
+              "y": 0
             }
           },
           {
-            "id": "blue_bed",
-            "name": "Синяя кровать",
+            "id": "magenta_bed",
+            "name": "Пурпурная кровать",
             "sprite": {
-              "file": "blocks-1-7750487a426a.webp",
+              "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
-              "x": 2,
-              "y": 0
+              "x": 6,
+              "y": 6
+            }
+          },
+          {
+            "id": "light_blue_bed",
+            "name": "Голубая кровать",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 3
             }
           },
           {
@@ -1678,6 +1718,86 @@
             }
           },
           {
+            "id": "lime_bed",
+            "name": "Лаймовая кровать",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 5
+            }
+          },
+          {
+            "id": "pink_bed",
+            "name": "Розовая кровать",
+            "sprite": {
+              "file": "blocks-6-60d5e373d30c.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 3
+            }
+          },
+          {
+            "id": "gray_bed",
+            "name": "Серая кровать",
+            "sprite": {
+              "file": "blocks-3-c451627f3b8d.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 5
+            }
+          },
+          {
+            "id": "light_gray_bed",
+            "name": "Светло-серая кровать",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 4
+            }
+          },
+          {
+            "id": "cyan_bed",
+            "name": "Бирюзовая кровать",
+            "sprite": {
+              "file": "blocks-2-18b9c6c6e65f.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 4
+            }
+          },
+          {
+            "id": "purple_bed",
+            "name": "Фиолетовая кровать",
+            "sprite": {
+              "file": "blocks-7-c29e02b641f7.webp",
+              "cols": 8,
+              "x": 6,
+              "y": 1
+            }
+          },
+          {
+            "id": "blue_bed",
+            "name": "Синяя кровать",
+            "sprite": {
+              "file": "blocks-1-7750487a426a.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 0
+            }
+          },
+          {
+            "id": "brown_bed",
+            "name": "Коричневая кровать",
+            "sprite": {
+              "file": "blocks-1-7750487a426a.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 2
+            }
+          },
+          {
             "id": "green_bed",
             "name": "Зелёная кровать",
             "sprite": {
@@ -1685,6 +1805,16 @@
               "cols": 8,
               "x": 5,
               "y": 6
+            }
+          },
+          {
+            "id": "red_bed",
+            "name": "Красная кровать",
+            "sprite": {
+              "file": "blocks-7-c29e02b641f7.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 4
             }
           },
           {
@@ -1700,7 +1830,7 @@
         ]
       },
       {
-        "id": "white_banner",
+        "id": "any_banner",
         "name": "Скрафти любой флаг",
         "type": "Вариант",
         "count": 1,
@@ -1722,13 +1852,103 @@
             }
           },
           {
-            "id": "red_banner",
-            "name": "Красный флаг",
+            "id": "orange_banner",
+            "name": "Оранжевый флаг",
+            "sprite": {
+              "file": "blocks-6-60d5e373d30c.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 0
+            }
+          },
+          {
+            "id": "magenta_banner",
+            "name": "Пурпурный флаг",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 6
+            }
+          },
+          {
+            "id": "light_blue_banner",
+            "name": "Голубой флаг",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 2
+            }
+          },
+          {
+            "id": "yellow_banner",
+            "name": "Жёлтый флаг",
+            "sprite": {
+              "file": "blocks-10-ad8a94908c83.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 3
+            }
+          },
+          {
+            "id": "lime_banner",
+            "name": "Лаймовый флаг",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 5
+            }
+          },
+          {
+            "id": "pink_banner",
+            "name": "Розовый флаг",
+            "sprite": {
+              "file": "blocks-6-60d5e373d30c.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 3
+            }
+          },
+          {
+            "id": "gray_banner",
+            "name": "Серый флаг",
+            "sprite": {
+              "file": "blocks-3-c451627f3b8d.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 5
+            }
+          },
+          {
+            "id": "light_gray_banner",
+            "name": "Светло-серый флаг",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 4
+            }
+          },
+          {
+            "id": "cyan_banner",
+            "name": "Бирюзовый флаг",
+            "sprite": {
+              "file": "blocks-2-18b9c6c6e65f.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 4
+            }
+          },
+          {
+            "id": "purple_banner",
+            "name": "Фиолетовый флаг",
             "sprite": {
               "file": "blocks-7-c29e02b641f7.webp",
               "cols": 8,
-              "x": 7,
-              "y": 3
+              "x": 5,
+              "y": 1
             }
           },
           {
@@ -1739,6 +1959,36 @@
               "cols": 8,
               "x": 1,
               "y": 0
+            }
+          },
+          {
+            "id": "brown_banner",
+            "name": "Коричневый флаг",
+            "sprite": {
+              "file": "blocks-1-7750487a426a.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 2
+            }
+          },
+          {
+            "id": "green_banner",
+            "name": "Зелёный флаг",
+            "sprite": {
+              "file": "blocks-3-c451627f3b8d.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 6
+            }
+          },
+          {
+            "id": "red_banner",
+            "name": "Красный флаг",
+            "sprite": {
+              "file": "blocks-7-c29e02b641f7.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 3
             }
           },
           {
@@ -1754,7 +2004,7 @@
         ]
       },
       {
-        "id": "oak_door",
+        "id": "any_door",
         "name": "Скрафти любые деревянные двери",
         "type": "Вариант",
         "count": 3,
@@ -1797,7 +2047,7 @@
           },
           {
             "id": "jungle_door",
-            "name": "Тропическая дверь",
+            "name": "Дверь из тропического дерева",
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
@@ -1824,11 +2074,61 @@
               "x": 6,
               "y": 5
             }
+          },
+          {
+            "id": "mangrove_door",
+            "name": "Мангровая дверь",
+            "sprite": {
+              "file": "blocks-5-7424e7c80f0c.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 1
+            }
+          },
+          {
+            "id": "cherry_door",
+            "name": "Вишнёвая дверь",
+            "sprite": {
+              "file": "blocks-1-7750487a426a.webp",
+              "cols": 8,
+              "x": 6,
+              "y": 3
+            }
+          },
+          {
+            "id": "bamboo_door",
+            "name": "Бамбуковая дверь",
+            "sprite": {
+              "file": "blocks-0-8028f094c135.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 1
+            }
+          },
+          {
+            "id": "crimson_door",
+            "name": "Багровая дверь",
+            "sprite": {
+              "file": "blocks-2-18b9c6c6e65f.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 2
+            }
+          },
+          {
+            "id": "warped_door",
+            "name": "Искажённая дверь",
+            "sprite": {
+              "file": "blocks-9-c0040410abbd.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 1
+            }
           }
         ]
       },
       {
-        "id": "oak_trapdoor",
+        "id": "any_trapdoor",
         "name": "Скрафти любые люки",
         "type": "Вариант",
         "count": 4,
@@ -1871,7 +2171,7 @@
           },
           {
             "id": "jungle_trapdoor",
-            "name": "Тропический люк",
+            "name": "Люк из тропического дерева",
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
@@ -1898,11 +2198,61 @@
               "x": 7,
               "y": 6
             }
+          },
+          {
+            "id": "mangrove_trapdoor",
+            "name": "Мангровый люк",
+            "sprite": {
+              "file": "blocks-5-7424e7c80f0c.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 2
+            }
+          },
+          {
+            "id": "cherry_trapdoor",
+            "name": "Вишнёвый люк",
+            "sprite": {
+              "file": "blocks-1-7750487a426a.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 4
+            }
+          },
+          {
+            "id": "bamboo_trapdoor",
+            "name": "Бамбуковый люк",
+            "sprite": {
+              "file": "blocks-0-8028f094c135.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 3
+            }
+          },
+          {
+            "id": "crimson_trapdoor",
+            "name": "Багровый люк",
+            "sprite": {
+              "file": "blocks-2-18b9c6c6e65f.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 3
+            }
+          },
+          {
+            "id": "warped_trapdoor",
+            "name": "Искажённый люк",
+            "sprite": {
+              "file": "blocks-9-c0040410abbd.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 3
+            }
           }
         ]
       },
       {
-        "id": "oak_fence",
+        "id": "any_fence",
         "name": "Скрафти любой забор",
         "type": "Вариант",
         "count": 6,
@@ -1945,7 +2295,7 @@
           },
           {
             "id": "jungle_fence",
-            "name": "Тропический забор",
+            "name": "Забор из тропического дерева",
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
@@ -1972,11 +2322,61 @@
               "x": 7,
               "y": 5
             }
+          },
+          {
+            "id": "mangrove_fence",
+            "name": "Мангровый забор",
+            "sprite": {
+              "file": "blocks-5-7424e7c80f0c.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 1
+            }
+          },
+          {
+            "id": "cherry_fence",
+            "name": "Вишнёвый забор",
+            "sprite": {
+              "file": "blocks-1-7750487a426a.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 3
+            }
+          },
+          {
+            "id": "bamboo_fence",
+            "name": "Бамбуковый забор",
+            "sprite": {
+              "file": "blocks-0-8028f094c135.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 2
+            }
+          },
+          {
+            "id": "crimson_fence",
+            "name": "Багровый забор",
+            "sprite": {
+              "file": "blocks-2-18b9c6c6e65f.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 2
+            }
+          },
+          {
+            "id": "warped_fence",
+            "name": "Искажённый забор",
+            "sprite": {
+              "file": "blocks-9-c0040410abbd.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 2
+            }
           }
         ]
       },
       {
-        "id": "oak_sign",
+        "id": "any_sign",
         "name": "Скрафти любые таблички",
         "type": "Вариант",
         "count": 3,
@@ -2019,7 +2419,7 @@
           },
           {
             "id": "jungle_sign",
-            "name": "Тропическая табличка",
+            "name": "Табличка из тропического дерева",
             "sprite": {
               "file": "blocks-4-e177ee096686.webp",
               "cols": 8,
@@ -2045,6 +2445,56 @@
               "cols": 8,
               "x": 4,
               "y": 6
+            }
+          },
+          {
+            "id": "mangrove_sign",
+            "name": "Мангровая табличка",
+            "sprite": {
+              "file": "blocks-5-7424e7c80f0c.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 1
+            }
+          },
+          {
+            "id": "cherry_sign",
+            "name": "Вишнёвая табличка",
+            "sprite": {
+              "file": "blocks-1-7750487a426a.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 4
+            }
+          },
+          {
+            "id": "bamboo_sign",
+            "name": "Бамбуковая табличка",
+            "sprite": {
+              "file": "blocks-0-8028f094c135.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 2
+            }
+          },
+          {
+            "id": "crimson_sign",
+            "name": "Багровая табличка",
+            "sprite": {
+              "file": "blocks-2-18b9c6c6e65f.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 2
+            }
+          },
+          {
+            "id": "warped_sign",
+            "name": "Искажённая табличка",
+            "sprite": {
+              "file": "blocks-9-c0040410abbd.webp",
+              "cols": 8,
+              "x": 6,
+              "y": 2
             }
           }
         ]
@@ -2135,7 +2585,7 @@
         "variants": null
       },
       {
-        "id": "oak_boat",
+        "id": "any_boat",
         "name": "Скрафти любую лодку",
         "type": "Вариант",
         "count": 1,
@@ -2157,16 +2607,6 @@
             }
           },
           {
-            "id": "birch_boat",
-            "name": "Берёзовая лодка",
-            "sprite": {
-              "file": "miscellaneous-0-889ffb1f8d3a.webp",
-              "cols": 8,
-              "x": 0,
-              "y": 2
-            }
-          },
-          {
             "id": "spruce_boat",
             "name": "Еловая лодка",
             "sprite": {
@@ -2177,8 +2617,18 @@
             }
           },
           {
+            "id": "birch_boat",
+            "name": "Берёзовая лодка",
+            "sprite": {
+              "file": "miscellaneous-0-889ffb1f8d3a.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 2
+            }
+          },
+          {
             "id": "jungle_boat",
-            "name": "Тропическая лодка",
+            "name": "Лодка из тропического дерева",
             "sprite": {
               "file": "miscellaneous-1-be890189a1a9.webp",
               "cols": 8,
@@ -2265,7 +2715,7 @@
         "variants": null
       },
       {
-        "id": "raw_iron",
+        "id": "any_raw_ore",
         "name": "Добудь 8 любой сырой руды",
         "type": "Вариант",
         "count": 8,
@@ -2278,7 +2728,7 @@
         "variants": [
           {
             "id": "raw_iron",
-            "name": "Сырое железо",
+            "name": "Рудное железо",
             "sprite": {
               "file": "valuables-1-113be8f5e8cc.webp",
               "cols": 8,
@@ -2288,7 +2738,7 @@
           },
           {
             "id": "raw_copper",
-            "name": "Сырая медь",
+            "name": "Рудная медь",
             "sprite": {
               "file": "valuables-0-f72395b51e8b.webp",
               "cols": 8,
@@ -2298,7 +2748,7 @@
           },
           {
             "id": "raw_gold",
-            "name": "Сырое золото",
+            "name": "Рудное золото",
             "sprite": {
               "file": "valuables-1-113be8f5e8cc.webp",
               "cols": 8,
@@ -2680,7 +3130,7 @@
         "variants": null
       },
       {
-        "id": "stone_pickaxe",
+        "id": "any_stone_tool",
         "name": "Скрафти любой каменный инструмент",
         "type": "Вариант",
         "count": 1,
@@ -2702,16 +3152,6 @@
             }
           },
           {
-            "id": "stone_axe",
-            "name": "Каменный топор",
-            "sprite": {
-              "file": "armor-and-tools-1-1da884ad2709.webp",
-              "cols": 8,
-              "x": 7,
-              "y": 3
-            }
-          },
-          {
             "id": "stone_sword",
             "name": "Каменный меч",
             "sprite": {
@@ -2719,6 +3159,16 @@
               "cols": 8,
               "x": 3,
               "y": 4
+            }
+          },
+          {
+            "id": "stone_axe",
+            "name": "Каменный топор",
+            "sprite": {
+              "file": "armor-and-tools-1-1da884ad2709.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 3
             }
           },
           {
@@ -2744,7 +3194,7 @@
         ]
       },
       {
-        "id": "iron_pickaxe",
+        "id": "any_iron_tool",
         "name": "Скрафти любой железный инструмент",
         "type": "Вариант",
         "count": 1,
@@ -2766,16 +3216,6 @@
             }
           },
           {
-            "id": "iron_axe",
-            "name": "Железный топор",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 4,
-              "y": 5
-            }
-          },
-          {
             "id": "iron_sword",
             "name": "Железный меч",
             "sprite": {
@@ -2783,6 +3223,16 @@
               "cols": 8,
               "x": 5,
               "y": 6
+            }
+          },
+          {
+            "id": "iron_axe",
+            "name": "Железный топор",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 5
             }
           },
           {
@@ -2808,7 +3258,7 @@
         ]
       },
       {
-        "id": "wooden_sword",
+        "id": "any_weapon",
         "name": "Скрафти любое оружие",
         "type": "Вариант",
         "count": 1,
@@ -2847,16 +3297,6 @@
               "cols": 8,
               "x": 5,
               "y": 6
-            }
-          },
-          {
-            "id": "golden_sword",
-            "name": "Золотой меч",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 1,
-              "y": 5
             }
           },
           {
@@ -3159,7 +3599,7 @@
     "badge": "6",
     "goals": [
       {
-        "id": "iron_helmet",
+        "id": "any_iron_armor",
         "name": "Скрафти любую железную броню",
         "type": "Вариант",
         "count": 1,
@@ -3617,7 +4057,7 @@
     "badge": "26",
     "goals": [
       {
-        "id": "oak_sapling",
+        "id": "any_sapling",
         "name": "Собери 4 любых саженца",
         "type": "Вариант",
         "count": 4,
@@ -3696,6 +4136,16 @@
               "cols": 8,
               "x": 1,
               "y": 3
+            }
+          },
+          {
+            "id": "mangrove_propagule",
+            "name": "Мангровый отросток",
+            "sprite": {
+              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+              "cols": 8,
+              "x": 6,
+              "y": 2
             }
           }
         ]
@@ -4013,7 +4463,7 @@
         "variants": null
       },
       {
-        "id": "white_dye",
+        "id": "any_dye",
         "name": "Скрафти 8 любых красителей",
         "type": "Вариант",
         "count": 8,
@@ -5118,7 +5568,7 @@
         "variants": null
       },
       {
-        "id": "magma_block",
+        "id": "nether_magma_block",
         "name": "Скрафти 4 блока магмы",
         "type": "Крафт",
         "count": 4,
