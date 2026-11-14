@@ -11,7 +11,6 @@
 	var popover = document.getElementById('pepe-popover');
 
 	var ASSETS_DIR = '/Bingo-Site-/assets/trading-zone/';
-	var SPRITE_SIZE = 46; // px - large, clean 3D isometric render
 
 	var currentCategory = 'all';
 	var searchQuery = '';
@@ -41,15 +40,18 @@
 		return document.documentElement.lang === 'en';
 	}
 
-	function getSpriteStyle(sprite, size) {
-		var s = size || SPRITE_SIZE;
+	function getSpriteStyle(sprite, customSize) {
 		if (!sprite || !sprite.file) return '';
 		var cols = sprite.cols || 8;
 		var x = sprite.x || 0;
 		var y = sprite.y || 0;
+		if (customSize) {
+			return 'background-image: url(\'' + ASSETS_DIR + sprite.file + '\'); ' +
+				'background-size: calc(' + cols + ' * ' + customSize + 'px) auto; ' +
+				'background-position: calc(-' + x + ' * ' + customSize + 'px) calc(-' + y + ' * ' + customSize + 'px);';
+		}
 		return 'background-image: url(\'' + ASSETS_DIR + sprite.file + '\'); ' +
-			'background-size: calc(' + cols + ' * ' + s + 'px) auto; ' +
-			'background-position: calc(-' + x + ' * ' + s + 'px) calc(-' + y + ' * ' + s + 'px);';
+			'--cols: ' + cols + '; --x: ' + x + '; --y: ' + y + ';';
 	}
 
 	function getPopoverTitle(goal) {
@@ -146,7 +148,7 @@
 				var hasVariants = goal.variants && goal.variants.length > 1;
 				var curIdx = (hasVariants && variantIndices[goal.id]) || 0;
 				var activeSprite = hasVariants ? goal.variants[curIdx].sprite : goal.sprite;
-				var spriteStyle = getSpriteStyle(activeSprite, SPRITE_SIZE);
+				var spriteStyle = getSpriteStyle(activeSprite);
 
 				html += '<button type="button" class="pepe-tile' + (hasVariants ? ' has-variants' : '') + '" ' +
 					'data-goal-id="' + goal.id + '" ' +
@@ -280,20 +282,28 @@
 
 			item.addEventListener('click', function (e) {
 				e.stopPropagation();
+				item.blur();
 				var idx = parseInt(item.getAttribute('data-idx'), 10);
 				variantIndices[goal.id] = idx;
 
-				// Update active border in popover
+				// Update active state in popover and blur all to prevent sticky focus on mobile
 				items.forEach(function (it) {
+					it.blur();
 					it.classList.toggle('active', it === item);
 				});
+
+				// Update subtitle
+				var v = goal.variants[idx];
+				if (subText && v) {
+					subText.innerHTML = v.name + ' <code class="pepe-tip-code">minecraft:' + v.id + '</code>';
+				}
 
 				// Update sprite on main tile
 				var mainTile = container.querySelector('.pepe-tile[data-goal-id="' + goal.id + '"]');
 				if (mainTile) {
 					var spr = mainTile.querySelector('.pepe-sprite');
 					if (spr) {
-						spr.style.cssText = getSpriteStyle(goal.variants[idx].sprite, SPRITE_SIZE);
+						spr.style.cssText = getSpriteStyle(goal.variants[idx].sprite);
 					}
 				}
 			});
@@ -371,7 +381,7 @@
 					var spriteEl = tileEl.querySelector('.pepe-sprite');
 					if (spriteEl) {
 						var newSprite = goal.variants[nextIdx].sprite;
-						spriteEl.style.cssText = getSpriteStyle(newSprite, SPRITE_SIZE);
+						spriteEl.style.cssText = getSpriteStyle(newSprite);
 					}
 				}
 			});
