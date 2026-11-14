@@ -4898,158 +4898,158 @@
         "variants": null
       },
       {
-        "id": "spider",
+        "id": "spider_spawn_egg",
         "name": "Убей 5 пауков",
         "type": "Охота",
         "count": 5,
         "sprite": {
-          "file": "mob-drops-0-5be4e7c909dd.webp",
+          "file": "spawn-eggs-0.png",
           "cols": 8,
           "x": 4,
-          "y": 3
+          "y": 0
         },
         "variants": null
       },
       {
-        "id": "enderman",
+        "id": "enderman_spawn_egg",
         "name": "Убей эндермена",
         "type": "Охота",
         "count": 1,
         "sprite": {
-          "file": "mob-drops-0-5be4e7c909dd.webp",
+          "file": "spawn-eggs-0.png",
           "cols": 8,
           "x": 5,
-          "y": 1
+          "y": 0
         },
         "variants": null
       },
       {
-        "id": "drowned",
+        "id": "drowned_spawn_egg",
         "name": "Убей 3 утопленников",
         "type": "Охота",
         "count": 3,
         "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
+          "file": "spawn-eggs-0.png",
           "cols": 8,
           "x": 0,
-          "y": 6
+          "y": 0
         },
         "variants": null
       },
       {
-        "id": "witch",
+        "id": "witch_spawn_egg",
         "name": "Убей ведьму",
         "type": "Охота",
         "count": 1,
         "sprite": {
-          "file": "miscellaneous-1-be890189a1a9.webp",
+          "file": "spawn-eggs-0.png",
           "cols": 8,
           "x": 3,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "phantom_spawn_egg",
+        "name": "Убей фантома",
+        "type": "Охота",
+        "count": 1,
+        "sprite": {
+          "file": "spawn-eggs-0.png",
+          "cols": 8,
+          "x": 6,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "slime_spawn_egg",
+        "name": "Убей 2 слизней",
+        "type": "Охота",
+        "count": 2,
+        "sprite": {
+          "file": "spawn-eggs-0.png",
+          "cols": 8,
+          "x": 7,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "blaze_spawn_egg",
+        "name": "Убей 2 ифритов",
+        "type": "Охота",
+        "count": 2,
+        "sprite": {
+          "file": "spawn-eggs-0.png",
+          "cols": 8,
+          "x": 0,
           "y": 1
         },
         "variants": null
       },
       {
-        "id": "phantom",
-        "name": "Убей фантома",
-        "type": "Охота",
-        "count": 1,
-        "sprite": {
-          "file": "mob-drops-0-5be4e7c909dd.webp",
-          "cols": 8,
-          "x": 4,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "slime",
-        "name": "Убей 2 слизней",
-        "type": "Охота",
-        "count": 2,
-        "sprite": {
-          "file": "mob-drops-0-5be4e7c909dd.webp",
-          "cols": 8,
-          "x": 2,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
-        "id": "blaze",
-        "name": "Убей 2 ифритов",
-        "type": "Охота",
-        "count": 2,
-        "sprite": {
-          "file": "mob-drops-0-5be4e7c909dd.webp",
-          "cols": 8,
-          "x": 2,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "magma_cube",
+        "id": "magma_cube_spawn_egg",
         "name": "Убей 2 магмовых кубов",
         "type": "Охота",
         "count": 2,
         "sprite": {
-          "file": "mob-drops-0-5be4e7c909dd.webp",
+          "file": "spawn-eggs-0.png",
           "cols": 8,
-          "x": 3,
-          "y": 2
+          "x": 1,
+          "y": 1
         },
         "variants": null
       },
       {
-        "id": "zombified_piglin",
+        "id": "zombified_piglin_spawn_egg",
         "name": "Убей 3 зомби-пиглинов",
         "type": "Охота",
         "count": 3,
         "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
+          "file": "spawn-eggs-0.png",
           "cols": 8,
-          "x": 6,
-          "y": 6
-        },
-        "variants": null
-      },
-      {
-        "id": "piglin",
-        "name": "Убей 2 пиглинов",
-        "type": "Охота",
-        "count": 2,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 6
-        },
-        "variants": null
-      },
-      {
-        "id": "wither_skeleton",
-        "name": "Убей визер-скелета",
-        "type": "Охота",
-        "count": 1,
-        "sprite": {
-          "file": "valuables-1-113be8f5e8cc.webp",
-          "cols": 8,
-          "x": 6,
+          "x": 1,
           "y": 0
         },
         "variants": null
       },
       {
-        "id": "ghast",
+        "id": "piglin_spawn_egg",
+        "name": "Убей 2 пиглинов",
+        "type": "Охота",
+        "count": 2,
+        "sprite": {
+          "file": "spawn-eggs-0.png",
+          "cols": 8,
+          "x": 2,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "wither_skeleton_spawn_egg",
+        "name": "Убей визер-скелета",
+        "type": "Охота",
+        "count": 1,
+        "sprite": {
+          "file": "spawn-eggs-0.png",
+          "cols": 8,
+          "x": 2,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "ghast_spawn_egg",
         "name": "Убей гаста",
         "type": "Охота",
         "count": 1,
         "sprite": {
-          "file": "mob-drops-0-5be4e7c909dd.webp",
+          "file": "spawn-eggs-0.png",
           "cols": 8,
-          "x": 0,
-          "y": 2
+          "x": 3,
+          "y": 1
         },
         "variants": null
       },

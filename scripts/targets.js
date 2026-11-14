@@ -136,10 +136,20 @@
 
 			visibleTotal += matchingGoals.length;
 
+			var totalVariantsInMatching = 0;
+			matchingGoals.forEach(function (g) {
+				if (g.variants && g.variants.length > 1) totalVariantsInMatching += g.variants.length;
+				else totalVariantsInMatching += 1;
+			});
+			var badgeText = matchingGoals.length;
+			if (totalVariantsInMatching > matchingGoals.length) {
+				badgeText += ' (' + totalVariantsInMatching + ')';
+			}
+
 			html += '<section class="pepe-category" data-cat-id="' + cat.id + '">';
 			html += '<div class="pepe-cat-header">';
 			html += '<h2 class="pepe-cat-title">' + cat.title + '</h2>';
-			html += '<span class="pepe-cat-badge">' + matchingGoals.length + (matchingGoals.length !== cat.goals.length ? ' / ' + cat.goals.length : '') + '</span>';
+			html += '<span class="pepe-cat-badge">' + badgeText + '</span>';
 			html += '</div>';
 
 			html += '<div class="pepe-item-grid">';
@@ -156,12 +166,10 @@
 
 				html += '<span class="pepe-sprite" style="' + spriteStyle + '"></span>';
 
-				if (goal.count && goal.count > 1) {
-					html += '<span class="pepe-count">' + goal.count + '</span>';
-				}
-
 				if (hasVariants) {
-					html += '<span class="pepe-variant-dot" title="Варианты (наведите или ПКМ)">⇄</span>';
+					html += '<span class="pepe-variant-count" title="Варианты: ' + goal.variants.length + '">' + goal.variants.length + '</span>';
+				} else if (goal.count && goal.count > 1) {
+					html += '<span class="pepe-count">' + goal.count + '</span>';
 				}
 
 				html += '</button>';
@@ -265,6 +273,13 @@
 		popover.classList.toggle('is-pinned', !!isPinned);
 		popover.style.display = 'block';
 
+		if (container) {
+			container.querySelectorAll('.pepe-tile.is-active-target').forEach(function (t) {
+				t.classList.remove('is-active-target');
+			});
+		}
+		tileEl.classList.add('is-active-target');
+
 		positionElement(popover, tileEl);
 
 		// Popover items hover & click handlers
@@ -323,6 +338,11 @@
 		popover.style.display = 'none';
 		popover.classList.remove('is-pinned');
 		pinnedGoalId = null;
+		if (container) {
+			container.querySelectorAll('.pepe-tile.is-active-target').forEach(function (t) {
+				t.classList.remove('is-active-target');
+			});
+		}
 	}
 
 	function scheduleClosePopover() {
