@@ -2,10 +2,9 @@
 	'use strict';
 	window.PEPE_GOALS_CATEGORIES = [
   {
-    "id": "wood",
-    "title": "Категория 1: Дерево и базовые крафты",
-    "badge": "21",
-    "color": "emerald",
+    "id": "blocks",
+    "title": "Блоки",
+    "badge": "69",
     "goals": [
       {
         "id": "oak_log",
@@ -180,19 +179,6 @@
         "variants": null
       },
       {
-        "id": "stick",
-        "name": "Скрафти 16 палок",
-        "type": "Крафт",
-        "count": 16,
-        "sprite": {
-          "file": "miscellaneous-2-d0e69ec518e8.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
         "id": "crafting_table",
         "name": "Скрафти верстак",
         "type": "Крафт",
@@ -245,71 +231,6 @@
         "variants": null
       },
       {
-        "id": "wooden_pickaxe",
-        "name": "Скрафти деревянную кирку",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-1-1da884ad2709.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "wooden_axe",
-        "name": "Скрафти деревянный топор",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-1-1da884ad2709.webp",
-          "cols": 8,
-          "x": 4,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "wooden_sword",
-        "name": "Скрафти деревянный меч",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-1-1da884ad2709.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 6
-        },
-        "variants": null
-      },
-      {
-        "id": "bowl",
-        "name": "Скрафти 4 миски",
-        "type": "Крафт",
-        "count": 4,
-        "sprite": {
-          "file": "miscellaneous-0-889ffb1f8d3a.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
-        "id": "torch",
-        "name": "Скрафти 16 факелов",
-        "type": "Крафт",
-        "count": 16,
-        "sprite": {
-          "file": "miscellaneous-2-d0e69ec518e8.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 4
-        },
-        "variants": null
-      },
-      {
         "id": "campfire",
         "name": "Скрафти костёр",
         "type": "Крафт",
@@ -322,215 +243,6 @@
         },
         "variants": null
       },
-      {
-        "id": "charcoal",
-        "name": "Выплави 8 древесного угля",
-        "type": "Крафт",
-        "count": 8,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "oak_boat",
-        "name": "Скрафти любую лодку",
-        "type": "Вариант",
-        "count": 1,
-        "sprite": {
-          "file": "miscellaneous-1-be890189a1a9.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 6
-        },
-        "variants": [
-          {
-            "id": "oak_boat",
-            "name": "Дубовая лодка",
-            "sprite": {
-              "file": "miscellaneous-1-be890189a1a9.webp",
-              "cols": 8,
-              "x": 1,
-              "y": 6
-            }
-          },
-          {
-            "id": "birch_boat",
-            "name": "Берёзовая лодка",
-            "sprite": {
-              "file": "miscellaneous-0-889ffb1f8d3a.webp",
-              "cols": 8,
-              "x": 0,
-              "y": 2
-            }
-          },
-          {
-            "id": "spruce_boat",
-            "name": "Еловая лодка",
-            "sprite": {
-              "file": "miscellaneous-2-d0e69ec518e8.webp",
-              "cols": 8,
-              "x": 3,
-              "y": 3
-            }
-          },
-          {
-            "id": "jungle_boat",
-            "name": "Тропическая лодка",
-            "sprite": {
-              "file": "miscellaneous-1-be890189a1a9.webp",
-              "cols": 8,
-              "x": 0,
-              "y": 3
-            }
-          },
-          {
-            "id": "acacia_boat",
-            "name": "Акациевая лодка",
-            "sprite": {
-              "file": "miscellaneous-0-889ffb1f8d3a.webp",
-              "cols": 8,
-              "x": 0,
-              "y": 0
-            }
-          },
-          {
-            "id": "dark_oak_boat",
-            "name": "Лодка из тёмного дуба",
-            "sprite": {
-              "file": "miscellaneous-0-889ffb1f8d3a.webp",
-              "cols": 8,
-              "x": 1,
-              "y": 6
-            }
-          },
-          {
-            "id": "mangrove_boat",
-            "name": "Мангровая лодка",
-            "sprite": {
-              "file": "miscellaneous-1-be890189a1a9.webp",
-              "cols": 8,
-              "x": 7,
-              "y": 4
-            }
-          },
-          {
-            "id": "cherry_boat",
-            "name": "Вишнёвая лодка",
-            "sprite": {
-              "file": "miscellaneous-0-889ffb1f8d3a.webp",
-              "cols": 8,
-              "x": 3,
-              "y": 4
-            }
-          },
-          {
-            "id": "bamboo_raft",
-            "name": "Бамбуковый плот",
-            "sprite": {
-              "file": "miscellaneous-0-889ffb1f8d3a.webp",
-              "cols": 8,
-              "x": 1,
-              "y": 1
-            }
-          }
-        ]
-      },
-      {
-        "id": "oak_sapling",
-        "name": "Собери 4 любых саженца",
-        "type": "Вариант",
-        "count": 4,
-        "sprite": {
-          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-          "cols": 8,
-          "x": 4,
-          "y": 3
-        },
-        "variants": [
-          {
-            "id": "oak_sapling",
-            "name": "Саженец дуба",
-            "sprite": {
-              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-              "cols": 8,
-              "x": 4,
-              "y": 3
-            }
-          },
-          {
-            "id": "spruce_sapling",
-            "name": "Саженец ели",
-            "sprite": {
-              "file": "dyes-and-plants-2-b66ab3740a79.webp",
-              "cols": 8,
-              "x": 0,
-              "y": 0
-            }
-          },
-          {
-            "id": "birch_sapling",
-            "name": "Саженец берёзы",
-            "sprite": {
-              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-              "cols": 8,
-              "x": 2,
-              "y": 1
-            }
-          },
-          {
-            "id": "jungle_sapling",
-            "name": "Саженец тропического дерева",
-            "sprite": {
-              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-              "cols": 8,
-              "x": 5,
-              "y": 1
-            }
-          },
-          {
-            "id": "acacia_sapling",
-            "name": "Саженец акации",
-            "sprite": {
-              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-              "cols": 8,
-              "x": 1,
-              "y": 0
-            }
-          },
-          {
-            "id": "dark_oak_sapling",
-            "name": "Саженец тёмного дуба",
-            "sprite": {
-              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-              "cols": 8,
-              "x": 2,
-              "y": 4
-            }
-          },
-          {
-            "id": "cherry_sapling",
-            "name": "Саженец вишни",
-            "sprite": {
-              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-              "cols": 8,
-              "x": 1,
-              "y": 3
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "mining",
-    "title": "Категория 2: Шахтёрство, камни и земляные ресурсы",
-    "badge": "26",
-    "color": "amber",
-    "goals": [
       {
         "id": "stone",
         "name": "Добудь 16 любого камня",
@@ -651,19 +363,6 @@
           "cols": 8,
           "x": 1,
           "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "flint",
-        "name": "Добудь 4 кремня",
-        "type": "Добыча",
-        "count": 4,
-        "sprite": {
-          "file": "miscellaneous-1-be890189a1a9.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 1
         },
         "variants": null
       },
@@ -863,19 +562,6 @@
         "variants": null
       },
       {
-        "id": "amethyst_shard",
-        "name": "Добудь 8 осколков аметиста",
-        "type": "Добыча",
-        "count": 8,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
         "id": "basalt",
         "name": "Добудь 16 базальта",
         "type": "Добыча",
@@ -939,1818 +625,7 @@
           "y": 4
         },
         "variants": null
-      }
-    ]
-  },
-  {
-    "id": "ores",
-    "title": "Категория 3: Руды, металлы и драгоценности",
-    "badge": "26",
-    "color": "yellow",
-    "goals": [
-      {
-        "id": "raw_iron",
-        "name": "Добудь 8 любой сырой руды",
-        "type": "Вариант",
-        "count": 8,
-        "sprite": {
-          "file": "valuables-1-113be8f5e8cc.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 0
-        },
-        "variants": [
-          {
-            "id": "raw_iron",
-            "name": "Сырое железо",
-            "sprite": {
-              "file": "valuables-1-113be8f5e8cc.webp",
-              "cols": 8,
-              "x": 1,
-              "y": 0
-            }
-          },
-          {
-            "id": "raw_copper",
-            "name": "Сырая медь",
-            "sprite": {
-              "file": "valuables-0-f72395b51e8b.webp",
-              "cols": 8,
-              "x": 7,
-              "y": 6
-            }
-          },
-          {
-            "id": "raw_gold",
-            "name": "Сырое золото",
-            "sprite": {
-              "file": "valuables-1-113be8f5e8cc.webp",
-              "cols": 8,
-              "x": 0,
-              "y": 0
-            }
-          }
-        ]
       },
-      {
-        "id": "coal",
-        "name": "Добудь 16 угля",
-        "type": "Добыча",
-        "count": 16,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "coal_block",
-        "name": "Скрафти угольный блок",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 4,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "raw_iron",
-        "name": "Добудь 12 сырого железа",
-        "type": "Добыча",
-        "count": 12,
-        "sprite": {
-          "file": "valuables-1-113be8f5e8cc.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "iron_ingot",
-        "name": "Выплави 12 железа",
-        "type": "Добыча",
-        "count": 12,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "iron_block",
-        "name": "Скрафти железный блок",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "raw_copper",
-        "name": "Добудь 16 сырой меди",
-        "type": "Добыча",
-        "count": 16,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 6
-        },
-        "variants": null
-      },
-      {
-        "id": "copper_ingot",
-        "name": "Выплави 16 меди",
-        "type": "Добыча",
-        "count": 16,
-        "sprite": {
-          "file": "blocks-2-18b9c6c6e65f.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "copper_block",
-        "name": "Скрафти 2 медных блока",
-        "type": "Крафт",
-        "count": 2,
-        "sprite": {
-          "file": "blocks-0-8028f094c135.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 6
-        },
-        "variants": null
-      },
-      {
-        "id": "raw_gold",
-        "name": "Добудь 6 сырого золота",
-        "type": "Добыча",
-        "count": 6,
-        "sprite": {
-          "file": "valuables-1-113be8f5e8cc.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "gold_ingot",
-        "name": "Выплави 6 золота",
-        "type": "Добыча",
-        "count": 6,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 5,
-          "y": 4
-        },
-        "variants": null
-      },
-      {
-        "id": "gold_block",
-        "name": "Скрафти золотой блок",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "gold_nugget",
-        "name": "Добудь 18 золотых самородков",
-        "type": "Добыча",
-        "count": 18,
-        "sprite": {
-          "file": "prohibited-sales-0-1f3d7aae4f27.webp",
-          "cols": 8,
-          "x": 5,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "iron_nugget",
-        "name": "Добудь 18 железных самородков",
-        "type": "Добыча",
-        "count": 18,
-        "sprite": {
-          "file": "prohibited-sales-0-1f3d7aae4f27.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "redstone",
-        "name": "Добудь 16 редстоуна",
-        "type": "Добыча",
-        "count": 16,
-        "sprite": {
-          "file": "miscellaneous-2-d0e69ec518e8.webp",
-          "cols": 8,
-          "x": 5,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "lapis_lazuli",
-        "name": "Добудь 12 лазурита",
-        "type": "Добыча",
-        "count": 12,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 3,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "diamond",
-        "name": "Добудь 2 алмаза",
-        "type": "Добыча",
-        "count": 2,
-        "sprite": {
-          "file": "server-currency-0-ac8f31ce20c1.webp",
-          "cols": 2,
-          "x": 1,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "diamond_block",
-        "name": "Скрафти алмазный блок",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "server-currency-0-ac8f31ce20c1.webp",
-          "cols": 2,
-          "x": 0,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "emerald",
-        "name": "Добудь 3 изумруда",
-        "type": "Добыча",
-        "count": 3,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 4
-        },
-        "variants": null
-      },
-      {
-        "id": "emerald_block",
-        "name": "Скрафти изумрудный блок",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 5,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "quartz",
-        "name": "Добудь 16 кварца",
-        "type": "Добыча",
-        "count": 16,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 6
-        },
-        "variants": null
-      },
-      {
-        "id": "quartz_block",
-        "name": "Скрафти 4 кварцевых блока",
-        "type": "Крафт",
-        "count": 4,
-        "sprite": {
-          "file": "valuables-0-f72395b51e8b.webp",
-          "cols": 8,
-          "x": 2,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "lightning_rod",
-        "name": "Скрафти громоотвод",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "miscellaneous-1-be890189a1a9.webp",
-          "cols": 8,
-          "x": 2,
-          "y": 4
-        },
-        "variants": null
-      },
-      {
-        "id": "spyglass",
-        "name": "Скрафти подзорную трубу",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-1-1da884ad2709.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
-        "id": "chain",
-        "name": "Скрафти 4 цепи",
-        "type": "Крафт",
-        "count": 4,
-        "sprite": {
-          "file": "miscellaneous-0-889ffb1f8d3a.webp",
-          "cols": 8,
-          "x": 2,
-          "y": 4
-        },
-        "variants": null
-      },
-      {
-        "id": "iron_bars",
-        "name": "Скрафти 16 железных прутьев",
-        "type": "Крафт",
-        "count": 16,
-        "sprite": {
-          "file": "blocks-4-e177ee096686.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 1
-        },
-        "variants": null
-      }
-    ]
-  },
-  {
-    "id": "tools",
-    "title": "Категория 4: Инструменты, оружие и доспехи",
-    "badge": "29",
-    "color": "blue",
-    "goals": [
-      {
-        "id": "stone_pickaxe",
-        "name": "Скрафти любой каменный инструмент",
-        "type": "Вариант",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-1-1da884ad2709.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 4
-        },
-        "variants": [
-          {
-            "id": "stone_pickaxe",
-            "name": "Каменная кирка",
-            "sprite": {
-              "file": "armor-and-tools-1-1da884ad2709.webp",
-              "cols": 8,
-              "x": 1,
-              "y": 4
-            }
-          },
-          {
-            "id": "stone_axe",
-            "name": "Каменный топор",
-            "sprite": {
-              "file": "armor-and-tools-1-1da884ad2709.webp",
-              "cols": 8,
-              "x": 7,
-              "y": 3
-            }
-          },
-          {
-            "id": "stone_sword",
-            "name": "Каменный меч",
-            "sprite": {
-              "file": "armor-and-tools-1-1da884ad2709.webp",
-              "cols": 8,
-              "x": 3,
-              "y": 4
-            }
-          },
-          {
-            "id": "stone_shovel",
-            "name": "Каменная лопата",
-            "sprite": {
-              "file": "armor-and-tools-1-1da884ad2709.webp",
-              "cols": 8,
-              "x": 2,
-              "y": 4
-            }
-          },
-          {
-            "id": "stone_hoe",
-            "name": "Каменная мотыга",
-            "sprite": {
-              "file": "armor-and-tools-1-1da884ad2709.webp",
-              "cols": 8,
-              "x": 0,
-              "y": 4
-            }
-          }
-        ]
-      },
-      {
-        "id": "iron_pickaxe",
-        "name": "Скрафти любой железный инструмент",
-        "type": "Вариант",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 3,
-          "y": 6
-        },
-        "variants": [
-          {
-            "id": "iron_pickaxe",
-            "name": "Железная кирка",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 3,
-              "y": 6
-            }
-          },
-          {
-            "id": "iron_axe",
-            "name": "Железный топор",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 4,
-              "y": 5
-            }
-          },
-          {
-            "id": "iron_sword",
-            "name": "Железный меч",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 5,
-              "y": 6
-            }
-          },
-          {
-            "id": "iron_shovel",
-            "name": "Железная лопата",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 4,
-              "y": 6
-            }
-          },
-          {
-            "id": "iron_hoe",
-            "name": "Железная мотыга",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 0,
-              "y": 6
-            }
-          }
-        ]
-      },
-      {
-        "id": "wooden_sword",
-        "name": "Скрафти любое оружие",
-        "type": "Вариант",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-1-1da884ad2709.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 6
-        },
-        "variants": [
-          {
-            "id": "wooden_sword",
-            "name": "Деревянный меч",
-            "sprite": {
-              "file": "armor-and-tools-1-1da884ad2709.webp",
-              "cols": 8,
-              "x": 0,
-              "y": 6
-            }
-          },
-          {
-            "id": "stone_sword",
-            "name": "Каменный меч",
-            "sprite": {
-              "file": "armor-and-tools-1-1da884ad2709.webp",
-              "cols": 8,
-              "x": 3,
-              "y": 4
-            }
-          },
-          {
-            "id": "iron_sword",
-            "name": "Железный меч",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 5,
-              "y": 6
-            }
-          },
-          {
-            "id": "golden_sword",
-            "name": "Золотой меч",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 1,
-              "y": 5
-            }
-          },
-          {
-            "id": "diamond_sword",
-            "name": "Алмазный меч",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 3,
-              "y": 3
-            }
-          },
-          {
-            "id": "bow",
-            "name": "Лук",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 4,
-              "y": 0
-            }
-          },
-          {
-            "id": "crossbow",
-            "name": "Арбалет",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 0,
-              "y": 2
-            }
-          }
-        ]
-      },
-      {
-        "id": "iron_helmet",
-        "name": "Скрафти любую железную броню",
-        "type": "Вариант",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 5
-        },
-        "variants": [
-          {
-            "id": "iron_helmet",
-            "name": "Железный шлем",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 7,
-              "y": 5
-            }
-          },
-          {
-            "id": "iron_chestplate",
-            "name": "Железный нагрудник",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 6,
-              "y": 5
-            }
-          },
-          {
-            "id": "iron_leggings",
-            "name": "Железные поножи",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 2,
-              "y": 6
-            }
-          },
-          {
-            "id": "iron_boots",
-            "name": "Железные ботинки",
-            "sprite": {
-              "file": "armor-and-tools-0-056e3f6ca739.webp",
-              "cols": 8,
-              "x": 5,
-              "y": 5
-            }
-          }
-        ]
-      },
-      {
-        "id": "stone_pickaxe",
-        "name": "Скрафти каменную кирку",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-1-1da884ad2709.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 4
-        },
-        "variants": null
-      },
-      {
-        "id": "stone_sword",
-        "name": "Скрафти каменный меч",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-1-1da884ad2709.webp",
-          "cols": 8,
-          "x": 3,
-          "y": 4
-        },
-        "variants": null
-      },
-      {
-        "id": "stone_axe",
-        "name": "Скрафти каменный топор",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-1-1da884ad2709.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
-        "id": "stone_shovel",
-        "name": "Скрафти каменную лопату",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-1-1da884ad2709.webp",
-          "cols": 8,
-          "x": 2,
-          "y": 4
-        },
-        "variants": null
-      },
-      {
-        "id": "iron_pickaxe",
-        "name": "Скрафти железную кирку",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 3,
-          "y": 6
-        },
-        "variants": null
-      },
-      {
-        "id": "iron_sword",
-        "name": "Скрафти железный меч",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 5,
-          "y": 6
-        },
-        "variants": null
-      },
-      {
-        "id": "iron_axe",
-        "name": "Скрафти железный топор",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 4,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "iron_shovel",
-        "name": "Скрафти железную лопату",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 4,
-          "y": 6
-        },
-        "variants": null
-      },
-      {
-        "id": "iron_hoe",
-        "name": "Скрафти железную мотыгу",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 6
-        },
-        "variants": null
-      },
-      {
-        "id": "iron_helmet",
-        "name": "Скрафти железный шлем",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "iron_chestplate",
-        "name": "Скрафти железный нагрудник",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "iron_leggings",
-        "name": "Скрафти железные поножи",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 2,
-          "y": 6
-        },
-        "variants": null
-      },
-      {
-        "id": "iron_boots",
-        "name": "Скрафти железные ботинки",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 5,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "shield",
-        "name": "Скрафти щит",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-1-1da884ad2709.webp",
-          "cols": 8,
-          "x": 4,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
-        "id": "bucket",
-        "name": "Скрафти 2 ведра",
-        "type": "Крафт",
-        "count": 2,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "water_bucket",
-        "name": "Набери ведро воды",
-        "type": "Крафт/Набор",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-1-1da884ad2709.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "lava_bucket",
-        "name": "Набери ведро лавы",
-        "type": "Крафт/Набор",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 6
-        },
-        "variants": null
-      },
-      {
-        "id": "shears",
-        "name": "Скрафти ножницы",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-1-1da884ad2709.webp",
-          "cols": 8,
-          "x": 3,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
-        "id": "flint_and_steel",
-        "name": "Скрафти огниво",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
-        "id": "bow",
-        "name": "Скрафти лук",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 4,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "crossbow",
-        "name": "Скрафти арбалет",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "arrow",
-        "name": "Скрафти 16 стрел",
-        "type": "Крафт",
-        "count": 16,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "fishing_rod",
-        "name": "Скрафти удочку",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
-        "id": "diamond_pickaxe",
-        "name": "Скрафти алмазную кирку",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
-        "id": "diamond_sword",
-        "name": "Скрафти алмазный меч",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "armor-and-tools-0-056e3f6ca739.webp",
-          "cols": 8,
-          "x": 3,
-          "y": 3
-        },
-        "variants": null
-      }
-    ]
-  },
-  {
-    "id": "food",
-    "title": "Категория 5: Еда, фермерство и кулинария",
-    "badge": "25",
-    "color": "orange",
-    "goals": [
-      {
-        "id": "apple",
-        "name": "Найди 2 яблока",
-        "type": "Добыча",
-        "count": 2,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "sweet_berries",
-        "name": "Собери 16 сладких ягод",
-        "type": "Добыча",
-        "count": 16,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 3,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "glow_berries",
-        "name": "Собери 8 светящихся ягод",
-        "type": "Добыча",
-        "count": 8,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 4,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "melon_slice",
-        "name": "Добудь 16 ломтиков арбуза",
-        "type": "Добыча",
-        "count": 16,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
-        "id": "melon",
-        "name": "Добудь 2 арбуза",
-        "type": "Добыча",
-        "count": 2,
-        "sprite": {
-          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "pumpkin",
-        "name": "Добудь 4 тыквы",
-        "type": "Добыча",
-        "count": 4,
-        "sprite": {
-          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "carved_pumpkin",
-        "name": "Вырежи тыкву",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "jack_o_lantern",
-        "name": "Скрафти светильник Джека",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-          "cols": 8,
-          "x": 3,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "wheat",
-        "name": "Собери 16 пшеницы",
-        "type": "Добыча",
-        "count": 16,
-        "sprite": {
-          "file": "dyes-and-plants-2-b66ab3740a79.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "hay_block",
-        "name": "Скрафти 2 стога сена",
-        "type": "Крафт",
-        "count": 2,
-        "sprite": {
-          "file": "blocks-4-e177ee096686.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "bread",
-        "name": "Испеки 6 хлеба",
-        "type": "Крафт",
-        "count": 6,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 5,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "carrot",
-        "name": "Собери 8 моркови",
-        "type": "Добыча",
-        "count": 8,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "potato",
-        "name": "Собери 8 картофеля",
-        "type": "Добыча",
-        "count": 8,
-        "sprite": {
-          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 4
-        },
-        "variants": null
-      },
-      {
-        "id": "baked_potato",
-        "name": "Запеки 6 картофелин",
-        "type": "Крафт",
-        "count": 6,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "beetroot",
-        "name": "Собери 8 свёклы",
-        "type": "Добыча",
-        "count": 8,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 2,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "mushroom_stew",
-        "name": "Приготовь тушёные грибы",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 3,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
-        "id": "cooked_beef",
-        "name": "Пожарь 6 стейков",
-        "type": "Добыча/Жарка",
-        "count": 6,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "cooked_porkchop",
-        "name": "Пожарь 6 свинины",
-        "type": "Добыча/Жарка",
-        "count": 6,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 4,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "cooked_mutton",
-        "name": "Пожарь 6 баранины",
-        "type": "Добыча/Жарка",
-        "count": 6,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 3,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "cooked_chicken",
-        "name": "Пожарь 6 курятины",
-        "type": "Добыча/Жарка",
-        "count": 6,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "cookie",
-        "name": "Испеки 8 печений",
-        "type": "Крафт",
-        "count": 8,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "cake",
-        "name": "Испеки торт",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "golden_carrot",
-        "name": "Скрафти 4 золотых моркови",
-        "type": "Крафт",
-        "count": 4,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "golden_apple",
-        "name": "Скрафти золотое яблоко",
-        "type": "Крафт",
-        "count": 1,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 5,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "honey_bottle",
-        "name": "Собери 3 бутылочки мёда",
-        "type": "Добыча",
-        "count": 3,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 7,
-          "y": 2
-        },
-        "variants": null
-      }
-    ]
-  },
-  {
-    "id": "plants",
-    "title": "Категория 6: Растения, цветы и красители",
-    "badge": "25",
-    "color": "teal",
-    "goals": [
-      {
-        "id": "sugar_cane",
-        "name": "Собери 16 тростника",
-        "type": "Добыча",
-        "count": 16,
-        "sprite": {
-          "file": "dyes-and-plants-2-b66ab3740a79.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "sugar",
-        "name": "Сделай 12 сахара",
-        "type": "Крафт",
-        "count": 12,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "paper",
-        "name": "Скрафти 9 бумаги",
-        "type": "Крафт",
-        "count": 9,
-        "sprite": {
-          "file": "miscellaneous-2-d0e69ec518e8.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "book",
-        "name": "Скрафти 3 книги",
-        "type": "Крафт",
-        "count": 3,
-        "sprite": {
-          "file": "books-0-d6d0da401328.webp",
-          "cols": 4,
-          "x": 0,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "bookshelf",
-        "name": "Скрафти 2 книжных полки",
-        "type": "Крафт",
-        "count": 2,
-        "sprite": {
-          "file": "blocks-1-7750487a426a.webp",
-          "cols": 8,
-          "x": 5,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "bamboo",
-        "name": "Собери 16 бамбука",
-        "type": "Добыча",
-        "count": 16,
-        "sprite": {
-          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "cactus",
-        "name": "Добудь 8 кактусов",
-        "type": "Добыча",
-        "count": 8,
-        "sprite": {
-          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "brown_mushroom",
-        "name": "Собери 4 коричневых гриба",
-        "type": "Добыча",
-        "count": 4,
-        "sprite": {
-          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-          "cols": 8,
-          "x": 2,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "red_mushroom",
-        "name": "Собери 4 красных гриба",
-        "type": "Добыча",
-        "count": 4,
-        "sprite": {
-          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-          "cols": 8,
-          "x": 4,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "kelp",
-        "name": "Добудь 16 ламинарии",
-        "type": "Добыча",
-        "count": 16,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
-        "id": "dried_kelp",
-        "name": "Высуши 16 ламинарии",
-        "type": "Добыча",
-        "count": 16,
-        "sprite": {
-          "file": "food-and-potions-0-ba22dbc90ada.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "lily_pad",
-        "name": "Собери 4 кувшинки",
-        "type": "Добыча",
-        "count": 4,
-        "sprite": {
-          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-          "cols": 8,
-          "x": 2,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "vine",
-        "name": "Срежь 8 лоз",
-        "type": "Добыча",
-        "count": 8,
-        "sprite": {
-          "file": "dyes-and-plants-2-b66ab3740a79.webp",
-          "cols": 8,
-          "x": 2,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "dandelion",
-        "name": "Сорви 6 одуванчиков",
-        "type": "Добыча",
-        "count": 6,
-        "sprite": {
-          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 4
-        },
-        "variants": null
-      },
-      {
-        "id": "poppy",
-        "name": "Сорви 6 маков",
-        "type": "Добыча",
-        "count": 6,
-        "sprite": {
-          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 4
-        },
-        "variants": null
-      },
-      {
-        "id": "cornflower",
-        "name": "Сорви 4 василька",
-        "type": "Добыча",
-        "count": 4,
-        "sprite": {
-          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-          "cols": 8,
-          "x": 4,
-          "y": 3
-        },
-        "variants": null
-      },
-      {
-        "id": "sunflower",
-        "name": "Сорви 4 подсолнуха",
-        "type": "Добыча",
-        "count": 4,
-        "sprite": {
-          "file": "dyes-and-plants-2-b66ab3740a79.webp",
-          "cols": 8,
-          "x": 2,
-          "y": 0
-        },
-        "variants": null
-      },
-      {
-        "id": "lilac",
-        "name": "Сорви 4 сирени",
-        "type": "Добыча",
-        "count": 4,
-        "sprite": {
-          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-          "cols": 8,
-          "x": 1,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "rose_bush",
-        "name": "Сорви 4 розовых куста",
-        "type": "Добыча",
-        "count": 4,
-        "sprite": {
-          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-          "cols": 8,
-          "x": 6,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "peony",
-        "name": "Сорви 4 пиона",
-        "type": "Добыча",
-        "count": 4,
-        "sprite": {
-          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 4
-        },
-        "variants": null
-      },
-      {
-        "id": "white_dye",
-        "name": "Скрафти 6 белых красителей",
-        "type": "Крафт",
-        "count": 6,
-        "sprite": {
-          "file": "dyes-and-plants-2-b66ab3740a79.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "red_dye",
-        "name": "Скрафти 6 красных красителей",
-        "type": "Крафт",
-        "count": 6,
-        "sprite": {
-          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-          "cols": 8,
-          "x": 3,
-          "y": 5
-        },
-        "variants": null
-      },
-      {
-        "id": "yellow_dye",
-        "name": "Скрафти 6 жёлтых красителей",
-        "type": "Крафт",
-        "count": 6,
-        "sprite": {
-          "file": "dyes-and-plants-2-b66ab3740a79.webp",
-          "cols": 8,
-          "x": 3,
-          "y": 2
-        },
-        "variants": null
-      },
-      {
-        "id": "blue_dye",
-        "name": "Скрафти 6 синих красителей",
-        "type": "Крафт",
-        "count": 6,
-        "sprite": {
-          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-          "cols": 8,
-          "x": 4,
-          "y": 1
-        },
-        "variants": null
-      },
-      {
-        "id": "white_dye",
-        "name": "Скрафти 8 любых красителей",
-        "type": "Вариант",
-        "count": 8,
-        "sprite": {
-          "file": "dyes-and-plants-2-b66ab3740a79.webp",
-          "cols": 8,
-          "x": 0,
-          "y": 2
-        },
-        "variants": [
-          {
-            "id": "white_dye",
-            "name": "Белый краситель",
-            "sprite": {
-              "file": "dyes-and-plants-2-b66ab3740a79.webp",
-              "cols": 8,
-              "x": 0,
-              "y": 2
-            }
-          },
-          {
-            "id": "orange_dye",
-            "name": "Оранжевый краситель",
-            "sprite": {
-              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-              "cols": 8,
-              "x": 5,
-              "y": 3
-            }
-          },
-          {
-            "id": "magenta_dye",
-            "name": "Пурпурный краситель",
-            "sprite": {
-              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-              "cols": 8,
-              "x": 4,
-              "y": 2
-            }
-          },
-          {
-            "id": "light_blue_dye",
-            "name": "Голубой краситель",
-            "sprite": {
-              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-              "cols": 8,
-              "x": 7,
-              "y": 1
-            }
-          },
-          {
-            "id": "yellow_dye",
-            "name": "Жёлтый краситель",
-            "sprite": {
-              "file": "dyes-and-plants-2-b66ab3740a79.webp",
-              "cols": 8,
-              "x": 3,
-              "y": 2
-            }
-          },
-          {
-            "id": "lime_dye",
-            "name": "Лаймовый краситель",
-            "sprite": {
-              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-              "cols": 8,
-              "x": 3,
-              "y": 2
-            }
-          },
-          {
-            "id": "pink_dye",
-            "name": "Розовый краситель",
-            "sprite": {
-              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-              "cols": 8,
-              "x": 1,
-              "y": 4
-            }
-          },
-          {
-            "id": "gray_dye",
-            "name": "Серый краситель",
-            "sprite": {
-              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-              "cols": 8,
-              "x": 4,
-              "y": 0
-            }
-          },
-          {
-            "id": "light_gray_dye",
-            "name": "Светло-серый краситель",
-            "sprite": {
-              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-              "cols": 8,
-              "x": 0,
-              "y": 2
-            }
-          },
-          {
-            "id": "cyan_dye",
-            "name": "Бирюзовый краситель",
-            "sprite": {
-              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-              "cols": 8,
-              "x": 7,
-              "y": 3
-            }
-          },
-          {
-            "id": "purple_dye",
-            "name": "Фиолетовый краситель",
-            "sprite": {
-              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-              "cols": 8,
-              "x": 2,
-              "y": 5
-            }
-          },
-          {
-            "id": "blue_dye",
-            "name": "Синий краситель",
-            "sprite": {
-              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-              "cols": 8,
-              "x": 4,
-              "y": 1
-            }
-          },
-          {
-            "id": "brown_dye",
-            "name": "Коричневый краситель",
-            "sprite": {
-              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-              "cols": 8,
-              "x": 1,
-              "y": 2
-            }
-          },
-          {
-            "id": "green_dye",
-            "name": "Зелёный краситель",
-            "sprite": {
-              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-              "cols": 8,
-              "x": 5,
-              "y": 0
-            }
-          },
-          {
-            "id": "red_dye",
-            "name": "Красный краситель",
-            "sprite": {
-              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
-              "cols": 8,
-              "x": 3,
-              "y": 5
-            }
-          },
-          {
-            "id": "black_dye",
-            "name": "Чёрный краситель",
-            "sprite": {
-              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
-              "cols": 8,
-              "x": 3,
-              "y": 1
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "building",
-    "title": "Категория 7: Строительные блоки, декор и шерсть",
-    "badge": "33",
-    "color": "indigo",
-    "goals": [
       {
         "id": "furnace",
         "name": "Скрафти 2 печки",
@@ -2970,7 +845,178 @@
           "x": 1,
           "y": 4
         },
-        "variants": null
+        "variants": [
+          {
+            "id": "glass",
+            "name": "Стекло",
+            "sprite": {
+              "file": "blocks-3-c451627f3b8d.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 4
+            }
+          },
+          {
+            "id": "white_stained_glass",
+            "name": "Белое стекло",
+            "sprite": {
+              "file": "blocks-10-ad8a94908c83.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 3
+            }
+          },
+          {
+            "id": "orange_stained_glass",
+            "name": "Оранжевое стекло",
+            "sprite": {
+              "file": "blocks-6-60d5e373d30c.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 1
+            }
+          },
+          {
+            "id": "magenta_stained_glass",
+            "name": "Пурпурное стекло",
+            "sprite": {
+              "file": "blocks-5-7424e7c80f0c.webp",
+              "cols": 8,
+              "x": 6,
+              "y": 0
+            }
+          },
+          {
+            "id": "light_blue_stained_glass",
+            "name": "Голубое стекло",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 4
+            }
+          },
+          {
+            "id": "yellow_stained_glass",
+            "name": "Жёлтое стекло",
+            "sprite": {
+              "file": "blocks-10-ad8a94908c83.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 4
+            }
+          },
+          {
+            "id": "lime_stained_glass",
+            "name": "Лаймовое стекло",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 6
+            }
+          },
+          {
+            "id": "pink_stained_glass",
+            "name": "Розовое стекло",
+            "sprite": {
+              "file": "blocks-6-60d5e373d30c.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 4
+            }
+          },
+          {
+            "id": "gray_stained_glass",
+            "name": "Серый стекло",
+            "sprite": {
+              "file": "blocks-3-c451627f3b8d.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 6
+            }
+          },
+          {
+            "id": "light_gray_stained_glass",
+            "name": "Светло-серое стекло",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 5
+            }
+          },
+          {
+            "id": "cyan_stained_glass",
+            "name": "Бирюзовое стекло",
+            "sprite": {
+              "file": "blocks-2-18b9c6c6e65f.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 5
+            }
+          },
+          {
+            "id": "purple_stained_glass",
+            "name": "Фиолетовое стекло",
+            "sprite": {
+              "file": "blocks-7-c29e02b641f7.webp",
+              "cols": 8,
+              "x": 6,
+              "y": 2
+            }
+          },
+          {
+            "id": "blue_stained_glass",
+            "name": "Синее стекло",
+            "sprite": {
+              "file": "blocks-1-7750487a426a.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 1
+            }
+          },
+          {
+            "id": "brown_stained_glass",
+            "name": "Коричневое стекло",
+            "sprite": {
+              "file": "blocks-1-7750487a426a.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 3
+            }
+          },
+          {
+            "id": "green_stained_glass",
+            "name": "Зелёное стекло",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 0
+            }
+          },
+          {
+            "id": "red_stained_glass",
+            "name": "Красное стекло",
+            "sprite": {
+              "file": "blocks-7-c29e02b641f7.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 6
+            }
+          },
+          {
+            "id": "black_stained_glass",
+            "name": "Чёрное стекло",
+            "sprite": {
+              "file": "blocks-0-8028f094c135.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 6
+            }
+          }
+        ]
       },
       {
         "id": "glass_pane",
@@ -2983,7 +1029,178 @@
           "x": 2,
           "y": 4
         },
-        "variants": null
+        "variants": [
+          {
+            "id": "glass_pane",
+            "name": "Стеклянная панель",
+            "sprite": {
+              "file": "blocks-3-c451627f3b8d.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 4
+            }
+          },
+          {
+            "id": "white_stained_glass_pane",
+            "name": "Белая стеклянная панель",
+            "sprite": {
+              "file": "blocks-10-ad8a94908c83.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 3
+            }
+          },
+          {
+            "id": "orange_stained_glass_pane",
+            "name": "Оранжевая стеклянная панель",
+            "sprite": {
+              "file": "blocks-6-60d5e373d30c.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 1
+            }
+          },
+          {
+            "id": "magenta_stained_glass_pane",
+            "name": "Пурпурная стеклянная панель",
+            "sprite": {
+              "file": "blocks-5-7424e7c80f0c.webp",
+              "cols": 8,
+              "x": 6,
+              "y": 0
+            }
+          },
+          {
+            "id": "light_blue_stained_glass_pane",
+            "name": "Голубая стеклянная панель",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 4
+            }
+          },
+          {
+            "id": "yellow_stained_glass_pane",
+            "name": "Жёлтая стеклянная панель",
+            "sprite": {
+              "file": "blocks-10-ad8a94908c83.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 4
+            }
+          },
+          {
+            "id": "lime_stained_glass_pane",
+            "name": "Лаймовая стеклянная панель",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 6
+            }
+          },
+          {
+            "id": "pink_stained_glass_pane",
+            "name": "Розовая стеклянная панель",
+            "sprite": {
+              "file": "blocks-6-60d5e373d30c.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 4
+            }
+          },
+          {
+            "id": "gray_stained_glass_pane",
+            "name": "Серый панель",
+            "sprite": {
+              "file": "blocks-3-c451627f3b8d.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 6
+            }
+          },
+          {
+            "id": "light_gray_stained_glass_pane",
+            "name": "Светло-серая стеклянная панель",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 5
+            }
+          },
+          {
+            "id": "cyan_stained_glass_pane",
+            "name": "Бирюзовая стеклянная панель",
+            "sprite": {
+              "file": "blocks-2-18b9c6c6e65f.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 5
+            }
+          },
+          {
+            "id": "purple_stained_glass_pane",
+            "name": "Фиолетовая стеклянная панель",
+            "sprite": {
+              "file": "blocks-7-c29e02b641f7.webp",
+              "cols": 8,
+              "x": 6,
+              "y": 2
+            }
+          },
+          {
+            "id": "blue_stained_glass_pane",
+            "name": "Синяя стеклянная панель",
+            "sprite": {
+              "file": "blocks-1-7750487a426a.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 1
+            }
+          },
+          {
+            "id": "brown_stained_glass_pane",
+            "name": "Коричневая стеклянная панель",
+            "sprite": {
+              "file": "blocks-1-7750487a426a.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 3
+            }
+          },
+          {
+            "id": "green_stained_glass_pane",
+            "name": "Зелёная стеклянная панель",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 0
+            }
+          },
+          {
+            "id": "red_stained_glass_pane",
+            "name": "Красная стеклянная панель",
+            "sprite": {
+              "file": "blocks-7-c29e02b641f7.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 6
+            }
+          },
+          {
+            "id": "black_stained_glass_pane",
+            "name": "Чёрная стеклянная панель",
+            "sprite": {
+              "file": "blocks-0-8028f094c135.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 6
+            }
+          }
+        ]
       },
       {
         "id": "bricks",
@@ -3009,7 +1226,178 @@
           "x": 4,
           "y": 0
         },
-        "variants": null
+        "variants": [
+          {
+            "id": "terracotta",
+            "name": "Терракота",
+            "sprite": {
+              "file": "blocks-9-c0040410abbd.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 1
+            }
+          },
+          {
+            "id": "white_terracotta",
+            "name": "Белая терракота",
+            "sprite": {
+              "file": "blocks-10-ad8a94908c83.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 3
+            }
+          },
+          {
+            "id": "orange_terracotta",
+            "name": "Оранжевая терракота",
+            "sprite": {
+              "file": "blocks-6-60d5e373d30c.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 1
+            }
+          },
+          {
+            "id": "magenta_terracotta",
+            "name": "Пурпурная терракота",
+            "sprite": {
+              "file": "blocks-5-7424e7c80f0c.webp",
+              "cols": 8,
+              "x": 6,
+              "y": 0
+            }
+          },
+          {
+            "id": "light_blue_terracotta",
+            "name": "Голубая терракота",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 4
+            }
+          },
+          {
+            "id": "yellow_terracotta",
+            "name": "Жёлтая терракота",
+            "sprite": {
+              "file": "blocks-10-ad8a94908c83.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 4
+            }
+          },
+          {
+            "id": "lime_terracotta",
+            "name": "Лаймовая терракота",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 6
+            }
+          },
+          {
+            "id": "pink_terracotta",
+            "name": "Розовая терракота",
+            "sprite": {
+              "file": "blocks-6-60d5e373d30c.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 4
+            }
+          },
+          {
+            "id": "gray_terracotta",
+            "name": "Серый терракота",
+            "sprite": {
+              "file": "blocks-3-c451627f3b8d.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 6
+            }
+          },
+          {
+            "id": "light_gray_terracotta",
+            "name": "Светло-серая терракота",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 5
+            }
+          },
+          {
+            "id": "cyan_terracotta",
+            "name": "Бирюзовая терракота",
+            "sprite": {
+              "file": "blocks-2-18b9c6c6e65f.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 5
+            }
+          },
+          {
+            "id": "purple_terracotta",
+            "name": "Фиолетовая терракота",
+            "sprite": {
+              "file": "blocks-7-c29e02b641f7.webp",
+              "cols": 8,
+              "x": 6,
+              "y": 2
+            }
+          },
+          {
+            "id": "blue_terracotta",
+            "name": "Синяя терракота",
+            "sprite": {
+              "file": "blocks-1-7750487a426a.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 1
+            }
+          },
+          {
+            "id": "brown_terracotta",
+            "name": "Коричневая терракота",
+            "sprite": {
+              "file": "blocks-1-7750487a426a.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 3
+            }
+          },
+          {
+            "id": "green_terracotta",
+            "name": "Зелёная терракота",
+            "sprite": {
+              "file": "blocks-4-e177ee096686.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 0
+            }
+          },
+          {
+            "id": "red_terracotta",
+            "name": "Красная терракота",
+            "sprite": {
+              "file": "blocks-7-c29e02b641f7.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 6
+            }
+          },
+          {
+            "id": "black_terracotta",
+            "name": "Чёрная терракота",
+            "sprite": {
+              "file": "blocks-0-8028f094c135.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 6
+            }
+          }
+        ]
       },
       {
         "id": "lantern",
@@ -3690,10 +2078,2120 @@
     ]
   },
   {
-    "id": "redstone",
-    "title": "Категория 8: Редстоун и механизмы",
+    "id": "items",
+    "title": "Предметы",
+    "badge": "33",
+    "goals": [
+      {
+        "id": "stick",
+        "name": "Скрафти 16 палок",
+        "type": "Крафт",
+        "count": 16,
+        "sprite": {
+          "file": "miscellaneous-2-d0e69ec518e8.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 3
+        },
+        "variants": null
+      },
+      {
+        "id": "bowl",
+        "name": "Скрафти 4 миски",
+        "type": "Крафт",
+        "count": 4,
+        "sprite": {
+          "file": "miscellaneous-0-889ffb1f8d3a.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 3
+        },
+        "variants": null
+      },
+      {
+        "id": "torch",
+        "name": "Скрафти 16 факелов",
+        "type": "Крафт",
+        "count": 16,
+        "sprite": {
+          "file": "miscellaneous-2-d0e69ec518e8.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 4
+        },
+        "variants": null
+      },
+      {
+        "id": "charcoal",
+        "name": "Выплави 8 древесного угля",
+        "type": "Крафт",
+        "count": 8,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "oak_boat",
+        "name": "Скрафти любую лодку",
+        "type": "Вариант",
+        "count": 1,
+        "sprite": {
+          "file": "miscellaneous-1-be890189a1a9.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 6
+        },
+        "variants": [
+          {
+            "id": "oak_boat",
+            "name": "Дубовая лодка",
+            "sprite": {
+              "file": "miscellaneous-1-be890189a1a9.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 6
+            }
+          },
+          {
+            "id": "birch_boat",
+            "name": "Берёзовая лодка",
+            "sprite": {
+              "file": "miscellaneous-0-889ffb1f8d3a.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 2
+            }
+          },
+          {
+            "id": "spruce_boat",
+            "name": "Еловая лодка",
+            "sprite": {
+              "file": "miscellaneous-2-d0e69ec518e8.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 3
+            }
+          },
+          {
+            "id": "jungle_boat",
+            "name": "Тропическая лодка",
+            "sprite": {
+              "file": "miscellaneous-1-be890189a1a9.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 3
+            }
+          },
+          {
+            "id": "acacia_boat",
+            "name": "Акациевая лодка",
+            "sprite": {
+              "file": "miscellaneous-0-889ffb1f8d3a.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "dark_oak_boat",
+            "name": "Лодка из тёмного дуба",
+            "sprite": {
+              "file": "miscellaneous-0-889ffb1f8d3a.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 6
+            }
+          },
+          {
+            "id": "mangrove_boat",
+            "name": "Мангровая лодка",
+            "sprite": {
+              "file": "miscellaneous-1-be890189a1a9.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 4
+            }
+          },
+          {
+            "id": "cherry_boat",
+            "name": "Вишнёвая лодка",
+            "sprite": {
+              "file": "miscellaneous-0-889ffb1f8d3a.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 4
+            }
+          },
+          {
+            "id": "bamboo_raft",
+            "name": "Бамбуковый плот",
+            "sprite": {
+              "file": "miscellaneous-0-889ffb1f8d3a.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "flint",
+        "name": "Добудь 4 кремня",
+        "type": "Добыча",
+        "count": 4,
+        "sprite": {
+          "file": "miscellaneous-1-be890189a1a9.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "amethyst_shard",
+        "name": "Добудь 8 осколков аметиста",
+        "type": "Добыча",
+        "count": 8,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "raw_iron",
+        "name": "Добудь 8 любой сырой руды",
+        "type": "Вариант",
+        "count": 8,
+        "sprite": {
+          "file": "valuables-1-113be8f5e8cc.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 0
+        },
+        "variants": [
+          {
+            "id": "raw_iron",
+            "name": "Сырое железо",
+            "sprite": {
+              "file": "valuables-1-113be8f5e8cc.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 0
+            }
+          },
+          {
+            "id": "raw_copper",
+            "name": "Сырая медь",
+            "sprite": {
+              "file": "valuables-0-f72395b51e8b.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 6
+            }
+          },
+          {
+            "id": "raw_gold",
+            "name": "Сырое золото",
+            "sprite": {
+              "file": "valuables-1-113be8f5e8cc.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "coal",
+        "name": "Добудь 16 угля",
+        "type": "Добыча",
+        "count": 16,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "coal_block",
+        "name": "Скрафти угольный блок",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 4,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "raw_iron",
+        "name": "Добудь 12 сырого железа",
+        "type": "Добыча",
+        "count": 12,
+        "sprite": {
+          "file": "valuables-1-113be8f5e8cc.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "iron_ingot",
+        "name": "Выплави 12 железа",
+        "type": "Добыча",
+        "count": 12,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "iron_block",
+        "name": "Скрафти железный блок",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "raw_copper",
+        "name": "Добудь 16 сырой меди",
+        "type": "Добыча",
+        "count": 16,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 6
+        },
+        "variants": null
+      },
+      {
+        "id": "copper_ingot",
+        "name": "Выплави 16 меди",
+        "type": "Добыча",
+        "count": 16,
+        "sprite": {
+          "file": "blocks-2-18b9c6c6e65f.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "copper_block",
+        "name": "Скрафти 2 медных блока",
+        "type": "Крафт",
+        "count": 2,
+        "sprite": {
+          "file": "blocks-0-8028f094c135.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 6
+        },
+        "variants": null
+      },
+      {
+        "id": "raw_gold",
+        "name": "Добудь 6 сырого золота",
+        "type": "Добыча",
+        "count": 6,
+        "sprite": {
+          "file": "valuables-1-113be8f5e8cc.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "gold_ingot",
+        "name": "Выплави 6 золота",
+        "type": "Добыча",
+        "count": 6,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 5,
+          "y": 4
+        },
+        "variants": null
+      },
+      {
+        "id": "gold_block",
+        "name": "Скрафти золотой блок",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "gold_nugget",
+        "name": "Добудь 18 золотых самородков",
+        "type": "Добыча",
+        "count": 18,
+        "sprite": {
+          "file": "prohibited-sales-0-1f3d7aae4f27.webp",
+          "cols": 8,
+          "x": 5,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "iron_nugget",
+        "name": "Добудь 18 железных самородков",
+        "type": "Добыча",
+        "count": 18,
+        "sprite": {
+          "file": "prohibited-sales-0-1f3d7aae4f27.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "redstone",
+        "name": "Добудь 16 редстоуна",
+        "type": "Добыча",
+        "count": 16,
+        "sprite": {
+          "file": "miscellaneous-2-d0e69ec518e8.webp",
+          "cols": 8,
+          "x": 5,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "lapis_lazuli",
+        "name": "Добудь 12 лазурита",
+        "type": "Добыча",
+        "count": 12,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 3,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "diamond",
+        "name": "Добудь 2 алмаза",
+        "type": "Добыча",
+        "count": 2,
+        "sprite": {
+          "file": "server-currency-0-ac8f31ce20c1.webp",
+          "cols": 2,
+          "x": 1,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "diamond_block",
+        "name": "Скрафти алмазный блок",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "server-currency-0-ac8f31ce20c1.webp",
+          "cols": 2,
+          "x": 0,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "emerald",
+        "name": "Добудь 3 изумруда",
+        "type": "Добыча",
+        "count": 3,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 4
+        },
+        "variants": null
+      },
+      {
+        "id": "emerald_block",
+        "name": "Скрафти изумрудный блок",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 5,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "quartz",
+        "name": "Добудь 16 кварца",
+        "type": "Добыча",
+        "count": 16,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 6
+        },
+        "variants": null
+      },
+      {
+        "id": "quartz_block",
+        "name": "Скрафти 4 кварцевых блока",
+        "type": "Крафт",
+        "count": 4,
+        "sprite": {
+          "file": "valuables-0-f72395b51e8b.webp",
+          "cols": 8,
+          "x": 2,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "lightning_rod",
+        "name": "Скрафти громоотвод",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "miscellaneous-1-be890189a1a9.webp",
+          "cols": 8,
+          "x": 2,
+          "y": 4
+        },
+        "variants": null
+      },
+      {
+        "id": "spyglass",
+        "name": "Скрафти подзорную трубу",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-1-1da884ad2709.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 3
+        },
+        "variants": null
+      },
+      {
+        "id": "chain",
+        "name": "Скрафти 4 цепи",
+        "type": "Крафт",
+        "count": 4,
+        "sprite": {
+          "file": "miscellaneous-0-889ffb1f8d3a.webp",
+          "cols": 8,
+          "x": 2,
+          "y": 4
+        },
+        "variants": null
+      },
+      {
+        "id": "iron_bars",
+        "name": "Скрафти 16 железных прутьев",
+        "type": "Крафт",
+        "count": 16,
+        "sprite": {
+          "file": "blocks-4-e177ee096686.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 1
+        },
+        "variants": null
+      }
+    ]
+  },
+  {
+    "id": "tools",
+    "title": "Инструменты",
+    "badge": "26",
+    "goals": [
+      {
+        "id": "wooden_pickaxe",
+        "name": "Скрафти деревянную кирку",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-1-1da884ad2709.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "wooden_axe",
+        "name": "Скрафти деревянный топор",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-1-1da884ad2709.webp",
+          "cols": 8,
+          "x": 4,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "wooden_sword",
+        "name": "Скрафти деревянный меч",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-1-1da884ad2709.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 6
+        },
+        "variants": null
+      },
+      {
+        "id": "stone_pickaxe",
+        "name": "Скрафти любой каменный инструмент",
+        "type": "Вариант",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-1-1da884ad2709.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 4
+        },
+        "variants": [
+          {
+            "id": "stone_pickaxe",
+            "name": "Каменная кирка",
+            "sprite": {
+              "file": "armor-and-tools-1-1da884ad2709.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 4
+            }
+          },
+          {
+            "id": "stone_axe",
+            "name": "Каменный топор",
+            "sprite": {
+              "file": "armor-and-tools-1-1da884ad2709.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 3
+            }
+          },
+          {
+            "id": "stone_sword",
+            "name": "Каменный меч",
+            "sprite": {
+              "file": "armor-and-tools-1-1da884ad2709.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 4
+            }
+          },
+          {
+            "id": "stone_shovel",
+            "name": "Каменная лопата",
+            "sprite": {
+              "file": "armor-and-tools-1-1da884ad2709.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 4
+            }
+          },
+          {
+            "id": "stone_hoe",
+            "name": "Каменная мотыга",
+            "sprite": {
+              "file": "armor-and-tools-1-1da884ad2709.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 4
+            }
+          }
+        ]
+      },
+      {
+        "id": "iron_pickaxe",
+        "name": "Скрафти любой железный инструмент",
+        "type": "Вариант",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 3,
+          "y": 6
+        },
+        "variants": [
+          {
+            "id": "iron_pickaxe",
+            "name": "Железная кирка",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 6
+            }
+          },
+          {
+            "id": "iron_axe",
+            "name": "Железный топор",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 5
+            }
+          },
+          {
+            "id": "iron_sword",
+            "name": "Железный меч",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 6
+            }
+          },
+          {
+            "id": "iron_shovel",
+            "name": "Железная лопата",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 6
+            }
+          },
+          {
+            "id": "iron_hoe",
+            "name": "Железная мотыга",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 6
+            }
+          }
+        ]
+      },
+      {
+        "id": "wooden_sword",
+        "name": "Скрафти любое оружие",
+        "type": "Вариант",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-1-1da884ad2709.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 6
+        },
+        "variants": [
+          {
+            "id": "wooden_sword",
+            "name": "Деревянный меч",
+            "sprite": {
+              "file": "armor-and-tools-1-1da884ad2709.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 6
+            }
+          },
+          {
+            "id": "stone_sword",
+            "name": "Каменный меч",
+            "sprite": {
+              "file": "armor-and-tools-1-1da884ad2709.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 4
+            }
+          },
+          {
+            "id": "iron_sword",
+            "name": "Железный меч",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 6
+            }
+          },
+          {
+            "id": "golden_sword",
+            "name": "Золотой меч",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 5
+            }
+          },
+          {
+            "id": "diamond_sword",
+            "name": "Алмазный меч",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 3
+            }
+          },
+          {
+            "id": "bow",
+            "name": "Лук",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 0
+            }
+          },
+          {
+            "id": "crossbow",
+            "name": "Арбалет",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "stone_pickaxe",
+        "name": "Скрафти каменную кирку",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-1-1da884ad2709.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 4
+        },
+        "variants": null
+      },
+      {
+        "id": "stone_sword",
+        "name": "Скрафти каменный меч",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-1-1da884ad2709.webp",
+          "cols": 8,
+          "x": 3,
+          "y": 4
+        },
+        "variants": null
+      },
+      {
+        "id": "stone_axe",
+        "name": "Скрафти каменный топор",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-1-1da884ad2709.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 3
+        },
+        "variants": null
+      },
+      {
+        "id": "stone_shovel",
+        "name": "Скрафти каменную лопату",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-1-1da884ad2709.webp",
+          "cols": 8,
+          "x": 2,
+          "y": 4
+        },
+        "variants": null
+      },
+      {
+        "id": "iron_pickaxe",
+        "name": "Скрафти железную кирку",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 3,
+          "y": 6
+        },
+        "variants": null
+      },
+      {
+        "id": "iron_sword",
+        "name": "Скрафти железный меч",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 5,
+          "y": 6
+        },
+        "variants": null
+      },
+      {
+        "id": "iron_axe",
+        "name": "Скрафти железный топор",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 4,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "iron_shovel",
+        "name": "Скрафти железную лопату",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 4,
+          "y": 6
+        },
+        "variants": null
+      },
+      {
+        "id": "iron_hoe",
+        "name": "Скрафти железную мотыгу",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 6
+        },
+        "variants": null
+      },
+      {
+        "id": "bucket",
+        "name": "Скрафти 2 ведра",
+        "type": "Крафт",
+        "count": 2,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "water_bucket",
+        "name": "Набери ведро воды",
+        "type": "Крафт/Набор",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-1-1da884ad2709.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "lava_bucket",
+        "name": "Набери ведро лавы",
+        "type": "Крафт/Набор",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 6
+        },
+        "variants": null
+      },
+      {
+        "id": "shears",
+        "name": "Скрафти ножницы",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-1-1da884ad2709.webp",
+          "cols": 8,
+          "x": 3,
+          "y": 3
+        },
+        "variants": null
+      },
+      {
+        "id": "flint_and_steel",
+        "name": "Скрафти огниво",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 3
+        },
+        "variants": null
+      },
+      {
+        "id": "bow",
+        "name": "Скрафти лук",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 4,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "crossbow",
+        "name": "Скрафти арбалет",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 2
+        },
+        "variants": null
+      },
+      {
+        "id": "arrow",
+        "name": "Скрафти 16 стрел",
+        "type": "Крафт",
+        "count": 16,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "fishing_rod",
+        "name": "Скрафти удочку",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 3
+        },
+        "variants": null
+      },
+      {
+        "id": "diamond_pickaxe",
+        "name": "Скрафти алмазную кирку",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 3
+        },
+        "variants": null
+      },
+      {
+        "id": "diamond_sword",
+        "name": "Скрафти алмазный меч",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 3,
+          "y": 3
+        },
+        "variants": null
+      }
+    ]
+  },
+  {
+    "id": "armor",
+    "title": "Броня",
+    "badge": "6",
+    "goals": [
+      {
+        "id": "iron_helmet",
+        "name": "Скрафти любую железную броню",
+        "type": "Вариант",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 5
+        },
+        "variants": [
+          {
+            "id": "iron_helmet",
+            "name": "Железный шлем",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 5
+            }
+          },
+          {
+            "id": "iron_chestplate",
+            "name": "Железный нагрудник",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 6,
+              "y": 5
+            }
+          },
+          {
+            "id": "iron_leggings",
+            "name": "Железные поножи",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 6
+            }
+          },
+          {
+            "id": "iron_boots",
+            "name": "Железные ботинки",
+            "sprite": {
+              "file": "armor-and-tools-0-056e3f6ca739.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 5
+            }
+          }
+        ]
+      },
+      {
+        "id": "iron_helmet",
+        "name": "Скрафти железный шлем",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "iron_chestplate",
+        "name": "Скрафти железный нагрудник",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "iron_leggings",
+        "name": "Скрафти железные поножи",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 2,
+          "y": 6
+        },
+        "variants": null
+      },
+      {
+        "id": "iron_boots",
+        "name": "Скрафти железные ботинки",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-0-056e3f6ca739.webp",
+          "cols": 8,
+          "x": 5,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "shield",
+        "name": "Скрафти щит",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "armor-and-tools-1-1da884ad2709.webp",
+          "cols": 8,
+          "x": 4,
+          "y": 3
+        },
+        "variants": null
+      }
+    ]
+  },
+  {
+    "id": "food",
+    "title": "Еда",
+    "badge": "25",
+    "goals": [
+      {
+        "id": "apple",
+        "name": "Найди 2 яблока",
+        "type": "Добыча",
+        "count": 2,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "sweet_berries",
+        "name": "Собери 16 сладких ягод",
+        "type": "Добыча",
+        "count": 16,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 3,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "glow_berries",
+        "name": "Собери 8 светящихся ягод",
+        "type": "Добыча",
+        "count": 8,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 4,
+          "y": 2
+        },
+        "variants": null
+      },
+      {
+        "id": "melon_slice",
+        "name": "Добудь 16 ломтиков арбуза",
+        "type": "Добыча",
+        "count": 16,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 3
+        },
+        "variants": null
+      },
+      {
+        "id": "melon",
+        "name": "Добудь 2 арбуза",
+        "type": "Добыча",
+        "count": 2,
+        "sprite": {
+          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 2
+        },
+        "variants": null
+      },
+      {
+        "id": "pumpkin",
+        "name": "Добудь 4 тыквы",
+        "type": "Добыча",
+        "count": 4,
+        "sprite": {
+          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "carved_pumpkin",
+        "name": "Вырежи тыкву",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 2
+        },
+        "variants": null
+      },
+      {
+        "id": "jack_o_lantern",
+        "name": "Скрафти светильник Джека",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+          "cols": 8,
+          "x": 3,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "wheat",
+        "name": "Собери 16 пшеницы",
+        "type": "Добыча",
+        "count": 16,
+        "sprite": {
+          "file": "dyes-and-plants-2-b66ab3740a79.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "hay_block",
+        "name": "Скрафти 2 стога сена",
+        "type": "Крафт",
+        "count": 2,
+        "sprite": {
+          "file": "blocks-4-e177ee096686.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "bread",
+        "name": "Испеки 6 хлеба",
+        "type": "Крафт",
+        "count": 6,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 5,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "carrot",
+        "name": "Собери 8 моркови",
+        "type": "Добыча",
+        "count": 8,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "potato",
+        "name": "Собери 8 картофеля",
+        "type": "Добыча",
+        "count": 8,
+        "sprite": {
+          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 4
+        },
+        "variants": null
+      },
+      {
+        "id": "baked_potato",
+        "name": "Запеки 6 картофелин",
+        "type": "Крафт",
+        "count": 6,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "beetroot",
+        "name": "Собери 8 свёклы",
+        "type": "Добыча",
+        "count": 8,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 2,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "mushroom_stew",
+        "name": "Приготовь тушёные грибы",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 3,
+          "y": 3
+        },
+        "variants": null
+      },
+      {
+        "id": "cooked_beef",
+        "name": "Пожарь 6 стейков",
+        "type": "Добыча/Жарка",
+        "count": 6,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "cooked_porkchop",
+        "name": "Пожарь 6 свинины",
+        "type": "Добыча/Жарка",
+        "count": 6,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 4,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "cooked_mutton",
+        "name": "Пожарь 6 баранины",
+        "type": "Добыча/Жарка",
+        "count": 6,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 3,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "cooked_chicken",
+        "name": "Пожарь 6 курятины",
+        "type": "Добыча/Жарка",
+        "count": 6,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "cookie",
+        "name": "Испеки 8 печений",
+        "type": "Крафт",
+        "count": 8,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "cake",
+        "name": "Испеки торт",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "golden_carrot",
+        "name": "Скрафти 4 золотых моркови",
+        "type": "Крафт",
+        "count": 4,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 2
+        },
+        "variants": null
+      },
+      {
+        "id": "golden_apple",
+        "name": "Скрафти золотое яблоко",
+        "type": "Крафт",
+        "count": 1,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 5,
+          "y": 2
+        },
+        "variants": null
+      },
+      {
+        "id": "honey_bottle",
+        "name": "Собери 3 бутылочки мёда",
+        "type": "Добыча",
+        "count": 3,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 7,
+          "y": 2
+        },
+        "variants": null
+      }
+    ]
+  },
+  {
+    "id": "plants",
+    "title": "Растения",
+    "badge": "26",
+    "goals": [
+      {
+        "id": "oak_sapling",
+        "name": "Собери 4 любых саженца",
+        "type": "Вариант",
+        "count": 4,
+        "sprite": {
+          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+          "cols": 8,
+          "x": 4,
+          "y": 3
+        },
+        "variants": [
+          {
+            "id": "oak_sapling",
+            "name": "Саженец дуба",
+            "sprite": {
+              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 3
+            }
+          },
+          {
+            "id": "spruce_sapling",
+            "name": "Саженец ели",
+            "sprite": {
+              "file": "dyes-and-plants-2-b66ab3740a79.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 0
+            }
+          },
+          {
+            "id": "birch_sapling",
+            "name": "Саженец берёзы",
+            "sprite": {
+              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 1
+            }
+          },
+          {
+            "id": "jungle_sapling",
+            "name": "Саженец тропического дерева",
+            "sprite": {
+              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 1
+            }
+          },
+          {
+            "id": "acacia_sapling",
+            "name": "Саженец акации",
+            "sprite": {
+              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 0
+            }
+          },
+          {
+            "id": "dark_oak_sapling",
+            "name": "Саженец тёмного дуба",
+            "sprite": {
+              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 4
+            }
+          },
+          {
+            "id": "cherry_sapling",
+            "name": "Саженец вишни",
+            "sprite": {
+              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 3
+            }
+          }
+        ]
+      },
+      {
+        "id": "sugar_cane",
+        "name": "Собери 16 тростника",
+        "type": "Добыча",
+        "count": 16,
+        "sprite": {
+          "file": "dyes-and-plants-2-b66ab3740a79.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "sugar",
+        "name": "Сделай 12 сахара",
+        "type": "Крафт",
+        "count": 12,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "paper",
+        "name": "Скрафти 9 бумаги",
+        "type": "Крафт",
+        "count": 9,
+        "sprite": {
+          "file": "miscellaneous-2-d0e69ec518e8.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "book",
+        "name": "Скрафти 3 книги",
+        "type": "Крафт",
+        "count": 3,
+        "sprite": {
+          "file": "books-0-d6d0da401328.webp",
+          "cols": 4,
+          "x": 0,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "bookshelf",
+        "name": "Скрафти 2 книжных полки",
+        "type": "Крафт",
+        "count": 2,
+        "sprite": {
+          "file": "blocks-1-7750487a426a.webp",
+          "cols": 8,
+          "x": 5,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "bamboo",
+        "name": "Собери 16 бамбука",
+        "type": "Добыча",
+        "count": 16,
+        "sprite": {
+          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "cactus",
+        "name": "Добудь 8 кактусов",
+        "type": "Добыча",
+        "count": 8,
+        "sprite": {
+          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 2
+        },
+        "variants": null
+      },
+      {
+        "id": "brown_mushroom",
+        "name": "Собери 4 коричневых гриба",
+        "type": "Добыча",
+        "count": 4,
+        "sprite": {
+          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+          "cols": 8,
+          "x": 2,
+          "y": 2
+        },
+        "variants": null
+      },
+      {
+        "id": "red_mushroom",
+        "name": "Собери 4 красных гриба",
+        "type": "Добыча",
+        "count": 4,
+        "sprite": {
+          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+          "cols": 8,
+          "x": 4,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "kelp",
+        "name": "Добудь 16 ламинарии",
+        "type": "Добыча",
+        "count": 16,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 3
+        },
+        "variants": null
+      },
+      {
+        "id": "dried_kelp",
+        "name": "Высуши 16 ламинарии",
+        "type": "Добыча",
+        "count": 16,
+        "sprite": {
+          "file": "food-and-potions-0-ba22dbc90ada.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 2
+        },
+        "variants": null
+      },
+      {
+        "id": "lily_pad",
+        "name": "Собери 4 кувшинки",
+        "type": "Добыча",
+        "count": 4,
+        "sprite": {
+          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+          "cols": 8,
+          "x": 2,
+          "y": 2
+        },
+        "variants": null
+      },
+      {
+        "id": "vine",
+        "name": "Срежь 8 лоз",
+        "type": "Добыча",
+        "count": 8,
+        "sprite": {
+          "file": "dyes-and-plants-2-b66ab3740a79.webp",
+          "cols": 8,
+          "x": 2,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "dandelion",
+        "name": "Сорви 6 одуванчиков",
+        "type": "Добыча",
+        "count": 6,
+        "sprite": {
+          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 4
+        },
+        "variants": null
+      },
+      {
+        "id": "poppy",
+        "name": "Сорви 6 маков",
+        "type": "Добыча",
+        "count": 6,
+        "sprite": {
+          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 4
+        },
+        "variants": null
+      },
+      {
+        "id": "cornflower",
+        "name": "Сорви 4 василька",
+        "type": "Добыча",
+        "count": 4,
+        "sprite": {
+          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+          "cols": 8,
+          "x": 4,
+          "y": 3
+        },
+        "variants": null
+      },
+      {
+        "id": "sunflower",
+        "name": "Сорви 4 подсолнуха",
+        "type": "Добыча",
+        "count": 4,
+        "sprite": {
+          "file": "dyes-and-plants-2-b66ab3740a79.webp",
+          "cols": 8,
+          "x": 2,
+          "y": 0
+        },
+        "variants": null
+      },
+      {
+        "id": "lilac",
+        "name": "Сорви 4 сирени",
+        "type": "Добыча",
+        "count": 4,
+        "sprite": {
+          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+          "cols": 8,
+          "x": 1,
+          "y": 2
+        },
+        "variants": null
+      },
+      {
+        "id": "rose_bush",
+        "name": "Сорви 4 розовых куста",
+        "type": "Добыча",
+        "count": 4,
+        "sprite": {
+          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+          "cols": 8,
+          "x": 6,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "peony",
+        "name": "Сорви 4 пиона",
+        "type": "Добыча",
+        "count": 4,
+        "sprite": {
+          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 4
+        },
+        "variants": null
+      },
+      {
+        "id": "white_dye",
+        "name": "Скрафти 6 белых красителей",
+        "type": "Крафт",
+        "count": 6,
+        "sprite": {
+          "file": "dyes-and-plants-2-b66ab3740a79.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 2
+        },
+        "variants": null
+      },
+      {
+        "id": "red_dye",
+        "name": "Скрафти 6 красных красителей",
+        "type": "Крафт",
+        "count": 6,
+        "sprite": {
+          "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+          "cols": 8,
+          "x": 3,
+          "y": 5
+        },
+        "variants": null
+      },
+      {
+        "id": "yellow_dye",
+        "name": "Скрафти 6 жёлтых красителей",
+        "type": "Крафт",
+        "count": 6,
+        "sprite": {
+          "file": "dyes-and-plants-2-b66ab3740a79.webp",
+          "cols": 8,
+          "x": 3,
+          "y": 2
+        },
+        "variants": null
+      },
+      {
+        "id": "blue_dye",
+        "name": "Скрафти 6 синих красителей",
+        "type": "Крафт",
+        "count": 6,
+        "sprite": {
+          "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+          "cols": 8,
+          "x": 4,
+          "y": 1
+        },
+        "variants": null
+      },
+      {
+        "id": "white_dye",
+        "name": "Скрафти 8 любых красителей",
+        "type": "Вариант",
+        "count": 8,
+        "sprite": {
+          "file": "dyes-and-plants-2-b66ab3740a79.webp",
+          "cols": 8,
+          "x": 0,
+          "y": 2
+        },
+        "variants": [
+          {
+            "id": "white_dye",
+            "name": "Белый краситель",
+            "sprite": {
+              "file": "dyes-and-plants-2-b66ab3740a79.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 2
+            }
+          },
+          {
+            "id": "orange_dye",
+            "name": "Оранжевый краситель",
+            "sprite": {
+              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 3
+            }
+          },
+          {
+            "id": "magenta_dye",
+            "name": "Пурпурный краситель",
+            "sprite": {
+              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 2
+            }
+          },
+          {
+            "id": "light_blue_dye",
+            "name": "Голубой краситель",
+            "sprite": {
+              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 1
+            }
+          },
+          {
+            "id": "yellow_dye",
+            "name": "Жёлтый краситель",
+            "sprite": {
+              "file": "dyes-and-plants-2-b66ab3740a79.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 2
+            }
+          },
+          {
+            "id": "lime_dye",
+            "name": "Лаймовый краситель",
+            "sprite": {
+              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 2
+            }
+          },
+          {
+            "id": "pink_dye",
+            "name": "Розовый краситель",
+            "sprite": {
+              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 4
+            }
+          },
+          {
+            "id": "gray_dye",
+            "name": "Серый краситель",
+            "sprite": {
+              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 0
+            }
+          },
+          {
+            "id": "light_gray_dye",
+            "name": "Светло-серый краситель",
+            "sprite": {
+              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+              "cols": 8,
+              "x": 0,
+              "y": 2
+            }
+          },
+          {
+            "id": "cyan_dye",
+            "name": "Бирюзовый краситель",
+            "sprite": {
+              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+              "cols": 8,
+              "x": 7,
+              "y": 3
+            }
+          },
+          {
+            "id": "purple_dye",
+            "name": "Фиолетовый краситель",
+            "sprite": {
+              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+              "cols": 8,
+              "x": 2,
+              "y": 5
+            }
+          },
+          {
+            "id": "blue_dye",
+            "name": "Синий краситель",
+            "sprite": {
+              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+              "cols": 8,
+              "x": 4,
+              "y": 1
+            }
+          },
+          {
+            "id": "brown_dye",
+            "name": "Коричневый краситель",
+            "sprite": {
+              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+              "cols": 8,
+              "x": 1,
+              "y": 2
+            }
+          },
+          {
+            "id": "green_dye",
+            "name": "Зелёный краситель",
+            "sprite": {
+              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+              "cols": 8,
+              "x": 5,
+              "y": 0
+            }
+          },
+          {
+            "id": "red_dye",
+            "name": "Красный краситель",
+            "sprite": {
+              "file": "dyes-and-plants-1-e3ca4f79f580.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 5
+            }
+          },
+          {
+            "id": "black_dye",
+            "name": "Чёрный краситель",
+            "sprite": {
+              "file": "dyes-and-plants-0-36b9cd35b1d0.webp",
+              "cols": 8,
+              "x": 3,
+              "y": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mechanisms",
+    "title": "Механизмы",
     "badge": "16",
-    "color": "rose",
     "goals": [
       {
         "id": "lever",
@@ -3906,10 +4404,9 @@
     ]
   },
   {
-    "id": "mobs",
-    "title": "Категория 9: Мобы, охота и дропы",
+    "id": "kills",
+    "title": "Убийства",
     "badge": "30",
-    "color": "purple",
     "goals": [
       {
         "id": "zombie",
@@ -4305,9 +4802,8 @@
   },
   {
     "id": "nether",
-    "title": "Категория 10: Незер и магия",
+    "title": "Незер",
     "badge": "25",
-    "color": "red",
     "goals": [
       {
         "id": "the_nether",

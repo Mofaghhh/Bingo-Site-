@@ -8,14 +8,10 @@
 	var cyclingToggle = document.getElementById('pepe-cycling-toggle');
 	var categoryTabs = document.getElementById('pepe-category-tabs');
 	var tooltip = document.getElementById('pepe-tooltip');
-	var modal = document.getElementById('pepe-modal');
-	var modalTitle = document.getElementById('pepe-modal-title');
-	var modalSubtitle = document.getElementById('pepe-modal-subtitle');
-	var modalGrid = document.getElementById('pepe-modal-grid');
-	var modalClose = document.getElementById('pepe-modal-close');
+	var popover = document.getElementById('pepe-popover');
 
 	var ASSETS_DIR = '/Bingo-Site-/assets/trading-zone/';
-	var SPRITE_SIZE = 34; // px
+	var SPRITE_SIZE = 46; // px - large, clean 3D isometric render
 
 	var currentCategory = 'all';
 	var searchQuery = '';
@@ -23,7 +19,11 @@
 	var cycleTimer = null;
 	var variantIndices = {};
 
-	// Map of all goals by ID for quick lookup
+	// Popover & Pinned state
+	var pinnedGoalId = null;
+	var popoverHideTimeout = null;
+
+	// Lookup map
 	var goalsById = {};
 	var totalGoalsCount = 0;
 
@@ -41,27 +41,27 @@
 		return document.documentElement.lang === 'en';
 	}
 
-	function getSpriteStyle(sprite) {
+	function getSpriteStyle(sprite, size) {
+		var s = size || SPRITE_SIZE;
 		if (!sprite || !sprite.file) return '';
 		var cols = sprite.cols || 8;
 		var x = sprite.x || 0;
 		var y = sprite.y || 0;
 		return 'background-image: url(\'' + ASSETS_DIR + sprite.file + '\'); ' +
-			'background-size: calc(' + cols + ' * ' + SPRITE_SIZE + 'px) auto; ' +
-			'background-position: calc(-' + x + ' * ' + SPRITE_SIZE + 'px) calc(-' + y + ' * ' + SPRITE_SIZE + 'px);';
+			'background-size: calc(' + cols + ' * ' + s + 'px) auto; ' +
+			'background-position: calc(-' + x + ' * ' + s + 'px) calc(-' + y + ' * ' + s + 'px);';
 	}
 
 	function renderCategoryTabs() {
 		if (!categoryTabs) return;
 		var en = isEn();
 		var html = '<button type="button" class="pepe-tab-btn active" data-cat="all">' +
-			(en ? 'All Categories' : 'Все категории') +
+			(en ? 'All' : 'Все') +
 			' <span class="pepe-tab-badge">' + totalGoalsCount + '</span></button>';
 
 		categories.forEach(function (cat) {
-			var catName = cat.title.replace(/^Категория \d+:\s*/, '');
 			html += '<button type="button" class="pepe-tab-btn" data-cat="' + cat.id + '">' +
-				catName +
+				cat.title +
 				' <span class="pepe-tab-badge">' + cat.goals.length + '</span></button>';
 		});
 
@@ -75,6 +75,7 @@
 			categoryTabs.querySelectorAll('.pepe-tab-btn').forEach(function (b) {
 				b.classList.toggle('active', b === btn);
 			});
+			closePopover();
 			render();
 		});
 	}
@@ -120,7 +121,7 @@
 				var hasVariants = goal.variants && goal.variants.length > 1;
 				var curIdx = (hasVariants && variantIndices[goal.id]) || 0;
 				var activeSprite = hasVariants ? goal.variants[curIdx].sprite : goal.sprite;
-				var spriteStyle = getSpriteStyle(activeSprite);
+				var spriteStyle = getSpriteStyle(activeSprite, SPRITE_SIZE);
 
 				html += '<button type="button" class="pepe-tile' + (hasVariants ? ' has-variants' : '') + '" ' +
 					'data-goal-id="' + goal.id + '" ' +
@@ -133,7 +134,7 @@
 				}
 
 				if (hasVariants) {
-					html += '<span class="pepe-variant-dot" title="Группа вариантов">⇄</span>';
+					html += '<span class="pepe-variant-dot" title="Варианты (наведите или ПКМ)">⇄</span>';
 				}
 
 				html += '</button>';
@@ -156,22 +157,15 @@
 		container.innerHTML = html;
 	}
 
-	// Tooltip handling
+	// Tooltip for single-item tiles
 	function showTooltip(tileEl) {
 		if (!tooltip) return;
 		var goalId = tileEl.getAttribute('data-goal-id');
 		var goal = goalsById[goalId];
 		if (!goal) return;
 
-		var hasVariants = goal.variants && goal.variants.length > 1;
-		var curIdx = (hasVariants && variantIndices[goal.id]) || 0;
-		var currentVariant = hasVariants ? goal.variants[curIdx] : null;
-
-		var itemName = currentVariant ? currentVariant.name : goal.name;
-		var itemId = currentVariant ? currentVariant.id : goal.id;
-
 		var html = '<div class="pepe-tip-header">' + goal.name + '</div>';
-		html += '<div class="pepe-tip-sub">' + itemName + ' <code class="pepe-tip-code">minecraft:' + itemId + '</code></div>';
+		html += '<div class="pepe-tip-sub"><code class="pepe-tip-code">minecraft:' + goal.id + '</code></div>';
 
 		html += '<div class="pepe-tip-meta">';
 		if (goal.count && goal.count > 1) {
@@ -180,42 +174,12 @@
 		if (goal.type) {
 			html += '<span class="pepe-tip-tag type-tag">' + goal.type + '</span>';
 		}
-		if (hasVariants) {
-			html += '<span class="pepe-tip-tag var-tag">' + goal.variants.length + ' вар.</span>';
-		}
 		html += '</div>';
-
-		if (hasVariants) {
-			html += '<div class="pepe-tip-action">⇄ Нажмите, чтобы открыть все ' + goal.variants.length + ' вариантов</div>';
-		}
 
 		tooltip.innerHTML = html;
 		tooltip.style.display = 'block';
 
-		positionTooltip(tileEl);
-	}
-
-	function positionTooltip(tileEl) {
-		if (!tooltip || tooltip.style.display === 'none') return;
-		var rect = tileEl.getBoundingClientRect();
-		var tipRect = tooltip.getBoundingClientRect();
-
-		var top = rect.top - tipRect.height - 8;
-		var left = rect.left + (rect.width / 2) - (tipRect.width / 2);
-
-		// If overflows top, show below
-		if (top < 10) {
-			top = rect.bottom + 8;
-		}
-
-		// Horizontal clamping
-		if (left < 10) left = 10;
-		if (left + tipRect.width > window.innerWidth - 10) {
-			left = window.innerWidth - tipRect.width - 10;
-		}
-
-		tooltip.style.top = (top + window.scrollY) + 'px';
-		tooltip.style.left = (left + window.scrollX) + 'px';
+		positionElement(tooltip, tileEl);
 	}
 
 	function hideTooltip() {
@@ -223,53 +187,167 @@
 		tooltip.style.display = 'none';
 	}
 
-	// Variant Modal
-	function openVariantModal(goalId) {
+	// Popover for variant tiles (PepeLand style, 7 cols grid)
+	function showPopover(tileEl, isPinned) {
+		if (!popover) return;
+		var goalId = tileEl.getAttribute('data-goal-id');
 		var goal = goalsById[goalId];
-		if (!goal || !goal.variants || !goal.variants.length) return;
-		if (!modal || !modalGrid) return;
+		if (!goal || !goal.variants || goal.variants.length <= 1) return;
 
-		if (modalTitle) {
-			modalTitle.textContent = goal.name;
-		}
-		if (modalSubtitle) {
-			modalSubtitle.textContent = 'Любой из ' + goal.variants.length + ' предметов засчитывает эту цель (требуется ' + (goal.count || 1) + ' шт.):';
-		}
+		clearTimeout(popoverHideTimeout);
+		hideTooltip();
 
-		var html = '';
-		goal.variants.forEach(function (v) {
-			var style = getSpriteStyle(v.sprite);
-			html += '<div class="pepe-modal-item">';
-			html += '<div class="pepe-modal-tile">';
-			html += '<span class="pepe-sprite" style="' + style + '"></span>';
-			html += '</div>';
-			html += '<div class="pepe-modal-item-info">';
-			html += '<div class="pepe-modal-item-name">' + v.name + '</div>';
-			html += '<code class="pepe-modal-item-id">minecraft:' + v.id + '</code>';
-			html += '</div>';
-			html += '</div>';
+		var curIdx = variantIndices[goal.id] || 0;
+		var curVariant = goal.variants[curIdx] || goal.variants[0];
+
+		// Clean title without extra prefix
+		var cleanTitle = goal.name
+			.replace(/^Сруби любые \d+ /, '')
+			.replace(/^Скрафти любую /, '')
+			.replace(/^Скрафти любые /, '')
+			.replace(/^Скрафти любой /, '')
+			.replace(/^Добудь \d+ любой /, '')
+			.replace(/^Добудь \d+ любого /, '')
+			.replace(/^Собери \d+ любых /, '')
+			.replace(/^Скрафти \d+ любых /, '')
+			.replace(/^Скрафти \d+ /, '')
+			.replace(/^Переплавь \d+ /, '')
+			.replace(/^Обпали \d+ /, '');
+
+		cleanTitle = cleanTitle.charAt(0).toUpperCase() + cleanTitle.slice(1);
+
+		var html = '<div class="pepe-popover-header">';
+		html += '<span class="pepe-popover-title">' + cleanTitle + '</span>';
+		html += '<span class="pepe-popover-badge">' + goal.variants.length + '</span>';
+		if (isPinned) {
+			html += '<button type="button" class="pepe-popover-close-btn" aria-label="Закрыть">✕</button>';
+		}
+		html += '</div>';
+
+		html += '<div class="pepe-popover-sub" id="pepe-popover-sub-text">' +
+			curVariant.name + ' <code class="pepe-tip-code">minecraft:' + curVariant.id + '</code>' +
+			'</div>';
+
+		html += '<div class="pepe-popover-grid">';
+
+		goal.variants.forEach(function (v, idx) {
+			var vStyle = getSpriteStyle(v.sprite, 26);
+			var isActive = idx === curIdx;
+
+			html += '<button type="button" class="pepe-popover-item' + (isActive ? ' active' : '') + '" ' +
+				'data-goal-id="' + goal.id + '" ' +
+				'data-idx="' + idx + '" ' +
+				'data-name="' + v.name.replace(/"/g, '&quot;') + '" ' +
+				'data-id="' + v.id + '" ' +
+				'title="' + v.name.replace(/"/g, '&quot;') + '">';
+			html += '<span class="pepe-sprite popover-sprite" style="' + vStyle + '"></span>';
+			html += '</button>';
 		});
 
-		modalGrid.innerHTML = html;
-		modal.classList.add('open');
-		document.body.style.overflow = 'hidden';
+		html += '</div>';
+
+		popover.innerHTML = html;
+		popover.setAttribute('data-target-goal', goal.id);
+		popover.classList.toggle('is-pinned', !!isPinned);
+		popover.style.display = 'block';
+
+		positionElement(popover, tileEl);
+
+		// Popover items hover & click handlers
+		var items = popover.querySelectorAll('.pepe-popover-item');
+		var subText = document.getElementById('pepe-popover-sub-text');
+
+		items.forEach(function (item) {
+			item.addEventListener('mouseenter', function () {
+				var name = item.getAttribute('data-name');
+				var id = item.getAttribute('data-id');
+				if (subText) {
+					subText.innerHTML = name + ' <code class="pepe-tip-code">minecraft:' + id + '</code>';
+				}
+			});
+
+			item.addEventListener('click', function (e) {
+				e.stopPropagation();
+				var idx = parseInt(item.getAttribute('data-idx'), 10);
+				variantIndices[goal.id] = idx;
+
+				// Update active border in popover
+				items.forEach(function (it) {
+					it.classList.toggle('active', it === item);
+				});
+
+				// Update sprite on main tile
+				var mainTile = container.querySelector('.pepe-tile[data-goal-id="' + goal.id + '"]');
+				if (mainTile) {
+					var spr = mainTile.querySelector('.pepe-sprite');
+					if (spr) {
+						spr.style.cssText = getSpriteStyle(goal.variants[idx].sprite, SPRITE_SIZE);
+					}
+				}
+			});
+		});
+
+		var closeBtn = popover.querySelector('.pepe-popover-close-btn');
+		if (closeBtn) {
+			closeBtn.addEventListener('click', function (e) {
+				e.stopPropagation();
+				closePopover();
+			});
+		}
 	}
 
-	function closeVariantModal() {
-		if (!modal) return;
-		modal.classList.remove('open');
-		document.body.style.overflow = '';
+	function closePopover() {
+		if (!popover) return;
+		popover.style.display = 'none';
+		popover.classList.remove('is-pinned');
+		pinnedGoalId = null;
 	}
 
-	// Cycling timer for variant goals
+	function scheduleClosePopover() {
+		if (pinnedGoalId) return; // Keep pinned open
+		clearTimeout(popoverHideTimeout);
+		popoverHideTimeout = setTimeout(function () {
+			if (!pinnedGoalId) {
+				closePopover();
+			}
+		}, 180);
+	}
+
+	function positionElement(elem, targetEl) {
+		if (!elem || elem.style.display === 'none') return;
+		var rect = targetEl.getBoundingClientRect();
+		var elemRect = elem.getBoundingClientRect();
+
+		var top = rect.top - elemRect.height - 10;
+		var left = rect.left + (rect.width / 2) - (elemRect.width / 2);
+
+		// If overflows top, display below
+		if (top < 10) {
+			top = rect.bottom + 10;
+		}
+
+		// Horizontal bounds clamping
+		if (left < 10) left = 10;
+		if (left + elemRect.width > window.innerWidth - 10) {
+			left = window.innerWidth - elemRect.width - 10;
+		}
+
+		elem.style.top = (top + window.scrollY) + 'px';
+		elem.style.left = (left + window.scrollX) + 'px';
+	}
+
+	// Cycling animation for variant goals
 	function startCycling() {
 		if (cycleTimer) clearInterval(cycleTimer);
 		cycleTimer = setInterval(function () {
 			if (!isCycling) return;
 
-			var hasUpdatedAny = false;
-
 			Object.keys(variantIndices).forEach(function (goalId) {
+				// Don't cycle if popover is open for this goal
+				if (popover && popover.style.display !== 'none' && popover.getAttribute('data-target-goal') === goalId) {
+					return;
+				}
+
 				var goal = goalsById[goalId];
 				if (!goal || !goal.variants || goal.variants.length <= 1) return;
 
@@ -281,46 +359,114 @@
 					var spriteEl = tileEl.querySelector('.pepe-sprite');
 					if (spriteEl) {
 						var newSprite = goal.variants[nextIdx].sprite;
-						spriteEl.style.cssText = getSpriteStyle(newSprite);
-						hasUpdatedAny = true;
+						spriteEl.style.cssText = getSpriteStyle(newSprite, SPRITE_SIZE);
 					}
 				}
 			});
 		}, 1500);
 	}
 
-	// Event listeners
+	// Global event listeners
 	if (container) {
+		// Hover on tile
 		container.addEventListener('mouseenter', function (e) {
 			var tile = e.target.closest('.pepe-tile');
-			if (tile) showTooltip(tile);
+			if (!tile) return;
+
+			var goalId = tile.getAttribute('data-goal-id');
+			var goal = goalsById[goalId];
+			if (!goal) return;
+
+			if (goal.variants && goal.variants.length > 1) {
+				if (!pinnedGoalId || pinnedGoalId === goalId) {
+					showPopover(tile, pinnedGoalId === goalId);
+				}
+			} else {
+				if (!pinnedGoalId) {
+					closePopover();
+					showTooltip(tile);
+				}
+			}
 		}, true);
 
+		// Mouse leave on tile
 		container.addEventListener('mouseleave', function (e) {
 			var tile = e.target.closest('.pepe-tile');
-			if (tile) hideTooltip();
+			if (!tile) return;
+
+			hideTooltip();
+			scheduleClosePopover();
 		}, true);
 
-		container.addEventListener('mousemove', function (e) {
+		// Right Click (ПКМ) - locks the popover open on this tile
+		container.addEventListener('contextmenu', function (e) {
 			var tile = e.target.closest('.pepe-tile');
-			if (tile && tooltip && tooltip.style.display !== 'none') {
-				positionTooltip(tile);
+			if (!tile) return;
+
+			e.preventDefault();
+			var goalId = tile.getAttribute('data-goal-id');
+			var goal = goalsById[goalId];
+			if (!goal) return;
+
+			if (goal.variants && goal.variants.length > 1) {
+				if (pinnedGoalId === goalId) {
+					closePopover();
+				} else {
+					pinnedGoalId = goalId;
+					showPopover(tile, true);
+				}
+			} else {
+				showTooltip(tile);
 			}
 		});
 
+		// Left click on variant tile also pins/toggles
 		container.addEventListener('click', function (e) {
 			var tile = e.target.closest('.pepe-tile.has-variants');
-			if (tile) {
-				var goalId = tile.getAttribute('data-goal-id');
-				hideTooltip();
-				openVariantModal(goalId);
+			if (!tile) return;
+
+			var goalId = tile.getAttribute('data-goal-id');
+			if (pinnedGoalId === goalId) {
+				closePopover();
+			} else {
+				pinnedGoalId = goalId;
+				showPopover(tile, true);
 			}
 		});
 	}
 
+	// Keep popover open while hovering inside it
+	if (popover) {
+		popover.addEventListener('mouseenter', function () {
+			clearTimeout(popoverHideTimeout);
+		});
+
+		popover.addEventListener('mouseleave', function () {
+			scheduleClosePopover();
+		});
+	}
+
+	// Click outside closes pinned popover
+	document.addEventListener('click', function (e) {
+		if (pinnedGoalId) {
+			if (!e.target.closest('#pepe-popover') && !e.target.closest('.pepe-tile')) {
+				closePopover();
+			}
+		}
+	});
+
+	// Escape closes popover
+	window.addEventListener('keydown', function (e) {
+		if (e.key === 'Escape') {
+			closePopover();
+			hideTooltip();
+		}
+	});
+
 	if (searchInput) {
 		searchInput.addEventListener('input', function () {
 			searchQuery = searchInput.value;
+			closePopover();
 			render();
 		});
 	}
@@ -330,22 +476,6 @@
 			isCycling = cyclingToggle.checked;
 		});
 	}
-
-	if (modalClose) {
-		modalClose.addEventListener('click', closeVariantModal);
-	}
-
-	if (modal) {
-		modal.addEventListener('click', function (e) {
-			if (e.target === modal) closeVariantModal();
-		});
-	}
-
-	window.addEventListener('keydown', function (e) {
-		if (e.key === 'Escape' && modal && modal.classList.contains('open')) {
-			closeVariantModal();
-		}
-	});
 
 	// Initialize
 	renderCategoryTabs();

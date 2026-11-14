@@ -1736,17 +1736,17 @@
 	border-radius: 9999px;
 }
 
-/* PepeLand Isometric Tile Grid */
+/* PepeLand Isometric Tile Grid (Enlarged High-Res 3D Tiles) */
 .pepe-item-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(46px, 1fr));
-	gap: 6px;
+	grid-template-columns: repeat(auto-fill, minmax(62px, 1fr));
+	gap: 8px;
 }
 
 .pepe-tile {
-	width: 48px;
-	height: 48px;
-	border-radius: 8px;
+	width: 62px;
+	height: 62px;
+	border-radius: 9px;
 	background-color: #14151b;
 	border: 1px solid rgba(255, 255, 255, 0.08);
 	position: relative;
@@ -1758,6 +1758,7 @@
 	box-sizing: border-box;
 	transition: background-color 0.12s ease, border-color 0.12s ease, transform 0.1s ease;
 	outline: none;
+	user-select: none;
 }
 
 .pepe-tile:hover,
@@ -1765,39 +1766,38 @@
 	background-color: #21232d;
 	border-color: rgba(255, 255, 255, 0.22);
 	transform: translateY(-1px);
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55);
 	z-index: 2;
 }
 
 .pepe-tile.has-variants {
-	border-color: rgba(167, 139, 250, 0.25);
+	border-color: rgba(167, 139, 250, 0.28);
 }
 
 .pepe-tile.has-variants:hover {
-	border-color: rgba(167, 139, 250, 0.6);
+	border-color: rgba(167, 139, 250, 0.65);
 }
 
 .pepe-sprite {
 	display: block;
-	width: 34px;
-	height: 34px;
+	width: 46px;
+	height: 46px;
 	background-repeat: no-repeat;
-	image-rendering: pixelated;
-	image-rendering: -moz-crisp-edges;
-	image-rendering: crisp-edges;
+	image-rendering: auto;
+	image-rendering: -webkit-optimize-contrast;
 	pointer-events: none;
 	flex-shrink: 0;
 }
 
 .pepe-count {
 	position: absolute;
-	bottom: 2px;
-	right: 4px;
-	font-size: 11px;
+	bottom: 3px;
+	right: 5px;
+	font-size: 13px;
 	font-weight: 700;
 	line-height: 1;
 	color: #ffffff;
-	text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 0 1px 2px #000;
+	text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 0 2px 3px rgba(0, 0, 0, 0.9);
 	font-family: var(--minecraft-font, monospace);
 	pointer-events: none;
 	letter-spacing: -0.5px;
@@ -1805,16 +1805,16 @@
 
 .pepe-variant-dot {
 	position: absolute;
-	top: 2px;
-	right: 3px;
-	font-size: 9.5px;
+	top: 3px;
+	right: 4px;
+	font-size: 10px;
 	line-height: 1;
 	color: #a78bfa;
-	opacity: 0.8;
+	opacity: 0.85;
 	pointer-events: none;
 }
 
-/* Floating Tooltip */
+/* Floating Tooltip for Single-Item Tiles */
 .pepe-tooltip {
 	position: absolute;
 	z-index: 1000;
@@ -1844,7 +1844,7 @@
 .pepe-tip-sub {
 	font-size: 11.5px;
 	color: #94a3b8;
-	margin-bottom: 8px;
+	margin-bottom: 6px;
 	line-height: 1.3;
 }
 
@@ -1862,7 +1862,6 @@
 	gap: 6px;
 	align-items: center;
 	flex-wrap: wrap;
-	margin-bottom: 4px;
 }
 
 .pepe-tip-tag {
@@ -1882,137 +1881,117 @@
 	color: #cbd5e1;
 }
 
-.pepe-tip-tag.var-tag {
-	background-color: rgba(167, 139, 250, 0.15);
-	color: #c4b5fd;
+/* Floating PepeLand Popover (Hover & Right-Click) */
+.pepe-popover {
+	position: absolute;
+	z-index: 1100;
+	background-color: #0c0d12;
+	border: 1px solid rgba(255, 255, 255, 0.16);
+	box-shadow: 0 14px 36px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(0, 0, 0, 0.6);
+	border-radius: 10px;
+	padding: 10px 12px;
+	animation: pepeFadeIn 0.12s ease-out;
 }
 
-.pepe-tip-action {
-	font-size: 11px;
-	color: #a78bfa;
-	margin-top: 6px;
-	border-top: 1px dashed rgba(255, 255, 255, 0.1);
-	padding-top: 6px;
+.pepe-popover.is-pinned {
+	border-color: rgba(56, 189, 248, 0.45);
+	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.9), 0 0 16px rgba(56, 189, 248, 0.18);
 }
 
-/* Variant Modal */
-.pepe-modal-overlay {
-	position: fixed;
-	inset: 0;
-	background-color: rgba(0, 0, 0, 0.78);
-	backdrop-filter: blur(4px);
-	z-index: 1200;
-	display: none;
+.pepe-popover-header {
+	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 20px;
+	gap: 8px;
+	margin-bottom: 3px;
+	position: relative;
 }
 
-.pepe-modal-overlay.open {
-	display: flex;
-}
-
-.pepe-modal-dialog {
-	background-color: #14151b;
-	border: 1px solid rgba(255, 255, 255, 0.14);
-	box-shadow: 0 20px 48px rgba(0, 0, 0, 0.85);
-	border-radius: 12px;
-	max-width: 620px;
-	width: 100%;
-	max-height: 85vh;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-}
-
-.pepe-modal-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	padding: 16px 20px;
-	background-color: #101116;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.pepe-modal-title {
-	font-size: 1.15rem;
+.pepe-popover-title {
+	font-size: 13.5px;
 	font-weight: 700;
 	color: #ffffff;
-	margin: 0 0 4px 0;
+	text-align: center;
+	line-height: 1.2;
 }
 
-.pepe-modal-subtitle {
-	font-size: 12.5px;
+.pepe-popover-badge {
+	font-size: 11px;
+	font-weight: 600;
 	color: #94a3b8;
-	margin: 0;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 1px 7px;
+	border-radius: 9999px;
 }
 
-.pepe-modal-close {
+.pepe-popover-close-btn {
+	position: absolute;
+	right: -4px;
+	top: -4px;
 	background: transparent;
 	border: none;
-	color: #94a3b8;
-	font-size: 20px;
+	color: #64748b;
+	font-size: 14px;
 	cursor: pointer;
+	padding: 2px 6px;
 	line-height: 1;
-	padding: 4px;
-	transition: color 0.15s ease;
+	transition: color 0.12s ease;
 }
 
-.pepe-modal-close:hover {
+.pepe-popover-close-btn:hover {
 	color: #ffffff;
 }
 
-.pepe-modal-grid {
-	padding: 16px 20px;
-	overflow-y: auto;
+.pepe-popover-sub {
+	font-size: 11px;
+	color: #94a3b8;
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+/* 7 Columns Grid - Exact PepeLand layout */
+.pepe-popover-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-	gap: 10px;
+	grid-template-columns: repeat(7, 34px);
+	gap: 4px;
+	justify-content: center;
 }
 
-.pepe-modal-item {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	background-color: #181921;
-	border: 1px solid rgba(255, 255, 255, 0.06);
-	border-radius: 8px;
-	padding: 8px 10px;
-}
-
-.pepe-modal-tile {
-	width: 40px;
-	height: 40px;
-	background-color: #101116;
-	border: 1px solid rgba(255, 255, 255, 0.08);
+.pepe-popover-item {
+	width: 34px;
+	height: 34px;
+	background-color: #14151c;
+	border: 1px solid rgba(255, 255, 255, 0.1);
 	border-radius: 6px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	flex-shrink: 0;
+	cursor: pointer;
+	padding: 0;
+	box-sizing: border-box;
+	transition: background-color 0.1s ease, border-color 0.1s ease, transform 0.08s ease;
+	outline: none;
 }
 
-.pepe-modal-item-info {
-	display: flex;
-	flex-direction: column;
-	min-width: 0;
+.pepe-popover-item:hover {
+	border-color: rgba(255, 255, 255, 0.35);
+	background-color: #222430;
+	transform: scale(1.06);
+	z-index: 2;
 }
 
-.pepe-modal-item-name {
-	font-size: 12px;
-	font-weight: 600;
-	color: #f1f5f9;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+.pepe-popover-item.active {
+	border: 2px solid #38bdf8;
+	background-color: #1a2233;
+	box-shadow: 0 0 8px rgba(56, 189, 248, 0.35);
 }
 
-.pepe-modal-item-id {
-	font-size: 10px;
-	color: #64748b;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+.popover-sprite {
+	width: 26px;
+	height: 26px;
+	image-rendering: auto;
+	image-rendering: -webkit-optimize-contrast;
+	pointer-events: none;
 }
 
 .pepe-empty-state {
@@ -2024,18 +2003,31 @@
 
 @media (width < 640px) {
 	.pepe-item-grid {
-		grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
-		gap: 5px;
+		grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+		gap: 6px;
 	}
 	.pepe-tile {
-		width: 44px;
-		height: 44px;
+		width: 52px;
+		height: 52px;
 	}
 	.pepe-sprite {
-		width: 30px;
-		height: 30px;
+		width: 38px;
+		height: 38px;
 	}
-	.pepe-modal-grid {
-		grid-template-columns: 1fr;
+	.pepe-count {
+		font-size: 12px;
+		bottom: 2px;
+		right: 3px;
+	}
+	.pepe-popover-grid {
+		grid-template-columns: repeat(5, 32px);
+	}
+	.pepe-popover-item {
+		width: 32px;
+		height: 32px;
+	}
+	.popover-sprite {
+		width: 24px;
+		height: 24px;
 	}
 }
