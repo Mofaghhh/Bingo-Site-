@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	// Official Tournament Roster (112 Real Participants)
+	// Official Tournament Roster (128 Real Participants)
 	var TOURNAMENT_ROSTER = [
 	{
 		"seed": 1,
@@ -397,253 +397,253 @@
 	},
 	{
 		"seed": 57,
+		"nick": "NoNamelessMore",
+		"opponent": "MrTobkins",
+		"matchType": "Выбранная пара",
+		"registered": true
+	},
+	{
+		"seed": 58,
+		"nick": "MrTobkins",
+		"opponent": "NoNamelessMore",
+		"matchType": "Выбранная пара",
+		"registered": true
+	},
+	{
+		"seed": 59,
+		"nick": "MineKr1stal",
+		"opponent": "SlameR_",
+		"matchType": "Выбранная пара",
+		"registered": true
+	},
+	{
+		"seed": 60,
+		"nick": "SlameR_",
+		"opponent": "MineKr1stal",
+		"matchType": "Выбранная пара",
+		"registered": true
+	},
+	{
+		"seed": 61,
+		"nick": "_Felex",
+		"opponent": "Mr_Uoker",
+		"matchType": "Выбранная пара",
+		"registered": true
+	},
+	{
+		"seed": 62,
+		"nick": "Mr_Uoker",
+		"opponent": "_Felex",
+		"matchType": "Выбранная пара",
+		"registered": true
+	},
+	{
+		"seed": 63,
+		"nick": "SH4URM3N",
+		"opponent": "WellDie_YT",
+		"matchType": "Выбранная пара",
+		"registered": true
+	},
+	{
+		"seed": 64,
+		"nick": "WellDie_YT",
+		"opponent": "SH4URM3N",
+		"matchType": "Выбранная пара",
+		"registered": true
+	},
+	{
+		"seed": 65,
 		"nick": "AxooKnight",
 		"opponent": "lav_art",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 58,
+		"seed": 66,
 		"nick": "lav_art",
 		"opponent": "AxooKnight",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 59,
-		"nick": "Nikitos_Ultra",
-		"opponent": "MineKr1stal",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 60,
-		"nick": "MineKr1stal",
-		"opponent": "Nikitos_Ultra",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 61,
+		"seed": 67,
 		"nick": "Olerve1n",
 		"opponent": "lord_volkOG",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 62,
+		"seed": 68,
 		"nick": "lord_volkOG",
 		"opponent": "Olerve1n",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 63,
+		"seed": 69,
 		"nick": "_riment",
 		"opponent": "soniccost",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 64,
+		"seed": 70,
 		"nick": "soniccost",
 		"opponent": "_riment",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 65,
+		"seed": 71,
 		"nick": "Pyteshectvenik",
 		"opponent": "silentkaiser",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 66,
+		"seed": 72,
 		"nick": "silentkaiser",
 		"opponent": "Pyteshectvenik",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 67,
+		"seed": 73,
 		"nick": "Spear2",
 		"opponent": "flankorXD",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 68,
+		"seed": 74,
 		"nick": "flankorXD",
 		"opponent": "Spear2",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 69,
+		"seed": 75,
 		"nick": "Lick_Moder",
 		"opponent": "Aakariu",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 70,
+		"seed": 76,
 		"nick": "Aakariu",
 		"opponent": "Lick_Moder",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 71,
+		"seed": 77,
 		"nick": "lendysha1",
 		"opponent": "gribkoB",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 72,
+		"seed": 78,
 		"nick": "gribkoB",
 		"opponent": "lendysha1",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 73,
+		"seed": 79,
 		"nick": "Zitster",
 		"opponent": "Eleius_2010",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 74,
+		"seed": 80,
 		"nick": "Eleius_2010",
 		"opponent": "Zitster",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 75,
+		"seed": 81,
 		"nick": "disleksin",
 		"opponent": "Mantikorit",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 76,
+		"seed": 82,
 		"nick": "Mantikorit",
 		"opponent": "disleksin",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 77,
+		"seed": 83,
 		"nick": "karolparol",
 		"opponent": "Sayfers_Off",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 78,
+		"seed": 84,
 		"nick": "Sayfers_Off",
 		"opponent": "karolparol",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 79,
+		"seed": 85,
 		"nick": "LenSiryshka",
 		"opponent": "PoLoLoDI",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 80,
+		"seed": 86,
 		"nick": "PoLoLoDI",
 		"opponent": "LenSiryshka",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 81,
+		"seed": 87,
 		"nick": "Flaroq",
 		"opponent": "WenyaFox",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 82,
+		"seed": 88,
 		"nick": "WenyaFox",
 		"opponent": "Flaroq",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 83,
-		"nick": "SH4URM3N",
-		"opponent": "deficiit",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 84,
-		"nick": "deficiit",
-		"opponent": "SH4URM3N",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 85,
+		"seed": 89,
 		"nick": "marik3k",
 		"opponent": "ItsR0kot",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 86,
+		"seed": 90,
 		"nick": "ItsR0kot",
 		"opponent": "marik3k",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 87,
-		"nick": "SlameR_",
-		"opponent": "Ravit0wo",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 88,
-		"nick": "Ravit0wo",
-		"opponent": "SlameR_",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 89,
+		"seed": 91,
 		"nick": "WeretiKo",
 		"opponent": "MrFrogodil",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 90,
+		"seed": 92,
 		"nick": "MrFrogodil",
 		"opponent": "WeretiKo",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 91,
-		"nick": "KarrimencatYt",
-		"opponent": "MrTobkins",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 92,
-		"nick": "MrTobkins",
-		"opponent": "KarrimencatYt",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
@@ -677,113 +677,225 @@
 	},
 	{
 		"seed": 97,
-		"nick": "KypTu3aHku",
-		"opponent": "NoNamelessMore",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 98,
-		"nick": "NoNamelessMore",
-		"opponent": "KypTu3aHku",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 99,
 		"nick": "0TVECHAU",
 		"opponent": "Zzopi6ames",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 100,
+		"seed": 98,
 		"nick": "Zzopi6ames",
 		"opponent": "0TVECHAU",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 101,
+		"seed": 99,
 		"nick": "Endercat1058",
 		"opponent": "Dipovsky_",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 102,
+		"seed": 100,
 		"nick": "Dipovsky_",
 		"opponent": "Endercat1058",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 103,
-		"nick": "_Felex",
-		"opponent": "miro980",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 104,
-		"nick": "miro980",
-		"opponent": "_Felex",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 105,
-		"nick": "ExyAI",
-		"opponent": "WellDie_YT",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 106,
-		"nick": "WellDie_YT",
-		"opponent": "ExyAI",
-		"matchType": "Случайный подбор",
-		"registered": true
-	},
-	{
-		"seed": 107,
+		"seed": 101,
 		"nick": "Teredex",
 		"opponent": "chkeikka",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 108,
+		"seed": 102,
 		"nick": "chkeikka",
 		"opponent": "Teredex",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 109,
+		"seed": 103,
 		"nick": "MrWey_Flof",
 		"opponent": "Rai23visYT",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 110,
+		"seed": 104,
 		"nick": "Rai23visYT",
 		"opponent": "MrWey_Flof",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 111,
+		"seed": 105,
 		"nick": "SPAGICH",
 		"opponent": "_1Atropine3_",
 		"matchType": "Случайный подбор",
 		"registered": true
 	},
 	{
-		"seed": 112,
+		"seed": 106,
 		"nick": "_1Atropine3_",
 		"opponent": "SPAGICH",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 107,
+		"nick": "Polkir",
+		"opponent": "deficiit",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 108,
+		"nick": "deficiit",
+		"opponent": "Polkir",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 109,
+		"nick": "Wefody",
+		"opponent": "MsChiba",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 110,
+		"nick": "MsChiba",
+		"opponent": "Wefody",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 111,
+		"nick": "Ravit0wo",
+		"opponent": "ExyAI",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 112,
+		"nick": "ExyAI",
+		"opponent": "Ravit0wo",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 113,
+		"nick": "GRIDoN_",
+		"opponent": "Nikitos_Ultra",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 114,
+		"nick": "Nikitos_Ultra",
+		"opponent": "GRIDoN_",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 115,
+		"nick": "DEECABRASS",
+		"opponent": "nezaderzhka",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 116,
+		"nick": "nezaderzhka",
+		"opponent": "DEECABRASS",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 117,
+		"nick": "miro980",
+		"opponent": "Miky1d",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 118,
+		"nick": "Miky1d",
+		"opponent": "miro980",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 119,
+		"nick": "TamST",
+		"opponent": "KarrimencatYt",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 120,
+		"nick": "KarrimencatYt",
+		"opponent": "TamST",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 121,
+		"nick": "Dolo2ez",
+		"opponent": "_Deflor_",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 122,
+		"nick": "_Deflor_",
+		"opponent": "Dolo2ez",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 123,
+		"nick": "Fr0ks1k",
+		"opponent": "bodii17",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 124,
+		"nick": "bodii17",
+		"opponent": "Fr0ks1k",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 125,
+		"nick": "KypTu3aHku",
+		"opponent": "milxxzz",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 126,
+		"nick": "milxxzz",
+		"opponent": "KypTu3aHku",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 127,
+		"nick": "Koshee_",
+		"opponent": "PuFfpuFFchan",
+		"matchType": "Случайный подбор",
+		"registered": true
+	},
+	{
+		"seed": 128,
+		"nick": "PuFfpuFFchan",
+		"opponent": "Koshee_",
 		"matchType": "Случайный подбор",
 		"registered": true
 	}
